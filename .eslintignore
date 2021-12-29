@@ -47,5 +47,10 @@ jspm_packages
 !.yarn/versions
 .yarn-integrity # Yarn Integrity file
 
+# Lock files
+package-lock.json
+yarn.lock
+
 ## library folder
-build
+dist
+CHANGELOG.md
