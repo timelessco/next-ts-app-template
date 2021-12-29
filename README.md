@@ -1,28 +1,22 @@
-# Next.js + Jest
+# Next.js + Tailwind + TypeScript + Jest
 
-This example shows how to configure Jest to work with Next.js.
+This includes Next.js' built-in support for Tailwind CSS, Jest and TypeScript.
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and
-TypeScript.
+## Getting Started
 
-## How to Use
-
-Quickly get started using
-[Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
-
-In your terminal, run the following command:
+First, run the development server:
 
 ```bash
-npx create-next-app --example with-jest with-jest-app
+npm run dev
 # or
-yarn create next-app --example with-jest with-jest-app
+yarn dev
 ```
 
-## Run Jest Tests
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the
+result.
 
-```bash
-npm test
-```
+You can start editing the page by modifying `pages/index.js`. The page
+auto-updates as you edit the file.
 
 ## Contributors ✨
 
