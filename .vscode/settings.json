@@ -1,3 +1,6 @@
 {
-  "git.branchProtection": ["main"]
+  "git.branchProtection": ["main"],
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///Users/navin/Documents/github/next-react-app/.github/workflows/build.yml"
+  }
 }

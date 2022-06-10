@@ -29,7 +29,8 @@
     "test:ci": "jest --ci",
     "lint": "next lint",
     "lint:fix": "eslint --color --ext .js,.jsx,.ts,.tsx . --fix",
-    "format": "prettier -wl \"./**/*.{html,css,js,jsx,ts,tsx,md,json}\"",
+    "format": "prettier --check \"./**/*.{html,css,js,jsx,ts,tsx,md,json}\"",
+    "format:fix": "prettier -wl \"./**/*.{html,css,js,jsx,ts,tsx,md,json}\"",
     "format:package": "sort-package-json package.json",
     "release": "release-it",
     "commit": "gacp",
@@ -47,7 +48,7 @@
       "yarn lint:fix"
     ],
     "**/*.{html,css,js,jsx,ts,tsx,md,json}": [
-      "yarn format"
+      "yarn format:fix"
     ]
   },
   "browserslist": {
@@ -78,7 +79,7 @@
     "@testing-library/react": "13.3.0",
     "@testing-library/user-event": "14.2.0",
     "@types/jest": "28.1.1",
-    "@types/node": "17.0.5",
+    "@types/node": "17.0.41",
     "@types/react": "18.0.12",
     "@types/react-dom": "18.0.5",
     "all-contributors-cli": "6.20.0",
