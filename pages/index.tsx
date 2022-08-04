@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <h1>
-        <p>Next React App</p>
+        <p className="font-extrabold">Next React App</p>
       </h1>
       <Button>Hi</Button>
     </div>
