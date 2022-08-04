@@ -1,5 +1,44 @@
 
 
+## [2.0.0](https://github.com/navin-moorthy/next-react-app/compare/1.0.1...2.0.0) (2022-08-04)
+
+
+### CI Changes
+
+* **renovate:** 👷 update renovate to use only chore ([#59](https://github.com/navin-moorthy/next-react-app/issues/59)) ([4a4c428](https://github.com/navin-moorthy/next-react-app/commit/4a4c428836d86369233baf1ca113434090e9e220))
+
+
+### Maintanance Updates
+
+* **deps:** ⬆️ update dependency next to v12.2.0 ([293fc15](https://github.com/navin-moorthy/next-react-app/commit/293fc15acc050f5b5c2081223f9f3c446a7f13e7))
+* **deps:** ⬆️ update dependency next to v12.2.2 ([c6bb0f4](https://github.com/navin-moorthy/next-react-app/commit/c6bb0f4440fb2bd31f56e467fbafefa739cb94bf))
+* **deps:** ⬆️ update dependency next to v12.2.3 ([58b2cbf](https://github.com/navin-moorthy/next-react-app/commit/58b2cbfdb57f0f6ffb3da50c03439c5bfac5c902))
+* **deps:** ⬆️ update dev dependencies (minor) ([4d9638d](https://github.com/navin-moorthy/next-react-app/commit/4d9638da6b3d0def94b3e96f9259c323278503c9))
+* **deps:** ⬆️ update dev dependencies (minor) ([a3dfa78](https://github.com/navin-moorthy/next-react-app/commit/a3dfa78300f6a7b34553312e1abf8e78c84bdbe3))
+* **deps:** ⬆️ update dev dependencies (minor) ([0f15571](https://github.com/navin-moorthy/next-react-app/commit/0f15571c2447a88fba5d70545406909b802bf882))
+* **deps:** ⬆️ update dev dependencies (minor) ([3086d4a](https://github.com/navin-moorthy/next-react-app/commit/3086d4a191d0ebc2a3731d111b68aaf6eeaacc91))
+* **deps:** ⬆️ update dev dependencies (minor) ([#60](https://github.com/navin-moorthy/next-react-app/issues/60)) ([897dc6c](https://github.com/navin-moorthy/next-react-app/commit/897dc6cef41890a7e59b456daacde37c89946036))
+* **deps:** ⬆️ update dev dependencies (minor) ([#61](https://github.com/navin-moorthy/next-react-app/issues/61)) ([70dda29](https://github.com/navin-moorthy/next-react-app/commit/70dda2940513490e25af1a3499648e6087a57c8e))
+* **deps:** ⬆️ update dev dependencies (minor) ([#63](https://github.com/navin-moorthy/next-react-app/issues/63)) ([60047cc](https://github.com/navin-moorthy/next-react-app/commit/60047cc17067e54fb4cc28ae754cab831f945754))
+* **deps:** ⬆️ update dev dependencies (minor) ([#64](https://github.com/navin-moorthy/next-react-app/issues/64)) ([d3c6182](https://github.com/navin-moorthy/next-react-app/commit/d3c61824c4455b0a6ca2980f94382a8fe5b4e944))
+* **deps:** ⬆️ update dev dependencies (minor) ([#65](https://github.com/navin-moorthy/next-react-app/issues/65)) ([b4a587e](https://github.com/navin-moorthy/next-react-app/commit/b4a587ef4f67588fafa3720e419211c0f75c8fa9))
+* **deps:** ⬆️ update dev dependencies (minor) ([#66](https://github.com/navin-moorthy/next-react-app/issues/66)) ([57147c2](https://github.com/navin-moorthy/next-react-app/commit/57147c2640fd4a0eaa8873a6fdd1a5fc673a5409))
+* **deps:** ⬆️ update dev dependencies (minor) ([#67](https://github.com/navin-moorthy/next-react-app/issues/67)) ([d650edf](https://github.com/navin-moorthy/next-react-app/commit/d650edf5a30f7c0ee3ed2333edbff3490ccd8e61))
+* **deps:** ⬆️ update dev dependencies (minor) ([#68](https://github.com/navin-moorthy/next-react-app/issues/68)) ([124b40e](https://github.com/navin-moorthy/next-react-app/commit/124b40e5d8c2c26efc0ebf2240b0383e4f389c99))
+* **deps:** ⬆️ update prod dependencies (minor) to v18.2.0 ([#62](https://github.com/navin-moorthy/next-react-app/issues/62)) ([c8350f6](https://github.com/navin-moorthy/next-react-app/commit/c8350f6dc3c590d8f57e2101bd4f50267db5f0d7))
+* **kodiak:** 🔧 update kodiak config ([82c7b50](https://github.com/navin-moorthy/next-react-app/commit/82c7b505edba1c911bef79490cfc63b7fe79786e))
+
+
+### Code Refactors
+
+* **components:** ✨ add components folder & workflow ([93ef51a](https://github.com/navin-moorthy/next-react-app/commit/93ef51a3abbf81335643189b6e13745b0c5b53e3))
+* **package:** ♻️ add index page & update package json ([baefdfa](https://github.com/navin-moorthy/next-react-app/commit/baefdfa631b7c42c3c07fa3bcada82e2b2e85de9))
+
+
+### Feature Updates
+
+* **config:** ✨ add next config ts & document font ([91f5402](https://github.com/navin-moorthy/next-react-app/commit/91f5402062cbfa790f252f9bab07d82be7150dce))
+
 ## [1.0.1](https://github.com/navin-moorthy/next-react-app/compare/1.0.0...1.0.1) (2022-06-10)
 
 
