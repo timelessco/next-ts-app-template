@@ -1,5 +1,30 @@
 
 
+## [3.0.0](https://github.com/navin-moorthy/next-react-app/compare/2.0.0...3.0.0) (2023-01-25)
+
+
+### CI Changes
+
+* **yarn-lock:** 🔧 update lock file ([06561e2](https://github.com/navin-moorthy/next-react-app/commit/06561e2c9d3076192c2d55c845fdf1373e9a5192))
+
+
+### Feature Updates
+
+* **project:** 🔥 more production grade tools & checks done ([6b2a24f](https://github.com/navin-moorthy/next-react-app/commit/6b2a24f284ff7be8705ba0282922232ea080e45f))
+
+
+### Maintanance Updates
+
+* **deps:** ⬆️ update dependency next to v12.2.5 ([ea80adf](https://github.com/navin-moorthy/next-react-app/commit/ea80adf32bf62e49d42a3ef3be0e0c90a46b1b3d))
+* **deps:** pin dependency pinst to 3.0.0 ([e9e5eec](https://github.com/navin-moorthy/next-react-app/commit/e9e5eecffcb5e1edcf6bf06e183326157c3476bb))
+* **script:** 💄 update lint staged script ([0908069](https://github.com/navin-moorthy/next-react-app/commit/090806923efc17f948a08cbf0890a8493d66c924))
+
+
+### Build Updates
+
+* **deps:** ➕ add concurrently deps ([aefeb59](https://github.com/navin-moorthy/next-react-app/commit/aefeb59c8286e1b3b6f0cba52d940aafb660ac5d))
+* **releaseit:** 👷 remove build from the config ([5ef1093](https://github.com/navin-moorthy/next-react-app/commit/5ef1093030d83cdb345d31fd1f0995367a53951b))
+
 ## [2.0.0](https://github.com/navin-moorthy/next-react-app/compare/1.0.1...2.0.0) (2022-08-04)
 
 
