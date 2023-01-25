@@ -1,6 +1,6 @@
 import { Button } from "../components";
 
-export default function Home() {
+const Home = () => {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <h1>
@@ -9,4 +9,6 @@ export default function Home() {
       <Button>Hi</Button>
     </div>
   );
-}
+};
+
+export default Home;
