@@ -1,6 +1,6 @@
 module.exports = {
   hooks: {
-    "before:init": ["pnpm lint", "pnpm test", "pnpm build"],
+    "before:init": ["pnpm lint", "pnpm test"],
   },
   git: {
     requireBranch: "main",
