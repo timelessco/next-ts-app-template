@@ -136,11 +136,11 @@
     "editor": false
   },
   "lint-staged": {
-    "**/*.{js,jsx,tx,tsx}": [
-      "yarn lint:fix"
+    "**/*.{js,cjs,jsx,ts,cts,tsx}": [
+      "pnpm lint:eslint"
     ],
-    "**/*.{html,css,js,jsx,ts,tsx,md,json}": [
-      "yarn format:fix"
+    "**/*.{html,css,js,cjs,jsx,ts,cts,tsx,md,json}": [
+      "pnpm lint:prettier"
     ]
   }
 }
