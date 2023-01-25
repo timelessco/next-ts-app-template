@@ -1,36 +1,28 @@
 # dotenv environment variable files
 .env*
 
-# Testing
-/coverage
-
-# Storybook Build
-storybook-static
-
-# Next JS
-/.next/
-/out/
-
-# Vercel folder
-.vercel
-
-# Local Netlify
-.netlify
-.idea
-*.env
-
-# Optional eslint cache
-.eslintcache
-
 # Logs
 *.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Optional tool caches
+.eslintcache
+.stylelintcache
 
 # Dependency directories
 node_modules
 jspm_packages
-
-# Mac files
-.DS_Store
 
 # Optional npm cache directory
 .npm
@@ -47,5 +39,32 @@ jspm_packages
 !.yarn/versions
 .yarn-integrity # Yarn Integrity file
 
+# Typescript
+*.tsbuildinfo
+
+# Testing
+/coverage
+
+# Next JS
+/.next/
+/out/
+
+# Vercel folder
+.vercel
+
+# Local Netlify
+.netlify
+.idea
+
+# Sentry
+.sentryclirc
+
+# Storybook Build
+storybook-static
+
+# Turbo Repo
+.turbo
+
 ## library folder
 build
+.husky/post-checkout

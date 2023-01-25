@@ -1,5 +1,5 @@
 module.exports = {
-  // max 120 characters per line
+  // max 80 characters per line
   printWidth: 80,
   // use 2 spaces for indentation
   tabWidth: 2,
@@ -36,4 +36,38 @@ module.exports = {
   endOfLine: "lf",
   // formats quoted code embedded
   embeddedLanguageFormatting: "auto",
+
+  // Plugins
+  plugins: [
+    require("prettier-plugin-pkg"),
+    require("prettier-plugin-tailwindcss"),
+    require("@ianvs/prettier-plugin-sort-imports"),
+  ],
+
+  pluginSearchDirs: false,
+  // @ianvs/prettier-plugin-sort-imports
+  importOrder: [
+    // Packages.
+    // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+    "^@?\\w",
+    "",
+    // Absolute imports and other imports such as Vue-style `@/foo`.
+    // Anything that does not start with a dot.
+    "^../",
+    "",
+    "^./",
+    "",
+
+    // Relative imports.
+    // Anything that starts with two dots.
+
+    // Style imports.
+    "^.+\\.s?css$",
+  ],
+  importOrderSortSpecifiers: true,
+  importOrderCaseInsensitive: true,
+  importOrderMergeDuplicateImports: true,
+  importOrderCombineTypeAndValueImports: true,
+  importOrderBuiltinModulesToTop: true,
+  importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
 };
