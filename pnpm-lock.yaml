@@ -7,9 +7,9 @@ specifiers:
   '@commitlint/cli': 17.4.2
   '@commitlint/config-conventional': 17.4.2
   '@ianvs/prettier-plugin-sort-imports': 3.7.1
-  '@next/bundle-analyzer': 13.1.5
-  '@next/env': 13.1.5
-  '@next/eslint-plugin-next': 13.1.5
+  '@next/bundle-analyzer': 13.1.6
+  '@next/env': 13.1.6
+  '@next/eslint-plugin-next': 13.1.6
   '@release-it/conventional-changelog': 5.1.1
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.4.0
@@ -74,9 +74,9 @@ devDependencies:
   '@commitlint/cli': 17.4.2
   '@commitlint/config-conventional': 17.4.2
   '@ianvs/prettier-plugin-sort-imports': 3.7.1_prettier@2.8.3
-  '@next/bundle-analyzer': 13.1.5
-  '@next/env': 13.1.5
-  '@next/eslint-plugin-next': 13.1.5
+  '@next/bundle-analyzer': 13.1.6
+  '@next/env': 13.1.6
+  '@next/eslint-plugin-next': 13.1.6
   '@release-it/conventional-changelog': 5.1.1_release-it@15.6.0
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
@@ -106,7 +106,7 @@ devDependencies:
   lint-staged: 13.1.0
   next-bundle-analyzer: 0.6.7_next@13.1.5
   next-compose-plugins: 2.2.1
-  next-sitemap: 3.1.47_csmsbcsbfdx2cjngizs3en5eh4
+  next-sitemap: 3.1.47_vb5rzzmscxiwuzvwjd3m2gv2kq
   npm-run-all: 4.1.5
   pinst: 3.0.0
   postcss: 8.4.21
@@ -2049,8 +2049,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@next/bundle-analyzer/13.1.5:
-    resolution: {integrity: sha512-Z+1gyS0Hy+Lpt2k/067YIxmYoKQt0RtHy3EMyR3SMZyZGmx3muZPUBS0Aj+tdfdReVNOK2nQdT8ghSZG9Lwmbw==}
+  /@next/bundle-analyzer/13.1.6:
+    resolution: {integrity: sha512-rJS9CtLoGT58mL+v2ISKANosFFWP/0YKYByHQ3vTaZrbQP8b1rYRxd2QVMJmnSXaFkiP9URt1XJ6OdGyVq5b6g==}
     dependencies:
       webpack-bundle-analyzer: 4.7.0
     transitivePeerDependencies:
@@ -2061,8 +2061,12 @@ packages:
   /@next/env/13.1.5:
     resolution: {integrity: sha512-0Ry4NhJy6qLbXhvxPRUQ1H6RzgtryGdUto7hfgAK0Iw/bScgeVjwLZdfhm2iT7qsOS32apo9cWzLCxjc6iGPsA==}
 
-  /@next/eslint-plugin-next/13.1.5:
-    resolution: {integrity: sha512-3kvLTX35bOWOCKU8KY74Ygczc55Qk/kB2TQy0tH7Rti6hzZ6Aij7WQ8zHdIVjmnlD0n/zXWXrIf5y56RKcLQkQ==}
+  /@next/env/13.1.6:
+    resolution: {integrity: sha512-s+W9Fdqh5MFk6ECrbnVmmAOwxKQuhGMT7xXHrkYIBMBcTiOqNWhv5KbJIboKR5STXxNXl32hllnvKaffzFaWQg==}
+    dev: true
+
+  /@next/eslint-plugin-next/13.1.6:
+    resolution: {integrity: sha512-o7cauUYsXjzSJkay8wKjpKJf2uLzlggCsGUkPu3lP09Pv97jYlekTC20KJrjQKmSv5DXV0R/uks2ZXhqjNkqAw==}
     dependencies:
       glob: 7.1.7
     dev: true
@@ -7299,7 +7303,7 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /next-sitemap/3.1.47_csmsbcsbfdx2cjngizs3en5eh4:
+  /next-sitemap/3.1.47_vb5rzzmscxiwuzvwjd3m2gv2kq:
     resolution: {integrity: sha512-LZxCWZ6lhQBfv1cuGob3tnsaHWffQM7VDmkXXp8u3n4LD7EJAR/SamlMj3mpHa8bFeuR6TjjRqrq/7e4WSOcLQ==}
     engines: {node: '>=14.18'}
     hasBin: true
@@ -7308,7 +7312,7 @@ packages:
       next: '*'
     dependencies:
       '@corex/deepmerge': 4.0.37
-      '@next/env': 13.1.5
+      '@next/env': 13.1.6
       minimist: 1.2.7
       next: 13.1.5_pjwopsidmaokadturxaafygjp4
     dev: true
