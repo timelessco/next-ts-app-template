@@ -50,7 +50,7 @@
     "test:ci": "SKIP_ENV_VALIDATION=true jest --ci"
   },
   "dependencies": {
-    "next": "13.1.5",
+    "next": "13.1.6",
     "next-seo": "5.15.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
