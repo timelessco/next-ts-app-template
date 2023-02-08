@@ -98,7 +98,7 @@
     "npm-run-all": "^4.1.5",
     "pinst": "3.0.0",
     "postcss": "8.4.21",
-    "prettier": "2.8.3",
+    "prettier": "2.8.4",
     "prettier-plugin-pkg": "0.17.1",
     "prettier-plugin-tailwindcss": "^0.2.2",
     "release-it": "15.6.0",
@@ -107,10 +107,10 @@
     "stylelint-config-clean-order": "^2.3.1",
     "stylelint-config-prettier": "9.0.4",
     "stylelint-config-standard": "29.0.0",
-    "tailwindcss": "3.2.4",
+    "tailwindcss": "3.2.6",
     "tilg": "0.1.1",
     "typescript": "4.9.5",
-    "zod": "3.20.2"
+    "zod": "3.20.5"
   },
   "browserslist": {
     "production": [
