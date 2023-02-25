@@ -90,13 +90,7 @@ const config = {
         "plugin:@next/next/recommended",
         "plugin:tailwindcss/recommended",
       ],
-      plugins: [
-        "import",
-        "jsx-a11y",
-        "react",
-        "@typescript-eslint",
-        "tailwindcss",
-      ],
+      plugins: ["import", "jsx-a11y", "react", "@typescript-eslint"],
       rules: {
         // eslint core
         // Allow console.log in development
@@ -172,7 +166,6 @@ const config = {
   ],
   settings: {
     tailwindcss: {
-      callee: ["clsx"],
       config: "tailwind.config.cjs",
     },
   },
