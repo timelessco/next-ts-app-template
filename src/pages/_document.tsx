@@ -3,11 +3,18 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html
+        className="min-h-full antialiased inter-display optimizeLegibility"
+        lang="en"
+      >
         <Head>
+          {/* Fonts Preload */}
           <link
-            href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
-            rel="stylesheet"
+            rel="preload"
+            href="/fonts/Inter.var-english.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
           />
         </Head>
         <body>

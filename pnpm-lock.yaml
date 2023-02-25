@@ -10,6 +10,7 @@ specifiers:
   '@next/bundle-analyzer': 13.2.1
   '@next/env': 13.2.1
   '@next/eslint-plugin-next': 13.2.1
+  '@octokit/core': ^4.2.0
   '@release-it/conventional-changelog': 5.1.1
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 14.0.0
@@ -20,6 +21,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.53.0
   '@typescript-eslint/parser': 5.53.0
   autoprefixer: 10.4.13
+  dedent: ^0.7.0
   eslint: 8.34.0
   eslint-config-airbnb: 19.0.4
   eslint-config-airbnb-base: ^15.0.0
@@ -32,7 +34,10 @@ specifiers:
   eslint-plugin-react: 7.32.2
   eslint-plugin-react-hooks: 4.6.0
   eslint-plugin-tailwindcss: ^3.9.0
+  execa: ^7.0.0
   gacp: 3.0.3
+  git-remote-origin-url: ^4.0.0
+  git-url-parse: ^13.1.0
   husky: 8.0.3
   jest: 29.4.3
   jest-environment-jsdom: 29.4.3
@@ -54,7 +59,6 @@ specifiers:
   sharp: 0.31.3
   stylelint: 15.2.0
   stylelint-config-clean-order: ^5.0.0
-  stylelint-config-prettier: 9.0.5
   stylelint-config-standard: 30.0.1
   tailwindcss: 3.2.7
   tilg: 0.1.1
@@ -77,6 +81,7 @@ devDependencies:
   '@next/bundle-analyzer': 13.2.1
   '@next/env': 13.2.1
   '@next/eslint-plugin-next': 13.2.1
+  '@octokit/core': 4.2.0
   '@release-it/conventional-changelog': 5.1.1_release-it@15.6.0
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
@@ -87,6 +92,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.53.0_ny4s7qc6yg74faf3d6xty2ofzy
   '@typescript-eslint/parser': 5.53.0_7kw3g6rralp5ps6mg3uyzz6azm
   autoprefixer: 10.4.13_postcss@8.4.21
+  dedent: 0.7.0
   eslint: 8.34.0
   eslint-config-airbnb: 19.0.4_hbw3smywoiafix46yjc35xsaqq
   eslint-config-airbnb-base: 15.0.0_mvgyw3chnqkp6sgfmmtihyjpnm
@@ -99,7 +105,10 @@ devDependencies:
   eslint-plugin-react: 7.32.2_eslint@8.34.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.34.0
   eslint-plugin-tailwindcss: 3.9.0_tailwindcss@3.2.7
+  execa: 7.0.0
   gacp: 3.0.3
+  git-remote-origin-url: 4.0.0
+  git-url-parse: 13.1.0
   husky: 8.0.3
   jest: 29.4.3_ujxcenvse5zlxdro6vjdmkgl3a
   jest-environment-jsdom: 29.4.3
@@ -117,7 +126,6 @@ devDependencies:
   sharp: 0.31.3
   stylelint: 15.2.0
   stylelint-config-clean-order: 5.0.0_stylelint@15.2.0
-  stylelint-config-prettier: 9.0.5_stylelint@15.2.0
   stylelint-config-standard: 30.0.1_stylelint@15.2.0
   tailwindcss: 3.2.7_aesdjsunmf4wiehhujt67my7tu
   tilg: 0.1.1_react@18.2.0
@@ -5051,6 +5059,21 @@ packages:
       strip-final-newline: 3.0.0
     dev: true
 
+  /execa/7.0.0:
+    resolution: {integrity: sha512-tQbH0pH/8LHTnwTrsKWideqi6rFB/QNUawEwrn+WHyz7PX1Tuz2u7wfTvbaNBdP5JD5LVWxNo8/A8CHNZ3bV6g==}
+    engines: {node: ^14.18.0 || ^16.14.0 || >=18.0.0}
+    dependencies:
+      cross-spawn: 7.0.3
+      get-stream: 6.0.1
+      human-signals: 4.3.0
+      is-stream: 3.0.0
+      merge-stream: 2.0.0
+      npm-run-path: 5.1.0
+      onetime: 6.0.0
+      signal-exit: 3.0.7
+      strip-final-newline: 3.0.0
+    dev: true
+
   /exit/0.1.2:
     resolution: {integrity: sha512-Zk/eNKV2zbjpKzrsQ+n1G6poVbErQxJ0LBOJXaKZ1EViLzH+hrLu9cdXI4zw9dBQJslwBEpbQ2P1oS7nDxs6jQ==}
     engines: {node: '>= 0.8.0'}
@@ -5418,6 +5441,13 @@ packages:
       pify: 2.3.0
     dev: true
 
+  /git-remote-origin-url/4.0.0:
+    resolution: {integrity: sha512-EAxDksNdjuWgmVW9pVvA9jQDi/dmTaiDONktIy7qiRRhBZUI4FQK1YvBvteuTSX24aNKg9lfgxNYJEeeSXe6DA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      gitconfiglocal: 2.1.0
+    dev: true
+
   /git-semver-tags/4.1.1:
     resolution: {integrity: sha512-OWyMt5zBe7xFs8vglMmhM9lRQzCWL3WjHtxNNfJTMngGym7pC1kh8sP6jevfydJ6LP3ZvGxfb6ABYgPUM0mtsA==}
     engines: {node: '>=10'}
@@ -5442,6 +5472,12 @@ packages:
 
   /gitconfiglocal/1.0.0:
     resolution: {integrity: sha512-spLUXeTAVHxDtKsJc8FkFVgFtMdEN9qPGpL23VfSHx4fP4+Ds097IXLvymbnDH8FnmxX5Nr9bPw3A+AQ6mWEaQ==}
+    dependencies:
+      ini: 1.3.8
+    dev: true
+
+  /gitconfiglocal/2.1.0:
+    resolution: {integrity: sha512-qoerOEliJn3z+Zyn1HW2F6eoYJqKwS6MgC9cztTLUB/xLWX8gD/6T60pKn4+t/d6tP7JlybI7Z3z+I572CR/Vg==}
     dependencies:
       ini: 1.3.8
     dev: true
@@ -5779,6 +5815,11 @@ packages:
   /human-signals/3.0.1:
     resolution: {integrity: sha512-rQLskxnM/5OCldHo+wNXbpVgDn5A17CUoKX+7Sokwaknlq7CdSnphy0W39GU8dw59XiCXmFXDg4fRuckQRKewQ==}
     engines: {node: '>=12.20.0'}
+    dev: true
+
+  /human-signals/4.3.0:
+    resolution: {integrity: sha512-zyzVyMjpGBX2+6cDVZeFPCdtOtdsxOeseRhB9tkQ6xXmGUNrcnBzdEKPy3VPNYz+4gy1oukVOXcrJCunSyc6QQ==}
+    engines: {node: '>=14.18.0'}
     dev: true
 
   /husky/8.0.3:
@@ -9190,16 +9231,6 @@ packages:
     dependencies:
       stylelint: 15.2.0
       stylelint-order: 6.0.2_stylelint@15.2.0
-    dev: true
-
-  /stylelint-config-prettier/9.0.5_stylelint@15.2.0:
-    resolution: {integrity: sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==}
-    engines: {node: '>= 12'}
-    hasBin: true
-    peerDependencies:
-      stylelint: '>= 11.x < 15'
-    dependencies:
-      stylelint: 15.2.0
     dev: true
 
   /stylelint-config-recommended/10.0.1_stylelint@15.2.0:
