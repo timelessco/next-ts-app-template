@@ -67,6 +67,10 @@ package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
+# Custom
+release-it/commit.hbs
+release-it/remote-commits.json
+
 # Library files
 dist
 CHANGELOG.md

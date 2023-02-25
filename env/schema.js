@@ -28,7 +28,7 @@ export const serverEnv = {
  */
 export const clientSchema = z.object({
   // Needed for sitemap generation
-  // NEXT_PUBLIC_SITE_URL: z.string().url(),
+  NEXT_PUBLIC_SITE_URL: z.string().url(),
 });
 
 /**
@@ -39,5 +39,5 @@ export const clientSchema = z.object({
  */
 export const clientEnv = {
   // Needed for sitemap generation
-  // NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
+  NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
 };

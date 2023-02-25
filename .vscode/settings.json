@@ -2,6 +2,33 @@
   "git.branchProtection": ["main"],
   "typescript.tsdk": "node_modules/typescript/lib",
 
+  // Editor Suggestions
+  "editor.suggest.preview": true,
+  "editor.snippetSuggestions": "inline",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.quickSuggestionsDelay": 0,
+  "editor.suggestSelection": "first",
+  "editor.suggest.showStatusBar": true,
+  "editor.suggest.localityBonus": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.wordBasedSuggestions": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "vsintellicode.modify.editor.suggestSelection": "choseToUpdateConfiguration",
+
+  // Editor Others
+  "editor.tabCompletion": "on",
+  "editor.accessibilitySupport": "off",
+  "editor.glyphMargin": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  "editor.smoothScrolling": true,
+  "editor.linkedEditing": true,
+  "editor.stickyScroll.enabled": true,
+
   // Editor Visuals
   "editor.renderLineHighlight": "all",
   "editor.minimap.enabled": false,
@@ -29,11 +56,11 @@
     // "source.organizeImports": true,
     // "source.sortImports": true,
     // "source.fixAll": true
+    "source.formatDocument": true,
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-
   "[markdown]": {
     "editor.quickSuggestions": {
       "comments": "on",
@@ -44,6 +71,9 @@
   "[blade]": {
     "editor.defaultFormatter": "onecentlin.laravel-blade",
     "editor.autoClosingBrackets": "always"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
 
   // Files Customization
@@ -80,24 +110,80 @@
   },
 
   // Language based settings
+
+  // CSS
   "css.validate": false,
   "css.lint.unknownAtRules": "ignore",
   "less.validate": false,
   "scss.validate": false,
   "stylelint.validate": ["css", "scss"],
+
+  // JavaScript
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.referencesCodeLens.enabled": true,
   "javascript.referencesCodeLens.showOnAllFunctions": true,
+
+  // TypeScript
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.validate.enable": true,
+  "typescript.surveys.enabled": false,
   // Check JS files with TS linter
   // "js/ts.implicitProjectConfig.checkJs": true,
+
+  // Markdown
   "markdown.validate.enabled": true,
   "markdown.experimental.editor.pasteLinks.enabled": true,
 
   // PHP
   "blade.format.enable": true,
   "php.suggest.basic": false,
+
+  // Workbench Customization
+  "workbench.colorTheme": "Moonlight II",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.settings.openDefaultSettings": true,
+  "workbench.settings.useSplitJSON": false,
+  "workbench.settings.editor": "json",
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.editor.showTabs": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+
+  // Explorer UI
+  "explorer.openEditors.visible": 1,
+  "explorer.confirmDragAndDrop": false,
+  "window.commandCenter": true,
+  "debug.toolBarLocation": "docked",
+  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+
+  // Git-SCM
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.followTagsWhenSync": true,
+  "git.enableCommitSigning": true,
+  "git.autoStash": true,
+  "git.fetchOnPull": true,
+  "scm.alwaysShowRepositories": true,
+
+  // Extensions
+
+  // Built in Extensions
+
+  // Emmet
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "blade": "html",
+    "javascript": "javascriptreact",
+    "jsx-sublime-babel-tags": "javascriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showAbbreviationSuggestions": false,
+  "emmet.showExpandedAbbreviation": "never",
+  "emmet.showSuggestionsAsSnippets": false,
+
+  // Installed Extensions
 
   // Linters & Formatters
   // "prettier.enable": false,
@@ -106,7 +192,7 @@
   // "prettier.singleQuote": true,
   // "prettier.tabWidth": 2,
   // "eslint.enable": false,
-  "eslint.alwaysShowStatus": true,
+  // "eslint.alwaysShowStatus": true,
   "eslint.useESLintClass": true,
   "eslint.validate": [
     "javascript",
@@ -134,24 +220,17 @@
     }
   },
 
-  // Emmet
-  "emmet.includeLanguages": {
-    "vue-html": "html",
-    "blade": "html",
-    "javascript": "javascriptreact",
-    "jsx-sublime-babel-tags": "javascriptreact"
-  },
-  "emmet.triggerExpansionOnTab": true,
-  "emmet.showAbbreviationSuggestions": false,
-  "emmet.showExpandedAbbreviation": "never",
-  "emmet.showSuggestionsAsSnippets": false,
-
   // Conventional Commit
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.showEditor": true,
   "conventionalCommits.lineBreak": "\\n",
   "conventionalCommits.promptFooter": false,
   "conventionalCommits.promptBody": false,
+
+  // AutoClosing Tag
+  "html.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+  "typescript.autoClosingTags": true,
 
   // Auto close tag
   "auto-close-tag.SublimeText3Mode": true,
@@ -176,8 +255,43 @@
     "mdx"
   ],
 
+  // Github Copilot
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
+  },
+
+  //  Tailwind.
+  // Detect additional class regex
+  "tailwindCSS.experimental.classRegex": [
+    ":\\s*?[\"'`]([^\"'`]*).*?,",
+    ["tailwind.style\\(([^)]*)\\)", "\"([^\"]*)\""]
+  ],
+  // Enable features in languages that are not supported by default. Add a mapping here between the new language and an already supported language.
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "typescript": "javascript",
+    "typescriptreact": "javascript",
+    "javascriptreact": "javascript"
+  },
+
   // Error Translator for TypeScript
   "totalTypeScript.hideAllTips": true,
   "totalTypeScript.hideBasicTips": true,
-  "totalTypeScript.showFullTranslation": true
+  "totalTypeScript.showFullTranslation": true,
+
+  // GitLens
+  "gitlens.views.repositories.branches.layout": "list",
+
+  // Github Pull Requests
+  "githubPullRequests.fileListLayout": "tree",
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.assignCreated": "${user}",
+
+  // Jest
+  "jest.autoRun": {
+    "watch": false
+  }
 }

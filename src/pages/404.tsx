@@ -1,4 +1,4 @@
-// pages/500.js
+// pages/404.js
 import Link from "next/link";
 
 const NotFound = () => {

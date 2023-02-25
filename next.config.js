@@ -22,6 +22,11 @@ const nextConfig = {
 
   // Enable the below option only when you are debugging sourceamp
   productionBrowserSourceMaps: process.env.SOURCEMAP === "true",
+  images: {
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [384, 640, 768, 1024, 1280, 1440, 2560],
+    imageSizes: [128, 256],
+  },
 };
 
 // Make sure adding Sentry options is the last code to run before exporting, to

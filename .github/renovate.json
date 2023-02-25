@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base", ":semanticCommitTypeAll(chore)"],
-  "schedule": ["after 12am and before 5am every weekday", "every weekend"],
+  "schedule": ["after 12am and before 5am on saturday"],
   "commitMessageAction": "⬆️ update",
   "commitMessageTopic": "{{depName}}",
   "pinVersions": false,
@@ -24,10 +24,7 @@
   },
   "automergeStrategy": "squash",
   "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true,
-    "automergeType": "pr",
-    "platformAutomerge": true
+    "enabled": false
   },
   "packageRules": [
     {
