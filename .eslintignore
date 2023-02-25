@@ -71,9 +71,9 @@ pnpm-lock.yaml
 # Custom
 release-it/commit.hbs
 release-it/remote-commits.json
+release-it/conventionalChangelogWriterOptsTransform.cjs
 
 ## library folder
 dist
 CHANGELOG.md
 public
-
