@@ -19,6 +19,7 @@
 # Optional tool caches
 .eslintcache
 .stylelintcache
+.prettiercache
 
 # Dependency directories
 node_modules
