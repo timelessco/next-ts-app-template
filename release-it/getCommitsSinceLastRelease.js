@@ -92,7 +92,7 @@ async function getOldestCommitSinceLastTag() {
     "Github found",
     remoteCommits.length,
     "commits since last release timestamp",
-    "2022-08-04T09:16:39.000Z",
+    commitDate,
   );
 
   fs.writeFileSync(
