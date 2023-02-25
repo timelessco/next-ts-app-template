@@ -1,5 +1,823 @@
 
 
+## [3.1.0](https://github.com/navin-moorthy/next-react-app/compare/v3.0.0...v3.1.0) (2023-02-25)
+
+
+### Bug Fixes
+
+* **lint:** 🚨 update linting config to work better ([026a9a9](https://github.com/navin-moorthy/next-react-app/commit/026a9a9b9a4a031d8249b8b1a27d431e06e331c7)) by @navin-moorthy
+
+
+
+### Documentation Changes
+
+* **readme:** 📝 update stack & more info on scripts ([578d302](https://github.com/navin-moorthy/next-react-app/commit/578d302896a973845a579e2fa37d93f07967125d)) by @navin-moorthy
+
+
+
+### Feature Updates
+
+* **config:** 🔧 update better tooling with release it & other changes (#132) ([98efcb4](https://github.com/navin-moorthy/next-react-app/commit/98efcb4b357b1a1d5477f034c31a3cf5ef17ddfb)) by @navin-moorthy, closes [#132](https://github.com/navin-moorthy/next-react-app/issues/132) [split#diff-a8973c793505c01e9ddd05a1e86cae50d0b94aa97bf4d4b8616b785bf00ce0f2](https://github.com/navin-moorthy/split/issues/diff-a8973c793505c01e9ddd05a1e86cae50d0b94aa97bf4d4b8616b785bf00ce0f2) [split#diff-1a6731e971b66d5e90b6744705335dd3d40eddc2c7be4d84958fface18ee0](https://github.com/navin-moorthy/split/issues/diff-1a6731e971b66d5e90b6744705335dd3d40eddc2c7be4d84958fface18ee0) [split#diff-0b16e68584afa81cdad3d7b5f0e804951e691f8f15d48054d5985c21dc9091](https://github.com/navin-moorthy/split/issues/diff-0b16e68584afa81cdad3d7b5f0e804951e691f8f15d48054d5985c21dc9091) [split#diff-bb558edcfe64dde3c4d2b8ad39e0620eba6128c3471943bb856f35192d8adc57](https://github.com/navin-moorthy/split/issues/diff-bb558edcfe64dde3c4d2b8ad39e0620eba6128c3471943bb856f35192d8adc57) [split#diff-5cf8e77210aa0eab867346744e9d28a14155363b32216976bd510bc9733fd9a5](https://github.com/navin-moorthy/split/issues/diff-5cf8e77210aa0eab867346744e9d28a14155363b32216976bd510bc9733fd9a5) [split#diff-a5de3e5871ffcc383a2294845bd3df25d3eeff6c29ad46e3a396577c413bf357](https://github.com/navin-moorthy/split/issues/diff-a5de3e5871ffcc383a2294845bd3df25d3eeff6c29ad46e3a396577c413bf357) [split#diff-62896e4754501eb20e5d3715cc2a262e03a7a71b9d1e3907c4dda68d01360191](https://github.com/navin-moorthy/split/issues/diff-62896e4754501eb20e5d3715cc2a262e03a7a71b9d1e3907c4dda68d01360191) [split#diff-677a1e263116bbd418949c9ceb82ebc9244b5fd90f6a226c6a7b25312ec0379](https://github.com/navin-moorthy/split/issues/diff-677a1e263116bbd418949c9ceb82ebc9244b5fd90f6a226c6a7b25312ec0379)
+
+* **env:** ✨ load .env file to node process env using dotenv ([d06f508](https://github.com/navin-moorthy/next-react-app/commit/d06f5080fbd53a6631c8b63ce86408b3ad005546)) by @navin-moorthy
+
+
+
+### Code Refactors
+
+* **home:** ♻️ add next js starter template in tailwind ([7276b9c](https://github.com/navin-moorthy/next-react-app/commit/7276b9c1fb857bafb00ff223a5a0ada73300ed65)) by @navin-moorthy
+
+* **release-it:** ♻️ update proper lastmcommit date in log ([abd0c82](https://github.com/navin-moorthy/next-react-app/commit/abd0c82b99da1d2e8834414895781b609889d7c8)) by @navin-moorthy
+
+
+
+### Maintanance Updates
+
+* **deps:** lock file maintenance (#100) ([8d32d2f](https://github.com/navin-moorthy/next-react-app/commit/8d32d2fd6ffab8f474596c157f1518ffb35bbda3)) by @renovate[bot], closes [#100](https://github.com/navin-moorthy/next-react-app/issues/100)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Update | Change |
+|---|---|
+| lockFileMaintenance | All locks refreshed |
+
+🔧 This Pull Request updates lock files to use the latest dependency versions.
+
+---
+
+  
+
+* **deps:** lock file maintenance (#101) ([556e74f](https://github.com/navin-moorthy/next-react-app/commit/556e74f75a3122ff4e421bffc680a9b72f6530b2)) by @renovate[bot], closes [#101](https://github.com/navin-moorthy/next-react-app/issues/101)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Update | Change |
+|---|---|
+| lockFileMaintenance | All locks refreshed |
+
+🔧 This Pull Request updates lock files to use the latest dependency versions.
+
+---
+
+  
+
+* **deps:** lock file maintenance (#115) ([eb6bb31](https://github.com/navin-moorthy/next-react-app/commit/eb6bb31e6f024c59b58fd2bca4bed6d0c73569d9)) by @renovate[bot], closes [#115](https://github.com/navin-moorthy/next-react-app/issues/115)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Update | Change |
+|---|---|
+| lockFileMaintenance | All locks refreshed |
+
+🔧 This Pull Request updates lock files to use the latest dependency versions.
+
+---
+
+  
+
+* **deps:** lock file maintenance (#125) ([6d7f1e7](https://github.com/navin-moorthy/next-react-app/commit/6d7f1e7ab4e6612b83500f97cc4e496291468b5a)) by @renovate[bot], closes [#125](https://github.com/navin-moorthy/next-react-app/issues/125)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Update | Change |
+|---|---|
+| lockFileMaintenance | All locks refreshed |
+
+🔧 This Pull Request updates lock files to use the latest dependency versions.
+
+---
+
+  
+
+* **deps:** lock file maintenance (#88) ([5876d17](https://github.com/navin-moorthy/next-react-app/commit/5876d17f8ddebabe21a667e82a7c356d3a82b0c6)) by @renovate[bot], closes [#88](https://github.com/navin-moorthy/next-react-app/issues/88)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Update | Change |
+|---|---|
+| lockFileMaintenance | All locks refreshed |
+
+🔧 This Pull Request updates lock files to use the latest dependency versions.
+
+---
+
+  
+
+* **deps:** lock file maintenance (#94) ([98d5642](https://github.com/navin-moorthy/next-react-app/commit/98d56423a8a954bc884f18e0b82f68087d7ebb42)) by @renovate[bot], closes [#94](https://github.com/navin-moorthy/next-react-app/issues/94)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Update | Change |
+|---|---|
+| lockFileMaintenance | All locks refreshed |
+
+🔧 This Pull Request updates lock files to use the latest dependency versions.
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update @types/node to v18.11.19 (#99) ([db8d506](https://github.com/navin-moorthy/next-react-app/commit/db8d506b117c5c128b68c678ec138683faa85b84)) by @renovate[bot], closes [#99](https://github.com/navin-moorthy/next-react-app/issues/99)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@types/node](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`18.11.18` -> `18.11.19`](https://renovatebot.com/diffs/npm/@types%2fnode/18.11.18/18.11.19) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.11.19/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.11.19/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.11.19/compatibility-slim/18.11.18)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.11.19/confidence-slim/18.11.18)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update @types/node to v18.13.0 (#104) ([1a64101](https://github.com/navin-moorthy/next-react-app/commit/1a64101137c420063646674178193f63af43a79e)) by @renovate[bot], closes [#104](https://github.com/navin-moorthy/next-react-app/issues/104)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@types/node](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`18.11.19` -> `18.13.0`](https://renovatebot.com/diffs/npm/@types%2fnode/18.11.19/18.13.0) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.13.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.13.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.13.0/compatibility-slim/18.11.19)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.13.0/confidence-slim/18.11.19)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update @types/node to v18.14.0 (#123) ([7205579](https://github.com/navin-moorthy/next-react-app/commit/7205579116a2a48eed7baa1458163002865e1d9c)) by @renovate[bot], closes [#123](https://github.com/navin-moorthy/next-react-app/issues/123)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@types/node](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`18.13.0` -> `18.14.0`](https://renovatebot.com/diffs/npm/@types%2fnode/18.13.0/18.14.0) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.14.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.14.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.14.0/compatibility-slim/18.13.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.14.0/confidence-slim/18.13.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update @types/node to v18.14.1 (#127) ([4ab4571](https://github.com/navin-moorthy/next-react-app/commit/4ab45718e1431d72d2a6a4fa2cea4cbcdbf3417d)) by @renovate[bot], closes [#127](https://github.com/navin-moorthy/next-react-app/issues/127)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@types/node](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`18.14.0` -> `18.14.1`](https://renovatebot.com/diffs/npm/@types%2fnode/18.14.0/18.14.1) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.14.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.14.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.14.1/compatibility-slim/18.14.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.14.1/confidence-slim/18.14.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update @types/react to v18.0.28 (#112) ([ca3f9e9](https://github.com/navin-moorthy/next-react-app/commit/ca3f9e9078c27b8bceaaa4017eb5202f4aac6d24)) by @renovate[bot], closes [#112](https://github.com/navin-moorthy/next-react-app/issues/112)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@types/react](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`18.0.27` -> `18.0.28`](https://renovatebot.com/diffs/npm/@types%2freact/18.0.27/18.0.28) | [![age](https://badges.renovateapi.com/packages/npm/@types%2freact/18.0.28/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2freact/18.0.28/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2freact/18.0.28/compatibility-slim/18.0.27)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2freact/18.0.28/confidence-slim/18.0.27)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (minor) (#126) ([e0051e3](https://github.com/navin-moorthy/next-react-app/commit/e0051e3188ff040e2b600e8f1f92e2f531f34d70)) by @renovate[bot], closes [#126](https://github.com/navin-moorthy/next-react-app/issues/126)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@babel/core](https://babel.dev/docs/en/next/babel-core) ([source](https://togithub.com/babel/babel)) | [`^7.20.12` -> `^7.21.0`](https://renovatebot.com/diffs/npm/@babel%2fcore/7.20.12/7.21.0) | [![age](https://badges.renovateapi.com/packages/npm/@babel%2fcore/7.21.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@babel%2fcore/7.21.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@babel%2fcore/7.21.0/compatibility-slim/7.20.12)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@babel%2fcore/7.21.0/confidence-slim/7.20.12)](https://docs.renovatebot.com/merge-confidence/) |
+| [@typescript-eslint/eslint-plugin](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.52.0` -> `5.53.0`](https://renovatebot.com/diffs/npm/@typescript-eslint%2feslint-plugin/5.52.0/5.53.0) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.53.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.53.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.53.0/compatibility-slim/5.52.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.53.0/confidence-slim/5.52.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [@typescript-eslint/parser](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.52.0` -> `5.53.0`](https://renovatebot.com/diffs/npm/@typescript-eslint%2fparser/5.52.0/5.53.0) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.53.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.53.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.53.0/compatibility-slim/5.52.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.53.0/confidence-slim/5.52.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [eslint-plugin-tailwindcss](https://togithub.com/francoismassart/eslint-plugin-tailwindcss) | [`^3.8.3` -> `^3.9.0`](https://renovatebot.com/diffs/npm/eslint-plugin-tailwindcss/3.8.3/3.9.0) | [![age](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.9.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.9.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.9.0/compatibility-slim/3.8.3)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.9.0/confidence-slim/3.8.3)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#103) ([3d1cbf2](https://github.com/navin-moorthy/next-react-app/commit/3d1cbf2bbd71eb7186ac2daab820f599bbfec87d)) by @renovate[bot], closes [#103](https://github.com/navin-moorthy/next-react-app/issues/103)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [jest](https://jestjs.io/) ([source](https://togithub.com/facebook/jest)) | [`29.4.1` -> `29.4.2`](https://renovatebot.com/diffs/npm/jest/29.4.1/29.4.2) | [![age](https://badges.renovateapi.com/packages/npm/jest/29.4.2/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest/29.4.2/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest/29.4.2/compatibility-slim/29.4.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest/29.4.2/confidence-slim/29.4.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [jest-environment-jsdom](https://togithub.com/facebook/jest) | [`29.4.1` -> `29.4.2`](https://renovatebot.com/diffs/npm/jest-environment-jsdom/29.4.1/29.4.2) | [![age](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.2/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.2/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.2/compatibility-slim/29.4.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.2/confidence-slim/29.4.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [lint-staged](https://togithub.com/okonet/lint-staged) | [`13.1.0` -> `13.1.1`](https://renovatebot.com/diffs/npm/lint-staged/13.1.0/13.1.1) | [![age](https://badges.renovateapi.com/packages/npm/lint-staged/13.1.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/lint-staged/13.1.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/lint-staged/13.1.1/compatibility-slim/13.1.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/lint-staged/13.1.1/confidence-slim/13.1.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [next-sitemap](https://togithub.com/iamvishnusankar/next-sitemap) | [`3.1.49` -> `3.1.50`](https://renovatebot.com/diffs/npm/next-sitemap/3.1.49/3.1.50) | [![age](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.50/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.50/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.50/compatibility-slim/3.1.49)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.50/confidence-slim/3.1.49)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#105) ([5fb24ad](https://github.com/navin-moorthy/next-react-app/commit/5fb24ad8a72dd7075a08efe7152aa40a7cdecb3e)) by @renovate[bot], closes [#105](https://github.com/navin-moorthy/next-react-app/issues/105)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [prettier](https://prettier.io) ([source](https://togithub.com/prettier/prettier)) | [`2.8.3` -> `2.8.4`](https://renovatebot.com/diffs/npm/prettier/2.8.3/2.8.4) | [![age](https://badges.renovateapi.com/packages/npm/prettier/2.8.4/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/prettier/2.8.4/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/prettier/2.8.4/compatibility-slim/2.8.3)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/prettier/2.8.4/confidence-slim/2.8.3)](https://docs.renovatebot.com/merge-confidence/) |
+| [tailwindcss](https://tailwindcss.com) ([source](https://togithub.com/tailwindlabs/tailwindcss)) | [`3.2.4` -> `3.2.6`](https://renovatebot.com/diffs/npm/tailwindcss/3.2.4/3.2.6) | [![age](https://badges.renovateapi.com/packages/npm/tailwindcss/3.2.6/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/tailwindcss/3.2.6/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/tailwindcss/3.2.6/compatibility-slim/3.2.4)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/tailwindcss/3.2.6/confidence-slim/3.2.4)](https://docs.renovatebot.com/merge-confidence/) |
+| [zod](https://zod.dev) ([source](https://togithub.com/colinhacks/zod)) | [`3.20.2` -> `3.20.5`](https://renovatebot.com/diffs/npm/zod/3.20.2/3.20.5) | [![age](https://badges.renovateapi.com/packages/npm/zod/3.20.5/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/zod/3.20.5/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/zod/3.20.5/compatibility-slim/3.20.2)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/zod/3.20.5/confidence-slim/3.20.2)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#108) ([e2780b5](https://github.com/navin-moorthy/next-react-app/commit/e2780b5f415385c7a45f797f88b7210baee61305)) by @renovate[bot], closes [#108](https://github.com/navin-moorthy/next-react-app/issues/108)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [next-sitemap](https://togithub.com/iamvishnusankar/next-sitemap) | [`3.1.50` -> `3.1.52`](https://renovatebot.com/diffs/npm/next-sitemap/3.1.50/3.1.52) | [![age](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.52/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.52/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.52/compatibility-slim/3.1.50)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.52/confidence-slim/3.1.50)](https://docs.renovatebot.com/merge-confidence/) |
+| [zod](https://zod.dev) ([source](https://togithub.com/colinhacks/zod)) | [`3.20.5` -> `3.20.6`](https://renovatebot.com/diffs/npm/zod/3.20.5/3.20.6) | [![age](https://badges.renovateapi.com/packages/npm/zod/3.20.6/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/zod/3.20.6/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/zod/3.20.6/compatibility-slim/3.20.5)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/zod/3.20.6/confidence-slim/3.20.5)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#117) ([b63b769](https://github.com/navin-moorthy/next-react-app/commit/b63b7697d308cb32ac294eb3ade4c63f710ceabc)) by @renovate[bot], closes [#117](https://github.com/navin-moorthy/next-react-app/issues/117)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@commitlint/cli](https://commitlint.js.org/) ([source](https://togithub.com/conventional-changelog/commitlint)) | [`17.4.2` -> `17.4.3`](https://renovatebot.com/diffs/npm/@commitlint%2fcli/17.4.2/17.4.3) | [![age](https://badges.renovateapi.com/packages/npm/@commitlint%2fcli/17.4.3/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@commitlint%2fcli/17.4.3/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@commitlint%2fcli/17.4.3/compatibility-slim/17.4.2)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@commitlint%2fcli/17.4.3/confidence-slim/17.4.2)](https://docs.renovatebot.com/merge-confidence/) |
+| [@commitlint/config-conventional](https://commitlint.js.org/) ([source](https://togithub.com/conventional-changelog/commitlint)) | [`17.4.2` -> `17.4.3`](https://renovatebot.com/diffs/npm/@commitlint%2fconfig-conventional/17.4.2/17.4.3) | [![age](https://badges.renovateapi.com/packages/npm/@commitlint%2fconfig-conventional/17.4.3/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@commitlint%2fconfig-conventional/17.4.3/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@commitlint%2fconfig-conventional/17.4.3/compatibility-slim/17.4.2)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@commitlint%2fconfig-conventional/17.4.3/confidence-slim/17.4.2)](https://docs.renovatebot.com/merge-confidence/) |
+| [lint-staged](https://togithub.com/okonet/lint-staged) | [`13.1.1` -> `13.1.2`](https://renovatebot.com/diffs/npm/lint-staged/13.1.1/13.1.2) | [![age](https://badges.renovateapi.com/packages/npm/lint-staged/13.1.2/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/lint-staged/13.1.2/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/lint-staged/13.1.2/compatibility-slim/13.1.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/lint-staged/13.1.2/confidence-slim/13.1.1)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#119) ([17ddf39](https://github.com/navin-moorthy/next-react-app/commit/17ddf3958ec1b619778a3917d0f1260c8d63d64a)) by @renovate[bot], closes [#119](https://github.com/navin-moorthy/next-react-app/issues/119)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@types/react-dom](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-dom) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`18.0.10` -> `18.0.11`](https://renovatebot.com/diffs/npm/@types%2freact-dom/18.0.10/18.0.11) | [![age](https://badges.renovateapi.com/packages/npm/@types%2freact-dom/18.0.11/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2freact-dom/18.0.11/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2freact-dom/18.0.11/compatibility-slim/18.0.10)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2freact-dom/18.0.11/confidence-slim/18.0.10)](https://docs.renovatebot.com/merge-confidence/) |
+| [jest](https://jestjs.io/) ([source](https://togithub.com/facebook/jest)) | [`29.4.2` -> `29.4.3`](https://renovatebot.com/diffs/npm/jest/29.4.2/29.4.3) | [![age](https://badges.renovateapi.com/packages/npm/jest/29.4.3/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest/29.4.3/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest/29.4.3/compatibility-slim/29.4.2)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest/29.4.3/confidence-slim/29.4.2)](https://docs.renovatebot.com/merge-confidence/) |
+| [jest-environment-jsdom](https://togithub.com/facebook/jest) | [`29.4.2` -> `29.4.3`](https://renovatebot.com/diffs/npm/jest-environment-jsdom/29.4.2/29.4.3) | [![age](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.3/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.3/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.3/compatibility-slim/29.4.2)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.3/confidence-slim/29.4.2)](https://docs.renovatebot.com/merge-confidence/) |
+| [prettier-plugin-tailwindcss](https://togithub.com/tailwindlabs/prettier-plugin-tailwindcss) | [`^0.2.2` -> `^0.2.3`](https://renovatebot.com/diffs/npm/prettier-plugin-tailwindcss/0.2.2/0.2.3) | [![age](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.3/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.3/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.3/compatibility-slim/0.2.2)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.3/confidence-slim/0.2.2)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#86) ([c174f5c](https://github.com/navin-moorthy/next-react-app/commit/c174f5c420af706835aa580570a2c05421f03598)) by @renovate[bot], closes [#86](https://github.com/navin-moorthy/next-react-app/issues/86)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [eslint-plugin-tailwindcss](https://togithub.com/francoismassart/eslint-plugin-tailwindcss) | [`^3.8.1` -> `^3.8.2`](https://renovatebot.com/diffs/npm/eslint-plugin-tailwindcss/3.8.1/3.8.2) | [![age](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.8.2/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.8.2/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.8.2/compatibility-slim/3.8.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.8.2/confidence-slim/3.8.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [prettier-plugin-tailwindcss](https://togithub.com/tailwindlabs/prettier-plugin-tailwindcss) | [`^0.2.1` -> `^0.2.2`](https://renovatebot.com/diffs/npm/prettier-plugin-tailwindcss/0.2.1/0.2.2) | [![age](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.2/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.2/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.2/compatibility-slim/0.2.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.2/confidence-slim/0.2.1)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#93) ([8c27859](https://github.com/navin-moorthy/next-react-app/commit/8c27859547a03dadf6c75e974fbbb9f1f5a70f2e)) by @renovate[bot], closes [#93](https://github.com/navin-moorthy/next-react-app/issues/93)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [eslint-plugin-react](https://togithub.com/jsx-eslint/eslint-plugin-react) | [`7.32.1` -> `7.32.2`](https://renovatebot.com/diffs/npm/eslint-plugin-react/7.32.1/7.32.2) | [![age](https://badges.renovateapi.com/packages/npm/eslint-plugin-react/7.32.2/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/eslint-plugin-react/7.32.2/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/eslint-plugin-react/7.32.2/compatibility-slim/7.32.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/eslint-plugin-react/7.32.2/confidence-slim/7.32.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [next-sitemap](https://togithub.com/iamvishnusankar/next-sitemap) | [`3.1.47` -> `3.1.48`](https://renovatebot.com/diffs/npm/next-sitemap/3.1.47/3.1.48) | [![age](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.48/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.48/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.48/compatibility-slim/3.1.47)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.48/confidence-slim/3.1.47)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v13.1.6 (patch) (#90) ([cfeaff9](https://github.com/navin-moorthy/next-react-app/commit/cfeaff9a8014667b472b13cabdd8b8ce64e63a24)) by @renovate[bot], closes [#90](https://github.com/navin-moorthy/next-react-app/issues/90)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@next/bundle-analyzer](https://togithub.com/vercel/next.js) | [`13.1.5` -> `13.1.6`](https://renovatebot.com/diffs/npm/@next%2fbundle-analyzer/13.1.5/13.1.6) | [![age](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.1.6/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.1.6/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.1.6/compatibility-slim/13.1.5)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.1.6/confidence-slim/13.1.5)](https://docs.renovatebot.com/merge-confidence/) |
+| [@next/env](https://togithub.com/vercel/next.js) | [`13.1.5` -> `13.1.6`](https://renovatebot.com/diffs/npm/@next%2fenv/13.1.5/13.1.6) | [![age](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.1.6/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.1.6/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.1.6/compatibility-slim/13.1.5)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.1.6/confidence-slim/13.1.5)](https://docs.renovatebot.com/merge-confidence/) |
+| [@next/eslint-plugin-next](https://togithub.com/vercel/next.js) | [`13.1.5` -> `13.1.6`](https://renovatebot.com/diffs/npm/@next%2feslint-plugin-next/13.1.5/13.1.6) | [![age](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.1.6/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.1.6/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.1.6/compatibility-slim/13.1.5)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.1.6/confidence-slim/13.1.5)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v13.2.0 (minor) (#128) ([d8c4434](https://github.com/navin-moorthy/next-react-app/commit/d8c4434ba85645ffb624a7a032aa802d39c93ee4)) by @renovate[bot], closes [#128](https://github.com/navin-moorthy/next-react-app/issues/128)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@next/bundle-analyzer](https://togithub.com/vercel/next.js) | [`13.1.6` -> `13.2.0`](https://renovatebot.com/diffs/npm/@next%2fbundle-analyzer/13.1.6/13.2.0) | [![age](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.2.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.2.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.2.0/compatibility-slim/13.1.6)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.2.0/confidence-slim/13.1.6)](https://docs.renovatebot.com/merge-confidence/) |
+| [@next/env](https://togithub.com/vercel/next.js) | [`13.1.6` -> `13.2.0`](https://renovatebot.com/diffs/npm/@next%2fenv/13.1.6/13.2.0) | [![age](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.2.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.2.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.2.0/compatibility-slim/13.1.6)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.2.0/confidence-slim/13.1.6)](https://docs.renovatebot.com/merge-confidence/) |
+| [@next/eslint-plugin-next](https://togithub.com/vercel/next.js) | [`13.1.6` -> `13.2.0`](https://renovatebot.com/diffs/npm/@next%2feslint-plugin-next/13.1.6/13.2.0) | [![age](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.2.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.2.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.2.0/compatibility-slim/13.1.6)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.2.0/confidence-slim/13.1.6)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v13.2.1 (patch) (#130) ([8ad827b](https://github.com/navin-moorthy/next-react-app/commit/8ad827b39d9681ba881920d88f18fa029d0ada80)) by @renovate[bot], closes [#130](https://github.com/navin-moorthy/next-react-app/issues/130)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@next/bundle-analyzer](https://togithub.com/vercel/next.js) | [`13.2.0` -> `13.2.1`](https://renovatebot.com/diffs/npm/@next%2fbundle-analyzer/13.2.0/13.2.1) | [![age](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.2.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.2.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.2.1/compatibility-slim/13.2.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.2.1/confidence-slim/13.2.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [@next/env](https://togithub.com/vercel/next.js) | [`13.2.0` -> `13.2.1`](https://renovatebot.com/diffs/npm/@next%2fenv/13.2.0/13.2.1) | [![age](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.2.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.2.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.2.1/compatibility-slim/13.2.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.2.1/confidence-slim/13.2.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [@next/eslint-plugin-next](https://togithub.com/vercel/next.js) | [`13.2.0` -> `13.2.1`](https://renovatebot.com/diffs/npm/@next%2feslint-plugin-next/13.2.0/13.2.1) | [![age](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.2.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.2.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.2.1/compatibility-slim/13.2.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.2.1/confidence-slim/13.2.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v17.4.4 (patch) (#122) ([a648214](https://github.com/navin-moorthy/next-react-app/commit/a6482143ec2392e17e15b3801499ee8e6b51e197)) by @renovate[bot], closes [#122](https://github.com/navin-moorthy/next-react-app/issues/122)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@commitlint/cli](https://commitlint.js.org/) ([source](https://togithub.com/conventional-changelog/commitlint)) | [`17.4.3` -> `17.4.4`](https://renovatebot.com/diffs/npm/@commitlint%2fcli/17.4.3/17.4.4) | [![age](https://badges.renovateapi.com/packages/npm/@commitlint%2fcli/17.4.4/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@commitlint%2fcli/17.4.4/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@commitlint%2fcli/17.4.4/compatibility-slim/17.4.3)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@commitlint%2fcli/17.4.4/confidence-slim/17.4.3)](https://docs.renovatebot.com/merge-confidence/) |
+| [@commitlint/config-conventional](https://commitlint.js.org/) ([source](https://togithub.com/conventional-changelog/commitlint)) | [`17.4.3` -> `17.4.4`](https://renovatebot.com/diffs/npm/@commitlint%2fconfig-conventional/17.4.3/17.4.4) | [![age](https://badges.renovateapi.com/packages/npm/@commitlint%2fconfig-conventional/17.4.4/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@commitlint%2fconfig-conventional/17.4.4/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@commitlint%2fconfig-conventional/17.4.4/compatibility-slim/17.4.3)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@commitlint%2fconfig-conventional/17.4.4/confidence-slim/17.4.3)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v29.4.0 (minor) (#87) ([fa3988b](https://github.com/navin-moorthy/next-react-app/commit/fa3988b3d6bd0a22aed6c539711f761686226e8b)) by @renovate[bot], closes [#87](https://github.com/navin-moorthy/next-react-app/issues/87)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@types/jest](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/jest) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`29.2.6` -> `29.4.0`](https://renovatebot.com/diffs/npm/@types%2fjest/29.2.6/29.4.0) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/compatibility-slim/29.2.6)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/confidence-slim/29.2.6)](https://docs.renovatebot.com/merge-confidence/) |
+| [jest](https://jestjs.io/) ([source](https://togithub.com/facebook/jest)) | [`29.3.1` -> `29.4.0`](https://renovatebot.com/diffs/npm/jest/29.3.1/29.4.0) | [![age](https://badges.renovateapi.com/packages/npm/jest/29.4.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest/29.4.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest/29.4.0/compatibility-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest/29.4.0/confidence-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [jest-environment-jsdom](https://togithub.com/facebook/jest) | [`29.3.1` -> `29.4.0`](https://renovatebot.com/diffs/npm/jest-environment-jsdom/29.3.1/29.4.0) | [![age](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/compatibility-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/confidence-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v29.4.0 (minor) (#87) ([ab96ef7](https://github.com/navin-moorthy/next-react-app/commit/ab96ef76af6b3fcc661f3b02ff54d74d0fb4b91a)) by @renovate[bot], closes [#87](https://github.com/navin-moorthy/next-react-app/issues/87)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@types/jest](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/jest) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`29.2.6` -> `29.4.0`](https://renovatebot.com/diffs/npm/@types%2fjest/29.2.6/29.4.0) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/compatibility-slim/29.2.6)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/confidence-slim/29.2.6)](https://docs.renovatebot.com/merge-confidence/) |
+| [jest](https://jestjs.io/) ([source](https://togithub.com/facebook/jest)) | [`29.3.1` -> `29.4.0`](https://renovatebot.com/diffs/npm/jest/29.3.1/29.4.0) | [![age](https://badges.renovateapi.com/packages/npm/jest/29.4.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest/29.4.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest/29.4.0/compatibility-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest/29.4.0/confidence-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [jest-environment-jsdom](https://togithub.com/facebook/jest) | [`29.3.1` -> `29.4.0`](https://renovatebot.com/diffs/npm/jest-environment-jsdom/29.3.1/29.4.0) | [![age](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/compatibility-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/confidence-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v29.4.1 (patch) (#89) ([aa2b9d5](https://github.com/navin-moorthy/next-react-app/commit/aa2b9d5886b4d6352ea580eaeb80cbdc43693c72)) by @renovate[bot], closes [#89](https://github.com/navin-moorthy/next-react-app/issues/89)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [jest](https://jestjs.io/) ([source](https://togithub.com/facebook/jest)) | [`29.4.0` -> `29.4.1`](https://renovatebot.com/diffs/npm/jest/29.4.0/29.4.1) | [![age](https://badges.renovateapi.com/packages/npm/jest/29.4.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest/29.4.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest/29.4.1/compatibility-slim/29.4.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest/29.4.1/confidence-slim/29.4.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [jest-environment-jsdom](https://togithub.com/facebook/jest) | [`29.4.0` -> `29.4.1`](https://renovatebot.com/diffs/npm/jest-environment-jsdom/29.4.0/29.4.1) | [![age](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.1/compatibility-slim/29.4.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.1/confidence-slim/29.4.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v5.50.0 (minor) (#97) ([cca2175](https://github.com/navin-moorthy/next-react-app/commit/cca2175414cd2ac574d197ed889cc33e965afd23)) by @renovate[bot], closes [#97](https://github.com/navin-moorthy/next-react-app/issues/97)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@typescript-eslint/eslint-plugin](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.49.0` -> `5.50.0`](https://renovatebot.com/diffs/npm/@typescript-eslint%2feslint-plugin/5.49.0/5.50.0) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.50.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.50.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.50.0/compatibility-slim/5.49.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.50.0/confidence-slim/5.49.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [@typescript-eslint/parser](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.49.0` -> `5.50.0`](https://renovatebot.com/diffs/npm/@typescript-eslint%2fparser/5.49.0/5.50.0) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.50.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.50.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.50.0/compatibility-slim/5.49.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.50.0/confidence-slim/5.49.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v5.51.0 (minor) (#102) ([79c83f0](https://github.com/navin-moorthy/next-react-app/commit/79c83f0bc2a50941759b492621d8fafb97087cdf)) by @renovate[bot], closes [#102](https://github.com/navin-moorthy/next-react-app/issues/102)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@typescript-eslint/eslint-plugin](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.50.0` -> `5.51.0`](https://renovatebot.com/diffs/npm/@typescript-eslint%2feslint-plugin/5.50.0/5.51.0) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.51.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.51.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.51.0/compatibility-slim/5.50.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.51.0/confidence-slim/5.50.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [@typescript-eslint/parser](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.50.0` -> `5.51.0`](https://renovatebot.com/diffs/npm/@typescript-eslint%2fparser/5.50.0/5.51.0) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.51.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.51.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.51.0/compatibility-slim/5.50.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.51.0/confidence-slim/5.50.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v5.52.0 (minor) (#118) ([21f4895](https://github.com/navin-moorthy/next-react-app/commit/21f489568a6aba1758604f3cc3afcd551fcb9cb1)) by @renovate[bot], closes [#118](https://github.com/navin-moorthy/next-react-app/issues/118)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@typescript-eslint/eslint-plugin](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.51.0` -> `5.52.0`](https://renovatebot.com/diffs/npm/@typescript-eslint%2feslint-plugin/5.51.0/5.52.0) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.52.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.52.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.52.0/compatibility-slim/5.51.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.52.0/confidence-slim/5.51.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [@typescript-eslint/parser](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.51.0` -> `5.52.0`](https://renovatebot.com/diffs/npm/@typescript-eslint%2fparser/5.51.0/5.52.0) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.52.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.52.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.52.0/compatibility-slim/5.51.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.52.0/confidence-slim/5.51.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update eslint to v8.33.0 (#92) ([cba0e16](https://github.com/navin-moorthy/next-react-app/commit/cba0e16a64f758229165df85047451c8b4fc65eb)) by @renovate[bot], closes [#92](https://github.com/navin-moorthy/next-react-app/issues/92)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [eslint](https://eslint.org) ([source](https://togithub.com/eslint/eslint)) | [`8.32.0` -> `8.33.0`](https://renovatebot.com/diffs/npm/eslint/8.32.0/8.33.0) | [![age](https://badges.renovateapi.com/packages/npm/eslint/8.33.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/eslint/8.33.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/eslint/8.33.0/compatibility-slim/8.32.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/eslint/8.33.0/confidence-slim/8.32.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update eslint to v8.34.0 (#110) ([7c2eb2f](https://github.com/navin-moorthy/next-react-app/commit/7c2eb2f33c5db3a67caa1c2b52b62a3be7eb1637)) by @renovate[bot], closes [#110](https://github.com/navin-moorthy/next-react-app/issues/110)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [eslint](https://eslint.org) ([source](https://togithub.com/eslint/eslint)) | [`8.33.0` -> `8.34.0`](https://renovatebot.com/diffs/npm/eslint/8.33.0/8.34.0) | [![age](https://badges.renovateapi.com/packages/npm/eslint/8.34.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/eslint/8.34.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/eslint/8.34.0/compatibility-slim/8.33.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/eslint/8.34.0/confidence-slim/8.33.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update eslint-plugin-tailwindcss to ^3.8.3 (#96) ([03ef547](https://github.com/navin-moorthy/next-react-app/commit/03ef547a1eefc96c6e5fe581c3346b9238a82077)) by @renovate[bot], closes [#96](https://github.com/navin-moorthy/next-react-app/issues/96)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [eslint-plugin-tailwindcss](https://togithub.com/francoismassart/eslint-plugin-tailwindcss) | [`^3.8.2` -> `^3.8.3`](https://renovatebot.com/diffs/npm/eslint-plugin-tailwindcss/3.8.2/3.8.3) | [![age](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.8.3/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.8.3/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.8.3/compatibility-slim/3.8.2)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.8.3/confidence-slim/3.8.2)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update next-sitemap to v3.1.49 (#98) ([b604aca](https://github.com/navin-moorthy/next-react-app/commit/b604aca95df1f47bdbaf81162c227fd6717b3823)) by @renovate[bot], closes [#98](https://github.com/navin-moorthy/next-react-app/issues/98)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [next-sitemap](https://togithub.com/iamvishnusankar/next-sitemap) | [`3.1.48` -> `3.1.49`](https://renovatebot.com/diffs/npm/next-sitemap/3.1.48/3.1.49) | [![age](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.49/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.49/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.49/compatibility-slim/3.1.48)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/next-sitemap/3.1.49/confidence-slim/3.1.48)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update stylelint to v15.1.0 (#113) ([541a053](https://github.com/navin-moorthy/next-react-app/commit/541a0534fc409ce58e87292f20312ea109ac91ce)) by @renovate[bot], closes [#113](https://github.com/navin-moorthy/next-react-app/issues/113)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [stylelint](https://stylelint.io) ([source](https://togithub.com/stylelint/stylelint)) | [`15.0.0` -> `15.1.0`](https://renovatebot.com/diffs/npm/stylelint/15.0.0/15.1.0) | [![age](https://badges.renovateapi.com/packages/npm/stylelint/15.1.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/stylelint/15.1.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/stylelint/15.1.0/compatibility-slim/15.0.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/stylelint/15.1.0/confidence-slim/15.0.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update stylelint to v15.2.0 (#124) ([953edd3](https://github.com/navin-moorthy/next-react-app/commit/953edd36364411d459bc310ddc311ac10a9f3bf4)) by @renovate[bot], closes [#124](https://github.com/navin-moorthy/next-react-app/issues/124)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [stylelint](https://stylelint.io) ([source](https://togithub.com/stylelint/stylelint)) | [`15.1.0` -> `15.2.0`](https://renovatebot.com/diffs/npm/stylelint/15.1.0/15.2.0) | [![age](https://badges.renovateapi.com/packages/npm/stylelint/15.2.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/stylelint/15.2.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/stylelint/15.2.0/compatibility-slim/15.1.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/stylelint/15.2.0/confidence-slim/15.1.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update stylelint-config-prettier to v9.0.5 (#109) ([2ea91b4](https://github.com/navin-moorthy/next-react-app/commit/2ea91b456742d2b959023dcd887777ef77270ad4)) by @renovate[bot], closes [#109](https://github.com/navin-moorthy/next-react-app/issues/109)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [stylelint-config-prettier](https://togithub.com/prettier/stylelint-config-prettier) | [`9.0.4` -> `9.0.5`](https://renovatebot.com/diffs/npm/stylelint-config-prettier/9.0.4/9.0.5) | [![age](https://badges.renovateapi.com/packages/npm/stylelint-config-prettier/9.0.5/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/stylelint-config-prettier/9.0.5/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/stylelint-config-prettier/9.0.5/compatibility-slim/9.0.4)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/stylelint-config-prettier/9.0.5/confidence-slim/9.0.4)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update tailwindcss to v3.2.7 (#120) ([6b80db3](https://github.com/navin-moorthy/next-react-app/commit/6b80db394692ea47ced3330cf76f810bdd77f479)) by @renovate[bot], closes [#120](https://github.com/navin-moorthy/next-react-app/issues/120)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [tailwindcss](https://tailwindcss.com) ([source](https://togithub.com/tailwindlabs/tailwindcss)) | [`3.2.6` -> `3.2.7`](https://renovatebot.com/diffs/npm/tailwindcss/3.2.6/3.2.7) | [![age](https://badges.renovateapi.com/packages/npm/tailwindcss/3.2.7/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/tailwindcss/3.2.7/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/tailwindcss/3.2.7/compatibility-slim/3.2.6)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/tailwindcss/3.2.7/confidence-slim/3.2.6)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update typescript to v4.9.5 (#95) ([445792a](https://github.com/navin-moorthy/next-react-app/commit/445792afdfd3a2809a9b55a193be5f2a44d4c71c)) by @renovate[bot], closes [#95](https://github.com/navin-moorthy/next-react-app/issues/95)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [typescript](https://www.typescriptlang.org/) ([source](https://togithub.com/Microsoft/TypeScript)) | [`4.9.4` -> `4.9.5`](https://renovatebot.com/diffs/npm/typescript/4.9.4/4.9.5) | [![age](https://badges.renovateapi.com/packages/npm/typescript/4.9.5/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/typescript/4.9.5/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/typescript/4.9.5/compatibility-slim/4.9.4)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/typescript/4.9.5/confidence-slim/4.9.4)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ upgrade @testing-library/react to v14 (#121) ([48c0862](https://github.com/navin-moorthy/next-react-app/commit/48c08626c091f7e64a50e6635beaad42824e00df)) by @renovate[bot], closes [#121](https://github.com/navin-moorthy/next-react-app/issues/121)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@testing-library/react](https://togithub.com/testing-library/react-testing-library) | [`13.4.0` -> `14.0.0`](https://renovatebot.com/diffs/npm/@testing-library%2freact/13.4.0/14.0.0) | [![age](https://badges.renovateapi.com/packages/npm/@testing-library%2freact/14.0.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@testing-library%2freact/14.0.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@testing-library%2freact/14.0.0/compatibility-slim/13.4.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@testing-library%2freact/14.0.0/confidence-slim/13.4.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ upgrade stylelint to v15 (#106) ([5bfa213](https://github.com/navin-moorthy/next-react-app/commit/5bfa213a42bfe43bf35e1d877f150078d0f6771d)) by @renovate[bot], closes [#106](https://github.com/navin-moorthy/next-react-app/issues/106)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [stylelint](https://stylelint.io) ([source](https://togithub.com/stylelint/stylelint)) | [`14.16.1` -> `15.0.0`](https://renovatebot.com/diffs/npm/stylelint/14.16.1/15.0.0) | [![age](https://badges.renovateapi.com/packages/npm/stylelint/15.0.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/stylelint/15.0.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/stylelint/15.0.0/compatibility-slim/14.16.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/stylelint/15.0.0/confidence-slim/14.16.1)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ upgrade stylelint-config-clean-order to v4 (#114) ([7bd6a7e](https://github.com/navin-moorthy/next-react-app/commit/7bd6a7e49852b3295ed56b2f69ca108a338e2777)) by @renovate[bot], closes [#114](https://github.com/navin-moorthy/next-react-app/issues/114)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [stylelint-config-clean-order](https://togithub.com/kutsan/stylelint-config-clean-order) | [`^2.3.1` -> `^4.0.0`](https://renovatebot.com/diffs/npm/stylelint-config-clean-order/2.3.1/4.0.0) | [![age](https://badges.renovateapi.com/packages/npm/stylelint-config-clean-order/4.0.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/stylelint-config-clean-order/4.0.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/stylelint-config-clean-order/4.0.0/compatibility-slim/2.3.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/stylelint-config-clean-order/4.0.0/confidence-slim/2.3.1)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ upgrade stylelint-config-clean-order to v5 (#116) ([b3e2b1d](https://github.com/navin-moorthy/next-react-app/commit/b3e2b1d75b240528baaa92b082e5b70546098212)) by @renovate[bot], closes [#116](https://github.com/navin-moorthy/next-react-app/issues/116)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [stylelint-config-clean-order](https://togithub.com/kutsan/stylelint-config-clean-order) | [`^4.0.0` -> `^5.0.0`](https://renovatebot.com/diffs/npm/stylelint-config-clean-order/4.0.0/5.0.0) | [![age](https://badges.renovateapi.com/packages/npm/stylelint-config-clean-order/5.0.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/stylelint-config-clean-order/5.0.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/stylelint-config-clean-order/5.0.0/compatibility-slim/4.0.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/stylelint-config-clean-order/5.0.0/confidence-slim/4.0.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ upgrade stylelint-config-standard to v30 (#107) ([5e0a5dc](https://github.com/navin-moorthy/next-react-app/commit/5e0a5dc0d56f5235a9d363b9a2eec54f25429ed4)) by @renovate[bot], closes [#107](https://github.com/navin-moorthy/next-react-app/issues/107)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [stylelint-config-standard](https://togithub.com/stylelint/stylelint-config-standard) | [`29.0.0` -> `30.0.1`](https://renovatebot.com/diffs/npm/stylelint-config-standard/29.0.0/30.0.1) | [![age](https://badges.renovateapi.com/packages/npm/stylelint-config-standard/30.0.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/stylelint-config-standard/30.0.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/stylelint-config-standard/30.0.1/compatibility-slim/29.0.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/stylelint-config-standard/30.0.1/confidence-slim/29.0.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **other-deps:** ⬆️ update next to v13.1.6 (#91) ([6785506](https://github.com/navin-moorthy/next-react-app/commit/678550641301924d1c506f4669d714c9a5511edb)) by @renovate[bot], closes [#91](https://github.com/navin-moorthy/next-react-app/issues/91)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [next](https://nextjs.org) ([source](https://togithub.com/vercel/next.js)) | [`13.1.5` -> `13.1.6`](https://renovatebot.com/diffs/npm/next/13.1.5/13.1.6) | [![age](https://badges.renovateapi.com/packages/npm/next/13.1.6/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/next/13.1.6/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/next/13.1.6/compatibility-slim/13.1.5)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/next/13.1.6/confidence-slim/13.1.5)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **other-deps:** ⬆️ update next to v13.2.0 (#129) ([e0302de](https://github.com/navin-moorthy/next-react-app/commit/e0302dea06136d819e829e321d3f08d773d07a5a)) by @renovate[bot], closes [#129](https://github.com/navin-moorthy/next-react-app/issues/129)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [next](https://nextjs.org) ([source](https://togithub.com/vercel/next.js)) | [`13.1.6` -> `13.2.0`](https://renovatebot.com/diffs/npm/next/13.1.6/13.2.0) | [![age](https://badges.renovateapi.com/packages/npm/next/13.2.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/next/13.2.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/next/13.2.0/compatibility-slim/13.1.6)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/next/13.2.0/confidence-slim/13.1.6)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **other-deps:** ⬆️ update next to v13.2.1 (#131) ([c4bdcd9](https://github.com/navin-moorthy/next-react-app/commit/c4bdcd9d1d73a83fce1cd3afef296c9dd9a2bfd8)) by @renovate[bot], closes [#131](https://github.com/navin-moorthy/next-react-app/issues/131)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [next](https://nextjs.org) ([source](https://togithub.com/vercel/next.js)) | [`13.2.0` -> `13.2.1`](https://renovatebot.com/diffs/npm/next/13.2.0/13.2.1) | [![age](https://badges.renovateapi.com/packages/npm/next/13.2.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/next/13.2.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/next/13.2.1/compatibility-slim/13.2.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/next/13.2.1/confidence-slim/13.2.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **release:** 🔖 initial release ([511a001](https://github.com/navin-moorthy/next-react-app/commit/511a001cf28e769f7bfc5856c1c6e5d2d4cb5d02)) by @navin-moorthy
+
+* **script:** 🏗️ update format script ([cbdd5e8](https://github.com/navin-moorthy/next-react-app/commit/cbdd5e8fe43dfbb73d9b89a1915a7eb85a12d1ca)) by @navin-moorthy
+
+* **version:** 🏗️ update to previous version in package json ([25b899c](https://github.com/navin-moorthy/next-react-app/commit/25b899c3063c63732d41a0cf62db4e767da8ef62)) by @navin-moorthy
+
 ## [3.0.0](https://github.com/navin-moorthy/next-react-app/compare/2.0.0...3.0.0) (2023-01-25)
 
 
