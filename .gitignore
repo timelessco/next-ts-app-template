@@ -66,6 +66,9 @@ storybook-static
 # Turbo Repo
 .turbo
 
+# Custom
+release-it/remote-commits.json
+
 ## library folder
 build
 .husky/post-checkout

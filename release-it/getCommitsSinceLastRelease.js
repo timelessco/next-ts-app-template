@@ -9,6 +9,10 @@ import { execa } from "execa";
 import gitRemoteOriginUrl from "git-remote-origin-url";
 import GitUrlParse from "git-url-parse";
 
+import * as dotenv from "dotenv";
+// see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config();
+
 const require = createRequire(import.meta.url);
 const packagejson = require("../package.json");
 
