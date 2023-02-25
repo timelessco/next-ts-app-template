@@ -17,7 +17,125 @@
 
 ### Feature Updates
 
-* **config:** 🔧 update better tooling with release it & other changes (#132) ([98efcb4](https://github.com/navin-moorthy/next-react-app/commit/98efcb4b357b1a1d5477f034c31a3cf5ef17ddfb)) by @navin-moorthy, closes [#132](https://github.com/navin-moorthy/next-react-app/issues/132) [split#diff-a8973c793505c01e9ddd05a1e86cae50d0b94aa97bf4d4b8616b785bf00ce0f2](https://github.com/navin-moorthy/split/issues/diff-a8973c793505c01e9ddd05a1e86cae50d0b94aa97bf4d4b8616b785bf00ce0f2) [split#diff-1a6731e971b66d5e90b6744705335dd3d40eddc2c7be4d84958fface18ee0](https://github.com/navin-moorthy/split/issues/diff-1a6731e971b66d5e90b6744705335dd3d40eddc2c7be4d84958fface18ee0) [split#diff-0b16e68584afa81cdad3d7b5f0e804951e691f8f15d48054d5985c21dc9091](https://github.com/navin-moorthy/split/issues/diff-0b16e68584afa81cdad3d7b5f0e804951e691f8f15d48054d5985c21dc9091) [split#diff-bb558edcfe64dde3c4d2b8ad39e0620eba6128c3471943bb856f35192d8adc57](https://github.com/navin-moorthy/split/issues/diff-bb558edcfe64dde3c4d2b8ad39e0620eba6128c3471943bb856f35192d8adc57) [split#diff-5cf8e77210aa0eab867346744e9d28a14155363b32216976bd510bc9733fd9a5](https://github.com/navin-moorthy/split/issues/diff-5cf8e77210aa0eab867346744e9d28a14155363b32216976bd510bc9733fd9a5) [split#diff-a5de3e5871ffcc383a2294845bd3df25d3eeff6c29ad46e3a396577c413bf357](https://github.com/navin-moorthy/split/issues/diff-a5de3e5871ffcc383a2294845bd3df25d3eeff6c29ad46e3a396577c413bf357) [split#diff-62896e4754501eb20e5d3715cc2a262e03a7a71b9d1e3907c4dda68d01360191](https://github.com/navin-moorthy/split/issues/diff-62896e4754501eb20e5d3715cc2a262e03a7a71b9d1e3907c4dda68d01360191) [split#diff-677a1e263116bbd418949c9ceb82ebc9244b5fd90f6a226c6a7b25312ec0379](https://github.com/navin-moorthy/split/issues/diff-677a1e263116bbd418949c9ceb82ebc9244b5fd90f6a226c6a7b25312ec0379)
+* **config:** 🔧 update better tooling with release it & other changes (#132) ([98efcb4](https://github.com/navin-moorthy/next-react-app/commit/98efcb4b357b1a1d5477f034c31a3cf5ef17ddfb)) by @navin-moorthy, closes [#132](https://github.com/navin-moorthy/next-react-app/issues/132)
+
+---
+
+- add [new release it](https://github.com/navin-moorthy/next-react-app/pull/132/files?diff=split#diff-a8973c793505c01e9ddd05a1e86cae50d0b94aa97bf4d4b8616b785bf00ce0f2) [changelog format](https://github.com/navin-moorthy/next-react-app/pull/132/files?diff=split#diff-1a6731e971b66d5e90b6744705335dd3d40eddc2c7be4d84958fface18ee0afc) [including commit body](https://github.com/navin-moorthy/next-react-app/pull/132/files?diff=split#diff-0b16e68584afa81cdad3d7b5f0e804951e691f8f15d48054d5985c21dc9091ee) for [better github release support](https://github.com/navin-moorthy/next-react-app/pull/132/files?diff=split#diff-bb558edcfe64dde3c4d2b8ad39e0620eba6128c3471943bb856f35192d8adc57)
+```json
+// package.json
+{"release": "node release-it/getCommitsSinceLastRelease.js && release-it"}
+```
+- update renovate cron to run once a week on saturday
+```json
+// .github/renovate.json
+{"schedule": ["after 12am and before 5am on saturday"]}
+```
+- remove renovate lockfile maintenance update
+```json
+// .github/renovate.json
+"lockFileMaintenance": {
+  "enabled": false
+},
+```
+- add .prettiercache to the root folder itself & gitignore it
+```json
+// package.json
+{"lint:prettier": "prettier --check --cache --cache-location=.prettiercache \"./**/*.{html,css,js,cjs,jsx,ts,cts,tsx,md,json}\""}
+```
+- add prettier import order with react, next & other libraries following it
+```js
+// .prettierrc.cjs
+importOrder: [
+  // Packages.
+  // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+  "^react$",
+  "^react-dom$",
+  "^next$",
+  "^next/+",
+  "^@?\\w",
+  "",
+  // Absolute imports and other imports such as Vue-style `@/foo`.
+  // Anything that does not start with a dot.
+  "^../",
+  "",
+  "^./",
+  "",
+
+  // Relative imports.
+  // Anything that starts with two dots.
+
+  // Style imports.
+  "^.+\\.s?css$",
+],
+```
+- [update stylelint config](https://github.com/navin-moorthy/next-react-app/pull/132/files?diff=split#diff-5cf8e77210aa0eab867346744e9d28a14155363b32216976bd510bc9733fd9a5) for the new major version which no longer requires `stylelint-config-prettier`
+- add all of the local vscode settings.json to the [workspace settings.json](https://github.com/navin-moorthy/next-react-app/pull/132/files?diff=split#diff-a5de3e5871ffcc383a2294845bd3df25d3eeff6c29ad46e3a396577c413bf357)
+- add required [`env` check for `NEXT_PUBLIC_SITE_URL`](https://github.com/navin-moorthy/next-react-app/pull/132/files?diff=split#diff-62896e4754501eb20e5d3715cc2a262e03a7a71b9d1e3907c4dda68d01360191) which is [required for sitemap](https://github.com/navin-moorthy/next-react-app/pull/132/files?diff=split#diff-677a1e263116bbd418949c9ceb82ebc9244b5fd90f6a226c6a7b25312ec0379a)
+- add new image configuration for `next.config.js`
+```js
+// next.config.js
+images: {
+  formats: ["image/avif", "image/webp"],
+  deviceSizes: [384, 640, 768, 1024, 1280, 1440, 2560],
+  imageSizes: [128, 256],
+},
+```
+- update `tailwind.config.cjs` for better legibility & update the html tag
+```js
+// tailwind.config.cjs
+plugin(function ({ addUtilities }) {
+  addUtilities({
+    ".inter-display": {
+      "font-variation-settings": `"opsz" 32`,
+    },
+  });
+  addUtilities({
+    ".optimizeLegibility": {
+      "text-rendering": "optimizeLegibility",
+    },
+  });
+}),
+```
+```jsx
+// pages/_document.tsx
+<Html className="min-h-full antialiased inter-display optimizeLegibility" lang="en" />
+```
+- add customized `InterVar` with `Adjusted Arial Fallback` of a local font & preload our customized font.
+```js
+// tailwind.config.cjs
+fontFamily: {
+  sans: [
+    "InterVar",
+    "Adjusted Arial Fallback",
+    ...defaultTheme.fontFamily.sans,
+  ],
+},
+```
+```jsx
+// pages/_document.tsx
+<Head>
+  {/* Fonts Preload */}
+  <link
+    rel="preload"
+    href="/fonts/Inter.var-english.woff2"
+    as="font"
+    type="font/woff2"
+    crossOrigin="anonymous"
+  />
+</Head>;
+```
+- add also notes on how to add the font splitting & fallback in the `styles/global.css` file [gist lint](https://gist.githubusercontent.com/navin-moorthy/7833eaca953c4ea4d1759625354b48ba/raw/055b58b73999385a329e2043263e76f11f882467/Font%20Slicing%20with%20fallback%20for%20performance.css)
+- add hover media query to disable hover interaction on mobile
+```js
+// tailwind.config.cjs
+future: {
+  relativeContentPathsByDefault: true,
+  hoverOnlyWhenSupported: true,
+},
+```
+
+---
 
 * **env:** ✨ load .env file to node process env using dotenv ([d06f508](https://github.com/navin-moorthy/next-react-app/commit/d06f5080fbd53a6631c8b63ce86408b3ad005546)) by @navin-moorthy
 
@@ -33,7 +151,7 @@
 
 ### Maintanance Updates
 
-* **deps:** lock file maintenance (#100) ([8d32d2f](https://github.com/navin-moorthy/next-react-app/commit/8d32d2fd6ffab8f474596c157f1518ffb35bbda3)) by @renovate[bot], closes [#100](https://github.com/navin-moorthy/next-react-app/issues/100)  
+* **deps:** lock file maintenance (#100) ([8d32d2f](https://github.com/navin-moorthy/next-react-app/commit/8d32d2fd6ffab8f474596c157f1518ffb35bbda3)) by @renovate[bot], closes [#100](https://github.com/navin-moorthy/next-react-app/issues/100)
 
 ---
 
@@ -49,27 +167,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **deps:** lock file maintenance (#101) ([556e74f](https://github.com/navin-moorthy/next-react-app/commit/556e74f75a3122ff4e421bffc680a9b72f6530b2)) by @renovate[bot], closes [#101](https://github.com/navin-moorthy/next-react-app/issues/101)  
 
----
-
-[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
-
-This PR contains the following updates:
-
-| Update | Change |
-|---|---|
-| lockFileMaintenance | All locks refreshed |
-
-🔧 This Pull Request updates lock files to use the latest dependency versions.
-
----
-
-  
-
-* **deps:** lock file maintenance (#115) ([eb6bb31](https://github.com/navin-moorthy/next-react-app/commit/eb6bb31e6f024c59b58fd2bca4bed6d0c73569d9)) by @renovate[bot], closes [#115](https://github.com/navin-moorthy/next-react-app/issues/115)  
+* **deps:** lock file maintenance (#101) ([556e74f](https://github.com/navin-moorthy/next-react-app/commit/556e74f75a3122ff4e421bffc680a9b72f6530b2)) by @renovate[bot], closes [#101](https://github.com/navin-moorthy/next-react-app/issues/101)
 
 ---
 
@@ -85,27 +185,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **deps:** lock file maintenance (#125) ([6d7f1e7](https://github.com/navin-moorthy/next-react-app/commit/6d7f1e7ab4e6612b83500f97cc4e496291468b5a)) by @renovate[bot], closes [#125](https://github.com/navin-moorthy/next-react-app/issues/125)  
 
----
-
-[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
-
-This PR contains the following updates:
-
-| Update | Change |
-|---|---|
-| lockFileMaintenance | All locks refreshed |
-
-🔧 This Pull Request updates lock files to use the latest dependency versions.
-
----
-
-  
-
-* **deps:** lock file maintenance (#88) ([5876d17](https://github.com/navin-moorthy/next-react-app/commit/5876d17f8ddebabe21a667e82a7c356d3a82b0c6)) by @renovate[bot], closes [#88](https://github.com/navin-moorthy/next-react-app/issues/88)  
+* **deps:** lock file maintenance (#115) ([eb6bb31](https://github.com/navin-moorthy/next-react-app/commit/eb6bb31e6f024c59b58fd2bca4bed6d0c73569d9)) by @renovate[bot], closes [#115](https://github.com/navin-moorthy/next-react-app/issues/115)
 
 ---
 
@@ -121,9 +203,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **deps:** lock file maintenance (#94) ([98d5642](https://github.com/navin-moorthy/next-react-app/commit/98d56423a8a954bc884f18e0b82f68087d7ebb42)) by @renovate[bot], closes [#94](https://github.com/navin-moorthy/next-react-app/issues/94)  
+
+* **deps:** lock file maintenance (#125) ([6d7f1e7](https://github.com/navin-moorthy/next-react-app/commit/6d7f1e7ab4e6612b83500f97cc4e496291468b5a)) by @renovate[bot], closes [#125](https://github.com/navin-moorthy/next-react-app/issues/125)
 
 ---
 
@@ -139,9 +221,45 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update @types/node to v18.11.19 (#99) ([db8d506](https://github.com/navin-moorthy/next-react-app/commit/db8d506b117c5c128b68c678ec138683faa85b84)) by @renovate[bot], closes [#99](https://github.com/navin-moorthy/next-react-app/issues/99)  
+
+* **deps:** lock file maintenance (#88) ([5876d17](https://github.com/navin-moorthy/next-react-app/commit/5876d17f8ddebabe21a667e82a7c356d3a82b0c6)) by @renovate[bot], closes [#88](https://github.com/navin-moorthy/next-react-app/issues/88)
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Update | Change |
+|---|---|
+| lockFileMaintenance | All locks refreshed |
+
+🔧 This Pull Request updates lock files to use the latest dependency versions.
+
+---
+
+
+
+* **deps:** lock file maintenance (#94) ([98d5642](https://github.com/navin-moorthy/next-react-app/commit/98d56423a8a954bc884f18e0b82f68087d7ebb42)) by @renovate[bot], closes [#94](https://github.com/navin-moorthy/next-react-app/issues/94)
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Update | Change |
+|---|---|
+| lockFileMaintenance | All locks refreshed |
+
+🔧 This Pull Request updates lock files to use the latest dependency versions.
+
+---
+
+
+
+* **dev-deps:** ⬆️ update @types/node to v18.11.19 (#99) ([db8d506](https://github.com/navin-moorthy/next-react-app/commit/db8d506b117c5c128b68c678ec138683faa85b84)) by @renovate[bot], closes [#99](https://github.com/navin-moorthy/next-react-app/issues/99)
 
 ---
 
@@ -155,9 +273,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update @types/node to v18.13.0 (#104) ([1a64101](https://github.com/navin-moorthy/next-react-app/commit/1a64101137c420063646674178193f63af43a79e)) by @renovate[bot], closes [#104](https://github.com/navin-moorthy/next-react-app/issues/104)  
+
+* **dev-deps:** ⬆️ update @types/node to v18.13.0 (#104) ([1a64101](https://github.com/navin-moorthy/next-react-app/commit/1a64101137c420063646674178193f63af43a79e)) by @renovate[bot], closes [#104](https://github.com/navin-moorthy/next-react-app/issues/104)
 
 ---
 
@@ -171,9 +289,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update @types/node to v18.14.0 (#123) ([7205579](https://github.com/navin-moorthy/next-react-app/commit/7205579116a2a48eed7baa1458163002865e1d9c)) by @renovate[bot], closes [#123](https://github.com/navin-moorthy/next-react-app/issues/123)  
+
+* **dev-deps:** ⬆️ update @types/node to v18.14.0 (#123) ([7205579](https://github.com/navin-moorthy/next-react-app/commit/7205579116a2a48eed7baa1458163002865e1d9c)) by @renovate[bot], closes [#123](https://github.com/navin-moorthy/next-react-app/issues/123)
 
 ---
 
@@ -187,9 +305,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update @types/node to v18.14.1 (#127) ([4ab4571](https://github.com/navin-moorthy/next-react-app/commit/4ab45718e1431d72d2a6a4fa2cea4cbcdbf3417d)) by @renovate[bot], closes [#127](https://github.com/navin-moorthy/next-react-app/issues/127)  
+
+* **dev-deps:** ⬆️ update @types/node to v18.14.1 (#127) ([4ab4571](https://github.com/navin-moorthy/next-react-app/commit/4ab45718e1431d72d2a6a4fa2cea4cbcdbf3417d)) by @renovate[bot], closes [#127](https://github.com/navin-moorthy/next-react-app/issues/127)
 
 ---
 
@@ -203,9 +321,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update @types/react to v18.0.28 (#112) ([ca3f9e9](https://github.com/navin-moorthy/next-react-app/commit/ca3f9e9078c27b8bceaaa4017eb5202f4aac6d24)) by @renovate[bot], closes [#112](https://github.com/navin-moorthy/next-react-app/issues/112)  
+
+* **dev-deps:** ⬆️ update @types/react to v18.0.28 (#112) ([ca3f9e9](https://github.com/navin-moorthy/next-react-app/commit/ca3f9e9078c27b8bceaaa4017eb5202f4aac6d24)) by @renovate[bot], closes [#112](https://github.com/navin-moorthy/next-react-app/issues/112)
 
 ---
 
@@ -219,9 +337,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) (minor) (#126) ([e0051e3](https://github.com/navin-moorthy/next-react-app/commit/e0051e3188ff040e2b600e8f1f92e2f531f34d70)) by @renovate[bot], closes [#126](https://github.com/navin-moorthy/next-react-app/issues/126)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (minor) (#126) ([e0051e3](https://github.com/navin-moorthy/next-react-app/commit/e0051e3188ff040e2b600e8f1f92e2f531f34d70)) by @renovate[bot], closes [#126](https://github.com/navin-moorthy/next-react-app/issues/126)
 
 ---
 
@@ -238,9 +356,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#103) ([3d1cbf2](https://github.com/navin-moorthy/next-react-app/commit/3d1cbf2bbd71eb7186ac2daab820f599bbfec87d)) by @renovate[bot], closes [#103](https://github.com/navin-moorthy/next-react-app/issues/103)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#103) ([3d1cbf2](https://github.com/navin-moorthy/next-react-app/commit/3d1cbf2bbd71eb7186ac2daab820f599bbfec87d)) by @renovate[bot], closes [#103](https://github.com/navin-moorthy/next-react-app/issues/103)
 
 ---
 
@@ -257,9 +375,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#105) ([5fb24ad](https://github.com/navin-moorthy/next-react-app/commit/5fb24ad8a72dd7075a08efe7152aa40a7cdecb3e)) by @renovate[bot], closes [#105](https://github.com/navin-moorthy/next-react-app/issues/105)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#105) ([5fb24ad](https://github.com/navin-moorthy/next-react-app/commit/5fb24ad8a72dd7075a08efe7152aa40a7cdecb3e)) by @renovate[bot], closes [#105](https://github.com/navin-moorthy/next-react-app/issues/105)
 
 ---
 
@@ -275,9 +393,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#108) ([e2780b5](https://github.com/navin-moorthy/next-react-app/commit/e2780b5f415385c7a45f797f88b7210baee61305)) by @renovate[bot], closes [#108](https://github.com/navin-moorthy/next-react-app/issues/108)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#108) ([e2780b5](https://github.com/navin-moorthy/next-react-app/commit/e2780b5f415385c7a45f797f88b7210baee61305)) by @renovate[bot], closes [#108](https://github.com/navin-moorthy/next-react-app/issues/108)
 
 ---
 
@@ -292,9 +410,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#117) ([b63b769](https://github.com/navin-moorthy/next-react-app/commit/b63b7697d308cb32ac294eb3ade4c63f710ceabc)) by @renovate[bot], closes [#117](https://github.com/navin-moorthy/next-react-app/issues/117)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#117) ([b63b769](https://github.com/navin-moorthy/next-react-app/commit/b63b7697d308cb32ac294eb3ade4c63f710ceabc)) by @renovate[bot], closes [#117](https://github.com/navin-moorthy/next-react-app/issues/117)
 
 ---
 
@@ -310,9 +428,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#119) ([17ddf39](https://github.com/navin-moorthy/next-react-app/commit/17ddf3958ec1b619778a3917d0f1260c8d63d64a)) by @renovate[bot], closes [#119](https://github.com/navin-moorthy/next-react-app/issues/119)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#119) ([17ddf39](https://github.com/navin-moorthy/next-react-app/commit/17ddf3958ec1b619778a3917d0f1260c8d63d64a)) by @renovate[bot], closes [#119](https://github.com/navin-moorthy/next-react-app/issues/119)
 
 ---
 
@@ -329,9 +447,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#86) ([c174f5c](https://github.com/navin-moorthy/next-react-app/commit/c174f5c420af706835aa580570a2c05421f03598)) by @renovate[bot], closes [#86](https://github.com/navin-moorthy/next-react-app/issues/86)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#86) ([c174f5c](https://github.com/navin-moorthy/next-react-app/commit/c174f5c420af706835aa580570a2c05421f03598)) by @renovate[bot], closes [#86](https://github.com/navin-moorthy/next-react-app/issues/86)
 
 ---
 
@@ -346,9 +464,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#93) ([8c27859](https://github.com/navin-moorthy/next-react-app/commit/8c27859547a03dadf6c75e974fbbb9f1f5a70f2e)) by @renovate[bot], closes [#93](https://github.com/navin-moorthy/next-react-app/issues/93)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#93) ([8c27859](https://github.com/navin-moorthy/next-react-app/commit/8c27859547a03dadf6c75e974fbbb9f1f5a70f2e)) by @renovate[bot], closes [#93](https://github.com/navin-moorthy/next-react-app/issues/93)
 
 ---
 
@@ -363,9 +481,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) to v13.1.6 (patch) (#90) ([cfeaff9](https://github.com/navin-moorthy/next-react-app/commit/cfeaff9a8014667b472b13cabdd8b8ce64e63a24)) by @renovate[bot], closes [#90](https://github.com/navin-moorthy/next-react-app/issues/90)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v13.1.6 (patch) (#90) ([cfeaff9](https://github.com/navin-moorthy/next-react-app/commit/cfeaff9a8014667b472b13cabdd8b8ce64e63a24)) by @renovate[bot], closes [#90](https://github.com/navin-moorthy/next-react-app/issues/90)
 
 ---
 
@@ -381,9 +499,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) to v13.2.0 (minor) (#128) ([d8c4434](https://github.com/navin-moorthy/next-react-app/commit/d8c4434ba85645ffb624a7a032aa802d39c93ee4)) by @renovate[bot], closes [#128](https://github.com/navin-moorthy/next-react-app/issues/128)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v13.2.0 (minor) (#128) ([d8c4434](https://github.com/navin-moorthy/next-react-app/commit/d8c4434ba85645ffb624a7a032aa802d39c93ee4)) by @renovate[bot], closes [#128](https://github.com/navin-moorthy/next-react-app/issues/128)
 
 ---
 
@@ -399,9 +517,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) to v13.2.1 (patch) (#130) ([8ad827b](https://github.com/navin-moorthy/next-react-app/commit/8ad827b39d9681ba881920d88f18fa029d0ada80)) by @renovate[bot], closes [#130](https://github.com/navin-moorthy/next-react-app/issues/130)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v13.2.1 (patch) (#130) ([8ad827b](https://github.com/navin-moorthy/next-react-app/commit/8ad827b39d9681ba881920d88f18fa029d0ada80)) by @renovate[bot], closes [#130](https://github.com/navin-moorthy/next-react-app/issues/130)
 
 ---
 
@@ -417,9 +535,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) to v17.4.4 (patch) (#122) ([a648214](https://github.com/navin-moorthy/next-react-app/commit/a6482143ec2392e17e15b3801499ee8e6b51e197)) by @renovate[bot], closes [#122](https://github.com/navin-moorthy/next-react-app/issues/122)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v17.4.4 (patch) (#122) ([a648214](https://github.com/navin-moorthy/next-react-app/commit/a6482143ec2392e17e15b3801499ee8e6b51e197)) by @renovate[bot], closes [#122](https://github.com/navin-moorthy/next-react-app/issues/122)
 
 ---
 
@@ -434,27 +552,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) to v29.4.0 (minor) (#87) ([fa3988b](https://github.com/navin-moorthy/next-react-app/commit/fa3988b3d6bd0a22aed6c539711f761686226e8b)) by @renovate[bot], closes [#87](https://github.com/navin-moorthy/next-react-app/issues/87)  
 
----
-
-[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
-
-This PR contains the following updates:
-
-| Package | Change | Age | Adoption | Passing | Confidence |
-|---|---|---|---|---|---|
-| [@types/jest](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/jest) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`29.2.6` -> `29.4.0`](https://renovatebot.com/diffs/npm/@types%2fjest/29.2.6/29.4.0) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/compatibility-slim/29.2.6)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/confidence-slim/29.2.6)](https://docs.renovatebot.com/merge-confidence/) |
-| [jest](https://jestjs.io/) ([source](https://togithub.com/facebook/jest)) | [`29.3.1` -> `29.4.0`](https://renovatebot.com/diffs/npm/jest/29.3.1/29.4.0) | [![age](https://badges.renovateapi.com/packages/npm/jest/29.4.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest/29.4.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest/29.4.0/compatibility-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest/29.4.0/confidence-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) |
-| [jest-environment-jsdom](https://togithub.com/facebook/jest) | [`29.3.1` -> `29.4.0`](https://renovatebot.com/diffs/npm/jest-environment-jsdom/29.3.1/29.4.0) | [![age](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/compatibility-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/confidence-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) |
-
----
-
-  
-
-* **dev-deps:** ⬆️ update devdependencies (non-major) to v29.4.0 (minor) (#87) ([ab96ef7](https://github.com/navin-moorthy/next-react-app/commit/ab96ef76af6b3fcc661f3b02ff54d74d0fb4b91a)) by @renovate[bot], closes [#87](https://github.com/navin-moorthy/next-react-app/issues/87)  
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v29.4.0 (minor) (#87) ([fa3988b](https://github.com/navin-moorthy/next-react-app/commit/fa3988b3d6bd0a22aed6c539711f761686226e8b)) by @renovate[bot], closes [#87](https://github.com/navin-moorthy/next-react-app/issues/87)
 
 ---
 
@@ -470,9 +570,27 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) to v29.4.1 (patch) (#89) ([aa2b9d5](https://github.com/navin-moorthy/next-react-app/commit/aa2b9d5886b4d6352ea580eaeb80cbdc43693c72)) by @renovate[bot], closes [#89](https://github.com/navin-moorthy/next-react-app/issues/89)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v29.4.0 (minor) (#87) ([ab96ef7](https://github.com/navin-moorthy/next-react-app/commit/ab96ef76af6b3fcc661f3b02ff54d74d0fb4b91a)) by @renovate[bot], closes [#87](https://github.com/navin-moorthy/next-react-app/issues/87)
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@types/jest](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/jest) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`29.2.6` -> `29.4.0`](https://renovatebot.com/diffs/npm/@types%2fjest/29.2.6/29.4.0) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/compatibility-slim/29.2.6)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.0/confidence-slim/29.2.6)](https://docs.renovatebot.com/merge-confidence/) |
+| [jest](https://jestjs.io/) ([source](https://togithub.com/facebook/jest)) | [`29.3.1` -> `29.4.0`](https://renovatebot.com/diffs/npm/jest/29.3.1/29.4.0) | [![age](https://badges.renovateapi.com/packages/npm/jest/29.4.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest/29.4.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest/29.4.0/compatibility-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest/29.4.0/confidence-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [jest-environment-jsdom](https://togithub.com/facebook/jest) | [`29.3.1` -> `29.4.0`](https://renovatebot.com/diffs/npm/jest-environment-jsdom/29.3.1/29.4.0) | [![age](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/compatibility-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.4.0/confidence-slim/29.3.1)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v29.4.1 (patch) (#89) ([aa2b9d5](https://github.com/navin-moorthy/next-react-app/commit/aa2b9d5886b4d6352ea580eaeb80cbdc43693c72)) by @renovate[bot], closes [#89](https://github.com/navin-moorthy/next-react-app/issues/89)
 
 ---
 
@@ -487,9 +605,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) to v5.50.0 (minor) (#97) ([cca2175](https://github.com/navin-moorthy/next-react-app/commit/cca2175414cd2ac574d197ed889cc33e965afd23)) by @renovate[bot], closes [#97](https://github.com/navin-moorthy/next-react-app/issues/97)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v5.50.0 (minor) (#97) ([cca2175](https://github.com/navin-moorthy/next-react-app/commit/cca2175414cd2ac574d197ed889cc33e965afd23)) by @renovate[bot], closes [#97](https://github.com/navin-moorthy/next-react-app/issues/97)
 
 ---
 
@@ -504,9 +622,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) to v5.51.0 (minor) (#102) ([79c83f0](https://github.com/navin-moorthy/next-react-app/commit/79c83f0bc2a50941759b492621d8fafb97087cdf)) by @renovate[bot], closes [#102](https://github.com/navin-moorthy/next-react-app/issues/102)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v5.51.0 (minor) (#102) ([79c83f0](https://github.com/navin-moorthy/next-react-app/commit/79c83f0bc2a50941759b492621d8fafb97087cdf)) by @renovate[bot], closes [#102](https://github.com/navin-moorthy/next-react-app/issues/102)
 
 ---
 
@@ -521,9 +639,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update devdependencies (non-major) to v5.52.0 (minor) (#118) ([21f4895](https://github.com/navin-moorthy/next-react-app/commit/21f489568a6aba1758604f3cc3afcd551fcb9cb1)) by @renovate[bot], closes [#118](https://github.com/navin-moorthy/next-react-app/issues/118)  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) to v5.52.0 (minor) (#118) ([21f4895](https://github.com/navin-moorthy/next-react-app/commit/21f489568a6aba1758604f3cc3afcd551fcb9cb1)) by @renovate[bot], closes [#118](https://github.com/navin-moorthy/next-react-app/issues/118)
 
 ---
 
@@ -538,9 +656,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update eslint to v8.33.0 (#92) ([cba0e16](https://github.com/navin-moorthy/next-react-app/commit/cba0e16a64f758229165df85047451c8b4fc65eb)) by @renovate[bot], closes [#92](https://github.com/navin-moorthy/next-react-app/issues/92)  
+
+* **dev-deps:** ⬆️ update eslint to v8.33.0 (#92) ([cba0e16](https://github.com/navin-moorthy/next-react-app/commit/cba0e16a64f758229165df85047451c8b4fc65eb)) by @renovate[bot], closes [#92](https://github.com/navin-moorthy/next-react-app/issues/92)
 
 ---
 
@@ -554,9 +672,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update eslint to v8.34.0 (#110) ([7c2eb2f](https://github.com/navin-moorthy/next-react-app/commit/7c2eb2f33c5db3a67caa1c2b52b62a3be7eb1637)) by @renovate[bot], closes [#110](https://github.com/navin-moorthy/next-react-app/issues/110)  
+
+* **dev-deps:** ⬆️ update eslint to v8.34.0 (#110) ([7c2eb2f](https://github.com/navin-moorthy/next-react-app/commit/7c2eb2f33c5db3a67caa1c2b52b62a3be7eb1637)) by @renovate[bot], closes [#110](https://github.com/navin-moorthy/next-react-app/issues/110)
 
 ---
 
@@ -570,9 +688,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update eslint-plugin-tailwindcss to ^3.8.3 (#96) ([03ef547](https://github.com/navin-moorthy/next-react-app/commit/03ef547a1eefc96c6e5fe581c3346b9238a82077)) by @renovate[bot], closes [#96](https://github.com/navin-moorthy/next-react-app/issues/96)  
+
+* **dev-deps:** ⬆️ update eslint-plugin-tailwindcss to ^3.8.3 (#96) ([03ef547](https://github.com/navin-moorthy/next-react-app/commit/03ef547a1eefc96c6e5fe581c3346b9238a82077)) by @renovate[bot], closes [#96](https://github.com/navin-moorthy/next-react-app/issues/96)
 
 ---
 
@@ -586,9 +704,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update next-sitemap to v3.1.49 (#98) ([b604aca](https://github.com/navin-moorthy/next-react-app/commit/b604aca95df1f47bdbaf81162c227fd6717b3823)) by @renovate[bot], closes [#98](https://github.com/navin-moorthy/next-react-app/issues/98)  
+
+* **dev-deps:** ⬆️ update next-sitemap to v3.1.49 (#98) ([b604aca](https://github.com/navin-moorthy/next-react-app/commit/b604aca95df1f47bdbaf81162c227fd6717b3823)) by @renovate[bot], closes [#98](https://github.com/navin-moorthy/next-react-app/issues/98)
 
 ---
 
@@ -602,9 +720,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update stylelint to v15.1.0 (#113) ([541a053](https://github.com/navin-moorthy/next-react-app/commit/541a0534fc409ce58e87292f20312ea109ac91ce)) by @renovate[bot], closes [#113](https://github.com/navin-moorthy/next-react-app/issues/113)  
+
+* **dev-deps:** ⬆️ update stylelint to v15.1.0 (#113) ([541a053](https://github.com/navin-moorthy/next-react-app/commit/541a0534fc409ce58e87292f20312ea109ac91ce)) by @renovate[bot], closes [#113](https://github.com/navin-moorthy/next-react-app/issues/113)
 
 ---
 
@@ -618,9 +736,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update stylelint to v15.2.0 (#124) ([953edd3](https://github.com/navin-moorthy/next-react-app/commit/953edd36364411d459bc310ddc311ac10a9f3bf4)) by @renovate[bot], closes [#124](https://github.com/navin-moorthy/next-react-app/issues/124)  
+
+* **dev-deps:** ⬆️ update stylelint to v15.2.0 (#124) ([953edd3](https://github.com/navin-moorthy/next-react-app/commit/953edd36364411d459bc310ddc311ac10a9f3bf4)) by @renovate[bot], closes [#124](https://github.com/navin-moorthy/next-react-app/issues/124)
 
 ---
 
@@ -634,9 +752,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update stylelint-config-prettier to v9.0.5 (#109) ([2ea91b4](https://github.com/navin-moorthy/next-react-app/commit/2ea91b456742d2b959023dcd887777ef77270ad4)) by @renovate[bot], closes [#109](https://github.com/navin-moorthy/next-react-app/issues/109)  
+
+* **dev-deps:** ⬆️ update stylelint-config-prettier to v9.0.5 (#109) ([2ea91b4](https://github.com/navin-moorthy/next-react-app/commit/2ea91b456742d2b959023dcd887777ef77270ad4)) by @renovate[bot], closes [#109](https://github.com/navin-moorthy/next-react-app/issues/109)
 
 ---
 
@@ -650,9 +768,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update tailwindcss to v3.2.7 (#120) ([6b80db3](https://github.com/navin-moorthy/next-react-app/commit/6b80db394692ea47ced3330cf76f810bdd77f479)) by @renovate[bot], closes [#120](https://github.com/navin-moorthy/next-react-app/issues/120)  
+
+* **dev-deps:** ⬆️ update tailwindcss to v3.2.7 (#120) ([6b80db3](https://github.com/navin-moorthy/next-react-app/commit/6b80db394692ea47ced3330cf76f810bdd77f479)) by @renovate[bot], closes [#120](https://github.com/navin-moorthy/next-react-app/issues/120)
 
 ---
 
@@ -666,9 +784,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ update typescript to v4.9.5 (#95) ([445792a](https://github.com/navin-moorthy/next-react-app/commit/445792afdfd3a2809a9b55a193be5f2a44d4c71c)) by @renovate[bot], closes [#95](https://github.com/navin-moorthy/next-react-app/issues/95)  
+
+* **dev-deps:** ⬆️ update typescript to v4.9.5 (#95) ([445792a](https://github.com/navin-moorthy/next-react-app/commit/445792afdfd3a2809a9b55a193be5f2a44d4c71c)) by @renovate[bot], closes [#95](https://github.com/navin-moorthy/next-react-app/issues/95)
 
 ---
 
@@ -682,9 +800,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ upgrade @testing-library/react to v14 (#121) ([48c0862](https://github.com/navin-moorthy/next-react-app/commit/48c08626c091f7e64a50e6635beaad42824e00df)) by @renovate[bot], closes [#121](https://github.com/navin-moorthy/next-react-app/issues/121)  
+
+* **dev-deps:** ⬆️ upgrade @testing-library/react to v14 (#121) ([48c0862](https://github.com/navin-moorthy/next-react-app/commit/48c08626c091f7e64a50e6635beaad42824e00df)) by @renovate[bot], closes [#121](https://github.com/navin-moorthy/next-react-app/issues/121)
 
 ---
 
@@ -698,9 +816,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ upgrade stylelint to v15 (#106) ([5bfa213](https://github.com/navin-moorthy/next-react-app/commit/5bfa213a42bfe43bf35e1d877f150078d0f6771d)) by @renovate[bot], closes [#106](https://github.com/navin-moorthy/next-react-app/issues/106)  
+
+* **dev-deps:** ⬆️ upgrade stylelint to v15 (#106) ([5bfa213](https://github.com/navin-moorthy/next-react-app/commit/5bfa213a42bfe43bf35e1d877f150078d0f6771d)) by @renovate[bot], closes [#106](https://github.com/navin-moorthy/next-react-app/issues/106)
 
 ---
 
@@ -714,9 +832,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ upgrade stylelint-config-clean-order to v4 (#114) ([7bd6a7e](https://github.com/navin-moorthy/next-react-app/commit/7bd6a7e49852b3295ed56b2f69ca108a338e2777)) by @renovate[bot], closes [#114](https://github.com/navin-moorthy/next-react-app/issues/114)  
+
+* **dev-deps:** ⬆️ upgrade stylelint-config-clean-order to v4 (#114) ([7bd6a7e](https://github.com/navin-moorthy/next-react-app/commit/7bd6a7e49852b3295ed56b2f69ca108a338e2777)) by @renovate[bot], closes [#114](https://github.com/navin-moorthy/next-react-app/issues/114)
 
 ---
 
@@ -730,9 +848,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ upgrade stylelint-config-clean-order to v5 (#116) ([b3e2b1d](https://github.com/navin-moorthy/next-react-app/commit/b3e2b1d75b240528baaa92b082e5b70546098212)) by @renovate[bot], closes [#116](https://github.com/navin-moorthy/next-react-app/issues/116)  
+
+* **dev-deps:** ⬆️ upgrade stylelint-config-clean-order to v5 (#116) ([b3e2b1d](https://github.com/navin-moorthy/next-react-app/commit/b3e2b1d75b240528baaa92b082e5b70546098212)) by @renovate[bot], closes [#116](https://github.com/navin-moorthy/next-react-app/issues/116)
 
 ---
 
@@ -746,9 +864,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **dev-deps:** ⬆️ upgrade stylelint-config-standard to v30 (#107) ([5e0a5dc](https://github.com/navin-moorthy/next-react-app/commit/5e0a5dc0d56f5235a9d363b9a2eec54f25429ed4)) by @renovate[bot], closes [#107](https://github.com/navin-moorthy/next-react-app/issues/107)  
+
+* **dev-deps:** ⬆️ upgrade stylelint-config-standard to v30 (#107) ([5e0a5dc](https://github.com/navin-moorthy/next-react-app/commit/5e0a5dc0d56f5235a9d363b9a2eec54f25429ed4)) by @renovate[bot], closes [#107](https://github.com/navin-moorthy/next-react-app/issues/107)
 
 ---
 
@@ -762,9 +880,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **other-deps:** ⬆️ update next to v13.1.6 (#91) ([6785506](https://github.com/navin-moorthy/next-react-app/commit/678550641301924d1c506f4669d714c9a5511edb)) by @renovate[bot], closes [#91](https://github.com/navin-moorthy/next-react-app/issues/91)  
+
+* **other-deps:** ⬆️ update next to v13.1.6 (#91) ([6785506](https://github.com/navin-moorthy/next-react-app/commit/678550641301924d1c506f4669d714c9a5511edb)) by @renovate[bot], closes [#91](https://github.com/navin-moorthy/next-react-app/issues/91)
 
 ---
 
@@ -778,9 +896,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **other-deps:** ⬆️ update next to v13.2.0 (#129) ([e0302de](https://github.com/navin-moorthy/next-react-app/commit/e0302dea06136d819e829e321d3f08d773d07a5a)) by @renovate[bot], closes [#129](https://github.com/navin-moorthy/next-react-app/issues/129)  
+
+* **other-deps:** ⬆️ update next to v13.2.0 (#129) ([e0302de](https://github.com/navin-moorthy/next-react-app/commit/e0302dea06136d819e829e321d3f08d773d07a5a)) by @renovate[bot], closes [#129](https://github.com/navin-moorthy/next-react-app/issues/129)
 
 ---
 
@@ -794,9 +912,9 @@ This PR contains the following updates:
 
 ---
 
-  
 
-* **other-deps:** ⬆️ update next to v13.2.1 (#131) ([c4bdcd9](https://github.com/navin-moorthy/next-react-app/commit/c4bdcd9d1d73a83fce1cd3afef296c9dd9a2bfd8)) by @renovate[bot], closes [#131](https://github.com/navin-moorthy/next-react-app/issues/131)  
+
+* **other-deps:** ⬆️ update next to v13.2.1 (#131) ([c4bdcd9](https://github.com/navin-moorthy/next-react-app/commit/c4bdcd9d1d73a83fce1cd3afef296c9dd9a2bfd8)) by @renovate[bot], closes [#131](https://github.com/navin-moorthy/next-react-app/issues/131)
 
 ---
 
@@ -810,7 +928,7 @@ This PR contains the following updates:
 
 ---
 
-  
+
 
 * **release:** 🔖 initial release ([511a001](https://github.com/navin-moorthy/next-react-app/commit/511a001cf28e769f7bfc5856c1c6e5d2d4cb5d02)) by @navin-moorthy
 
