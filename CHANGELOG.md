@@ -1,5 +1,18 @@
 
 
+## [3.2.0](https://github.com/navin-moorthy/next-react-app/compare/v3.1.0...v3.2.0) (2023-02-26)
+
+
+### Bug Fixes
+
+* **prettier:** 🐛 import order ([5df08d1](https://github.com/navin-moorthy/next-react-app/commit/5df08d1fa8dde22f30325394c2323846ebe9ac51)) by @navin-moorthy
+
+
+
+### Documentation Changes
+
+* **changelog:** 📝 update feature docs mismatch in previour version ([661d233](https://github.com/navin-moorthy/next-react-app/commit/661d233a659c38247b6b9a53473ffe904210bd36)) by @navin-moorthy
+
 ## [3.1.0](https://github.com/navin-moorthy/next-react-app/compare/v3.0.0...v3.1.0) (2023-02-25)
 
 
