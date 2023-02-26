@@ -40,8 +40,9 @@ module.exports = {
   // Plugins
   plugins: [
     require("prettier-plugin-pkg"),
-    require("@ianvs/prettier-plugin-sort-imports"),
     require("prettier-plugin-tailwindcss"),
+    // Should always be last
+    require("@ianvs/prettier-plugin-sort-imports"),
   ],
 
   pluginSearchDirs: false,

@@ -1,15 +1,12 @@
-// Octokit.js
-// https://github.com/octokit/core.js#readme
-
 import fs from "fs";
 import { createRequire } from "node:module";
 import { Octokit } from "@octokit/core";
 import dedent from "dedent";
+import * as dotenv from "dotenv";
 import { execa } from "execa";
 import gitRemoteOriginUrl from "git-remote-origin-url";
 import GitUrlParse from "git-url-parse";
 
-import * as dotenv from "dotenv";
 // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 dotenv.config();
 
