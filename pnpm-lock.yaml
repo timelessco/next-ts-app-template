@@ -7,9 +7,9 @@ specifiers:
   '@commitlint/cli': 17.4.4
   '@commitlint/config-conventional': 17.4.4
   '@ianvs/prettier-plugin-sort-imports': 3.7.1
-  '@next/bundle-analyzer': 13.2.1
-  '@next/env': 13.2.1
-  '@next/eslint-plugin-next': 13.2.1
+  '@next/bundle-analyzer': 13.2.4
+  '@next/env': 13.2.4
+  '@next/eslint-plugin-next': 13.2.4
   '@octokit/core': ^4.2.0
   '@release-it/conventional-changelog': 5.1.1
   '@testing-library/jest-dom': 5.16.5
@@ -20,7 +20,7 @@ specifiers:
   '@types/react-dom': 18.0.11
   '@typescript-eslint/eslint-plugin': 5.54.1
   '@typescript-eslint/parser': 5.54.1
-  autoprefixer: 10.4.13
+  autoprefixer: 10.4.14
   dedent: ^0.7.0
   dotenv: ^16.0.3
   eslint: 8.35.0
@@ -53,7 +53,7 @@ specifiers:
   postcss: 8.4.21
   prettier: 2.8.4
   prettier-plugin-pkg: 0.17.1
-  prettier-plugin-tailwindcss: ^0.2.3
+  prettier-plugin-tailwindcss: ^0.2.4
   react: 18.2.0
   react-dom: 18.2.0
   release-it: 15.8.0
@@ -79,9 +79,9 @@ devDependencies:
   '@commitlint/cli': 17.4.4
   '@commitlint/config-conventional': 17.4.4
   '@ianvs/prettier-plugin-sort-imports': 3.7.1_prettier@2.8.4
-  '@next/bundle-analyzer': 13.2.1
-  '@next/env': 13.2.1
-  '@next/eslint-plugin-next': 13.2.1
+  '@next/bundle-analyzer': 13.2.4
+  '@next/env': 13.2.4
+  '@next/eslint-plugin-next': 13.2.4
   '@octokit/core': 4.2.0
   '@release-it/conventional-changelog': 5.1.1_release-it@15.8.0
   '@testing-library/jest-dom': 5.16.5
@@ -92,7 +92,7 @@ devDependencies:
   '@types/react-dom': 18.0.11
   '@typescript-eslint/eslint-plugin': 5.54.1_mlk7dnz565t663n4razh6a6v6i
   '@typescript-eslint/parser': 5.54.1_ycpbpc6yetojsgtrx3mwntkhsu
-  autoprefixer: 10.4.13_postcss@8.4.21
+  autoprefixer: 10.4.14_postcss@8.4.21
   dedent: 0.7.0
   dotenv: 16.0.3
   eslint: 8.35.0
@@ -117,13 +117,13 @@ devDependencies:
   lint-staged: 13.2.0
   next-bundle-analyzer: 0.6.7_next@13.2.1
   next-compose-plugins: 2.2.1
-  next-sitemap: 4.0.5_w72blvo532ghymzwxfaavzsw7a
+  next-sitemap: 4.0.5_jwyuvqinril3trufiqt2v4ba44
   npm-run-all: 4.1.5
   pinst: 3.0.0
   postcss: 8.4.21
   prettier: 2.8.4
   prettier-plugin-pkg: 0.17.1_prettier@2.8.4
-  prettier-plugin-tailwindcss: 0.2.3_2m34gfnsqvzqy5bj5eci3wt3by
+  prettier-plugin-tailwindcss: 0.2.4_2m34gfnsqvzqy5bj5eci3wt3by
   release-it: 15.8.0
   sharp: 0.31.3
   stylelint: 15.2.0
@@ -2147,8 +2147,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@next/bundle-analyzer/13.2.1:
-    resolution: {integrity: sha512-ex5CyyqWfBaDE0eguyhWlWZAsg2n9zN1c/YK4FNui7C/cKnjib5FcZeVNeKU9PfSYXDDT9onIhWkhsMNQwIGVg==}
+  /@next/bundle-analyzer/13.2.4:
+    resolution: {integrity: sha512-bY4Clt7f1roJextpeQOQQWfNiXI0O5UvfOEyfuM5YUGPQMOCAZD2zjLjolakdn9Dm2yyMQUQ6JDE+iJK0dIeLA==}
     dependencies:
       webpack-bundle-analyzer: 4.7.0
     transitivePeerDependencies:
@@ -2159,8 +2159,12 @@ packages:
   /@next/env/13.2.1:
     resolution: {integrity: sha512-Hq+6QZ6kgmloCg8Kgrix+4F0HtvLqVK3FZAnlAoS0eonaDemHe1Km4kwjSWRE3JNpJNcKxFHF+jsZrYo0SxWoQ==}
 
-  /@next/eslint-plugin-next/13.2.1:
-    resolution: {integrity: sha512-r0i5rcO6SMAZtqiGarUVMr3k256X0R0j6pEkKg4PxqUW+hG0qgMxRVAJsuoRG5OBFkCOlSfWZJ0mP9fQdCcyNg==}
+  /@next/env/13.2.4:
+    resolution: {integrity: sha512-+Mq3TtpkeeKFZanPturjcXt+KHfKYnLlX6jMLyCrmpq6OOs4i1GqBOAauSkii9QeKCMTYzGppar21JU57b/GEA==}
+    dev: true
+
+  /@next/eslint-plugin-next/13.2.4:
+    resolution: {integrity: sha512-ck1lI+7r1mMJpqLNa3LJ5pxCfOB1lfJncKmRJeJxcJqcngaFwylreLP7da6Rrjr6u2gVRTfmnkSkjc80IiQCwQ==}
     dependencies:
       glob: 7.1.7
     dev: true
@@ -3211,15 +3215,15 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: true
 
-  /autoprefixer/10.4.13_postcss@8.4.21:
-    resolution: {integrity: sha512-49vKpMqcZYsJjwotvt4+h/BCjJVnhGwcLpDt5xkcaOG3eLrG/HUYLagrihYsQ+qrIBgIzX1Rw7a6L8I/ZA1Atg==}
+  /autoprefixer/10.4.14_postcss@8.4.21:
+    resolution: {integrity: sha512-FQzyfOsTlwVzjHxKEqRIAdJx9niO6VCBCoEwax/VLSoQF29ggECcPuBqUMZ+u8jCZOPSy8b8/8KnuFbp0SaFZQ==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.5
-      caniuse-lite: 1.0.30001456
+      caniuse-lite: 1.0.30001464
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -3472,7 +3476,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001456
+      caniuse-lite: 1.0.30001464
       electron-to-chromium: 1.4.302
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
@@ -3580,6 +3584,9 @@ packages:
 
   /caniuse-lite/1.0.30001456:
     resolution: {integrity: sha512-XFHJY5dUgmpMV25UqaD4kVq2LsiaU5rS8fb0f17pCoXQiQslzmFgnfOxfvo1bTpTqf7dwG/N/05CnLCnOEKmzA==}
+
+  /caniuse-lite/1.0.30001464:
+    resolution: {integrity: sha512-oww27MtUmusatpRpCGSOneQk2/l5czXANDSFvsc7VuOQ86s3ANhZetpwXNf1zY/zdfP63Xvjz325DAdAoES13g==}
 
   /chalk/2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -7500,7 +7507,7 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /next-sitemap/4.0.5_w72blvo532ghymzwxfaavzsw7a:
+  /next-sitemap/4.0.5_jwyuvqinril3trufiqt2v4ba44:
     resolution: {integrity: sha512-kIABX4n8wJqY2sttRjivBF2r1MgQ1pg12y87qGT+5meippq0ivxaNSRldMDOj8pIGhXW6uFAsCxyH/JftqkwWQ==}
     engines: {node: '>=14.18'}
     hasBin: true
@@ -7509,7 +7516,7 @@ packages:
       next: '*'
     dependencies:
       '@corex/deepmerge': 4.0.37
-      '@next/env': 13.2.1
+      '@next/env': 13.2.4
       minimist: 1.2.8
       next: 13.2.1_6m24vuloj5ihw4zc5lbsktc4fu
     dev: true
@@ -8253,8 +8260,8 @@ packages:
       prettier: 2.8.4
     dev: true
 
-  /prettier-plugin-tailwindcss/0.2.3_2m34gfnsqvzqy5bj5eci3wt3by:
-    resolution: {integrity: sha512-s2N5Dh7Ao5KTV1mao5ZBnn8EKtUcDPJEkGViZIjI0Ij9TTI5zgTz4IHOxW33jOdjHKa8CSjM88scelUiC5TNRQ==}
+  /prettier-plugin-tailwindcss/0.2.4_2m34gfnsqvzqy5bj5eci3wt3by:
+    resolution: {integrity: sha512-wMyugRI2yD8gqmMpZSS8kTA0gGeKozX/R+w8iWE+yiCZL09zY0SvfiHfHabNhjGhzxlQ2S2VuTxPE3T72vppCQ==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
