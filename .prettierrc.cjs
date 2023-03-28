@@ -119,12 +119,8 @@ module.exports = {
 
 	overrides: [
 		{
-			files: ".all-contributorsrc",
+			files: ".*rc",
 			options: { parser: "json" },
-		},
-		{
-			files: ".npmrc",
-			options: { parser: "yaml" },
 		},
 	],
 };
