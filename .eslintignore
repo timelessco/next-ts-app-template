@@ -20,6 +20,7 @@
 .eslintcache
 .stylelintcache
 .prettiercache
+.cspellcache
 
 # Dependency directories
 node_modules

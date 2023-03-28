@@ -1,32 +1,30 @@
-// @ts-check
 import withBundleAnalyzer from "@next/bundle-analyzer";
 
 /**
  * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
  * This is especially useful for Docker builds.
  */
-// @ts-ignore
-// eslint-disable-next-line no-unused-expressions
+// eslint-disable-next-line no-unused-expressions, @babel/no-unused-expressions
 !process.env.SKIP_ENV_VALIDATION && (await import("./env/server.js"));
 
 const bundleAnalyzer = withBundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
+	enabled: process.env.ANALYZE === "true",
 });
 
 /**
  * @type {import('next').NextConfig}
- * */
+ */
 const nextConfig = {
-  // https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode
-  // reactStrictMode: true,
+	// https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode
+	// reactStrictMode: true,
 
-  // Enable the below option only when you are debugging sourceamp
-  productionBrowserSourceMaps: process.env.SOURCEMAP === "true",
-  images: {
-    formats: ["image/avif", "image/webp"],
-    deviceSizes: [384, 640, 768, 1024, 1280, 1440, 2560],
-    imageSizes: [128, 256],
-  },
+	// Enable the below option only when you are debugging sourceamp
+	productionBrowserSourceMaps: process.env.SOURCEMAP === "true",
+	images: {
+		formats: ["image/avif", "image/webp"],
+		deviceSizes: [384, 640, 768, 1_024, 1_280, 1_440, 2_560],
+		imageSizes: [128, 256],
+	},
 };
 
 // Make sure adding Sentry options is the last code to run before exporting, to
