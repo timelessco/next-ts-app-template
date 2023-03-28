@@ -1,5 +1,209 @@
 
 
+## [4.0.0](https://github.com/navin-moorthy/next-react-app/compare/v3.2.0...v4.0.0) (2023-03-28)
+
+
+### Maintenance Updates
+
+* **deps:** ⬆️ update actions/stale action to v8 (#143) ([91e55d1](https://github.com/navin-moorthy/next-react-app/commit/91e55d118e38b72dd773f2afa2ce16417194eb78)) by @renovate[bot], closes [#143](https://github.com/navin-moorthy/next-react-app/issues/143)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Type | Update | Change |
+|---|---|---|---|
+| [actions/stale](https://togithub.com/actions/stale) | action | major | `v7` -> `v8` |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (minor) (#136) ([d33da31](https://github.com/navin-moorthy/next-react-app/commit/d33da31b56505dc3761925e1785c95b492e569a7)) by @renovate[bot], closes [#136](https://github.com/navin-moorthy/next-react-app/issues/136)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@types/node](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`18.14.1` -> `18.15.0`](https://renovatebot.com/diffs/npm/@types%2fnode/18.14.1/18.15.0) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.15.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.15.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.15.0/compatibility-slim/18.14.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.15.0/confidence-slim/18.14.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [@typescript-eslint/eslint-plugin](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.53.0` -> `5.54.1`](https://renovatebot.com/diffs/npm/@typescript-eslint%2feslint-plugin/5.53.0/5.54.1) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.54.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.54.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.54.1/compatibility-slim/5.53.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.54.1/confidence-slim/5.53.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [@typescript-eslint/parser](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.53.0` -> `5.54.1`](https://renovatebot.com/diffs/npm/@typescript-eslint%2fparser/5.53.0/5.54.1) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.54.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.54.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.54.1/compatibility-slim/5.53.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.54.1/confidence-slim/5.53.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [eslint](https://eslint.org) ([source](https://togithub.com/eslint/eslint)) | [`8.34.0` -> `8.35.0`](https://renovatebot.com/diffs/npm/eslint/8.34.0/8.35.0) | [![age](https://badges.renovateapi.com/packages/npm/eslint/8.35.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/eslint/8.35.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/eslint/8.35.0/compatibility-slim/8.34.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/eslint/8.35.0/confidence-slim/8.34.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [eslint-config-prettier](https://togithub.com/prettier/eslint-config-prettier) | [`8.6.0` -> `8.7.0`](https://renovatebot.com/diffs/npm/eslint-config-prettier/8.6.0/8.7.0) | [![age](https://badges.renovateapi.com/packages/npm/eslint-config-prettier/8.7.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/eslint-config-prettier/8.7.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/eslint-config-prettier/8.7.0/compatibility-slim/8.6.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/eslint-config-prettier/8.7.0/confidence-slim/8.6.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [eslint-plugin-tailwindcss](https://togithub.com/francoismassart/eslint-plugin-tailwindcss) | [`^3.9.0` -> `^3.10.1`](https://renovatebot.com/diffs/npm/eslint-plugin-tailwindcss/3.9.0/3.10.1) | [![age](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.10.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.10.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.10.1/compatibility-slim/3.9.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/eslint-plugin-tailwindcss/3.10.1/confidence-slim/3.9.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [jest](https://jestjs.io/) ([source](https://togithub.com/facebook/jest)) | [`29.4.3` -> `29.5.0`](https://renovatebot.com/diffs/npm/jest/29.4.3/29.5.0) | [![age](https://badges.renovateapi.com/packages/npm/jest/29.5.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest/29.5.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest/29.5.0/compatibility-slim/29.4.3)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest/29.5.0/confidence-slim/29.4.3)](https://docs.renovatebot.com/merge-confidence/) |
+| [jest-environment-jsdom](https://togithub.com/facebook/jest) | [`29.4.3` -> `29.5.0`](https://renovatebot.com/diffs/npm/jest-environment-jsdom/29.4.3/29.5.0) | [![age](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.5.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.5.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.5.0/compatibility-slim/29.4.3)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/jest-environment-jsdom/29.5.0/confidence-slim/29.4.3)](https://docs.renovatebot.com/merge-confidence/) |
+| [lint-staged](https://togithub.com/okonet/lint-staged) | [`13.1.2` -> `13.2.0`](https://renovatebot.com/diffs/npm/lint-staged/13.1.2/13.2.0) | [![age](https://badges.renovateapi.com/packages/npm/lint-staged/13.2.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/lint-staged/13.2.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/lint-staged/13.2.0/compatibility-slim/13.1.2)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/lint-staged/13.2.0/confidence-slim/13.1.2)](https://docs.renovatebot.com/merge-confidence/) |
+| [release-it](https://togithub.com/release-it/release-it) | [`15.6.0` -> `15.8.0`](https://renovatebot.com/diffs/npm/release-it/15.6.0/15.8.0) | [![age](https://badges.renovateapi.com/packages/npm/release-it/15.8.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/release-it/15.8.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/release-it/15.8.0/compatibility-slim/15.6.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/release-it/15.8.0/confidence-slim/15.6.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [zod](https://zod.dev) ([source](https://togithub.com/colinhacks/zod)) | [`3.20.6` -> `3.21.4`](https://renovatebot.com/diffs/npm/zod/3.20.6/3.21.4) | [![age](https://badges.renovateapi.com/packages/npm/zod/3.21.4/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/zod/3.21.4/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/zod/3.21.4/compatibility-slim/3.20.6)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/zod/3.21.4/confidence-slim/3.20.6)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (minor) (#140) ([46c858b](https://github.com/navin-moorthy/next-react-app/commit/46c858b992fcd88949a274c35541aa33f21169a7)) by @renovate[bot], closes [#140](https://github.com/navin-moorthy/next-react-app/issues/140)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@babel/eslint-parser](https://babel.dev/) ([source](https://togithub.com/babel/babel)) | [`^7.19.1` -> `^7.21.3`](https://renovatebot.com/diffs/npm/@babel%2feslint-parser/7.19.1/7.21.3) | [![age](https://badges.renovateapi.com/packages/npm/@babel%2feslint-parser/7.21.3/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@babel%2feslint-parser/7.21.3/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@babel%2feslint-parser/7.21.3/compatibility-slim/7.19.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@babel%2feslint-parser/7.21.3/confidence-slim/7.19.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [@types/jest](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/jest) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`29.4.4` -> `29.5.0`](https://renovatebot.com/diffs/npm/@types%2fjest/29.4.4/29.5.0) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.5.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.5.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.5.0/compatibility-slim/29.4.4)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.5.0/confidence-slim/29.4.4)](https://docs.renovatebot.com/merge-confidence/) |
+| [@typescript-eslint/eslint-plugin](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.54.1` -> `5.55.0`](https://renovatebot.com/diffs/npm/@typescript-eslint%2feslint-plugin/5.54.1/5.55.0) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.55.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.55.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.55.0/compatibility-slim/5.54.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.55.0/confidence-slim/5.54.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [@typescript-eslint/parser](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.54.1` -> `5.55.0`](https://renovatebot.com/diffs/npm/@typescript-eslint%2fparser/5.54.1/5.55.0) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.55.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.55.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.55.0/compatibility-slim/5.54.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.55.0/confidence-slim/5.54.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [eslint](https://eslint.org) ([source](https://togithub.com/eslint/eslint)) | [`8.35.0` -> `8.36.0`](https://renovatebot.com/diffs/npm/eslint/8.35.0/8.36.0) | [![age](https://badges.renovateapi.com/packages/npm/eslint/8.36.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/eslint/8.36.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/eslint/8.36.0/compatibility-slim/8.35.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/eslint/8.36.0/confidence-slim/8.35.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [execa](https://togithub.com/sindresorhus/execa) | [`^7.0.0` -> `^7.1.1`](https://renovatebot.com/diffs/npm/execa/7.0.0/7.1.1) | [![age](https://badges.renovateapi.com/packages/npm/execa/7.1.1/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/execa/7.1.1/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/execa/7.1.1/compatibility-slim/7.0.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/execa/7.1.1/confidence-slim/7.0.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [release-it](https://togithub.com/release-it/release-it) | [`15.8.0` -> `15.9.0`](https://renovatebot.com/diffs/npm/release-it/15.8.0/15.9.0) | [![age](https://badges.renovateapi.com/packages/npm/release-it/15.9.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/release-it/15.9.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/release-it/15.9.0/compatibility-slim/15.8.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/release-it/15.9.0/confidence-slim/15.8.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [stylelint](https://stylelint.io) ([source](https://togithub.com/stylelint/stylelint)) | [`15.2.0` -> `15.3.0`](https://renovatebot.com/diffs/npm/stylelint/15.2.0/15.3.0) | [![age](https://badges.renovateapi.com/packages/npm/stylelint/15.3.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/stylelint/15.3.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/stylelint/15.3.0/compatibility-slim/15.2.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/stylelint/15.3.0/confidence-slim/15.2.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (minor) (#142) ([3bb1684](https://github.com/navin-moorthy/next-react-app/commit/3bb1684eee176977361cd4baab43c6a71b00c6ca)) by @renovate[bot], closes [#142](https://github.com/navin-moorthy/next-react-app/issues/142)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@commitlint/cli](https://commitlint.js.org/) ([source](https://togithub.com/conventional-changelog/commitlint)) | [`17.4.4` -> `17.5.0`](https://renovatebot.com/diffs/npm/@commitlint%2fcli/17.4.4/17.5.0) | [![age](https://badges.renovateapi.com/packages/npm/@commitlint%2fcli/17.5.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@commitlint%2fcli/17.5.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@commitlint%2fcli/17.5.0/compatibility-slim/17.4.4)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@commitlint%2fcli/17.5.0/confidence-slim/17.4.4)](https://docs.renovatebot.com/merge-confidence/) |
+| [@typescript-eslint/eslint-plugin](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.55.0` -> `5.56.0`](https://renovatebot.com/diffs/npm/@typescript-eslint%2feslint-plugin/5.55.0/5.56.0) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.56.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.56.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.56.0/compatibility-slim/5.55.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2feslint-plugin/5.56.0/confidence-slim/5.55.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [@typescript-eslint/parser](https://togithub.com/typescript-eslint/typescript-eslint) | [`5.55.0` -> `5.56.0`](https://renovatebot.com/diffs/npm/@typescript-eslint%2fparser/5.55.0/5.56.0) | [![age](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.56.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.56.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.56.0/compatibility-slim/5.55.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@typescript-eslint%2fparser/5.56.0/confidence-slim/5.55.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [eslint-config-prettier](https://togithub.com/prettier/eslint-config-prettier) | [`8.7.0` -> `8.8.0`](https://renovatebot.com/diffs/npm/eslint-config-prettier/8.7.0/8.8.0) | [![age](https://badges.renovateapi.com/packages/npm/eslint-config-prettier/8.8.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/eslint-config-prettier/8.8.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/eslint-config-prettier/8.8.0/compatibility-slim/8.7.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/eslint-config-prettier/8.8.0/confidence-slim/8.7.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [sharp](https://togithub.com/lovell/sharp) ([changelog](https://togithub.com/lovell/sharp/blob/main/docs/changelog.md)) | [`0.31.3` -> `0.32.0`](https://renovatebot.com/diffs/npm/sharp/0.31.3/0.32.0) | [![age](https://badges.renovateapi.com/packages/npm/sharp/0.32.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/sharp/0.32.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/sharp/0.32.0/compatibility-slim/0.31.3)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/sharp/0.32.0/confidence-slim/0.31.3)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#134) ([0f5db3c](https://github.com/navin-moorthy/next-react-app/commit/0f5db3ca8c70c753ad0fb53a4fe65eeb4c03c987)) by @renovate[bot], closes [#134](https://github.com/navin-moorthy/next-react-app/issues/134)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@next/bundle-analyzer](https://togithub.com/vercel/next.js) | [`13.2.1` -> `13.2.4`](https://renovatebot.com/diffs/npm/@next%2fbundle-analyzer/13.2.1/13.2.4) | [![age](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.2.4/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.2.4/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.2.4/compatibility-slim/13.2.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@next%2fbundle-analyzer/13.2.4/confidence-slim/13.2.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [@next/env](https://togithub.com/vercel/next.js) | [`13.2.1` -> `13.2.4`](https://renovatebot.com/diffs/npm/@next%2fenv/13.2.1/13.2.4) | [![age](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.2.4/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.2.4/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.2.4/compatibility-slim/13.2.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@next%2fenv/13.2.4/confidence-slim/13.2.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [@next/eslint-plugin-next](https://togithub.com/vercel/next.js) | [`13.2.1` -> `13.2.4`](https://renovatebot.com/diffs/npm/@next%2feslint-plugin-next/13.2.1/13.2.4) | [![age](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.2.4/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.2.4/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.2.4/compatibility-slim/13.2.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@next%2feslint-plugin-next/13.2.4/confidence-slim/13.2.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [autoprefixer](https://togithub.com/postcss/autoprefixer) | [`10.4.13` -> `10.4.14`](https://renovatebot.com/diffs/npm/autoprefixer/10.4.13/10.4.14) | [![age](https://badges.renovateapi.com/packages/npm/autoprefixer/10.4.14/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/autoprefixer/10.4.14/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/autoprefixer/10.4.14/compatibility-slim/10.4.13)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/autoprefixer/10.4.14/confidence-slim/10.4.13)](https://docs.renovatebot.com/merge-confidence/) |
+| [prettier-plugin-tailwindcss](https://togithub.com/tailwindlabs/prettier-plugin-tailwindcss) | [`^0.2.3` -> `^0.2.4`](https://renovatebot.com/diffs/npm/prettier-plugin-tailwindcss/0.2.3/0.2.4) | [![age](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.4/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.4/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.4/compatibility-slim/0.2.3)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.4/confidence-slim/0.2.3)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#139) ([0c71227](https://github.com/navin-moorthy/next-react-app/commit/0c712278f6601e0a24243d707ad081b07a5527aa)) by @renovate[bot], closes [#139](https://github.com/navin-moorthy/next-react-app/issues/139)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@babel/core](https://babel.dev/docs/en/next/babel-core) ([source](https://togithub.com/babel/babel)) | [`^7.21.0` -> `^7.21.3`](https://renovatebot.com/diffs/npm/@babel%2fcore/7.21.0/7.21.3) | [![age](https://badges.renovateapi.com/packages/npm/@babel%2fcore/7.21.3/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@babel%2fcore/7.21.3/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@babel%2fcore/7.21.3/compatibility-slim/7.21.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@babel%2fcore/7.21.3/confidence-slim/7.21.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [@types/jest](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/jest) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`29.4.0` -> `29.4.4`](https://renovatebot.com/diffs/npm/@types%2fjest/29.4.0/29.4.4) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.4/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.4/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.4/compatibility-slim/29.4.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fjest/29.4.4/confidence-slim/29.4.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [@types/node](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`18.15.0` -> `18.15.3`](https://renovatebot.com/diffs/npm/@types%2fnode/18.15.0/18.15.3) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.15.3/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.15.3/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.15.3/compatibility-slim/18.15.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.15.3/confidence-slim/18.15.0)](https://docs.renovatebot.com/merge-confidence/) |
+| [prettier-plugin-tailwindcss](https://togithub.com/tailwindlabs/prettier-plugin-tailwindcss) | [`^0.2.4` -> `^0.2.5`](https://renovatebot.com/diffs/npm/prettier-plugin-tailwindcss/0.2.4/0.2.5) | [![age](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.5/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.5/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.5/compatibility-slim/0.2.4)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/prettier-plugin-tailwindcss/0.2.5/confidence-slim/0.2.4)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ update devdependencies (non-major) (patch) (#141) ([315e407](https://github.com/navin-moorthy/next-react-app/commit/315e4077ea597f6a51551c0ccc88412f160be455)) by @renovate[bot], closes [#141](https://github.com/navin-moorthy/next-react-app/issues/141)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [@ianvs/prettier-plugin-sort-imports](https://togithub.com/ianvs/prettier-plugin-sort-imports) | [`3.7.1` -> `3.7.2`](https://renovatebot.com/diffs/npm/@ianvs%2fprettier-plugin-sort-imports/3.7.1/3.7.2) | [![age](https://badges.renovateapi.com/packages/npm/@ianvs%2fprettier-plugin-sort-imports/3.7.2/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@ianvs%2fprettier-plugin-sort-imports/3.7.2/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@ianvs%2fprettier-plugin-sort-imports/3.7.2/compatibility-slim/3.7.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@ianvs%2fprettier-plugin-sort-imports/3.7.2/confidence-slim/3.7.1)](https://docs.renovatebot.com/merge-confidence/) |
+| [@types/node](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`18.15.3` -> `18.15.7`](https://renovatebot.com/diffs/npm/@types%2fnode/18.15.3/18.15.7) | [![age](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.15.7/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.15.7/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.15.7/compatibility-slim/18.15.3)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2fnode/18.15.7/confidence-slim/18.15.3)](https://docs.renovatebot.com/merge-confidence/) |
+| [@types/react](https://togithub.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react) ([source](https://togithub.com/DefinitelyTyped/DefinitelyTyped)) | [`18.0.28` -> `18.0.29`](https://renovatebot.com/diffs/npm/@types%2freact/18.0.28/18.0.29) | [![age](https://badges.renovateapi.com/packages/npm/@types%2freact/18.0.29/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/@types%2freact/18.0.29/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/@types%2freact/18.0.29/compatibility-slim/18.0.28)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/@types%2freact/18.0.29/confidence-slim/18.0.28)](https://docs.renovatebot.com/merge-confidence/) |
+| [next-sitemap](https://togithub.com/iamvishnusankar/next-sitemap) | [`4.0.5` -> `4.0.6`](https://renovatebot.com/diffs/npm/next-sitemap/4.0.5/4.0.6) | [![age](https://badges.renovateapi.com/packages/npm/next-sitemap/4.0.6/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/next-sitemap/4.0.6/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/next-sitemap/4.0.6/compatibility-slim/4.0.5)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/next-sitemap/4.0.6/confidence-slim/4.0.5)](https://docs.renovatebot.com/merge-confidence/) |
+| [prettier](https://prettier.io) ([source](https://togithub.com/prettier/prettier)) | [`2.8.4` -> `2.8.7`](https://renovatebot.com/diffs/npm/prettier/2.8.4/2.8.7) | [![age](https://badges.renovateapi.com/packages/npm/prettier/2.8.7/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/prettier/2.8.7/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/prettier/2.8.7/compatibility-slim/2.8.4)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/prettier/2.8.7/confidence-slim/2.8.4)](https://docs.renovatebot.com/merge-confidence/) |
+| [release-it](https://togithub.com/release-it/release-it) | [`15.9.0` -> `15.9.3`](https://renovatebot.com/diffs/npm/release-it/15.9.0/15.9.3) | [![age](https://badges.renovateapi.com/packages/npm/release-it/15.9.3/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/release-it/15.9.3/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/release-it/15.9.3/compatibility-slim/15.9.0)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/release-it/15.9.3/confidence-slim/15.9.0)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ upgrade next-sitemap to v4 (#133) ([f5c0101](https://github.com/navin-moorthy/next-react-app/commit/f5c0101880b23badc01efea1db7e5a24646d725c)) by @renovate[bot], closes [#133](https://github.com/navin-moorthy/next-react-app/issues/133)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [next-sitemap](https://togithub.com/iamvishnusankar/next-sitemap) | [`3.1.52` -> `4.0.5`](https://renovatebot.com/diffs/npm/next-sitemap/3.1.52/4.0.5) | [![age](https://badges.renovateapi.com/packages/npm/next-sitemap/4.0.5/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/next-sitemap/4.0.5/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/next-sitemap/4.0.5/compatibility-slim/3.1.52)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/next-sitemap/4.0.5/confidence-slim/3.1.52)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **dev-deps:** ⬆️ upgrade stylelint-config-standard to v31 (#137) ([7966ca9](https://github.com/navin-moorthy/next-react-app/commit/7966ca9faa243764a063ffe41b948a584cd38600)) by @renovate[bot], closes [#137](https://github.com/navin-moorthy/next-react-app/issues/137)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [stylelint-config-standard](https://togithub.com/stylelint/stylelint-config-standard) | [`30.0.1` -> `31.0.0`](https://renovatebot.com/diffs/npm/stylelint-config-standard/30.0.1/31.0.0) | [![age](https://badges.renovateapi.com/packages/npm/stylelint-config-standard/31.0.0/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/stylelint-config-standard/31.0.0/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/stylelint-config-standard/31.0.0/compatibility-slim/30.0.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/stylelint-config-standard/31.0.0/confidence-slim/30.0.1)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+* **other-deps:** ⬆️ update next to v13.2.4 (#135) ([a7bf124](https://github.com/navin-moorthy/next-react-app/commit/a7bf124af703f85a133f02ab9b0fd09bd8bd53b3)) by @renovate[bot], closes [#135](https://github.com/navin-moorthy/next-react-app/issues/135)  
+
+---
+
+[![Mend Renovate](https://app.renovatebot.com/images/banner.svg)](https://renovatebot.com)
+
+This PR contains the following updates:
+
+| Package | Change | Age | Adoption | Passing | Confidence |
+|---|---|---|---|---|---|
+| [next](https://nextjs.org) ([source](https://togithub.com/vercel/next.js)) | [`13.2.1` -> `13.2.4`](https://renovatebot.com/diffs/npm/next/13.2.1/13.2.4) | [![age](https://badges.renovateapi.com/packages/npm/next/13.2.4/age-slim)](https://docs.renovatebot.com/merge-confidence/) | [![adoption](https://badges.renovateapi.com/packages/npm/next/13.2.4/adoption-slim)](https://docs.renovatebot.com/merge-confidence/) | [![passing](https://badges.renovateapi.com/packages/npm/next/13.2.4/compatibility-slim/13.2.1)](https://docs.renovatebot.com/merge-confidence/) | [![confidence](https://badges.renovateapi.com/packages/npm/next/13.2.4/confidence-slim/13.2.1)](https://docs.renovatebot.com/merge-confidence/) |
+
+---
+
+  
+
+
+
+### Feature Updates
+
+* **project:** 🎉 add new toolings (#144) ([7a066dc](https://github.com/navin-moorthy/next-react-app/commit/7a066dc3b721424ef59d0064f8bbf96531f8cb84)) by @navin-moorthy, closes [#144](https://github.com/navin-moorthy/next-react-app/issues/144)
+
 ## [3.2.0](https://github.com/navin-moorthy/next-react-app/compare/v3.1.0...v3.2.0) (2023-02-26)
 
 
