@@ -1,5 +1,6 @@
 // Thanks to https://github.com/t3-oss/create-t3-app/
-// @ts-check
+
+/* eslint-disable node/no-process-env */
 import { z } from "zod";
 
 /**
@@ -7,18 +8,19 @@ import { z } from "zod";
  * This way you can ensure the app isn't built with invalid env vars.
  */
 export const serverSchema = z.object({
-  NODE_ENV: z.enum(["development", "test", "production"]),
-  // API_URL: z.string().url(),
+	NODE_ENV: z.enum(["development", "test", "production"]),
+	// API_URL: z.string().url(),
 });
 
 /**
  * You can't destruct `process.env` as a regular object in the Next.js
  * middleware, so you have to do it manually here.
+ *
  * @type {{ [k in keyof z.infer<typeof serverSchema>]: z.infer<typeof serverSchema>[k] | undefined }}
  */
-export const serverEnv = {
-  NODE_ENV: process.env.NODE_ENV,
-  // API_URL: process.env.API_URL,
+export const serverEnvironment = {
+	NODE_ENV: process.env.NODE_ENV,
+	// API_URL: process.env.API_URL,
 };
 
 /**
@@ -27,17 +29,18 @@ export const serverEnv = {
  * To expose them to the client, prefix them with `NEXT_PUBLIC_`.
  */
 export const clientSchema = z.object({
-  // Needed for sitemap generation
-  NEXT_PUBLIC_SITE_URL: z.string().url(),
+	// Needed for sitemap generation
+	NEXT_PUBLIC_SITE_URL: z.string().url(),
 });
 
 /**
  * You can't destruct `process.env` as a regular object, so you have to do
  * it manually here. This is because Next.js evaluates this at build time,
  * and only used environment variables are included in the build.
+ *
  * @type {{ [k in keyof z.infer<typeof clientSchema>]: z.infer<typeof clientSchema>[k] | undefined }}
  */
-export const clientEnv = {
-  // Needed for sitemap generation
-  NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
+export const clientEnvironment = {
+	// Needed for sitemap generation
+	NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
 };
