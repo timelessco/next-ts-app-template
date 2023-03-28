@@ -9,11 +9,11 @@
 		"typescript"
 	],
 	"bugs": {
-		"url": "https://github.com/navin-moorthy/next-react-app/issues"
+		"url": "https://github.com/timelessco/next-react-app/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/navin-moorthy/next-react-app.git"
+		"url": "git+https://github.com/timelessco/next-react-app.git"
 	},
 	"license": "MIT",
 	"author": "Navin Moorthy <navin007.a@gmail.com>",

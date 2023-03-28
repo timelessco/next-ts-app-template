@@ -10,11 +10,11 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- prettier-ignore-end -->
 	</a>
-	<a href="https://github.com/navin-moorthy/next-react-app/blob/main/.github/CODE_OF_CONDUCT.md" target="_blank">
+	<a href="https://github.com/timelessco/next-react-app/blob/main/.github/CODE_OF_CONDUCT.md" target="_blank">
 		<img alt="Contributor Covenant" src="https://img.shields.io/badge/code_of_conduct-enforced-21bb42" />
 	</a>
-	<a href="https://github.com/navin-moorthy/next-react-app/blob/main/LICENSE.md" target="_blank">
-		<img alt="License: MIT" src="https://img.shields.io/github/license/navin-moorthy/next-react-app?color=21bb42">
+	<a href="https://github.com/timelessco/next-react-app/blob/main/LICENSE.md" target="_blank">
+		<img alt="License: MIT" src="https://img.shields.io/github/license/timelessco/next-react-app?color=21bb42">
 	</a>
 	<img alt="Style: Prettier" src="https://img.shields.io/badge/style-prettier-21bb42.svg" />
 	<img alt="TypeScript: Strict" src="https://img.shields.io/badge/typescript-strict-21bb42.svg" />
@@ -58,7 +58,7 @@ See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://navinmoorthy.me/"><img src="https://avatars.githubusercontent.com/u/39694575?v=4?s=100" width="100px;" alt="Navin Moorthy"/><br /><sub><b>Navin Moorthy</b></sub></a><br /><a href="https://github.com/navin-moorthy/next-react-app/commits?author=navin-moorthy" title="Code">💻</a> <a href="#a11y-navin-moorthy" title="Accessibility">️️️️♿️</a> <a href="https://github.com/navin-moorthy/next-react-app/commits?author=navin-moorthy" title="Documentation">📖</a> <a href="#design-navin-moorthy" title="Design">🎨</a> <a href="#ideas-navin-moorthy" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-navin-moorthy" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://navinmoorthy.me/"><img src="https://avatars.githubusercontent.com/u/39694575?v=4?s=100" width="100px;" alt="Navin Moorthy"/><br /><sub><b>Navin Moorthy</b></sub></a><br /><a href="https://github.com/timelessco/next-react-app/commits?author=navin-moorthy" title="Code">💻</a> <a href="#a11y-navin-moorthy" title="Accessibility">️️️️♿️</a> <a href="https://github.com/timelessco/next-react-app/commits?author=navin-moorthy" title="Documentation">📖</a> <a href="#design-navin-moorthy" title="Design">🎨</a> <a href="#ideas-navin-moorthy" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-navin-moorthy" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.joshuakgoldberg.com"><img src="https://avatars.githubusercontent.com/u/3335181?v=4?s=100" width="100px;" alt="Josh Goldberg"/><br /><sub><b>Josh Goldberg</b></sub></a><br /><a href="#tool-JoshuaKGoldberg" title="Tools">🔧</a></td>
     </tr>
   </tbody>

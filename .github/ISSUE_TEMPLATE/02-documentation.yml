@@ -14,7 +14,7 @@ body:
           required: true
         - label:
             I have [searched for related
-            issues](https://github.com/navin-moorthy/next-react-app/issues?q=is%3Aissue)
+            issues](https://github.com/timelessco/next-react-app/issues?q=is%3Aissue)
             and found none that matched my issue.
           required: true
     type: checkboxes

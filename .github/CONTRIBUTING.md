@@ -26,7 +26,7 @@ are expected to follow.
 ## Reporting Issues
 
 Please do
-[report an issue on the issue tracker](https://github.com/navin-moorthy/next-react-app/issues/new/choose)
+[report an issue on the issue tracker](https://github.com/timelessco/next-react-app/issues/new/choose)
 if there's any bugfix, documentation improvement, or general enhancement you'd
 like to see in the repository! Please fully fill out all required fields in the
 most appropriate issue form.
@@ -43,9 +43,9 @@ steps involved:
 
 With the exception of very small typos, all changes to this repository generally
 need to correspond to an
-[open issue marked as `accepting prs` on the issue tracker](https://github.com/navin-moorthy/next-react-app/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22).
+[open issue marked as `accepting prs` on the issue tracker](https://github.com/timelessco/next-react-app/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22).
 If this is your first time contributing, consider searching for
-[unassigned issues that also have the `good first issue` label](https://github.com/navin-moorthy/next-react-app/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22+label%3A%22good+first+issue%22+no%3Aassignee).
+[unassigned issues that also have the `good first issue` label](https://github.com/timelessco/next-react-app/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22+label%3A%22good+first+issue%22+no%3Aassignee).
 If the issue you'd like to fix isn't found on the issue, see
 [Reporting Issues](#reporting-issues) for filing your own (please do!).
 
@@ -59,7 +59,7 @@ PRs are also expected to have a title that adheres to
 [commitlint](https://github.com/conventional-changelog/commitlint). Only PR
 titles need to be in that format, not individual commits. Don't worry if you get
 this wrong: you can always change the PR title after sending it. Check
-[previously merged PRs](https://github.com/navin-moorthy/next-react-app/pulls?q=is%3Apr+is%3Amerged+-label%3Adependencies+)
+[previously merged PRs](https://github.com/timelessco/next-react-app/pulls?q=is%3Apr+is%3Amerged+-label%3Adependencies+)
 for reference.
 
 #### Draft PRs

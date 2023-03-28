@@ -19,11 +19,10 @@
 		}
 	],
 	"contributorsPerLine": 7,
-	"contributorsSortAlphabetically": true,
 	"files": ["README.md"],
 	"imageSize": 100,
 	"projectName": "next-react-app",
-	"projectOwner": "navin-moorthy",
+	"projectOwner": "timelessco",
 	"repoHost": "https://github.com",
 	"repoType": "github"
 }
