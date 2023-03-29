@@ -26,23 +26,25 @@ Built using the [Next.js framework](https://nextjs.org/) and written in
 TypeScript & other amazing technologies mentioned below to build a modern web
 application.
 
-- [react](https://reactjs.org/)
 - [next.js](https://nextjs.org/)
+- [react](https://reactjs.org/)
 - [typeScript](https://www.typescriptlang.org/)
 - [zod](https://github.com/colinhacks/zod)
 - [tailwindcss](https://tailwindcss.com/)
+- [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
+- [pnpm](https://pnpm.io/)
 - [eslint](https://eslint.org/)
 - [prettier](https://prettier.io/)
 - [stylelint](https://stylelint.io/)
-- [jest](https://jestjs.io/)
-- [react-testing-library](https://testing-library.com/docs/react-testing-library/intro/)
-- [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
-- [pnpm](https://pnpm.io/)
+- [markdownlint](https://github.com/DavidAnson/markdownlint)
+- [knip](https://github.com/webpro/knip)
+- [cspell](https://cspell.org)
+- [npm-package-json-lint](https://npmpackagejsonlint.org/)
+- [release-it](https://github.com/release-it/release-it#readme)
 - [husky](https://typicode.github.io/husky/#/)
 - [lint-staged](https://github.com/okonet/lint-staged#readme)
 - [commitlint](https://commitlint.js.org/#/)
 - [gacp](https://github.com/vivaxy/gacp#readme)
-- [release-it](https://github.com/release-it/release-it#readme)
 
 ## Development
 

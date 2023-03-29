@@ -35,6 +35,7 @@
 		"lint:types": "tsc --noEmit",
 		"lint:css": "stylelint '**/*.css' --cache --color -f verbose",
 		"lint:md": "markdownlint **/*.md \".github/**/*.md\"",
+		"lint:knip": "knip --production",
 		"lint:package-json": "npmPkgJsonLint .",
 		"lint:spelling": "cspell --dot --gitignore --cache --no-progress check \"**/*\"",
 		"format": "npm-run-all format:*",

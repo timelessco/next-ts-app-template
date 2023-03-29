@@ -17,6 +17,7 @@
     - [Stylelint](#stylelint)
     - [Markdown](#markdown)
     - [Check Types](#check-types)
+    - [Check unused dependencies, exports \& types](#check-unused-dependencies-exports--types)
     - [Check Spelling](#check-spelling)
     - [Check package.json](#check-packagejson)
     - [Test](#test)
@@ -27,9 +28,7 @@ Before you get started, you will need to have the following tools installed on
 your machine:
 
 - **[Node.js](https://nodejs.org/en/)** (version 12 or later)
-- **[pnpm](https://pnpm.io/)** (version 5 or later) or
-  **[npm](https://www.npmjs.com/)** or **[yarn](https://yarnpkg.com/)** (version
-  6 or later)
+- **[pnpm](https://pnpm.io/)** (version 7 or later)
 - **[Git](https://git-scm.com/)** (optional, but recommended for version
   control)
 
@@ -172,6 +171,15 @@ Markdown files
 > Check TypeScript types
 
 `pnpm lint:types`
+
+### Check unused dependencies, exports & types
+
+([knip](https://github.com/webpro/knip)): Checks all unused dependencies,
+exports & types
+
+> Check the spelling errors
+
+`pnpm lint:knip`
 
 ### Check Spelling
 
