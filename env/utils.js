@@ -22,20 +22,11 @@ export const formatErrors = (errors) => {
 
 	return Object.entries(errors)
 		.map(([name, value]) => {
-			if (Array.isArray(value)) {
-				return `${name}: ${value.join(", ")}\n`;
-			}
-
-			if (typeof value === "string") {
-				return `${name}: ${value}\n`;
-			}
-
-			if (typeof value === "object") {
-				return `${name}: ${formatErrors(value)}`;
+			if (value && "_errors" in value) {
+				return `${name}: ${value._errors.join(", ")}\n`;
 			}
 
 			return null;
 		})
-		.filter(isNonNullable)
-		.join("");
+		.filter(isNonNullable);
 };
