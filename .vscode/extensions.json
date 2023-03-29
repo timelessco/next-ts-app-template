@@ -5,6 +5,7 @@
 		"bradlc.vscode-tailwindcss",
 		"stylelint.vscode-stylelint",
 		"DavidAnson.vscode-markdownlint",
+		"streetsidesoftware.code-spell-checker",
 
 		// Optional
 		"vivaxy.vscode-conventional-commits",
