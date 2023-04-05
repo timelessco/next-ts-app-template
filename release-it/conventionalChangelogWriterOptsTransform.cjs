@@ -1,6 +1,99 @@
-const path = require("path");
-const fs = require("fs");
+const { titleCase } = require("title-case");
+const { resolve } = require("path");
+const { readFileSync } = require("fs");
 const remoteCommits = require("./remote-commits.json");
+
+const types = [
+	{ type: "feat", section: "⭐ New Features" },
+	{ type: "fix", section: "🐞 Bug Fixes" },
+	{
+		type: "refactor",
+		section: "♻️ Refactors",
+	},
+	{
+		type: "perf",
+		section: "⚡️ Performance Improvements",
+	},
+	{
+		type: "docs",
+		section: "📔 Documentation Changes",
+	},
+	{ type: "test", section: "🧪 Test Updates" },
+	{ type: "build", section: "👷 Build Updates" },
+	{ type: "ci", section: "💚 CI Changes" },
+	{ type: "revert", section: "⏪️ Reverted Changes" },
+	{
+		type: "chore",
+		section: "🔨 Maintenance Updates",
+	},
+	{ type: "style", section: "🎨 Other Changes" },
+];
+
+function findTypeEntry(types, commit) {
+	const typeKey = (commit.revert ? "revert" : commit.type || "").toLowerCase();
+	return types.find((entry) => {
+		if (entry.type !== typeKey) {
+			return false;
+		}
+
+		if (entry.scope && entry.scope !== commit.scope) {
+			return false;
+		}
+
+		return true;
+	});
+}
+
+const owner =
+	"{{#if this.owner}}{{~this.owner}}{{else}}{{~@root.owner}}{{/if}}";
+const host = "{{~@root.host}}";
+const repository =
+	"{{#if this.repository}}{{~this.repository}}{{else}}{{~@root.repository}}{{/if}}";
+
+const commitUrlFormat = expandTemplate(
+	"{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
+	{
+		host,
+		owner,
+		repository,
+	},
+);
+
+function addBangNotes(commit, context) {
+	const match = commit.header.match(/^(\w*)(?:\((.*)\))?!: (.*)$/);
+
+	if (match) {
+		const noteText = match[3]; // the description of the change.
+
+		const commitHashUrl = `${context.host}/${context.owner}/${context.repository}/commit/${commit.hash}`;
+
+		commit.notes.push({
+			text: (commit?.body && commit.body) || noteText,
+			scope: commit?.scope,
+			body: commit?.body,
+			shortHash: commit.shortHash,
+			hashUrl: commitHashUrl,
+		});
+
+		// Remove the commit to the notable changes as it will be added as breaking change
+		commit.body = null;
+	}
+}
+
+function addNotableChanges(commit, context) {
+	if (commit?.body) {
+		const commitHashUrl = `${context.host}/${context.owner}/${context.repository}/commit/${commit.hash}`;
+
+		context.notableChanges.push({
+			scope: commit?.scope
+				? titleCase(commit.scope.replaceAll(".", " ")).replaceAll("-", " ")
+				: null,
+			body: commit.body,
+			shortHash: commit.shortHash,
+			hashUrl: commitHashUrl,
+		});
+	}
+}
 
 // expand on the simple mustache-style templates supported in
 // configuration (we may eventually want to use handlebars for this).
@@ -12,49 +105,72 @@ function expandTemplate(template, context) {
 	return expanded;
 }
 
-function findTypeEntry(types, commit) {
-	const typeKey = (commit.revert ? "revert" : commit.type || "").toLowerCase();
-	return types.find((entry) => {
-		if (entry.type !== typeKey) {
-			return false;
-		}
-		if (entry.scope && entry.scope !== commit.scope) {
-			return false;
-		}
-		return true;
-	});
-}
+const releaseAsRe =
+	/release-as:\s*\w*@?([0-9]+\.[0-9]+\.[0-9a-z]+(-[0-9a-z.]+)?)\s*/i;
 
-const types = [
-	{ type: "feat", section: "Feature Updates" },
-	{ type: "fix", section: "Bug Fixes" },
-	{
-		type: "refactor",
-		section: "Code Refactors",
-	},
-	{
-		type: "docs",
-		section: "Documentation Changes",
-	},
-	{
-		type: "chore",
-		section: "Maintenance Updates",
-	},
-	{ type: "build", section: "Build Updates" },
-	{ type: "test", section: "Test Updates" },
-	{ type: "style", section: "Other Changes" },
-	{
-		type: "perf",
-		section: "Performance Improvements",
-	},
-	{ type: "ci", section: "CI Changes" },
-	{ type: "revert", section: "Updates Reverted" },
-];
+const transform = (commit, context) => {
+	if (commit.shortHash === "2a31131") {
+		console.log(
+			"🚀 ~ file: conventionalChangelogWriterOptsTransform.cjs:55 ~ conventionalChangelogWriterOptsTransform ~ commit:",
+			commit,
+		);
+		console.log(
+			"🚀 ~ file: conventionalChangelogWriterOptsTransform.cjs:55 ~ conventionalChangelogWriterOptsTransform ~ context:",
+			context,
+		);
+	}
 
-const conventionalChangelogWriterOptsTransform = (commit, context) => {
+	// Remove commit body if it's author is a bot
+	if (commit.authorName === "renovate[bot]") {
+		commit.body = "";
+	}
+
+	let discard = true;
 	const issues = [];
 	const entry = findTypeEntry(types, commit);
 	if (entry) commit.type = entry.section;
+
+	// adds additional breaking change notes
+	// for the special case, test(system)!: hello world, where there is
+	// a '!' but no 'BREAKING CHANGE' in body:
+	addBangNotes(commit, context);
+
+	// Add an entry in the CHANGELOG if special Release-As footer
+	// is used:
+	if (
+		(commit.footer && releaseAsRe.test(commit.footer)) ||
+		(commit.body && releaseAsRe.test(commit.body))
+	) {
+		discard = false;
+	}
+
+	commit.notes.forEach((note) => {
+		note.title = "BREAKING CHANGES";
+		discard = false;
+	});
+
+	context.hasNotableChanges = true;
+	context.notableChangesTitle = "👀 Notable Changes";
+	context.notableChanges = context.notableChanges || [];
+
+	addNotableChanges(commit, context);
+
+	if (context.notableChanges.length === 0) {
+		context.hasNotableChanges = false;
+	}
+
+	// breaking changes attached to any type are still displayed.
+	if (discard && (entry === undefined || entry.hidden)) return;
+
+	if (entry) commit.type = entry.section;
+
+	if (commit.scope === "*") {
+		commit.scope = "";
+	}
+
+	if (typeof commit.hash === "string") {
+		commit.shortHash = commit.hash.substring(0, 7);
+	}
 
 	if (typeof commit.subject === "string") {
 		const issueRegEx = `([#].join("|"))` + `([0-9]+)`;
@@ -62,6 +178,7 @@ const conventionalChangelogWriterOptsTransform = (commit, context) => {
 
 		commit.subject = commit.subject.replace(re, (_, prefix, issue) => {
 			issues.push(prefix + issue);
+
 			const url = expandTemplate(
 				"{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
 				{
@@ -72,6 +189,7 @@ const conventionalChangelogWriterOptsTransform = (commit, context) => {
 					prefix,
 				},
 			);
+
 			return `[${prefix}${issue}](${url})`;
 		});
 
@@ -116,20 +234,17 @@ const conventionalChangelogWriterOptsTransform = (commit, context) => {
 	return commit;
 };
 
-const owner =
-	"{{#if this.owner}}{{~this.owner}}{{else}}{{~@root.owner}}{{/if}}";
-const host = "{{~@root.host}}";
-const repository =
-	"{{#if this.repository}}{{~this.repository}}{{else}}{{~@root.repository}}{{/if}}";
-
-const commitUrlFormat = expandTemplate(
-	"{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
-	{
-		host,
-		owner,
-		repository,
-	},
+const template = readFileSync(
+	resolve(__dirname, "./templates/template.hbs"),
+	"utf-8",
 );
+const mainTemplate = template;
+
+const commit = readFileSync(
+	resolve(__dirname, "./templates/commit.hbs"),
+	"utf-8",
+);
+
 const issueUrlFormat = expandTemplate(
 	"{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
 	{
@@ -140,11 +255,37 @@ const issueUrlFormat = expandTemplate(
 		prefix: "{{this.prefix}}",
 	},
 );
-const commitTemplateString = fs
-	.readFileSync(path.resolve("release-it", "commit.hbs"))
-	.toString();
-const commitTemplate = commitTemplateString
+
+const commitPartial = commit
 	.replace(/{{commitUrlFormat}}/g, commitUrlFormat)
 	.replace(/{{issueUrlFormat}}/g, issueUrlFormat);
 
-module.exports = { conventionalChangelogWriterOptsTransform, commitTemplate };
+const commitGroupsSort = (a, b) => {
+	const commitGroupOrder = [
+		"🎨 Other Changes",
+		"💚 CI Changes",
+		"🔨 Maintenance Updates",
+		"📔 Documentation Changes",
+		"🧪 Test Updates",
+		"👷 Build Updates",
+		"⏪️ Reverted Changes",
+		"⚡️ Performance Improvements",
+		"♻️ Refactors",
+		"🐞 Bug Fixes",
+		"⭐ New Features",
+	];
+	const gRankA = commitGroupOrder.indexOf(a.title);
+	const gRankB = commitGroupOrder.indexOf(b.title);
+	if (gRankA >= gRankB) {
+		return -1;
+	} else {
+		return 1;
+	}
+};
+
+module.exports = {
+	transform,
+	mainTemplate,
+	commitPartial,
+	commitGroupsSort,
+};
