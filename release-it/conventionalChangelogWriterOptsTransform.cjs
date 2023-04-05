@@ -74,6 +74,9 @@ function addBangNotes(commit, context) {
 			shortHash: commit.shortHash,
 			hashUrl: commitHashUrl,
 		});
+
+		// Remove the commit to the notable changes as it will be added as breaking change
+		commit.body = null;
 	}
 }
 
