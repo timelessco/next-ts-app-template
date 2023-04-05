@@ -1,5 +1,83 @@
 
 
+## [5.0.0](https://github.com/timelessco/next-react-app/compare/v4.0.0...v5.0.0) (2023-04-05)
+
+
+### 🧨 BREAKING CHANGE
+
+
+#### `Tooling` 
+
+- Added turbo & enabled vercel remote caching
+- Improved release pipeline with fancy looking changelog
+- Combine many lint script actions into `ci.yml` with turbo
+- Fix semantic-pr-title issue with token
+
+
+
+Introduced in: [`481bcc6`](https://github.com/timelessco/next-react-app/commit/481bcc6c95105331dcd8bc30a5ea55a06e3d8ce3)
+
+
+
+
+### 👀 Notable Changes
+
+
+
+#### `Release It` 
+
+- Added 🧨 emoji for breaking change
+- Added titlecase support for scope
+- Added separate body & header
+- Removed auto added notes for custom solution
+- Removed unused logic regarding discard
+
+
+Introduced in: [`e86d72f`](https://github.com/timelessco/next-react-app/commit/e86d72ffd4784215de921a72a354ccfa64567c29)
+
+
+
+
+
+### Commits
+
+
+#### ⭐ New Features
+
+- **`tooling:`** ✨ add turbo repo to local & ci pipeline [481bcc6](https://github.com/timelessco/next-react-app/commit/481bcc6c95105331dcd8bc30a5ea55a06e3d8ce3) by @navin-moorthy
+
+
+
+#### 🐞 Bug Fixes
+
+- **`release-it:`** 🐛 update breaking change logic with handlebar changes [e86d72f](https://github.com/timelessco/next-react-app/commit/e86d72ffd4784215de921a72a354ccfa64567c29) by @navin-moorthy
+
+- **`release-it:`** 🐛 update config for the plugin changes [9b86ba2](https://github.com/timelessco/next-react-app/commit/9b86ba2d3b4e5136f6707aacf06405432f34cf7a) by @navin-moorthy
+
+
+
+#### ♻️ Refactors
+
+- **`env:`** ♻️ update formatErrors function to give proper formated output [30a7072](https://github.com/timelessco/next-react-app/commit/30a7072716b87f3e0d40ea4fda3ca7cea9d5d65d) by @navin-moorthy
+
+
+
+#### 👷 Build Updates
+
+- **`knip:`** 👷 add actions & update docs [6d971fb](https://github.com/timelessco/next-react-app/commit/6d971fb9d58b38942a4edd29c2eb57edeb1f0cf6) by @navin-moorthy
+
+
+
+#### 🔨 Maintenance Updates
+
+- **`dev-deps:`** ⬆️  upgrade stylelint config & other minor updates [507f975](https://github.com/timelessco/next-react-app/commit/507f9750f061fb4936bd42195515784e643e832e) by @navin-moorthy
+
+- **`package.json:`** ⬆️ upgrade  dev dependencies [facef3a](https://github.com/timelessco/next-react-app/commit/facef3a1713985e0732316c622d1f89aa89bf332) by @navin-moorthy
+
+- **`project:`** 🚚 transfer repository [40f0f42](https://github.com/timelessco/next-react-app/commit/40f0f4227c3497edd135230ffa2f754391ea2a9a) by @navin-moorthy
+
+- **`renovate:`** 📌 remove dependency from ignore list [c0a8b7a](https://github.com/timelessco/next-react-app/commit/c0a8b7ad7120cb8f1118788e8045e5ff3c304c12) by @navin-moorthy
+
 ## [4.0.0](https://github.com/timelessco/next-react-app/compare/v3.2.0...v4.0.0) (2023-03-28)
 
 
