@@ -3,18 +3,16 @@
 {{#if noteGroups}}
 {{#each noteGroups}}
 
-### ⚠ {{title}}
-
-{{#raw}}{{/raw}}
+### {{title}}
 
 {{#each notes}}
 
 {{#if scope}}#### `{{scope}}` {{/if}}
 
-{{~#if body}}
-{{text}}
-{{~else}}
-- {{text}}
+{{#if body}}
+{{body}}
+{{else}}
+- {{header}}
 {{~/if}}
 
 {{#raw}}{{/raw}}
@@ -32,7 +30,6 @@ Introduced in: [`{{shortHash}}`]({{hashUrl}})
 
 ### {{notableChangesTitle}}
 
-{{#raw}}{{/raw}}
 
 {{#each notableChanges}}
 

@@ -68,9 +68,13 @@ function addBangNotes(commit, context) {
 		const commitHashUrl = `${context.host}/${context.owner}/${context.repository}/commit/${commit.hash}`;
 
 		commit.notes.push({
-			text: (commit?.body && commit.body) || noteText,
-			scope: commit?.scope,
+			title: "🧨 BREAKING CHANGE",
+			text: null,
+			scope: commit?.scope
+				? titleCase(commit.scope.replaceAll(".", " ")).replaceAll("-", " ")
+				: null,
 			body: commit?.body,
+			header: noteText,
 			shortHash: commit.shortHash,
 			hashUrl: commitHashUrl,
 		});
@@ -105,49 +109,21 @@ function expandTemplate(template, context) {
 	return expanded;
 }
 
-const releaseAsRe =
-	/release-as:\s*\w*@?([0-9]+\.[0-9]+\.[0-9a-z]+(-[0-9a-z.]+)?)\s*/i;
-
 const transform = (commit, context) => {
-	if (commit.shortHash === "2a31131") {
-		console.log(
-			"🚀 ~ file: conventionalChangelogWriterOptsTransform.cjs:55 ~ conventionalChangelogWriterOptsTransform ~ commit:",
-			commit,
-		);
-		console.log(
-			"🚀 ~ file: conventionalChangelogWriterOptsTransform.cjs:55 ~ conventionalChangelogWriterOptsTransform ~ context:",
-			context,
-		);
-	}
-
 	// Remove commit body if it's author is a bot
 	if (commit.authorName === "renovate[bot]") {
 		commit.body = "";
 	}
 
-	let discard = true;
 	const issues = [];
 	const entry = findTypeEntry(types, commit);
-	if (entry) commit.type = entry.section;
 
 	// adds additional breaking change notes
 	// for the special case, test(system)!: hello world, where there is
 	// a '!' but no 'BREAKING CHANGE' in body:
 	addBangNotes(commit, context);
 
-	// Add an entry in the CHANGELOG if special Release-As footer
-	// is used:
-	if (
-		(commit.footer && releaseAsRe.test(commit.footer)) ||
-		(commit.body && releaseAsRe.test(commit.body))
-	) {
-		discard = false;
-	}
-
-	commit.notes.forEach((note) => {
-		note.title = "BREAKING CHANGES";
-		discard = false;
-	});
+	commit.notes = commit.notes.filter((note) => note.text == null);
 
 	context.hasNotableChanges = true;
 	context.notableChangesTitle = "👀 Notable Changes";
@@ -158,9 +134,6 @@ const transform = (commit, context) => {
 	if (context.notableChanges.length === 0) {
 		context.hasNotableChanges = false;
 	}
-
-	// breaking changes attached to any type are still displayed.
-	if (discard && (entry === undefined || entry.hidden)) return;
 
 	if (entry) commit.type = entry.section;
 
