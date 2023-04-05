@@ -1,42 +1,47 @@
 /* eslint-disable no-template-curly-in-string */
 const {
-	conventionalChangelogWriterOptsTransform,
-	commitTemplate,
+	mainTemplate,
+	commitPartial,
+	transform,
+	commitGroupsSort,
 } = require("./release-it/conventionalChangelogWriterOptsTransform.cjs");
 
 module.exports = {
 	hooks: {
-		"before:init": ["pnpm lint", "pnpm test"],
+		"before:init": [
+			"npx turbo run lint:eslint lint:types lint:css lint:md lint:knip lint:package-json lint:spelling lint:prettier test",
+		],
 	},
 	git: {
 		requireBranch: "main",
 		requireCommits: true,
-		requireCleanWorkingDir: true,
 		commitMessage: "🚀 Release v${version}",
 		commitArgs: ["--no-verify", "-S"],
 		tagArgs: ["-s"],
 	},
 	github: {
-		release: true,
 		releaseName: "Release v${version}",
+		release: true,
+		comments: {
+			submit: true,
+		},
 	},
 	npm: {
 		publish: false,
 	},
 	plugins: {
 		"@release-it/conventional-changelog": {
-			ignoreRecommendedBump: true,
+			preset: { name: "conventionalcommits" },
 			infile: "CHANGELOG.md",
 			gitRawCommitsOpts: {
 				format:
 					"%B%n-hash-%n%H%n-shortHash-%n%h%n-gitTags-%n%d%n-committerDate-%n%ci%n-authorName-%n%an%n-authorEmail-%n%ae%n-gpgStatus-%n%G?%n-gpgSigner-%n%GS",
 			},
 			writerOpts: {
-				commitPartial: commitTemplate,
-				transform: conventionalChangelogWriterOptsTransform,
-			},
-			preset: {
-				name: "conventionalcommits",
+				mainTemplate,
+				commitPartial,
+				transform,
+				commitGroupsSort,
 			},
 		},
 	},
