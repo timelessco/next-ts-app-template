@@ -32,7 +32,6 @@
 	"dependencyDashboardTitle": "Renovate Dependency Updates",
 	"automergeStrategy": "squash",
 	"postUpdateOptions": ["pnpmDedupe"],
-	"ignoreDeps": ["framer-motion"],
 	"commitMessageAction": "⬆️  update",
 	"commitMessageTopic": "{{depName}}",
 	"packageRules": [
