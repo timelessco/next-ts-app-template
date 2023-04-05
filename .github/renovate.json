@@ -32,7 +32,8 @@
 	"dependencyDashboardTitle": "Renovate Dependency Updates",
 	"automergeStrategy": "squash",
 	"postUpdateOptions": ["pnpmDedupe"],
-	"commitMessageAction": "⬆️ update",
+	"ignoreDeps": ["framer-motion"],
+	"commitMessageAction": "⬆️  update",
 	"commitMessageTopic": "{{depName}}",
 	"packageRules": [
 		{
@@ -80,7 +81,7 @@
 			"matchUpdateTypes": ["major"],
 			"labels": ["Dependency ⏫"],
 			"semanticCommitScope": "deps",
-			"commitMessageAction": "⬆️ upgrade",
+			"commitMessageAction": "⬆️  upgrade",
 			"semanticCommitType": "fix",
 			"prPriority": 3
 		},
@@ -90,7 +91,7 @@
 			"matchUpdateTypes": ["major"],
 			"labels": ["DevDependency 🔼"],
 			"semanticCommitScope": "dev-deps",
-			"commitMessageAction": "⬆️ upgrade",
+			"commitMessageAction": "⬆️  upgrade",
 			"prPriority": 3
 		},
 		{

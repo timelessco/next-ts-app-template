@@ -1,15 +1,19 @@
-*{{#if scope}} **{{scope}}:**
-{{~/if}} {{#if subject}}
-  {{~subject}}
+- {{#if scope}}**`{{scope}}:`** {{/if}}
+
+{{~#if subject}}
+{{subject}}
 {{~else}}
-  {{~header}}
+{{header}}
 {{~/if}}
 
-{{~!-- commit link --}}{{~#if hash}} {{#if @root.linkReferences~}}
-  ([{{shortHash}}]({{commitUrlFormat}})) {{~#if userLogin}} by @{{userLogin}} {{~/if}}
+{{~#if @root.linkReferences}}
+ [{{shortHash}}]({{commitUrlFormat}})
 {{~else}}
-  {{~shortHash}} {{~#if userLogin}} by @{{userLogin}} {{~/if}}
-{{~/if}}{{~/if}}
+ {{shortHash}}
+{{~/if}}
+
+{{~!-- commit author details --}}
+{{~#if userLogin}} by @{{userLogin}} {{~/if}}
 
 {{~!-- commit references --}}
 {{~#if references~}}
@@ -26,20 +30,6 @@
     {{~/if}}
     {{~this.repository}}{{this.prefix}}{{this.issue}}
   {{~/if}}{{/each}}
-{{~/if}}
-
-{{~#if body}}
-  {{#raw}}{{/raw}}
-  {{#if body}}
-
----
-
-{{body}}
-
----
-
-  {{/if}}
-  {{#raw}}{{/raw}}
 {{~/if}}
 
 {{#raw}}{{/raw}}

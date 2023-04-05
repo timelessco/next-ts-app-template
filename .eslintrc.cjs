@@ -125,7 +125,7 @@ module.exports = {
 					},
 				},
 				{
-					files: ["*.tsx"],
+					files: ["*.tsx", "use*.ts"],
 					extends: [
 						"canonical/react",
 						"canonical/jsx-a11y",
@@ -147,6 +147,7 @@ module.exports = {
 						"react/forbid-component-props": "off",
 						"react/prop-types": "off",
 						"react/jsx-handler-names": "off",
+						"react/jsx-curly-newline": "off",
 					},
 					settings: {
 						tailwindcss: {

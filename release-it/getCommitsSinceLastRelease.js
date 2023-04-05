@@ -29,7 +29,6 @@ const getOldestCommitSinceLastTag = async () => {
 };
 
 const octokit = new Octokit({
-	// eslint-disable-next-line node/no-process-env
 	auth: `token ${process.env.GITHUB_TOKEN}`,
 });
 
