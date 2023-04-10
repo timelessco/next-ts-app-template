@@ -17,9 +17,11 @@ const bundleAnalyzer = withBundleAnalyzer({
 const nextConfig = {
 	// https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode
 	// reactStrictMode: true,
-	eslint: {
-		ignoreDuringBuilds: true,
-	},
+	...(process.env.NODE_ENV === "production" && {
+		eslint: {
+			ignoreDuringBuilds: true,
+		},
+	}),
 
 	// Enable the below option only when you are debugging sourceamp
 	productionBrowserSourceMaps: process.env.SOURCEMAP === "true",

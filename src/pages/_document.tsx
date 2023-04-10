@@ -7,16 +7,7 @@ class MyDocument extends Document {
 				className="min-h-full antialiased inter-display optimizeLegibility"
 				lang="en"
 			>
-				<Head>
-					{/* Fonts Preload */}
-					<link
-						as="font"
-						crossOrigin="anonymous"
-						href="/fonts/Inter.var-english.woff2"
-						rel="preload"
-						type="font/woff2"
-					/>
-				</Head>
+				<Head />
 				<body>
 					<Main />
 					<NextScript />

@@ -12,10 +12,14 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: [
-					"InterVar",
-					"Adjusted Arial Fallback",
-					...defaultTheme.fontFamily.sans,
+					`var(--font-inter), ${defaultTheme.fontFamily.sans.join(", ")}`,
+					{ fontVariationSettings: '"opsz" 32' },
 				],
+			},
+			backgroundImage: {
+				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+				"gradient-conic":
+					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 			},
 		},
 	},
@@ -23,10 +27,8 @@ module.exports = {
 		plugin(({ addUtilities }) => {
 			addUtilities({
 				".inter-display": {
-					"font-variation-settings": `"opsz" 32`,
+					"font-optical-sizing": "auto",
 				},
-			});
-			addUtilities({
 				".optimizeLegibility": {
 					"text-rendering": "optimizeLegibility",
 				},
