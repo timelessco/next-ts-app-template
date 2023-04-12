@@ -1,5 +1,43 @@
 
 
+## [5.1.0](https://github.com/timelessco/next-ts-app/compare/v5.0.0...v5.1.0) (2023-04-12)
+
+
+### 🗃️ Commits
+
+
+#### ⭐ New Features
+
+- **`template:`** ✨ add new template with next google inter font [ff591ef](https://github.com/timelessco/next-ts-app/commit/ff591ef3205bdaaaa30918e1318b6b477d417d67) by @navin-moorthy
+
+
+
+#### 🐞 Bug Fixes
+
+- **`knip:`** 🐛 add release-it to entry & add tilg to ignore [cd9856a](https://github.com/timelessco/next-ts-app/commit/cd9856aac5f19729e40616ca05c889bc54a1c047) by @navin-moorthy
+
+
+
+#### ♻️ Refactors
+
+- **`env:`** ♻️ fix error return type & update docs [0b46e52](https://github.com/timelessco/next-ts-app/commit/0b46e52427fdb42e35fcefb259281a5ab51eba08) by @navin-moorthy
+
+- **`release-it:`** ♻️ add commits emoji in template handlebar [b33e71e](https://github.com/timelessco/next-ts-app/commit/b33e71e2d969b02768615c828a9a967ab1dc5852) by @navin-moorthy
+
+- **`rename:`** 🚚 rename repo to next-ts-app [9d70c08](https://github.com/timelessco/next-ts-app/commit/9d70c089ca84380ec5e0b5d2d0885fa50f8d6b11) by @navin-moorthy
+
+
+
+#### 🔨 Maintenance Updates
+
+- **`dev-deps:`** ⬆️  update types [9b50889](https://github.com/timelessco/next-ts-app/commit/9b50889b2b4cd30eca5a6bb7c5bf3b31633d6a94) by @navin-moorthy
+
+- **`dev-deps:`** ⬆️ update devdependencies (#149) [9cb34d2](https://github.com/timelessco/next-ts-app/commit/9cb34d26b407ec4ca72878fea67ffe859dfb8de7) by @renovate[bot], closes [#149](https://github.com/timelessco/next-ts-app/issues/149)
+
+- **`dev-deps:`** pin dependencies [c4b13a6](https://github.com/timelessco/next-ts-app/commit/c4b13a69b07dcf16b0ad0b042aaaa34e147570fe) by @renovate[bot]
+
+- **`other-deps:`** ⬆️ update pnpm to v8.2.0 (#147) [bf71831](https://github.com/timelessco/next-ts-app/commit/bf7183165ec280826c3e4dcef1168fdc0661f49a) by @renovate[bot], closes [#147](https://github.com/timelessco/next-ts-app/issues/147)
+
 ## [5.0.0](https://github.com/timelessco/next-ts-app/compare/v4.0.0...v5.0.0) (2023-04-05)
 
 
