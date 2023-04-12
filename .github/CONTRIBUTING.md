@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in contributing to `next-react-app`! 💖
+Thanks for your interest in contributing to `next-ts-app`! 💖
 
 > After this page, see [DEVELOPMENT.md][1] for local development instructions.
 
@@ -81,15 +81,15 @@ within 24 hours - it was likely an oversight on our end!
 
 [1]: ./DEVELOPMENT.md
 [2]: ./CODE_OF_CONDUCT.md
-[3]: https://github.com/timelessco/next-react-app/issues/new/choose
+[3]: https://github.com/timelessco/next-ts-app/issues/new/choose
 [4]:
-	https://github.com/timelessco/next-react-app/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22
+	https://github.com/timelessco/next-ts-app/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22
 [5]:
-	https://github.com/timelessco/next-react-app/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22+label%3A%22good+first+issue%22+no%3Aassignee
+	https://github.com/timelessco/next-ts-app/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22+label%3A%22good+first+issue%22+no%3Aassignee
 [6]: #reporting-issues
 [7]: https://github.com/conventional-changelog/commitlint
 [8]:
-	https://github.com/timelessco/next-react-app/pulls?q=is%3Apr+is%3Amerged+-label%3Adependencies+
+	https://github.com/timelessco/next-ts-app/pulls?q=is%3Apr+is%3Amerged+-label%3Adependencies+
 [9]:
 	https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request#converting-a-pull-request-to-a-draft
 [10]:

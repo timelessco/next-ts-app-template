@@ -1,19 +1,19 @@
 {
-	"name": "next-react-app",
+	"name": "next-ts-app",
 	"version": "5.0.0",
 	"private": true,
-	"description": "Next React App Template",
+	"description": "Next TS App Template",
 	"keywords": [
 		"react",
-		"next-react-app",
+		"next-ts-app",
 		"typescript"
 	],
 	"bugs": {
-		"url": "https://github.com/timelessco/next-react-app/issues"
+		"url": "https://github.com/timelessco/next-ts-app/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/timelessco/next-react-app.git"
+		"url": "git+https://github.com/timelessco/next-ts-app.git"
 	},
 	"license": "MIT",
 	"author": {

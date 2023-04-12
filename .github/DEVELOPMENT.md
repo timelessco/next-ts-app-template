@@ -59,8 +59,8 @@ After you have set the environmental variables in the **`.env`** file, you can
 run the project locally by
 
 ```shell
-git clone https://github.com/timelessco/next-react-app
-cd next-react-app
+git clone https://github.com/timelessco/next-ts-app
+cd next-ts-app
 pnpm install
 ```
 
