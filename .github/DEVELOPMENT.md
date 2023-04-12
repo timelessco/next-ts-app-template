@@ -21,6 +21,7 @@
     - [Check Spelling](#check-spelling)
     - [Check package.json](#check-packagejson)
     - [Test](#test)
+    - [Contributions](#contributions)
 
 ## Prerequisites
 
@@ -78,14 +79,13 @@ auto-updates as you edit the file
 
 ## Building the project
 
-To build the project to a production environment, you can use the
+You can use the below command to build the production-ready version of the
+project. This will create a **`.next`** directory with the compiled code and
+static assets.
 
 ```bash
 pnpm build
 ```
-
-to build the production-ready version of the project. This will create a
-**`.next`** directory with the compiled code and static assets.
 
 Run the above built application locally using
 
@@ -127,7 +127,7 @@ you save files in VS Code or make a Git commit.
 ### Eslint
 
 Extends all the necessary rulesets from [eslint-config-canonical][10] for the
-Next.js project that lints JavaScript and TypeScript source files
+project that lints JavaScript and TypeScript source files
 
 > Check for the linting errors
 
@@ -143,11 +143,11 @@ Next.js project that lints JavaScript and TypeScript source files
 
 > Check the css linting errors
 
-`pnpm lint:csslint`
+`pnpm lint:css`
 
 > AutoFix the css linting errors
 
-`pnpm format:csslint`
+`pnpm format:css`
 
 ### Markdown
 
@@ -155,11 +155,11 @@ Next.js project that lints JavaScript and TypeScript source files
 
 > Check the markdown linting errors
 
-`pnpm lint:csslint`
+`pnpm lint:md`
 
 > AutoFix the markdown linting errors
 
-`pnpm format:csslint`
+`pnpm format:md`
 
 ### Check Types
 
@@ -185,6 +185,11 @@ Next.js project that lints JavaScript and TypeScript source files
 
 `pnpm lint:spelling`
 
+> Populate `project-words.txt` with the words that are not in the dictionary &
+> fix
+
+`pnpm populate:dictionary`
+
 ### Check package.json
 
 ([npm-package-json-lint][16]): Lints the `package.json` file
@@ -198,6 +203,19 @@ Next.js project that lints JavaScript and TypeScript source files
 > Run the test suite
 
 `pnpm test`
+
+### Contributions
+
+([all-contributors][17]): ✨ Recognize all contributors, not just the ones who
+push code ✨
+
+> Add new contributors
+
+`pnpm contributors:add`
+
+> Generate the contributors list
+
+`pnpm contributors:generate`
 
 [1]: https://nodejs.org/en/
 [2]: https://pnpm.io/
@@ -215,3 +233,4 @@ Next.js project that lints JavaScript and TypeScript source files
 [14]: https://github.com/webpro/knip
 [15]: https://cspell.org
 [16]: https://npmpackagejsonlint.org/
+[17]: https://github.com/all-contributors/all-contributors

@@ -1,5 +1,6 @@
 # dotenv environment variable files
 .env*
+!.env.example
 
 # Logs
 *.log*

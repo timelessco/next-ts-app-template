@@ -45,6 +45,7 @@ application.
 - [lint-staged](https://github.com/okonet/lint-staged#readme)
 - [commitlint](https://commitlint.js.org/#/)
 - [gacp](https://github.com/vivaxy/gacp#readme)
+- [all-contributors](https://github.com/all-contributors/all-contributors)
 
 ## Development
 

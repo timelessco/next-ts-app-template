@@ -1,10 +1,8 @@
 // Thanks to https://github.com/t3-oss/create-t3-app/
-// @ts-check
 /**
  * This file is included in `/next.config.js` which ensures the app isn't built with invalid env vars.
  * It has to be a `.js`-file to be imported there.
  */
-
 import { clientEnvironmentParsedData } from "./client.js";
 import { serverEnvironment, serverSchema } from "./schema.js";
 import { formatErrors } from "./utils.js";

@@ -13,11 +13,11 @@ const isNonNullable = (x) => {
 
 /**
  * @param {import('zod').ZodFormattedError<Map<string,string>,string>} errors
- * @returns {string}
+ * @returns {string[]}
  */
 export const formatErrors = (errors) => {
 	if (!errors) {
-		return "";
+		return [];
 	}
 
 	return Object.entries(errors)
