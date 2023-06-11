@@ -87,7 +87,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "17.6.3",
 		"@commitlint/config-conventional": "17.6.3",
-		"@ianvs/prettier-plugin-sort-imports": "3.7.2",
+		"@ianvs/prettier-plugin-sort-imports": "4.0.2",
 		"@next/bundle-analyzer": "13.4.2",
 		"@next/env": "13.4.2",
 		"@next/eslint-plugin-next": "13.4.2",
