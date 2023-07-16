@@ -91,7 +91,7 @@
 		"@next/bundle-analyzer": "13.4.9",
 		"@next/env": "13.4.9",
 		"@next/eslint-plugin-next": "13.4.9",
-		"@octokit/core": "4.2.4",
+		"@octokit/core": "5.0.0",
 		"@release-it/conventional-changelog": "6.0.0",
 		"@types/node": "18.16.19",
 		"@types/react": "18.2.14",
