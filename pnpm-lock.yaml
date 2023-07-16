@@ -62,8 +62,8 @@ devDependencies:
     specifier: 6.31.1
     version: 6.31.1
   dedent:
-    specifier: 0.7.0
-    version: 0.7.0
+    specifier: 1.0.1
+    version: 1.0.1
   del-cli:
     specifier: 5.0.0
     version: 5.0.0
@@ -2533,6 +2533,15 @@ packages:
       dequal: 2.0.3
     dev: true
 
+  /babel-plugin-macros@3.1.0:
+    resolution: {integrity: sha512-Cg7TFGpIr01vOQNODXOOaGz2NpCU5gl8x1qJFbb6hbZxR7XrcE2vtbAsTAbJ7/xwJtUuJEw8K8Zr/AE0LHlesg==}
+    engines: {node: '>=10', npm: '>=6'}
+    dependencies:
+      '@babel/runtime': 7.22.5
+      cosmiconfig: 7.1.0
+      resolve: 1.22.2
+    dev: true
+
   /babylon@6.18.0:
     resolution: {integrity: sha512-q/UEjfGJ2Cm3oKV71DJz9d25TPnq5rhBVL2Q4fA5wcC3jcrdn7+SssEybFIxwAvvP+YCsCYNKughoF33GxgycQ==}
     hasBin: true
@@ -3606,8 +3615,10 @@ packages:
       mimic-response: 3.1.0
     dev: true
 
-  /dedent@0.7.0:
-    resolution: {integrity: sha512-Q6fKUPqnAHAyhiUgFU7BUzLiv0kd8saH9al7tnu5Q/okj6dnupxyTgFIBjVzJATdfIAm9NAsvXNzjaKa+bxVyA==}
+  /dedent@1.0.1:
+    resolution: {integrity: sha512-ISfLyH40XVmphoIMyGwOpN4w9kB4Jjz5r62myZDJMbjJSwur7r/EZ0xg64yyZl50qoDVIvCT9UMLmQAjepmjiA==}
+    dependencies:
+      babel-plugin-macros: 3.1.0
     dev: true
 
   /deep-extend@0.6.0:
