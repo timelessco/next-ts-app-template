@@ -74,8 +74,8 @@ devDependencies:
     specifier: 8.51.0
     version: 8.51.0
   eslint-config-canonical:
-    specifier: 41.4.2
-    version: 41.4.2(@babel/plugin-syntax-flow@7.22.5)(@babel/plugin-transform-react-jsx@7.22.15)(@types/node@18.18.5)(eslint@8.51.0)(graphql@16.8.1)(typescript@5.2.2)(vitest@0.34.6)
+    specifier: 42.0.1
+    version: 42.0.1(@babel/plugin-syntax-flow@7.22.5)(@babel/plugin-transform-react-jsx@7.22.15)(@types/node@18.18.5)(eslint@8.51.0)(graphql@16.8.1)(typescript@5.2.2)(vitest@0.34.6)
   eslint-config-prettier:
     specifier: 9.0.0
     version: 9.0.0(eslint@8.51.0)
@@ -4618,8 +4618,8 @@ packages:
       eslint: 8.51.0
     dev: true
 
-  /eslint-config-canonical@41.4.2(@babel/plugin-syntax-flow@7.22.5)(@babel/plugin-transform-react-jsx@7.22.15)(@types/node@18.18.5)(eslint@8.51.0)(graphql@16.8.1)(typescript@5.2.2)(vitest@0.34.6):
-    resolution: {integrity: sha512-ayP7OPe7Mh0Vf1K8PXQshekyeM3dNcEVwoJAu5ozrZXftaY36NPaH57Oj1FcmMzr2gpc3WbjQ5frVqxnqjnKMg==}
+  /eslint-config-canonical@42.0.1(@babel/plugin-syntax-flow@7.22.5)(@babel/plugin-transform-react-jsx@7.22.15)(@types/node@18.18.5)(eslint@8.51.0)(graphql@16.8.1)(typescript@5.2.2)(vitest@0.34.6):
+    resolution: {integrity: sha512-e+taL2j2EoeEJIxftD3+l3U3x/wnGQykrDb0CiBJuD+vCn9rM0Hc+j5ofUz6oKohTAuyR23qO8y6xqjOXnBLdQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: ^8.30.0
