@@ -74,8 +74,8 @@ devDependencies:
     specifier: 8.51.0
     version: 8.51.0
   eslint-config-canonical:
-    specifier: 41.4.2
-    version: 41.4.2(@babel/plugin-syntax-flow@7.22.5)(@babel/plugin-transform-react-jsx@7.22.15)(@types/node@18.18.5)(eslint@8.51.0)(graphql@16.8.1)(typescript@5.2.2)(vitest@0.34.6)
+    specifier: 42.0.1
+    version: 42.0.1(@babel/plugin-syntax-flow@7.22.5)(@babel/plugin-transform-react-jsx@7.22.15)(@types/node@18.18.5)(eslint@8.51.0)(graphql@16.8.1)(typescript@5.2.2)(vitest@0.34.6)
   eslint-config-prettier:
     specifier: 9.0.0
     version: 9.0.0(eslint@8.51.0)
@@ -113,8 +113,8 @@ devDependencies:
     specifier: 2.33.3
     version: 2.33.3
   lint-staged:
-    specifier: 14.0.1
-    version: 14.0.1
+    specifier: 15.0.2
+    version: 15.0.2
   markdownlint:
     specifier: 0.31.1
     version: 0.31.1
@@ -3572,6 +3572,11 @@ packages:
     engines: {node: '>=16'}
     dev: true
 
+  /commander@11.1.0:
+    resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
+    engines: {node: '>=16'}
+    dev: true
+
   /commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
@@ -4012,7 +4017,7 @@ packages:
       '@cspell/dynamic-import': 7.3.7
       chalk: 5.3.0
       chalk-template: 1.1.0
-      commander: 11.0.0
+      commander: 11.1.0
       cspell-gitignore: 7.3.7
       cspell-glob: 7.3.7
       cspell-io: 7.3.7
@@ -4622,8 +4627,8 @@ packages:
       eslint: 8.51.0
     dev: true
 
-  /eslint-config-canonical@41.4.2(@babel/plugin-syntax-flow@7.22.5)(@babel/plugin-transform-react-jsx@7.22.15)(@types/node@18.18.5)(eslint@8.51.0)(graphql@16.8.1)(typescript@5.2.2)(vitest@0.34.6):
-    resolution: {integrity: sha512-ayP7OPe7Mh0Vf1K8PXQshekyeM3dNcEVwoJAu5ozrZXftaY36NPaH57Oj1FcmMzr2gpc3WbjQ5frVqxnqjnKMg==}
+  /eslint-config-canonical@42.0.1(@babel/plugin-syntax-flow@7.22.5)(@babel/plugin-transform-react-jsx@7.22.15)(@types/node@18.18.5)(eslint@8.51.0)(graphql@16.8.1)(typescript@5.2.2)(vitest@0.34.6):
+    resolution: {integrity: sha512-e+taL2j2EoeEJIxftD3+l3U3x/wnGQykrDb0CiBJuD+vCn9rM0Hc+j5ofUz6oKohTAuyR23qO8y6xqjOXnBLdQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: ^8.30.0
@@ -7233,34 +7238,28 @@ packages:
       uc.micro: 1.0.6
     dev: true
 
-  /lint-staged@14.0.1:
-    resolution: {integrity: sha512-Mw0cL6HXnHN1ag0mN/Dg4g6sr8uf8sn98w2Oc1ECtFto9tvRF7nkXGJRbx8gPlHyoR0pLyBr2lQHbWwmUHe1Sw==}
-    engines: {node: ^16.14.0 || >=18.0.0}
+  /lint-staged@15.0.2:
+    resolution: {integrity: sha512-vnEy7pFTHyVuDmCAIFKR5QDO8XLVlPFQQyujQ/STOxe40ICWqJ6knS2wSJ/ffX/Lw0rz83luRDh+ET7toN+rOw==}
+    engines: {node: '>=18.12.0'}
     hasBin: true
     dependencies:
       chalk: 5.3.0
-      commander: 11.0.0
+      commander: 11.1.0
       debug: 4.3.4
-      execa: 7.2.0
+      execa: 8.0.1
       lilconfig: 2.1.0
-      listr2: 6.6.1
+      listr2: 7.0.2
       micromatch: 4.0.5
       pidtree: 0.6.0
       string-argv: 0.3.2
-      yaml: 2.3.1
+      yaml: 2.3.3
     transitivePeerDependencies:
-      - enquirer
       - supports-color
     dev: true
 
-  /listr2@6.6.1:
-    resolution: {integrity: sha512-+rAXGHh0fkEWdXBmX+L6mmfmXmXvDGEKzkjxO+8mP3+nI/r/CWznVBvsibXdxda9Zz0OW2e2ikphN3OwCT/jSg==}
+  /listr2@7.0.2:
+    resolution: {integrity: sha512-rJysbR9GKIalhTbVL2tYbF2hVyDnrf7pFUZBwjPaMIdadYHmeT+EVi/Bu3qd7ETQPahTotg2WRCatXwRBW554g==}
     engines: {node: '>=16.0.0'}
-    peerDependencies:
-      enquirer: '>= 2.3.0 < 3'
-    peerDependenciesMeta:
-      enquirer:
-        optional: true
     dependencies:
       cli-truncate: 3.1.0
       colorette: 2.0.20
@@ -8632,7 +8631,7 @@ packages:
       lilconfig: 2.1.0
       postcss: 8.4.31
       ts-node: 10.9.1(@types/node@18.18.5)(typescript@5.2.2)
-      yaml: 2.3.2
+      yaml: 2.3.3
     dev: true
 
   /postcss-nested@6.0.1(postcss@8.4.31):
@@ -11228,7 +11227,7 @@ packages:
     dependencies:
       eslint-visitor-keys: 3.4.3
       lodash: 4.17.21
-      yaml: 2.3.2
+      yaml: 2.3.3
     dev: true
 
   /yaml@1.10.2:
@@ -11236,13 +11235,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /yaml@2.3.1:
-    resolution: {integrity: sha512-2eHWfjaoXgTBC2jNM1LRef62VQa0umtvRiDSk6HSzW7RvS5YtkabJrwYLLEKWBc8a5U2PTSCs+dJjUTJdlHsWQ==}
-    engines: {node: '>= 14'}
-    dev: true
-
-  /yaml@2.3.2:
-    resolution: {integrity: sha512-N/lyzTPaJasoDmfV7YTrYCI0G/3ivm/9wdG0aHuheKowWQwGTsK0Eoiw6utmzAnI6pkJa0DUVygvp3spqqEKXg==}
+  /yaml@2.3.3:
+    resolution: {integrity: sha512-zw0VAJxgeZ6+++/su5AFoqBbZbrEakwu+X0M5HmcwUiBL7AzcuPKjj5we4xfQLp78LkEMpD0cOnUhmgOVy3KdQ==}
     engines: {node: '>= 14'}
     dev: true
 
