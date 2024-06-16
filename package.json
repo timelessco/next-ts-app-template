@@ -121,7 +121,7 @@
 		"markdownlint": "0.31.1",
 		"markdownlint-cli": "0.37.0",
 		"next-sitemap": "4.2.3",
-		"npm-package-json-lint": "7.0.0",
+		"npm-package-json-lint": "8.0.0",
 		"npm-package-json-lint-config-default": "6.0.0",
 		"postcss": "8.4.31",
 		"prettier": "3.0.3",
