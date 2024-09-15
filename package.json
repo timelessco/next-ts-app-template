@@ -104,7 +104,7 @@
 		"del-cli": "5.1.0",
 		"dotenv": "16.3.1",
 		"eslint": "8.51.0",
-		"eslint-config-canonical": "42.0.1",
+		"eslint-config-canonical": "44.3.0",
 		"eslint-config-prettier": "9.0.0",
 		"eslint-plugin-jsonc": "2.10.0",
 		"eslint-plugin-tailwindcss": "3.13.0",
