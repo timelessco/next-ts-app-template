@@ -1,4 +1,5 @@
-import TestimonialCarousel from "@/components/carousel-test";
+import Arrow from "@/components/arrow";
+import TestimonialCarousel from "@/components/carousel";
 import Image from "next/image";
 export default function Home() {
   return (
@@ -77,37 +78,16 @@ export default function Home() {
         </div>
       </div>
       <TestimonialCarousel />
-      <div className="h-[492px] bg-black hover:bg-blue-500 flex flex-col items-center justify-center  relative leading-[1.1] group transition-colors duration-300">
-        <div className="text-white text-[2.875rem] text-center tracking-[0.4px] antialiased font-lyondisplayweb font-light pt-[160px] mb-[25px]">
+      <div className="bg-black hover:bg-blue-500 flex flex-col items-center justify-center  relative leading-[1.1] group transition-colors duration-300 py-[160px]">
+        <div className="text-white text-[2.875rem] text-center tracking-[0.4px] antialiased font-lyondisplayweb font-light mb-[33px]">
           <p>Solving business problems with</p>
           <p>user-centric design</p>
         </div>
-        <div className="flex items-center gap-2 text-xl text-[2rem] text-[#2D82E4] tracking-[0] relative mb-0 group-hover:text-white antialiased pb-[160px] font-light transition-colors duration-300">
-          <span className="flex items-center gap-2 text-[2rem]">
+        <div className="flex items-center gap-2 text-xl text-[2rem] text-[#2D82E4] tracking-[0] relative mb-0 group-hover:text-white antialiased font-light transition-colors duration-300">
+          <p className="flex items-center gap-2 text-[2rem]">
             Learn more about us
-            <span className="transition-transform duration-300 transform group-hover:translate-x-2">
-              <svg
-                width="22px"
-                height="16px"
-                viewBox="0 0 22 16"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                className="stroke-[#2D82E4]"
-              >
-                <g
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M0,7 L19,7"></path>
-                  <polyline points="13 0 20 7 13 14"></polyline>
-                </g>
-              </svg>
-            </span>
-          </span>
+          </p>
+          <Arrow />
         </div>
       </div>
     </>
