@@ -51,7 +51,7 @@ const TestimonialCarousel = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="bg-gray-100   flex justify-center px-4 mt-[72px] pt-[196px] pb-[150px]">
+    <section className="bg-gray-100 flex justify-center px-4 mt-[72px] sm:pt-[96px] md:pt-[96px] lg:pt-[196px] xl:pt-[196px] 2xl:pt-[196px] lg:pb-[150px] xl:pb-[150px] 2xl:pb-[150px] sm:pb-[54px] md:pb-[54px]">
       <div className="max-w-3xl text-center px-[15px]">
         <h3 className="font-bold text-[15px] text-[rgba(7,18,44,0.55)] tracking-[1.97px]">
           WHAT OUR CLIENT SAYS
@@ -64,7 +64,7 @@ const TestimonialCarousel = () => {
                   {testimonial.text}
                 </p>
 
-                <div className="flex flex-col items-center pb-[25px]">
+                <div className="flex flex-col items-center sm:pb-[15px] md:pb-[15px] lg:pb-[25px] xl:[25px] 2xl:[25px] pb-[25px]">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
