@@ -1,6 +1,7 @@
 import Arrow from "@/components/arrow";
 import TestimonialCarousel from "@/components/carousel";
 import Image from "next/image";
+
 export default function Home() {
   return (
     <>
@@ -11,10 +12,10 @@ export default function Home() {
         </div>
         <div className="rounded bg-[linear-gradient(45deg,#34B1E0_0%,#A7E0F5_100%)] flex flex-row  hover:drop-shadow-xl transition duration-500 mt-[72px] hover:-translate-y-[3px]">
           <div className="flex flex-col justify-center hd:pl-[120px]  max-w-[480px] pl-[96px]">
-            <div className="font-light text-[23px] text-white tracking-[0] mb-[0.5rem] antialiased optimizeLegibility">
+            <div className="font-light text-[23px] text-white tracking-[0] mb-[5px] antialiased optimizeLegibility">
               Atlantic payroll
             </div>
-            <div className="font-lyondisplayweb text-[3.125rem] text-white leading-none font-bold">
+            <div className="font-lyondisplayweb text-[3.125rem] text-white leading-none font-bold antialiased mb-[8px]">
               Rethinking the online payroll experience
             </div>
           </div>
@@ -78,7 +79,7 @@ export default function Home() {
         </div>
       </div>
       <TestimonialCarousel />
-      <div className="bg-black hover:bg-blue-500 flex flex-col items-center justify-center  relative leading-[1.1] group transition-colors duration-300 py-[160px]">
+      <div className="bg-black hover:bg-blue-500 flex flex-col items-center justify-center  relative leading-[1.1] group transition-colors duration-300 pb-[160px] pt-[170px]">
         <div className="text-white text-[2.875rem] text-center tracking-[0.4px] antialiased font-lyondisplayweb font-light mb-[33px]">
           <p>Solving business problems with</p>
           <p>user-centric design</p>

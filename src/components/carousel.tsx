@@ -51,9 +51,9 @@ const TestimonialCarousel = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="bg-gray-100  py-[12.5rem] flex justify-center px-4 mt-[72px]">
+    <section className="bg-gray-100   flex justify-center px-4 mt-[72px] pt-[196px] pb-[150px]">
       <div className="max-w-3xl text-center px-[15px]">
-        <h3 className="font-bold text-[15px] text-[rgba(7,18,44,0.55)] tracking-[1.97px] mb-0.5rem">
+        <h3 className="font-bold text-[15px] text-[rgba(7,18,44,0.55)] tracking-[1.97px]">
           WHAT OUR CLIENT SAYS
         </h3>
         <div className="overflow-hidden" ref={emblaRef}>
@@ -64,7 +64,7 @@ const TestimonialCarousel = () => {
                   {testimonial.text}
                 </p>
 
-                <div className="flex flex-col items-center py-[25px]">
+                <div className="flex flex-col items-center pb-[25px]">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
@@ -84,12 +84,14 @@ const TestimonialCarousel = () => {
           </div>
         </div>
         {/* Dots Indicator */}
-        <div className="mt-6 flex justify-center space-x-[10px]">
+        <div className="mt-5 flex justify-center space-x-[10px]">
           {testimonials.map((_, index) => (
             <button
               key={index}
               className={`w-[6px] h-[6px] rounded-full ${
-                selectedIndex === index ? "bg-gray-900" : "bg-gray-400"
+                selectedIndex === index
+                  ? "bg-gray-900"
+                  : "bg-gray-400 font-light"
               }`}
               onClick={() => emblaApi?.scrollTo(index)}
             ></button>
