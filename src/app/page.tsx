@@ -82,8 +82,8 @@ export default function Home() {
           <p>Solving business problems with</p>
           <p>user-centric design</p>
         </div>
-        <div className="flex items-center gap-2 text-xl cursor-pointer text-[2rem] text-[#2D82E4] tracking-[0] relative mb-0 group-hover:text-white antialiased pb-[160px] font-light transition-colors duration-300">
-          <span className="flex items-center gap-2">
+        <div className="flex items-center gap-2 text-xl text-[2rem] text-[#2D82E4] tracking-[0] relative mb-0 group-hover:text-white antialiased pb-[160px] font-light transition-colors duration-300">
+          <span className="flex items-center gap-2 text-[2rem]">
             Learn more about us
             <span className="transition-transform duration-300 transform group-hover:translate-x-2">
               <svg
