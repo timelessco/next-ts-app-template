@@ -1,21 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "https://fast.fonts.net/cssapi/d31f6ac3-5be0-4f85-8d4f-e02338312df9.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+  @font-face {
+    font-family: 'Lyon Display Web';
+    src: url('/fonts/lyon-display/LyonDisplay-Light-Web.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  @font-face {
+    font-family: 'Lyon Display Web';
+    src: url('/fonts/lyon/lyon-display/LyonDisplay-Regular-Web.woff') format('woff'),;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+  }
+
+  @font-face {
+    font-family: 'Lyon Display Web';
+    src: url('/fonts/lyon/lyon-display/LyonDisplay-Bold-Web.woff') format('woff'),;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+  }
