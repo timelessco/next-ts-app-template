@@ -3813,10 +3813,6 @@ packages:
     resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
     hasBin: true
 
-  jiti@1.21.7:
-    resolution: {integrity: sha512-/imKNG4EbWNrVjoNC/1H5/9GFy+tqjGBHCaSsN+P2RnPqjsLmv6UD3Ej+Kj8nBWaRAwyk7kK5ZUc+OEatnTR3A==}
-    hasBin: true
-
   jiti@2.4.2:
     resolution: {integrity: sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A==}
     hasBin: true
@@ -10475,8 +10471,6 @@ snapshots:
 
   jiti@1.21.0: {}
 
-  jiti@1.21.7: {}
-
   jiti@2.4.2: {}
 
   js-tokens@4.0.0: {}
@@ -12373,7 +12367,7 @@ snapshots:
       fast-glob: 3.3.3
       glob-parent: 6.0.2
       is-glob: 4.0.3
-      jiti: 1.21.7
+      jiti: 1.21.0
       lilconfig: 2.1.0
       micromatch: 4.0.8
       normalize-path: 3.0.0
