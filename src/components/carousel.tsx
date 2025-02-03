@@ -52,7 +52,7 @@ const TestimonialCarousel = () => {
 
   return (
     <section className="bg-gray-100 flex justify-center px-4 mt-[72px] sm:pt-[96px] md:pt-[96px] lg:pt-[196px] xl:pt-[196px] 2xl:pt-[196px] lg:pb-[150px] xl:pb-[150px] 2xl:pb-[150px] sm:pb-[54px] md:pb-[54px]">
-      <div className="max-w-3xl text-center px-[15px]">
+      <div className="max-w-3xl text-center px-[15px] cursor-grab active:cursor-grabbing">
         <h3 className="font-bold text-[15px] text-[rgba(7,18,44,0.55)] tracking-[1.97px]">
           WHAT OUR CLIENT SAYS
         </h3>

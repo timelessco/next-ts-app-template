@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <div className="max-w-[1190px] px-[15px] mx-auto pt-[85px] hidden lg:block">
-        <div className="font-light text-[3.625rem] leading-[1.05] text-black tracking-[-0.6px] antialiased pt-[32px]">
+        <div className="font-light text-[3.625rem] leading-[1.05] text-black tracking-[-0.6px] antialiased pt-[109px]">
           We build brands, <br />
           products and apps.
         </div>
@@ -79,7 +79,7 @@ export default function Home() {
         </div>
       </div>
       <div className="block sm:block md:block lg:hidden xl:hidden 2xl:hidden px-[15px]">
-        <div className="text-5xl pt-24 pb-16 font-light antialiased">
+        <div className="text-5xl pb-16 pt-[180px] font-light antialiased">
           We build brands,
           <br />
           products and apps
@@ -95,10 +95,16 @@ export default function Home() {
               experience
             </div>
           </div>
-          <div className="flex justify-center items-center min-h-[795px] max-w-[738px] relative">
-            <Image src={"/mobile-view.png"} alt={"mobile-view"} fill />
+          <div className="flex justify-center items-center w-[100%] relative max-w-[991px] min-h-screen bg-right-top flex-wrap">
+            <Image
+              src={"/mobile-view.png"}
+              alt={"mobile-view"}
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
+
         <div className="mb-[56px] flex flex-col rounded bg-[linear-gradient(45deg,#19C391_0%,#49C07D_100%)] ">
           <div className="text-center mt-[32px]">
             <div className="antialiased text-xl font-light text-white tracking-[0] leading-[1.2] mb-[16px] mt-[20px]">
@@ -108,8 +114,18 @@ export default function Home() {
               Stock investing for <br /> everyone
             </div>
           </div>
-          <div className="flex justify-center min-h-[652px] max-w-[738px] relative">
+          <div className="flex justify-center h-full w-[100%]  relative min-h-screen">
             <Image src={"/smallcase.png"} alt={"mobile-view"} fill />
+          </div>
+        </div>
+        <div className="bg-right-top rounded bg-[url(/bluematter.jpg)] flex flex-col items-center justify-center hover:drop-shadow-lg h-[580px] min-w-[640px] transition duration-500 hover:-translate-y-[3px] mb-[56px]">
+          <div className="text-center">
+            <div className="font-light text-[23px] text-white tracking-[0] mb-[0.5rem] antialiased optimizeLegibility">
+              Bluematter
+            </div>
+            <div className="font-lyondisplayweb text-[2.25rem] text-white leading-none font-bold">
+              Solving America&apos;s marketing woes
+            </div>
           </div>
         </div>
         <div className="mb-[72px] flex flex-col rounded bg-[linear-gradient(45deg,#5B6AFF_0%,#919AFF_100%)]">
@@ -122,7 +138,7 @@ export default function Home() {
               <br /> infrastructure
             </div>
           </div>
-          <div className="flex justify-center min-h-[652px] max-w-[738px] relative">
+          <div className="flex justify-center h-screen w-[100%] relative">
             <Image
               src={"/photon-1.png"}
               alt={"mobile-view"}
@@ -135,7 +151,7 @@ export default function Home() {
 
       <TestimonialCarousel />
       <div className="bg-black hover:bg-blue-500 flex flex-col items-center justify-center relative leading-[1.1] group transition-colors duration-300 sm:pb-[122px] sm:pt-[112px] md:pb-[122px] md:pt-[112px] lg:pb-[160px] lg:pt-[170px] xl:pb-[160px] xl:pt-[170px] 2xl:pb-[160px] 2xl:pt-[170px]">
-        <div className="text-white lg:text-[2.875rem] xl:text-[2.875rem] 2xl:text-[2.875rem] sm:text-[2.5rem] md:text-[2.5rem] text-center tracking-[0.4px] antialiased font-lyondisplayweb font-light mb-[33px]">
+        <div className="text-white lg:text-[2.875rem] sm:text-[2.5rem] md:text-[2.5rem] text-center tracking-[0.4px] antialiased font-lyondisplayweb font-light mb-[33px]">
           <p>Solving business problems with</p>
           <p>user-centric design</p>
         </div>

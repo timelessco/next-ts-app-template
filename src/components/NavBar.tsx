@@ -1,20 +1,36 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function NavBar() {
   const currPath = usePathname();
   const isActive = (path: unknown) =>
     currPath === path ? "text-customHoverGray" : "text-customGray";
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <div className="block lg:hidden xl:hidden 2xl:hidden">
-        <div className="py-[15px] pl-[15px] pr-[10px] bg-white flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
+      <div
+        className={`top-0 block lg:hidden xl:hidden 2xl:hidden fixed min-w-[100%] z-10 transition-all duration-300 ease-in-out bg-white ${
+          scrolled ? "py-[5px] px-[15px] shadow-md" : "py-[15px] px-[15px]"
+        }`}
+      >
+        <div className="flex items-center justify-between">
+          <div className="flex items-center py-[5px]">
             <svg
               width="38"
               height="29"
@@ -63,7 +79,7 @@ export function NavBar() {
 
           {/* Hamburger Button */}
           <button
-            className="relative w-10 h-10 flex items-center justify-center focus:outline-none"
+            className="relative w-[24px] h-[2px] flex items-center justify-center focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle navigation"
             aria-expanded={isOpen}
@@ -89,40 +105,55 @@ export function NavBar() {
         </div>
 
         <div
-          className={`text-customGray text-[18px] bg-white shadow-md py-4 flex flex-col items-center space-y-3 transition-all duration-300 ${
-            isOpen
-              ? "translate-y-0 opacity-100"
-              : "translate-y-[-100%] opacity-0 pointer-events-none"
+          className={`absolute left-0 right-0 bg-white overflow-hidden transition-all duration-500 ease-in-out ${
+            isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <Link
-            href={""}
-            className="py-2 px-6 text-center transition duration-300 hover:bg-gray-200"
-          >
-            Work
-          </Link>
-          <Link
-            href={""}
-            className="py-2 px-6 text-center transition duration-300 hover:bg-gray-200"
-          >
-            About
-          </Link>
-          <Link
-            href={""}
-            className="py-2 px-6 text-center transition duration-300 hover:bg-gray-200"
-          >
-            Process
-          </Link>
-          <Link
-            href={""}
-            className="py-2 px-6 text-center transition duration-300 hover:bg-gray-200"
-          >
-            Contact
-          </Link>
+          <div className="antialiased font-light text-[18px] py-4 flex flex-col items-center space-y-3">
+            <Link
+              href={""}
+              className={`py-2 px-6 text-center transition duration-300 hover:bg-customHoverGray ${isActive(
+                "/"
+              )} `}
+            >
+              Work
+            </Link>
+            <Link
+              href={""}
+              className={`py-2 px-6 text-center transition duration-300 hover:bg-customHoverGray ${isActive(
+                "/about"
+              )} `}
+            >
+              About
+            </Link>
+            <Link
+              href={""}
+              className={`py-2 px-6 text-center transition duration-300 hover:bg-customHoverGray ${isActive(
+                "/process"
+              )} `}
+            >
+              Process
+            </Link>
+            <Link
+              href={""}
+              className={`py-2 px-6 text-center transition duration-300 hover:bg-customHoverGray ${isActive(
+                "/contact"
+              )} `}
+            >
+              Contact
+            </Link>
+          </div>
         </div>
       </div>
-      <div className="hidden lg:block xl:block 2xl:block">
-        <div className="bg-white max-w-[1190px] p-[15px] text-center mx-auto flex flex-row justify-between text-xl pr-4">
+      <div
+        className={`hidden lg:block xl:block 2xl:block fixed min-w-[100%] z-10 transition-all duration-300 ease-in-out bg-white ${
+          scrolled ? "py-[5px] px-[15px] shadow-md" : "py-[15px] px-[15px]"
+        }`}
+      >
+        <div
+          id="navbar"
+          className={`max-w-[1190px] mx-auto flex flex-row justify-between text-xl`}
+        >
           <div className="self-center py-[5px] translate-x-0 translate-y-[6]">
             <svg
               width="38px"
@@ -170,7 +201,7 @@ export function NavBar() {
               </g>
             </svg>
           </div>
-          <ul className="flex flex-row text-lg text-customGray  font-light antialiased pl-[66px]">
+          <ul className="flex flex-row text-lg text-customGray font-light antialiased pl-[66px]">
             <Link
               href={"/"}
               className={`hover:text-customHoverGray ${isActive(
@@ -199,7 +230,7 @@ export function NavBar() {
 
           <Link
             href={"/contact"}
-            className="text-lg text-customGray hover:text-white bg-[#F2F3F5] hover:bg-black rounded-[7px]  block px-[8px] py-[2px] leading-7 antialiased self-center"
+            className="text-lg text-customGray hover:text-white bg-[#F2F3F5] hover:bg-black rounded-[7px] block px-[8px] py-[2px] leading-7 antialiased self-center"
           >
             Contact
           </Link>
