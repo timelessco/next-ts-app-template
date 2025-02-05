@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { NavBar } from "@/components/NavBar";
+import { TailwindIndicator } from "@/components/TailwindIndicator";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,10 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="antialiased optimizeLegibility">
       <body>
         <NavBar />
         {children}
+        <TailwindIndicator />
       </body>
     </html>
   );
