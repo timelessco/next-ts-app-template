@@ -39,10 +39,15 @@ const testimonials = [
 const TestimonialCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [isFading, setIsFading] = useState(false);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
+    setIsFading(true);
+    setTimeout(() => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+      setIsFading(false);
+    }, 300); // Duration of the fade animation
   }, [emblaApi]);
 
   useEffect(() => {
@@ -51,14 +56,16 @@ const TestimonialCarousel = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="bg-gray-100 flex justify-center pt-[64px] md:pt-[96px] pb-[24px] lg:pt-[12.5rem] lg:pb-[160px]">
+    <section className="bg-gray-100 flex justify-center pt-[64px] md:pt-[96px] pb-[43px] mb:pb-[53px] lg:pt-[12.25rem] lg:pb-[153px]">
       <div className="canister">
         <div className="max-w-3xl w-full text-center mx-auto">
-          <h3 className="font-bold text-[rgba(7,18,44,0.55)] uppercase mb-[20px] text-light tracking-[1.97px] text-[13px] md:text-[15px]">
+          <h3 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px]">
             What Our Client Says
           </h3>
           <div
-            className="overflow-hidden flex justify-center cursor-grab active:cursor-grabbing"
+            className={`overflow-hidden flex justify-center cursor-grab active:cursor-grabbing ${
+              isFading ? "fade" : ""
+            }`}
             ref={emblaRef}
           >
             <div className="flex">
@@ -68,14 +75,14 @@ const TestimonialCarousel = () => {
                   className="flex-shrink-0 w-full flex flex-col items-center text-center"
                 >
                   {/* Testimonial Text */}
-                  <div className="min-[320px]:max-w-[304px] min-[400px]:max-w-[380px] relative md:max-w-[560px] mb-[25px] md:mb-[30px] flex">
+                  <div className="min-[320px]:max-w-[287px] min-[400px]:max-w-[380px] relative md:max-w-[560px] my-[25px] md:mb-[30px] flex">
                     <p className="max-w-full text-[1.5rem] md:text-[1.875rem] font-light leading-[1.33] tracking-[0.56px] font-lyondisplayweb  text-black text-center">
                       {testimonial.text}
                     </p>
                   </div>
                   {/* Profile Section */}
-                  <div className="flex flex-col items-center mt-4 text-center tracking-[0.3px]">
-                    <div className="relative w-[60px] h-[60px] mb-4">
+                  <div className="flex flex-col items-center mt-6 text-center tracking-[0.3px]">
+                    <div className="relative w-[60px] h-[60px] mb-5">
                       <Image
                         src={testimonial.image}
                         alt={testimonial.name}
@@ -84,10 +91,10 @@ const TestimonialCarousel = () => {
                         sizes="60px"
                       />
                     </div>
-                    <p className="font-normal l md:text-xl text-black text-[20px]">
+                    <p className="font-normal text-black text-[20px] leading-[1.2] tracking-[0]">
                       {testimonial.name}
                     </p>
-                    <p className="font-normal text-base md:text-lg text-[rgba(7,18,44,0.65)] tracking-wide text-[18px]">
+                    <p className="font-normal text-base md:text-lg text-[rgba(7,18,44,0.65)] text-[18px] leading-[1.5]">
                       {testimonial.position}
                     </p>
                   </div>
