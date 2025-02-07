@@ -1,6 +1,7 @@
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import ClassNames from "embla-carousel-class-names";
 import Image from "next/image";
 
 const testimonials = [
@@ -37,7 +38,7 @@ const testimonials = [
 ];
 
 const TestimonialCarousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [ClassNames()]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const onSelect = useCallback(() => {
@@ -69,7 +70,7 @@ const TestimonialCarousel = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-full flex flex-col items-center text-center"
+                  className="flex-shrink-0 w-full flex flex-col items-center text-center transition-opacity duration-700 ease-in-out opacity-100 [&:not(.is-snapped)]:opacity-0"
                 >
                   {/* Testimonial Text */}
                   <div className="min-[320px]:max-w-[287px] min-[400px]:max-w-[380px] relative md:max-w-[560px] my-[25px] md:mb-[30px] flex">
@@ -108,7 +109,7 @@ const TestimonialCarousel = () => {
                   selectedIndex === index ? "bg-gray-900" : "bg-gray-400"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
-                onClick={() => emblaApi && emblaApi.scrollTo(index)} // Move to the selected slide
+                onClick={() => emblaApi && emblaApi.scrollTo(index)}
               />
             ))}
           </div>
