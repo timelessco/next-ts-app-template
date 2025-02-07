@@ -39,15 +39,12 @@ const testimonials = [
 const TestimonialCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [isFading, setIsFading] = useState(false);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
-    setIsFading(true);
     setTimeout(() => {
       setSelectedIndex(emblaApi.selectedScrollSnap());
-      setIsFading(false);
-    }, 300); // Duration of the fade animation
+    });
   }, [emblaApi]);
 
   useEffect(() => {
@@ -63,9 +60,9 @@ const TestimonialCarousel = () => {
             What Our Client Says
           </h3>
           <div
-            className={`overflow-hidden flex justify-center cursor-grab active:cursor-grabbing ${
-              isFading ? "fade" : ""
-            }`}
+            className={
+              "overflow-hidden flex justify-center cursor-grab active:cursor-grabbing"
+            }
             ref={emblaRef}
           >
             <div className="flex">
