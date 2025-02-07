@@ -2,7 +2,7 @@
 import Arrow from "@/components/arrow";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import { ReactNode } from "react";
@@ -19,17 +19,27 @@ const AnimatedSection = ({
   const ref = useRef<HTMLDivElement | null>(null);
   const controls = useAnimation();
   const hasAnimated = useRef(false);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
+    const checkIfInView = () => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          setShouldAnimate(true);
+          hasAnimated.current = true;
+        }
+      }
+    };
+
+    // Check on mount if already in view (e.g., reloading below)
+    checkIfInView();
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          if (!hasAnimated.current) {
-            setTimeout(() => {
-              controls.start({ opacity: 1, y: 0 });
-            }, delay * 1000);
-            hasAnimated.current = true;
-          }
+        if (entry.isIntersecting && !hasAnimated.current) {
+          setShouldAnimate(true);
+          hasAnimated.current = true;
         } else if (!entry.isIntersecting && animateOnScrollUp) {
           hasAnimated.current = false;
         }
@@ -37,19 +47,20 @@ const AnimatedSection = ({
       { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-
-      if (ref.current.getBoundingClientRect().top < window.innerHeight) {
-        controls.start({ opacity: 1, y: 0 });
-        hasAnimated.current = true;
-      }
-    }
+    if (ref.current) observer.observe(ref.current);
 
     return () => {
       if (ref.current) observer.unobserve(ref.current);
     };
-  }, [controls, delay, animateOnScrollUp]);
+  }, [animateOnScrollUp]);
+
+  useEffect(() => {
+    if (shouldAnimate) {
+      setTimeout(() => {
+        controls.start({ opacity: 1, y: 0 });
+      }, delay * 1000);
+    }
+  }, [shouldAnimate, controls, delay]);
 
   return (
     <motion.div
