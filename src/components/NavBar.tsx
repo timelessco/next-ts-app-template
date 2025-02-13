@@ -113,7 +113,7 @@ export function NavBar() {
           <div className=" font-light text-[18px] py-4 flex flex-col items-center space-y-3">
             <Link
               href={"/"}
-              className={`py-2 px-6 text-center transition duration-300 hover:bg-customHoverGray ${isActive(
+              className={`py-2 px-6 text-center transition duration-300  ${isActive(
                 "/"
               )} `}
             >
@@ -121,7 +121,7 @@ export function NavBar() {
             </Link>
             <Link
               href={"/about"}
-              className={`py-2 px-6 text-center transition duration-300 hover:bg-customHoverGray ${isActive(
+              className={`py-2 px-6 text-center transition duration-300 ${isActive(
                 "/about"
               )} `}
             >
@@ -129,7 +129,7 @@ export function NavBar() {
             </Link>
             <Link
               href={"/process"}
-              className={`py-2 px-6 text-center transition duration-300 hover:bg-customHoverGray ${isActive(
+              className={`py-2 px-6 text-center transition duration-300 ${isActive(
                 "/process"
               )} `}
             >
@@ -137,7 +137,7 @@ export function NavBar() {
             </Link>
             <Link
               href={"/contact"}
-              className={`py-2 px-6 text-center transition duration-300 hover:bg-customHoverGray ${isActive(
+              className={`py-2 px-6 text-center transition duration-300  ${isActive(
                 "/contact"
               )} `}
             >

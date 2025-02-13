@@ -10,7 +10,7 @@ export default function WhyTimeless({ image, title, desc }: WhyTimelessProps) {
   return (
     <div className="relative last:mb-0">
       <div className="">
-        <div className=" mb-4 lg:mb-0 lg:absolute lg:-left-16 lg:top-1 flex justify-center lg:justify-start">
+        <div className=" mb-[10px] lg:mb-0 lg:absolute lg:-left-16 lg:top-1 flex justify-center lg:justify-start">
           <Image
             alt={title}
             src={image}

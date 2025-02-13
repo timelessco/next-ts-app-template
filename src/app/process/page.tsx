@@ -23,27 +23,107 @@ export default function Page() {
         ></Image>
       </section>
       <section>
-        <div className="flex flex-col bg-gray-100 pb-[186px] pt-14 lg:pt-[170px] px-[15px] text-center">
+        <div className="flex flex-col bg-gray-100 pb-[186px] pt-12 md:pt-14 lg:pt-[170px] px-[15px] text-center">
           <div className="canister">
             <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px] mb-[29px] lg:mb-[33px]">
               our process
             </h2>
-            <div className="min-[320px]:max-w-[287px] min-[400px]:max-w-[380px] mx-auto md:max-w-[640px] mb-[30px]">
-              <h3 className="max-w-full text-[1.5rem] md:text-[1.875rem] font-light leading-[1.33] tracking-[0.5px] font-lyondisplayweb  text-black text-center pb-12">
+            <div className="min-[320px]:max-w-[287px] min-[400px]:max-w-[380px] mx-auto md:max-w-[640px] mb-4 lg:mb-[30px]">
+              <h3 className="max-w-full text-[1.5rem] md:text-[1.875rem] font-light leading-[1.33] tracking-[0.5px] font-lyondisplayweb text-black text-center pb-8 lg:pb-12">
                 We believe the key to a delightful user experience is an
                 incremental process of measuring business success and aligning
                 them with user goals.
               </h3>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-[920px] py-10 mx-auto gap-10 justify-items-center">
+            <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-[440px] lg:max-w-[920px] py-4 lg:py-10 mx-auto gap-10 sm:gap-[110px] lg:gap-10 justify-items-center">
               <ProcessBox image="/svgs/research.svg" title="Research" />
               <ProcessBox image="/svgs/strategy-1.svg" title="Strategy" />
               <ProcessBox image="/svgs/design-1.svg" title="Design" />
               <ProcessBox image="/svgs/tech-1.svg" title="Execute" />
+
+              {/* lg - Top Arrow with Text Overlay */}
+              <div className="absolute hidden lg:block -top-4 left-[630px] -translate-x-[calc(252px/4)]">
+                <Image
+                  alt="arrow-top"
+                  src={"/path-copy.png"}
+                  height={55}
+                  width={252}
+                  className="relative"
+                />
+                <span className="absolute top-1 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
+                  Evolve
+                </span>
+              </div>
+
+              {/* lg - Bottom Arrow with Text Overlay */}
+              <div className="absolute hidden lg:block top-60 left-[630px] -translate-x-[calc(252px/4)]">
+                <Image
+                  alt="arrow-bottom"
+                  src={"/path-2.png"}
+                  height={55}
+                  width={252}
+                  className="relative"
+                />
+                <span className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
+                  Measure
+                </span>
+              </div>
+
+              <div className="absolute hidden sm:block lg:hidden bottom-[-40px] left-[200px]-translate-x-[calc(252px/4)]">
+                <Image
+                  alt="arrow-bottom-md"
+                  src={"/path-2.png"}
+                  height={55}
+                  width={252}
+                  className="relative"
+                />
+                <span className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
+                  Measure
+                </span>
+              </div>
+
+              <div className="absolute hidden sm:block lg:hidden md:top-[270px] top-[235px] left-[calc(50%-65px)] -translate-x-[calc(252px/4)]">
+                <Image
+                  alt="arrow-top-md"
+                  src={"/path-copy.png"}
+                  height={55}
+                  width={252}
+                  className="relative"
+                />
+                <span className="absolute -translate-x-[55px]  -translate-y-[70px] text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
+                  Evolve
+                </span>
+              </div>
+              <div className="absolute  block sm:hidden  top-[590px] right-[calc(50%-300px)] -translate-x-[calc(252px/4)] -rotate-90">
+                <Image
+                  alt="arrow-bottom-md"
+                  src={"/path-2.png"}
+                  height={55}
+                  width={252}
+                  className="relative"
+                />
+                <span className="absolute  -translate-x-1/2 -translate-y-1/2  text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
+                  Measure
+                </span>
+              </div>
+
+              <div className="absolute  block sm:hidden  top-[590px] left-[calc(50%-174px)] -translate-x-[calc(252px/4)] -rotate-90">
+                <Image
+                  alt="arrow-top-md"
+                  src={"/path-copy.png"}
+                  height={55}
+                  width={252}
+                  className="relative"
+                />
+                <span className="absolute left-1/2 -translate-x-[55px] -translate-y-[70px] text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
+                  Evolve
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
       <section className="canister lg:pt-[160px] lg:pb-[104px] pt-16 pb-8">
         <div className="flex flex-wrap lg:justify-between justify-center text-center lg:text-left">
           <div className="flex flex-col lg:max-w-[440px] max-w-[495px] mb-12 lg:mb-0">
@@ -79,7 +159,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="canister py-20 lg:py-28">
+      <section className="canister pt-12 pb-8 md:py-20 lg:py-28">
         <div className="text-center">
           <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px] leading-1 text-center">
             What we do
@@ -87,7 +167,7 @@ export default function Page() {
           <h3 className="max-w-[675px] mx-auto mt-[23px] mb-4 lg:text-[2.875rem] md:text-[2.5rem] text-[2rem] text-black tracking-[0.4px] leading-[1.08] font-light font-lyondisplayweb">
             We are commited to create digital products that people love to use.
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 md:pt-[90px] pt-8 place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 md:pt-[90px] pt-8 place-items-center gap-12 md:gap-0">
             <Whatwedo
               imageSrc="/svgs/strategy-1.svg"
               listItems={[
