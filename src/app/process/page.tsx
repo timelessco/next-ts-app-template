@@ -41,8 +41,7 @@ export default function Page() {
               <ProcessBox image="/svgs/design-1.svg" title="Design" />
               <ProcessBox image="/svgs/tech-1.svg" title="Execute" />
 
-              {/* lg - Top Arrow with Text Overlay */}
-              <div className="absolute hidden lg:block -top-4 left-[630px] -translate-x-[calc(252px/4)]">
+              <div className="absolute top-[590px] left-[calc(50%-174px)] -translate-x-[calc(252px/4)] -rotate-90 sm:rotate-0 lg:-top-4 lg:left-[630px] lg:-translate-x-[calc(252px/4)] lg:bottom-0 md:top-[270px] sm:top-[235px] sm:left-[calc(50%-65px)] sm:-translate-x-[calc(252px/4)]">
                 <Image
                   alt="arrow-top"
                   src={"/path-copy.png"}
@@ -50,13 +49,12 @@ export default function Page() {
                   width={252}
                   className="relative"
                 />
-                <span className="absolute top-1 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
+                <span className="absolute -translate-x-[55px] -translate-y-[70px] lg:top-1 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
                   Evolve
                 </span>
               </div>
 
-              {/* lg - Bottom Arrow with Text Overlay */}
-              <div className="absolute hidden lg:block top-60 left-[630px] -translate-x-[calc(252px/4)]">
+              <div className="absolute top-[590px] md:top-[530px] sm:top-[455px] right-[calc(50%-300px)] -translate-x-[calc(252px/4)] -rotate-90 sm:rotate-0 sm:right-0 sm:bottom-[-40px] sm:left-[150px] sm:-translate-x-[calc(252px/4)] lg:top-60 lg:left-[630px] lg:-translate-x-[calc(252px/4)]">
                 <Image
                   alt="arrow-bottom"
                   src={"/path-2.png"}
@@ -64,59 +62,8 @@ export default function Page() {
                   width={252}
                   className="relative"
                 />
-                <span className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
+                <span className="absolute top-[40px] sm:top-[50px] left-[70px]  sm:right-0 sm:left-[125px] sm:-translate-x-1/2 sm:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
                   Measure
-                </span>
-              </div>
-
-              <div className="absolute hidden sm:block lg:hidden bottom-[-40px] left-[200px]-translate-x-[calc(252px/4)]">
-                <Image
-                  alt="arrow-bottom-md"
-                  src={"/path-2.png"}
-                  height={55}
-                  width={252}
-                  className="relative"
-                />
-                <span className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
-                  Measure
-                </span>
-              </div>
-
-              <div className="absolute hidden sm:block lg:hidden md:top-[270px] top-[235px] left-[calc(50%-65px)] -translate-x-[calc(252px/4)]">
-                <Image
-                  alt="arrow-top-md"
-                  src={"/path-copy.png"}
-                  height={55}
-                  width={252}
-                  className="relative"
-                />
-                <span className="absolute -translate-x-[55px]  -translate-y-[70px] text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
-                  Evolve
-                </span>
-              </div>
-              <div className="absolute  block sm:hidden  top-[590px] right-[calc(50%-300px)] -translate-x-[calc(252px/4)] -rotate-90">
-                <Image
-                  alt="arrow-bottom-md"
-                  src={"/path-2.png"}
-                  height={55}
-                  width={252}
-                  className="relative"
-                />
-                <span className="absolute  -translate-x-1/2 -translate-y-1/2  text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
-                  Measure
-                </span>
-              </div>
-
-              <div className="absolute  block sm:hidden  top-[590px] left-[calc(50%-174px)] -translate-x-[calc(252px/4)] -rotate-90">
-                <Image
-                  alt="arrow-top-md"
-                  src={"/path-copy.png"}
-                  height={55}
-                  width={252}
-                  className="relative"
-                />
-                <span className="absolute left-1/2 -translate-x-[55px] -translate-y-[70px] text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
-                  Evolve
                 </span>
               </div>
             </div>
