@@ -1,9 +1,131 @@
+import Arrow from "@/components/arrow";
+import ProcessBox from "@/components/Processbox";
+import Image from "next/image";
+import WhyTimeless from "@/components/whytimeless";
+import Whatwedo from "@/components/whatwedo";
+import Footer from "@/components/footer";
 export default function Page() {
   return (
-    <div className="canister pt-[85px]">
-      <div className="font-light text-[2.25rem] md:text-[3rem] lg:text-[3.625rem] leading-[1.05] text-black tracking-[-0.6px]  pt-[60px] md:pt-[90px] lg:pt-[109px] text-center md:text-left">
-        Data driven design <br /> decisions
+    <>
+      <div>
+        <section className="canister pt-[85px]">
+          <h2 className="font-light text-[2.25rem] md:text-5xl lg:text-[3.625rem] leading-[1.05] text-black tracking-[-0.6px] pt-[60px] md:pt-[90pz] lg:pt-[107px] text-center md:text-left py-8 max-w-[480px]">
+            Data driven design decisions
+          </h2>
+        </section>
       </div>
-    </div>
+      <section className="pt-14">
+        <Image
+          src={"/cover.png"}
+          alt={"cover"}
+          height={4000}
+          width={2048}
+        ></Image>
+      </section>
+      <section>
+        <div className="flex flex-col bg-gray-100 pb-[186px] pt-14 lg:pt-[170px] px-[15px] text-center">
+          <div className="canister">
+            <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px] mb-[29px] lg:mb-[33px]">
+              our process
+            </h2>
+            <div className="min-[320px]:max-w-[287px] min-[400px]:max-w-[380px] mx-auto md:max-w-[640px] mb-[30px]">
+              <h3 className="max-w-full text-[1.5rem] md:text-[1.875rem] font-light leading-[1.33] tracking-[0.5px] font-lyondisplayweb  text-black text-center pb-12">
+                We believe the key to a delightful user experience is an
+                incremental process of measuring business success and aligning
+                them with user goals.
+              </h3>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-[920px] py-10 mx-auto gap-10 justify-items-center">
+              <ProcessBox image="/svgs/research.svg" title="Research" />
+              <ProcessBox image="/svgs/strategy-1.svg" title="Strategy" />
+              <ProcessBox image="/svgs/design-1.svg" title="Design" />
+              <ProcessBox image="/svgs/tech-1.svg" title="Execute" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="canister lg:pt-[160px] lg:pb-[104px] pt-16 pb-8">
+        <div className="flex flex-wrap lg:justify-between justify-center text-center lg:text-left">
+          <div className="flex flex-col lg:max-w-[440px] max-w-[495px] mb-12 lg:mb-0">
+            <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px]">
+              Why Timeless
+            </h2>
+            <h3 className="mt-6 font-lyondisplayweb lg:text-[2.875rem] md:text-[2.5rem] text-[2rem] text-black tracking-[0.4px] leading-[1.08] font-light">
+              Premium design and engineering, always on time and on budget.
+            </h3>
+            <div className="flex items-center gap-2 hover:gap-4 transition-all mt-6 text-xl text-[2rem] text-blue-600 tracking-[0]  mb-0 font-light duration-300 ease-in-out justify-center lg:justify-start">
+              <p className="text-[1.75rem] md:text-[2rem] leading-[1.5]">
+                Get in touch with us
+              </p>
+              <Arrow />
+            </div>
+          </div>
+          <div className="flex flex-col lg:mt-10 lg:max-w-[440px] max-w-[495px] relative">
+            <WhyTimeless
+              desc="We believe that a lot of digital products could use some much-needed polish and attention to detail. We achieve that with our refined design process that continuously measures & evolves to meet business and user goals."
+              title="Premium Design"
+              image="/svgs/premium.svg"
+            />
+            <WhyTimeless
+              desc="We respect your time and strive to meet realistic deadlines. We believe that when work gets done on time, you get more time to think about your vision of the future you."
+              title="Always on Time"
+              image="/svgs/swedish.svg"
+            />
+            <WhyTimeless
+              title="Affordable Pricing"
+              desc="From our experience with 200+ clients in the last decade, we learnt that pricing is based on the value rendered to the client and not on the number of hours spent. So our pricing reflects exactly that."
+              image="/svgs/wallet.svg"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="canister py-20 lg:py-28">
+        <div className="text-center">
+          <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px] leading-1 text-center">
+            What we do
+          </h2>
+          <h3 className="max-w-[675px] mx-auto mt-[23px] mb-4 lg:text-[2.875rem] md:text-[2.5rem] text-[2rem] text-black tracking-[0.4px] leading-[1.08] font-light font-lyondisplayweb">
+            We are commited to create digital products that people love to use.
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 md:pt-[90px] pt-8 place-items-center">
+            <Whatwedo
+              imageSrc="/svgs/strategy-1.svg"
+              listItems={[
+                "UI Research / Analysis",
+                "UX Consultancy",
+                "Information Architecture",
+                "User Testing",
+              ]}
+              title="Strategy"
+            />
+            <Whatwedo
+              imageSrc="/svgs/design-1.svg"
+              listItems={[
+                "User Experience",
+                "Interface Design",
+                "Illustration / Animation",
+                "Brand Development",
+              ]}
+              title="Design"
+            />
+            <Whatwedo
+              imageSrc="/svgs/tech-1.svg"
+              title="Technology"
+              listItems={[
+                "HTML / CSS / Javascript",
+                "React / Vue",
+                "PHP / NodeJS",
+                "DevOps",
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+      <Footer
+        desc="Get in touch with us"
+        title="We would love to work with you on your next big idea."
+        href="/contact"
+      />
+    </>
   );
 }

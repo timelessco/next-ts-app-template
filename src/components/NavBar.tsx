@@ -31,7 +31,7 @@ export function NavBar() {
       >
         <div className="canister">
           <div className="flex items-center justify-between">
-            <div className="flex items-center py-[5px]">
+            <h1 className="flex items-center py-[5px]">
               <svg
                 width="38"
                 height="29"
@@ -76,7 +76,7 @@ export function NavBar() {
                   </g>
                 </g>
               </svg>
-            </div>
+            </h1>
             {/* Hamburger Button */}
             <button
               className="relative w-[24px] h-[2px] flex items-center justify-center focus:outline-none"

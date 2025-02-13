@@ -54,7 +54,7 @@ const TestimonialCarousel = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="bg-gray-100 flex justify-center pt-[64px] md:pt-[96px] pb-[43px] mb:pb-[53px] lg:pt-[12.25rem] lg:pb-[153px]">
+    <section className="bg-gray-100 flex justify-center pt-[64px] md:pt-[96px] pb-[43px] md:pb-[53px] lg:pt-[12.25rem] lg:pb-[153px]">
       <div className="canister">
         <div className="max-w-3xl w-full text-center mx-auto">
           <h3 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px]">
@@ -92,7 +92,7 @@ const TestimonialCarousel = () => {
                     <p className="font-normal text-black text-[20px] leading-[1.2] tracking-[0]">
                       {testimonial.name}
                     </p>
-                    <p className="font-normal text-base md:text-lg text-[rgba(7,18,44,0.65)] text-[18px] leading-[1.5]">
+                    <p className="font-normal text-lg text-[rgba(7,18,44,0.65)]  tracking-[0.3] leading-[1.5]">
                       {testimonial.position}
                     </p>
                   </div>

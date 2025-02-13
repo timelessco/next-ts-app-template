@@ -1,11 +1,11 @@
 "use client";
-import Arrow from "@/components/arrow";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import { ReactNode } from "react";
+import Footer from "@/components/footer";
 
 const AnimatedSection = ({
   children,
@@ -32,7 +32,6 @@ const AnimatedSection = ({
       }
     };
 
-    // Check on mount if already in view (e.g., reloading below)
     checkIfInView();
 
     const observer = new IntersectionObserver(
@@ -83,7 +82,7 @@ export default function Home() {
       <div className="canister pt-[85px]">
         <AnimatedSection>
           <section>
-            <h2 className="font-light text-[2.25rem] md:text-[3rem] lg:text-[3.625rem] leading-[1.05] text-black tracking-[-0.6px]  pt-[60px] md:pt-[90px] lg:pt-[107px] text-center md:text-left">
+            <h2 className="font-light text-[2.25rem] md:text-5xl lg:text-[3.625rem] leading-[1.05] text-black tracking-[-0.6px]  pt-[60px] md:pt-[90pz] lg:pt-[107px] text-center md:text-left">
               We build brands, <br />
               products and apps.
             </h2>
@@ -96,7 +95,7 @@ export default function Home() {
               window.open("https://atlanticpayroll.tmls.dev/", "_blank");
             }}
           >
-            <div className="flex flex-col lg:pl-[96px] xl:pl-[120px] max-w-[370px] lg:max-w-[480px]  text-center lg:text-left mt-[30px] md:mt-[52px] lg:mt-[0px]">
+            <div className="flex flex-col lg:pl-24 xl:pl-40 max-w-[370px] lg:max-w-[480px]  text-center lg:text-left mt-[30px] md:mt-[52px] lg:mt-[0px]">
               <h2 className="font-light text-[20px] lg:text-[23px] text-white tracking-[0] mb-[15px] lg:mb-2 leading-[1.2]">
                 Atlantic payroll
               </h2>
@@ -110,7 +109,7 @@ export default function Home() {
                 alt={"mobile-view"}
                 height={972}
                 width={1024}
-                className="lg:pt-[3.5rem]"
+                className="lg:pt-14"
               ></Image>
             </div>
           </section>
@@ -122,7 +121,7 @@ export default function Home() {
               window.open("https://smallcase.tmls.dev/", "_blank");
             }}
           >
-            <div className="flex flex-col lg:pl-[96px] xl:pl-[120px] max-w-[360px] lg:max-w-[480px]  text-center lg:text-left mt-[30px] md:mt-[52px] lg:mt-[0px]">
+            <div className="flex flex-col lg:pl-24 xl:pl-30 max-w-[360px] lg:max-w-[480px]  text-center lg:text-left mt-[30px] md:mt-[52px] lg:mt-[0px]">
               <h2 className="font-light text-[20px] lg:text-[23px] text-white tracking-[0] mb-[15px] lg:mb-2 leading-[1.2]">
                 Smallcase
               </h2>
@@ -165,7 +164,7 @@ export default function Home() {
               window.open("https://photon.tmls.dev/", "_blank");
             }}
           >
-            <div className="flex flex-col justify-center text-center lg:text-left max-w-[360px] lg:max-w-[450px] xl:max-w-[480px] lg:pl-[96px] xl:pl-[120px]">
+            <div className="flex flex-col justify-center text-center lg:text-left max-w-[360px] lg:max-w-[450px] xl:max-w-[480px] lg:pl-24 xl:pl-30">
               <h2 className="mt-[32px] md:mt-[52px] lg:mt-[0px] font-light text-[20px] lg:text-[23px] text-white tracking-[0] mb-[15px] lg:mb-2 leading-[1.2]">
                 Photon
               </h2>
@@ -186,22 +185,11 @@ export default function Home() {
         </AnimatedSection>
       </div>
       <TestimonialCarousel />
-      <div
-        className="bg-black hover:bg-blue-500 flex flex-col items-center justify-center relative leading-[1.1] group transition-colors duration-300 py-[80px] md:py-[122px]  lg:py-[160px] cursor-pointer"
-        onClick={() => (window.location.href = "/about")}
-      >
-        <div className="canister">
-          <div className="mx-auto  text-white lg:text-[2.875rem] text-[2rem] md:text-[2.5rem] text-center tracking-[0.4px]  font-lyondisplayweb font-light mb-[25px] leading-[1.08] max-w-[720px]">
-            <p>Solving business problems with user-centric design</p>
-          </div>
-          <div className="justify-center flex items-center gap-2 text-xl text-[2rem] text-[#2D82E4] tracking-[0] relative mb-0 group-hover:text-white  font-light transition-colors duration-300">
-            <p className="text-[1.75rem] md:text-[2rem] leading-[1.5]">
-              Learn more about us
-            </p>
-            <Arrow />
-          </div>
-        </div>
-      </div>
+      <Footer
+        desc="Learn more about us"
+        href="/about"
+        title="Solving business problems with user-centric design"
+      />
     </>
   );
 }
