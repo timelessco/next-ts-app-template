@@ -15,21 +15,24 @@ export default function Page() {
         </section>
       </div>
       <section className="pt-14">
-        <Image
-          src={"/cover.png"}
-          alt={"cover"}
-          height={4000}
-          width={2048}
-        ></Image>
+        <div className="w-full h-auto">
+          <Image
+            src={"/cover.png"}
+            alt={"cover"}
+            height={4000}
+            width={2048}
+            className="w-full h-auto"
+          ></Image>
+        </div>
       </section>
       <section>
-        <div className="flex flex-col bg-gray-100 pb-[186px] pt-12 md:pt-14 lg:pt-[170px] px-[15px] text-center">
+        <div className="flex flex-col bg-gray-100 pb-[210px] pt-12 md:pt-14 lg:pt-[170px] px-[15px] text-center">
           <div className="canister">
             <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px] mb-[29px] lg:mb-[33px]">
               our process
             </h2>
             <div className="min-[320px]:max-w-[287px] min-[400px]:max-w-[380px] mx-auto md:max-w-[640px] mb-4 lg:mb-[30px]">
-              <h3 className="max-w-full text-[1.5rem] md:text-[1.875rem] font-light leading-[1.33] tracking-[0.5px] font-lyondisplayweb text-black text-center pb-8 lg:pb-12">
+              <h3 className="max-w-full text-[1.5rem] md:text-[1.875rem] font-light leading-[1.33] tracking-[0.5px] font-lyondisplayweb text-black text-center pb-8 lg:pb-[35px]">
                 We believe the key to a delightful user experience is an
                 incremental process of measuring business success and aligning
                 them with user goals.
