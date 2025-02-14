@@ -26,123 +26,84 @@ export function NavBar() {
 
   return (
     <div
-      className={`top-0 fixed min-w-[100%] z-10 transition-all duration-300 ease-in-out bg-white ${
+      className={`top-0 fixed min-w-[100%] z-10 transition-all duration-300 ease-in-out bg-white text-[18px] ${
         scrolled ? "py-[5px] shadow-md" : "py-[15px]"
       }`}
     >
       <div className="canister">
-        <div className="lg:hidden">
-          <div className="flex items-center justify-between">
-            <h1 className="flex items-center py-[5px]">
-              <Logo />
-            </h1>
-            <button
-              className="relative w-[24px] h-[2px] flex items-center justify-center focus:outline-none"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle navigation"
-              aria-expanded={isOpen}
-            >
-              <div className="relative w-6 h-6 flex items-center justify-center">
-                <span
-                  className={`absolute h-0.5 w-6 bg-gray-600 transform transition duration-300 ease-in-out origin-center ${
-                    isOpen ? "rotate-45" : "-translate-y-1.5"
-                  }`}
-                />
-                <span
-                  className={`absolute h-0.5 w-6 bg-gray-600 transition duration-300 ease-in-out ${
-                    isOpen ? "opacity-0" : "opacity-100"
-                  }`}
-                />
-                <span
-                  className={`absolute h-0.5 w-6 bg-gray-600 transform transition duration-300 ease-in-out origin-center ${
-                    isOpen ? "-rotate-45" : "translate-y-1.5"
-                  }`}
-                />
-              </div>
-            </button>
-          </div>
+        <nav className="relative">
+          <div className="flex flex-col lg:flex-row lg:items-center">
+            <div className="flex items-center justify-between">
+              <h1 className="flex items-center py-[5px]">
+                <Logo />
+              </h1>
 
-          <div
-            className={`absolute left-0 right-0 bg-white overflow-hidden transition-all duration-500 ease-in-out ${
-              isOpen ? "max-h-64" : "max-h-0"
-            }`}
-          >
-            <div className="font-light text-[18px] py-4 flex flex-col items-center space-y-3">
-              <Link
-                href={"/"}
-                className={`py-2 px-6 text-center transition duration-300 ${isActive(
-                  "/"
-                )}`}
+              <button
+                className="lg:hidden relative w-[24px] h-[2px] flex items-center justify-center focus:outline-none"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Toggle navigation"
+                aria-expanded={isOpen}
               >
-                Work
-              </Link>
-              <Link
-                href={"/about"}
-                className={`py-2 px-6 text-center transition duration-300 ${isActive(
-                  "/about"
-                )}`}
-              >
-                About
-              </Link>
-              <Link
-                href={"/process"}
-                className={`py-2 px-6 text-center transition duration-300 ${isActive(
-                  "/process"
-                )}`}
-              >
-                Process
-              </Link>
+                <div className="relative w-6 h-6 flex items-center justify-center">
+                  <span
+                    className={`absolute h-0.5 w-6 bg-gray-600 transform transition duration-300 ease-in-out origin-center ${
+                      isOpen ? "rotate-45" : "-translate-y-1.5"
+                    }`}
+                  />
+                  <span
+                    className={`absolute h-0.5 w-6 bg-gray-600 transition duration-300 ease-in-out ${
+                      isOpen ? "opacity-0" : "opacity-100"
+                    }`}
+                  />
+                  <span
+                    className={`absolute h-0.5 w-6 bg-gray-600 transform transition duration-300 ease-in-out origin-center ${
+                      isOpen ? "-rotate-45" : "translate-y-1.5"
+                    }`}
+                  />
+                </div>
+              </button>
+            </div>
+
+            <div
+              className={`flex flex-col lg:flex-row items-center w-full lg:absolute lg:left-0 space-y-3 lg:space-y-0 space-x-0 lg:space-x-6 transition-all duration-500 ease-in-out overflow-hidden ${
+                isOpen ? "max-h-[300px]" : "max-h-0"
+              } lg:max-h-none lg:opacity-100 lg:flex-row lg:space-y-0 lg:items-center lg:mt-0`}
+            >
+              <div className="flex flex-col lg:flex-row items-center lg:mx-auto space-y-3 lg:space-y-0 lg:space-x-6">
+                <Link
+                  href={"/"}
+                  className={`hover:text-customHoverGray ${isActive(
+                    "/"
+                  )} p-[8px]`}
+                >
+                  Work
+                </Link>
+                <Link
+                  href={"/about"}
+                  className={`hover:text-customHoverGray ${isActive(
+                    "/about"
+                  )} p-[8px]`}
+                >
+                  About
+                </Link>
+                <Link
+                  href={"/process"}
+                  className={`hover:text-customHoverGray ${isActive(
+                    "/process"
+                  )} p-[8px]`}
+                >
+                  Process
+                </Link>
+              </div>
               <Link
                 href={"/contact"}
-                className={`py-2 px-6 text-center transition duration-300 ${isActive(
-                  "/contact"
-                )}`}
+                className="text-customGray hover:text-customHoverGray lg:hover:text-white lg:bg-[#F2F3F5] lg:hover:bg-black rounded-[7px] px-[8px] py-[2px] lg:absolute lg:right-0"
               >
                 Contact
               </Link>
             </div>
           </div>
-        </div>
-
-        <div className="hidden lg:block">
-          <div id="navbar" className="flex flex-row justify-between text-xl">
-            <div className="self-center py-[5px] translate-x-0 translate-y-[6]">
-              <Logo />
-            </div>
-            <ul className="flex flex-row text-lg text-customGray font-light pl-[66px]">
-              <Link
-                href={"/"}
-                className={`hover:text-customHoverGray ${isActive(
-                  "/"
-                )} p-[8px] pr-[24px]`}
-              >
-                Work
-              </Link>
-              <Link
-                href={"/about"}
-                className={`hover:text-customHoverGray ${isActive(
-                  "/about"
-                )} p-[8px] pr-[24px]`}
-              >
-                About
-              </Link>
-              <Link
-                href={"/process"}
-                className={`hover:text-customHoverGray ${isActive(
-                  "/process"
-                )} p-[8px] pr-[24px]`}
-              >
-                Process
-              </Link>
-            </ul>
-            <Link
-              href={"/contact"}
-              className="text-lg text-customGray hover:text-white bg-[#F2F3F5] hover:bg-black rounded-[7px] block px-[8px] py-[2px] top-[5px] self-center"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
+        </nav>
       </div>
     </div>
   );
