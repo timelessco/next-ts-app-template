@@ -4,14 +4,13 @@ import Image from "next/image";
 import WhyTimeless from "@/components/whytimeless";
 import Whatwedo from "@/components/whatwedo";
 import Footer from "@/components/footer";
+import BigTextBox from "@/components/bigtextbox";
 export default function Page() {
   return (
     <>
       <div>
         <section className="canister pt-[85px]">
-          <h2 className="font-light text-[2.25rem] md:text-5xl lg:text-[3.625rem] leading-[1.05] text-black tracking-[-0.6px] pt-[60px] md:pt-[90pz] lg:pt-[107px] text-center md:text-left py-8 max-w-[480px]">
-            Data driven design decisions
-          </h2>
+          <BigTextBox text="Data driven design decisions" />
         </section>
       </div>
       <section className="pt-14">

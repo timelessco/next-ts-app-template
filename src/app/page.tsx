@@ -6,6 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 
 import { ReactNode } from "react";
 import Footer from "@/components/footer";
+import BigTextBox from "@/components/bigtextbox";
 
 const AnimatedSection = ({
   children,
@@ -82,10 +83,7 @@ export default function Home() {
       <div className="canister pt-[85px]">
         <AnimatedSection>
           <section>
-            <h2 className="font-light text-[2.25rem] md:text-5xl lg:text-[3.625rem] leading-[1.05] text-black tracking-[-0.6px]  pt-[60px] md:pt-[90pz] lg:pt-[107px] text-center md:text-left">
-              We build brands, <br />
-              products and apps.
-            </h2>
+            <BigTextBox text="We build brands, products and apps." />
           </section>
         </AnimatedSection>
         <AnimatedSection delay={0.3}>
