@@ -15,11 +15,17 @@ export default function Logo() {
         fillRule="evenodd"
       >
         <g id="timeless-index" transform="translate(-420.000000, -32.000000)">
-          <rect fill="#FFFFFF" x="0" y="0" width="2000" height="5317"></rect>
+          <rect
+            fill="transparent"
+            x="0"
+            y="0"
+            width="2000"
+            height="5317"
+          ></rect>
           <g
             id="header"
             transform="translate(420.000000, 26.000000)"
-            fill="#000000"
+            fill="currentColor"
             fillRule="nonzero"
           >
             <g id="icons/logo" transform="translate(0.000000, 6.000000)">

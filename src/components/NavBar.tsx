@@ -6,10 +6,11 @@ import Logo from "./Logo";
 
 export function NavBar() {
   const currPath = usePathname();
-  const isActive = (path: unknown) =>
+  const isActive = (path: string) =>
     currPath === path ? "text-customHoverGray" : "text-customGray";
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const isAbout = currPath === "/about" ? true : false;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,9 +27,9 @@ export function NavBar() {
 
   return (
     <div
-      className={`top-0 fixed min-w-[100%] z-10 transition-all duration-300 ease-in-out bg-white text-[18px] ${
+      className={`top-0 fixed min-w-[100%] z-10 transition-all duration-300 ease-in-out  text-[18px] leading-[1.5] ${
         scrolled ? "py-[5px] shadow-md" : "py-[15px]"
-      }`}
+      } ${isAbout ? "bg-black text-white" : "bg-white text-black"}`}
     >
       <div className="canister">
         <nav className="relative">
@@ -72,32 +73,38 @@ export function NavBar() {
               <div className="flex flex-col lg:flex-row items-center lg:mx-auto space-y-3 lg:space-y-0 lg:space-x-6">
                 <Link
                   href={"/"}
-                  className={`hover:text-customHoverGray ${isActive(
-                    "/"
-                  )} p-[8px]`}
+                  className={`${
+                    isAbout
+                      ? "text-white"
+                      : "text-customGray hover:text-customHoverGray"
+                  } ${isActive("/")} p-[8px]`}
                 >
                   Work
                 </Link>
                 <Link
                   href={"/about"}
-                  className={`hover:text-customHoverGray ${isActive(
-                    "/about"
-                  )} p-[8px]`}
+                  className={`${
+                    isAbout
+                      ? "text-white"
+                      : "text-customGray hover:text-customHoverGray"
+                  }${isActive("/about")} p-[8px]`}
                 >
                   About
                 </Link>
                 <Link
                   href={"/process"}
-                  className={`hover:text-customHoverGray ${isActive(
-                    "/process"
-                  )} p-[8px]`}
+                  className={`${
+                    isAbout
+                      ? "text-white"
+                      : "text-customGray hover:text-customHoverGray"
+                  } ${isActive("/process")} p-[8px]`}
                 >
                   Process
                 </Link>
               </div>
               <Link
                 href={"/contact"}
-                className="text-customGray hover:text-customHoverGray lg:hover:text-white lg:bg-[#F2F3F5] lg:hover:bg-black rounded-[7px] px-[8px] py-[2px] lg:absolute lg:right-0"
+                className={`text-customGray hover:text-customHoverGray   lg:hover:text-white lg:bg-[#F2F3F5] lg:hover:bg-black rounded-[7px] px-[8px] py-[2px] lg:absolute lg:right-0`}
               >
                 Contact
               </Link>
