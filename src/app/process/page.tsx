@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <>
       <div>
-        <section className="canister pt-[85px]">
+        <section className="canister lg:pt-[85px]">
           <BigTextBox text="Data driven design decisions" />
         </section>
       </div>
@@ -43,7 +43,7 @@ export default function Page() {
               <ProcessBox image="/svgs/design-1.svg" title="Design" />
               <ProcessBox image="/svgs/tech-1.svg" title="Execute" />
 
-              <div className="absolute top-[590px] left-[calc(50%-174px)] -translate-x-[calc(252px/4)] -rotate-90 sm:rotate-0 lg:-top-4 lg:left-[630px] lg:-translate-x-[calc(252px/4)] lg:bottom-0 md:top-[270px] sm:top-[235px] sm:left-[calc(50%-65px)] sm:-translate-x-[calc(252px/4)]">
+              <div className="absolute pointer-events-none top-[590px] left-[calc(50%-174px)] -translate-x-[calc(252px/4)] -rotate-90 sm:rotate-0 lg:-top-4 lg:left-[630px] lg:-translate-x-[calc(252px/4)] lg:bottom-0 md:top-[270px] sm:top-[235px] sm:left-[calc(50%-65px)] sm:-translate-x-[calc(252px/4)]">
                 <Image
                   alt="arrow-top"
                   src={"/path-copy.png"}
@@ -56,7 +56,7 @@ export default function Page() {
                 </span>
               </div>
 
-              <div className="absolute top-[590px] md:top-[530px] sm:top-[455px] right-[calc(50%-300px)] -translate-x-[calc(252px/4)] -rotate-90 sm:rotate-0 sm:right-0 sm:bottom-[-40px] sm:left-[150px] sm:-translate-x-[calc(252px/4)] lg:top-60 lg:left-[630px] lg:-translate-x-[calc(252px/4)]">
+              <div className="absolute pointer-events-none top-[590px] md:top-[530px] sm:top-[455px] right-[calc(50%-300px)] -translate-x-[calc(252px/4)] -rotate-90 sm:rotate-0 sm:right-0 sm:bottom-[-40px] sm:left-[150px] sm:-translate-x-[calc(252px/4)] lg:top-60 lg:left-[630px] lg:-translate-x-[calc(252px/4)]">
                 <Image
                   alt="arrow-bottom"
                   src={"/path-2.png"}

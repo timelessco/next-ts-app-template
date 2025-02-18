@@ -5,7 +5,7 @@ import GoogleMapComponent from "@/components/googlemaps";
 export default function Page() {
   return (
     <>
-      <section className="canister pt-[85px]">
+      <section className="canister lg:pt-[85px]">
         <BigTextBox text="We’d love to hear from you" />
       </section>
       <div className="relative mt-[136px]">

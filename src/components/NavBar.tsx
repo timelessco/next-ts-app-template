@@ -29,7 +29,7 @@ export function NavBar() {
     <div
       className={`top-0 fixed min-w-[100%] z-10 transition-all duration-300 ease-in-out  text-[18px] leading-[1.5] ${
         scrolled ? "py-[5px] shadow-md" : "py-[15px]"
-      } ${isAbout ? "bg-black text-white" : "bg-white text-black"}`}
+      } ${isAbout ? "bg-[#0E0E0F] text-white" : "bg-white text-black"}`}
     >
       <div className="canister">
         <nav className="relative">
@@ -47,17 +47,23 @@ export function NavBar() {
               >
                 <div className="relative w-6 h-6 flex items-center justify-center">
                   <span
-                    className={`absolute h-0.5 w-6 bg-gray-600 transform transition duration-300 ease-in-out origin-center ${
+                    className={`absolute h-0.5 w-6 ${
+                      isAbout ? "bg-white" : "bg-gray-600"
+                    }  transform transition duration-300 ease-in-out origin-center ${
                       isOpen ? "rotate-45" : "-translate-y-1.5"
                     }`}
                   />
                   <span
-                    className={`absolute h-0.5 w-6 bg-gray-600 transition duration-300 ease-in-out ${
+                    className={`absolute h-0.5 w-6 ${
+                      isAbout ? "bg-white" : "bg-gray-600"
+                    } transition duration-300 ease-in-out ${
                       isOpen ? "opacity-0" : "opacity-100"
                     }`}
                   />
                   <span
-                    className={`absolute h-0.5 w-6 bg-gray-600 transform transition duration-300 ease-in-out origin-center ${
+                    className={`absolute h-0.5 w-6 ${
+                      isAbout ? "bg-white" : "bg-gray-600"
+                    } transform transition duration-300 ease-in-out origin-center ${
                       isOpen ? "-rotate-45" : "translate-y-1.5"
                     }`}
                   />
@@ -104,7 +110,11 @@ export function NavBar() {
               </div>
               <Link
                 href={"/contact"}
-                className={`text-customGray hover:text-customHoverGray   lg:hover:text-white lg:bg-[#F2F3F5] lg:hover:bg-black rounded-[7px] px-[8px] py-[2px] lg:absolute lg:right-0`}
+                className={`${
+                  isAbout
+                    ? "text-black"
+                    : "text-customGray hover:text-customHoverGray"
+                }   lg:hover:text-white lg:bg-[#F2F3F5] lg:hover:bg-black rounded-[7px] px-[8px] py-[2px] lg:absolute lg:right-0`}
               >
                 Contact
               </Link>
