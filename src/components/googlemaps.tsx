@@ -1,19 +1,16 @@
 "use client";
 
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { useMediaQuery } from "@react-hookz/web";
 
 export default function GoogleMapComponent() {
-  const [map, setMap] = useState<google.maps.Map | null>(null);
   const isLargeScreen = useMediaQuery("(min-width: 1024px)");
   const center = isLargeScreen
     ? { lat: 12.991626, lng: 80.222091 }
     : { lat: 12.991479, lng: 80.219008 };
 
   const onLoad = useCallback((map: google.maps.Map) => {
-    setMap(map);
-
     map.setOptions({
       disableDefaultUI: true,
       styles: [
@@ -92,10 +89,6 @@ export default function GoogleMapComponent() {
     });
   }, []);
 
-  const onUnmount = useCallback(() => {
-    setMap(null);
-  }, []);
-
   return (
     <section className="w-full h-[500px] lg:h-[1024px]">
       <LoadScript
@@ -106,7 +99,6 @@ export default function GoogleMapComponent() {
           center={center}
           zoom={16.75}
           onLoad={onLoad}
-          onUnmount={onUnmount}
         ></GoogleMap>
       </LoadScript>
     </section>
