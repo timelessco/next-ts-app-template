@@ -11,6 +11,7 @@
   "dependencies": {
     "@react-google-maps/api": "^2.20.6",
     "@react-hookz/web": "^25.0.1",
+    "embla-carousel": "^8.5.2",
     "embla-carousel-class-names": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
     "embla-carousel-wheel-gestures": "^8.0.1",
@@ -18,7 +19,8 @@
     "framer-motion": "^12.2.0",
     "next": "15.1.6",
     "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react-dom": "19.0.0",
+    "wheel-gestures": "^2.2.48"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

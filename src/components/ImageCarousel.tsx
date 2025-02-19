@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import ClassNames from "embla-carousel-class-names";
 import Image from "next/image";
+import { PageScrollEmblaPlugin } from "./PageScrollEmblaPlugin";
 
 const images = [
   "/carousel-images/pantry-couch.png",
@@ -23,7 +24,7 @@ export default function ImageCarousel() {
         "(min-width: 1024px)": { align: "end" },
       },
     },
-    [ClassNames()]
+    [ClassNames(), PageScrollEmblaPlugin()]
   );
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -42,7 +43,7 @@ export default function ImageCarousel() {
 
   return (
     <div
-      className="relative overflow-hidden pt-7 pb-20 touch-pan-y"
+      className="relative overflow-hidden pt-7 pb-20 touch-pan-y cursor-grab active:cursor-grabbing"
       ref={emblaRef}
     >
       <div className="flex">

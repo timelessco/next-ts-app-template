@@ -25,7 +25,7 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className="flex flex-col bg-gray-100 pb-[210px] pt-12 md:pt-14 lg:pt-[170px] px-[15px] text-center">
+        <div className="flex flex-col bg-gray-100 pb-12 md:pb-[112px] lg:pb-[226px] pt-12 md:pt-14 lg:pt-[170px] px-[15px] text-center">
           <div className="canister">
             <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px] mb-[29px] lg:mb-[33px]">
               our process
@@ -79,7 +79,7 @@ export default function Page() {
             <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px]">
               Why Timeless
             </h2>
-            <h3 className="mt-6 font-lyondisplayweb lg:text-[2.875rem] md:text-[2.5rem] text-[2rem] text-black tracking-[0.4px] leading-[1.08] font-light">
+            <h3 className="mt-6 font-lyondisplayweb lg:text-[40px] md:text-[2.5rem] text-[2rem] text-black tracking-[0.4px] leading-[1.08] font-light">
               Premium design and engineering, always on time and on budget.
             </h3>
             <div className="flex items-center gap-2 hover:gap-4 transition-all mt-6 text-xl text-[2rem] text-blue-600 tracking-[0]  mb-0 font-light duration-300 ease-in-out justify-center lg:justify-start">

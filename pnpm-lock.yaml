@@ -18,6 +18,9 @@ importers:
       '@react-hookz/web':
         specifier: ^25.0.1
         version: 25.0.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      embla-carousel:
+        specifier: ^8.5.2
+        version: 8.5.2
       embla-carousel-class-names:
         specifier: ^8.5.2
         version: 8.5.2(embla-carousel@8.5.2)
@@ -42,6 +45,9 @@ importers:
       react-dom:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
+      wheel-gestures:
+        specifier: ^2.2.48
+        version: 2.2.48
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3
