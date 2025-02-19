@@ -2,7 +2,7 @@ import { EmblaCarouselType, EmblaPluginType } from "embla-carousel";
 
 export function PageScrollEmblaPlugin(): EmblaPluginType {
   let embla: EmblaCarouselType;
-  let startEvent: MouseEvent | null = null;
+  let startEvent: MouseEvent | TouchEvent | null = null;
   let baselineMoveX = 0;
   let isSyntheticActive = false;
   let cleanup = () => {};
@@ -11,16 +11,47 @@ export function PageScrollEmblaPlugin(): EmblaPluginType {
     embla = instance;
     const container = embla.containerNode();
 
-    function createRelativeMouseEvent(
-      type: "mousedown" | "mousemove" | "mouseup",
+    function onUserPointerDown() {
+      if (isSyntheticActive) {
+        releaseSynthetic(baselineMoveX);
+      }
+    }
+
+    container.addEventListener("mousedown", onUserPointerDown);
+    container.addEventListener("touchstart", onUserPointerDown);
+
+    function createRelativePointerEvent(
+      type: string,
       moveX: number
-    ) {
+    ): MouseEvent | TouchEvent {
       const relativeMovement = moveX - baselineMoveX;
+
+      if (startEvent instanceof TouchEvent && startEvent.touches.length > 0) {
+        const touch = startEvent.touches[0];
+        return new TouchEvent(type, {
+          touches: [
+            new Touch({
+              identifier: touch.identifier,
+              target: touch.target as EventTarget,
+              clientX: touch.clientX + relativeMovement,
+              clientY: touch.clientY,
+              screenX: touch.screenX + relativeMovement,
+              screenY: touch.screenY,
+              pageX: touch.pageX + relativeMovement,
+              pageY: touch.pageY,
+            }),
+          ],
+          bubbles: true,
+          cancelable: true,
+          composed: true,
+        });
+      }
+
       return new MouseEvent(type, {
-        clientX: (startEvent?.clientX ?? 0) + relativeMovement,
-        clientY: startEvent?.clientY ?? 0,
-        screenX: (startEvent?.screenX ?? 0) + relativeMovement,
-        screenY: (startEvent?.screenY ?? 0) + relativeMovement,
+        clientX: (startEvent as MouseEvent)?.clientX + relativeMovement,
+        clientY: (startEvent as MouseEvent)?.clientY ?? 0,
+        screenX: (startEvent as MouseEvent)?.screenX + relativeMovement,
+        screenY: (startEvent as MouseEvent)?.screenY ?? 0,
         movementX: relativeMovement,
         movementY: 0,
         button: 0,
@@ -30,7 +61,7 @@ export function PageScrollEmblaPlugin(): EmblaPluginType {
       });
     }
 
-    function dispatchEvent(event: MouseEvent) {
+    function dispatchEvent(event: Event) {
       container.dispatchEvent(event);
     }
 
@@ -54,7 +85,7 @@ export function PageScrollEmblaPlugin(): EmblaPluginType {
         isSyntheticActive = true;
       }
 
-      const syntheticMove = createRelativeMouseEvent("mousemove", moveX);
+      const syntheticMove = createRelativePointerEvent("mousemove", moveX);
       dispatchEvent(syntheticMove);
 
       if (sTop >= hgt) {
@@ -64,13 +95,13 @@ export function PageScrollEmblaPlugin(): EmblaPluginType {
 
     function releaseSynthetic(moveX: number) {
       if (isSyntheticActive) {
-        const syntheticUp = createRelativeMouseEvent("mouseup", moveX);
+        const syntheticUp = createRelativePointerEvent("mouseup", moveX);
         dispatchEvent(syntheticUp);
         isSyntheticActive = false;
       }
     }
 
-    function onGlobalMouseMove(e: MouseEvent) {
+    function onGlobalPointerMove(e: MouseEvent | TouchEvent) {
       if (e.isTrusted && isSyntheticActive) {
         e.preventDefault();
         e.stopPropagation();
@@ -78,16 +109,22 @@ export function PageScrollEmblaPlugin(): EmblaPluginType {
       }
     }
 
-    const onWindowMouseUp = () => releaseSynthetic(0);
+    const onWindowPointerUp = () => releaseSynthetic(0);
 
     window.addEventListener("scroll", onScroll);
-    window.addEventListener("mousemove", onGlobalMouseMove, true);
-    window.addEventListener("mouseup", onWindowMouseUp);
+    window.addEventListener("mousemove", onGlobalPointerMove, true);
+    window.addEventListener("mouseup", onWindowPointerUp);
+    window.addEventListener("touchmove", onGlobalPointerMove, true);
+    window.addEventListener("touchend", onWindowPointerUp);
 
     cleanup = () => {
       window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("mousemove", onGlobalMouseMove, true);
-      window.removeEventListener("mouseup", onWindowMouseUp);
+      window.removeEventListener("mousemove", onGlobalPointerMove, true);
+      window.removeEventListener("mouseup", onWindowPointerUp);
+      window.removeEventListener("touchmove", onGlobalPointerMove, true);
+      window.removeEventListener("touchend", onWindowPointerUp);
+      container.removeEventListener("mousedown", onUserPointerDown);
+      container.removeEventListener("touchstart", onUserPointerDown);
     };
   }
 

@@ -112,7 +112,7 @@ export function NavBar() {
                 href={"/contact"}
                 className={`${
                   isAbout
-                    ? "text-black"
+                    ? `text-black ${isOpen ? "text-white" : ""}`
                     : "text-customGray hover:text-customHoverGray"
                 }   lg:hover:text-white lg:bg-[#F2F3F5] lg:hover:bg-black rounded-[7px] px-[8px] py-[2px] lg:absolute lg:right-0`}
               >
