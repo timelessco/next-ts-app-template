@@ -140,14 +140,16 @@ export default function Page() {
                 key={member.id}
                 className="flex flex-col items-center px-[10px] pb-16 w-1/2 md:w-1/3 lg:w-1/4"
               >
-                <div className="sm:w-[74px] sm:h-[74px] w-[64px] h-[64px] my-[25px] mx-auto">
+                <div className="sm:w-[74px] sm:h-[74px] w-[64px] h-[64px] my-[25px] mx-auto hover:scale-110 hover:shadow-2xl duration-300 ease-in-out  relative overflow-hidden rounded-full group">
                   <Image
                     alt={member.name}
                     src={member.image}
                     height={148}
                     width={148}
+                    className="transition-transform  rounded-full"
                   />
                 </div>
+
                 <h2 className="text-xl font-normal tracking-[0] leading-[1.2]">
                   {member.name}
                 </h2>
