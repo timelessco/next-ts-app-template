@@ -43,7 +43,7 @@ export default function ImageCarousel() {
 
   return (
     <div
-      className="relative overflow-hidden pt-7 pb-20 touch-pan-y cursor-grab active:cursor-grabbing"
+      className="relative overflow-hidden pt-7 pb-8 md:pb-20 touch-pan-y cursor-grab active:cursor-grabbing"
       ref={emblaRef}
     >
       <div className="flex">

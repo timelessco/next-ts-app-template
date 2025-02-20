@@ -1,6 +1,6 @@
 "use client";
 
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { GoogleMap, LoadScriptNext } from "@react-google-maps/api";
 import { useCallback } from "react";
 import { useMediaQuery } from "@react-hookz/web";
 
@@ -91,7 +91,7 @@ export default function GoogleMapComponent() {
 
   return (
     <section className="w-full h-[500px] lg:h-[1024px]">
-      <LoadScript
+      <LoadScriptNext
         googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}
       >
         <GoogleMap
@@ -100,7 +100,7 @@ export default function GoogleMapComponent() {
           zoom={16.75}
           onLoad={onLoad}
         ></GoogleMap>
-      </LoadScript>
+      </LoadScriptNext>
     </section>
   );
 }

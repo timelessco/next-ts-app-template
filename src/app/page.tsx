@@ -94,7 +94,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="flex flex-col lg:pl-24 xl:pl-30 max-w-[370px] lg:max-w-[480px]  text-center lg:text-left mt-[30px] md:mt-[52px] lg:mt-[0px]">
+              <div className="flex flex-col lg:pl-24 xl:pl-[120px] max-w-[370px] lg:max-w-[480px]  text-center lg:text-left mt-[30px] md:mt-[52px] lg:mt-[0px]">
                 <h2 className="font-light text-[20px] lg:text-[23px] text-white tracking-[0] mb-[15px] lg:mb-2 leading-[1.2]">
                   Atlantic payroll
                 </h2>
@@ -150,7 +150,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="flex flex-col justify-center lg:leading-none leading-[1.1] max-w-[380] lg:max-w-[600px] lg:pl-[96px] xl:pl-[120px] text-center lg:text-left lg:mb-2">
+              <div className="flex flex-col justify-center lg:leading-none leading-[1.1] max-w-[380] lg:max-w-[600px] lg:pl-24 xl:pl-[120px] text-center lg:text-left lg:mb-2">
                 <h2 className="font-light text-[23px] text-white tracking-[0] mb-[0.5rem] lg:leading-[1.2]">
                   Bluematter
                 </h2>
@@ -169,7 +169,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="flex flex-col justify-center text-center lg:text-left max-w-[360px] lg:max-w-[450px] xl:max-w-[480px] lg:pl-24 xl:pl-30">
+              <div className="flex flex-col justify-center text-center lg:text-left max-w-[360px] lg:max-w-[450px] xl:max-w-[480px] lg:pl-24 xl:pl-[120px] xl:pl-30">
                 <h2 className="mt-[32px] md:mt-[52px] lg:mt-[0px] font-light text-[20px] lg:text-[23px] text-white tracking-[0] mb-[15px] lg:mb-2 leading-[1.2]">
                   Photon
                 </h2>

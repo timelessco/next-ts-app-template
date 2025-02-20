@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <>
       <div>
-        <section className="canister lg:pt-[85px]">
+        <section className="canister lg:pt-[85px] pb-8">
           <BigTextBox text="Data driven design decisions" />
         </section>
       </div>
@@ -25,12 +25,12 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className="flex flex-col bg-gray-100 pb-12 md:pb-[112px] lg:pb-[226px] pt-12 md:pt-14 lg:pt-[170px] px-[15px] text-center">
+        <div className="flex flex-col bg-gray-100 pb-12 sm:pb-[112px] lg:pb-[226px] pt-12 md:pt-14 lg:pt-[170px] px-[15px] text-center">
           <div className="canister">
             <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px] mb-[29px] lg:mb-[33px]">
               our process
             </h2>
-            <div className="min-[320px]:max-w-[287px] min-[400px]:max-w-[380px] mx-auto md:max-w-[640px] mb-4 lg:mb-[30px]">
+            <div className="min-[320px]:max-w-[287px] min-[400px]:max-w-[380px] mx-auto sm:max-w-[640px] mb-4 lg:mb-[30px]">
               <h3 className="max-w-full text-[1.5rem] md:text-[1.875rem] font-light leading-[1.33] tracking-[0.5px] font-lyondisplayweb text-black text-center pb-8 lg:pb-[35px]">
                 We believe the key to a delightful user experience is an
                 incremental process of measuring business success and aligning
@@ -43,7 +43,7 @@ export default function Page() {
               <ProcessBox image="/svgs/design-1.svg" title="Design" />
               <ProcessBox image="/svgs/tech-1.svg" title="Execute" />
 
-              <div className="absolute pointer-events-none top-[590px] left-[calc(50%-174px)] -translate-x-[calc(252px/4)] -rotate-90 sm:rotate-0 lg:-top-4 lg:left-[630px] lg:-translate-x-[calc(252px/4)] lg:bottom-0 md:top-[270px] sm:top-[235px] sm:left-[calc(50%-65px)] sm:-translate-x-[calc(252px/4)]">
+              <div className="absolute pointer-events-none top-[590px] left-[calc(50%-169px)] -translate-x-[calc(252px/4)] -rotate-90 sm:rotate-0 lg:-top-4 lg:left-[630px] lg:-translate-x-[calc(252px/4)] lg:bottom-0 md:top-[270px] sm:top-[235px] sm:left-[calc(50%-65px)] sm:-translate-x-[calc(252px/4)]">
                 <Image
                   alt="arrow-top"
                   src={"/path-copy.png"}
@@ -51,12 +51,12 @@ export default function Page() {
                   width={252}
                   className="relative"
                 />
-                <span className="absolute -translate-x-[55px] -translate-y-[70px] lg:top-1 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
+                <span className="absolute -translate-x-[55px] -translate-y-[65px] lg:top-1 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
                   Evolve
                 </span>
               </div>
 
-              <div className="absolute pointer-events-none top-[590px] md:top-[530px] sm:top-[455px] right-[calc(50%-300px)] -translate-x-[calc(252px/4)] -rotate-90 sm:rotate-0 sm:right-0 sm:bottom-[-40px] sm:left-[150px] sm:-translate-x-[calc(252px/4)] lg:top-60 lg:left-[630px] lg:-translate-x-[calc(252px/4)]">
+              <div className="absolute pointer-events-none top-[590px] md:top-[530px] sm:top-[455px] right-[calc(50%-295px)] -translate-x-[calc(252px/4)] -rotate-90 sm:rotate-0 sm:right-0 sm:bottom-[-40px] sm:left-[150px] sm:-translate-x-[calc(252px/4)] lg:top-60 lg:left-[630px] lg:-translate-x-[calc(252px/4)]">
                 <Image
                   alt="arrow-bottom"
                   src={"/path-2.png"}
@@ -64,7 +64,7 @@ export default function Page() {
                   width={252}
                   className="relative"
                 />
-                <span className="absolute top-[40px] sm:top-[50px] left-[70px]  sm:right-0 sm:left-[125px] sm:-translate-x-1/2 sm:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
+                <span className="absolute top-[35px] sm:top-[50px] left-[70px]  sm:right-0 sm:left-[125px] sm:-translate-x-1/2 sm:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
                   Measure
                 </span>
               </div>
@@ -79,10 +79,10 @@ export default function Page() {
             <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px]">
               Why Timeless
             </h2>
-            <h3 className="mt-6 font-lyondisplayweb lg:text-[40px] md:text-[2.5rem] text-[2rem] text-black tracking-[0.4px] leading-[1.08] font-light">
+            <h3 className="mt-6 font-lyondisplayweb md  :text-[2.5rem] text-[2rem] text-black tracking-[0.4px] leading-[1.08] font-light">
               Premium design and engineering, always on time and on budget.
             </h3>
-            <div className="flex items-center gap-2 hover:gap-4 transition-all mt-6 text-xl text-[2rem] text-blue-600 tracking-[0]  mb-0 font-light duration-300 ease-in-out justify-center lg:justify-start">
+            <div className="flex items-center gap-2 hover:gap-4 transition-all mt-6 text-[1.75rem] md:text-[2rem] text-[#007bff] tracking-[0]  mb-0 font-light duration-300 ease-in-out justify-center lg:justify-start">
               <p className="text-[1.75rem] md:text-[2rem] leading-[1.5]">
                 Get in touch with us
               </p>

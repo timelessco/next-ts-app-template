@@ -21,7 +21,7 @@ export default function WhyTimeless({ image, title, desc }: WhyTimelessProps) {
           />
         </div>
       </div>
-      <h4 className="font-semibold text-[1.625rem] mb-[15px] leading-[1.2]">
+      <h4 className="font-semibold text-[1.625rem] mb-[15px] leading-[1.2] tracking-normal">
         {title}
       </h4>
       <p className="text-[rgba(7,18,44,0.65)] text-xl leading-[29px] tracking-[0.19px] mb-4 pb-8 lg:pb-[88px] font-light">

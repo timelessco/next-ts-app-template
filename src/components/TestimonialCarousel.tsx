@@ -73,7 +73,7 @@ const TestimonialCarousel = () => {
                   className="flex-shrink-0 w-full flex flex-col items-center text-center transition-opacity duration-700 ease-in-out opacity-100 [&:not(.is-snapped)]:opacity-0"
                 >
                   {/* Testimonial Text */}
-                  <div className="min-[320px]:max-w-[287px] min-[400px]:max-w-[380px] relative md:max-w-[560px] my-[25px] md:mb-[30px] flex">
+                  <div className="min-[320px]:max-w-[287px] min-[400px]:max-w-[380px] relative md:max-w-[560px] my-[25px]  flex">
                     <p className="max-w-full text-[1.5rem] md:text-[1.875rem] font-light leading-[1.33] tracking-[0.56px] font-lyondisplayweb  text-black text-center">
                       {testimonial.text}
                     </p>
@@ -101,7 +101,7 @@ const TestimonialCarousel = () => {
             </div>
           </div>
           {/* Dots Indicator */}
-          <div className="mt-[40px] flex justify-center space-x-[10px]">
+          <div className="mt-[35px] flex justify-center space-x-[10px]">
             {testimonials.map((_, index) => (
               <button
                 key={index}

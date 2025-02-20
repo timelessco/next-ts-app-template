@@ -126,7 +126,7 @@ export default function Page() {
       </section>
       <WhatWeDoSection />
       <ImageCarousel />
-      <section className="canister py-10 text-center">
+      <section className="canister pt-10 pb-[32px] md:pb-[108px] lg:pb-[92px] text-center">
         <h2 className="uppercase tracking-[1.97] mb-[29.25px] lg:mb-[33.75px] text-[15px] text-[rgba(7,18,44,0.55)] font-bold leading-[1.2]">
           meet the team
         </h2>
@@ -138,9 +138,9 @@ export default function Page() {
             {teamMembers.map((member) => (
               <div
                 key={member.id}
-                className="flex flex-col items-center px-[10px] pb-16 w-1/2 md:w-1/3 lg:w-1/4"
+                className="flex flex-col items-center px-[10px] pb-16 w-1/2 md:w-1/3 lg:w-1/4 group"
               >
-                <div className="sm:w-[74px] sm:h-[74px] w-[64px] h-[64px] my-[25px] mx-auto hover:scale-110 hover:shadow-2xl duration-300 ease-in-out  relative overflow-hidden rounded-full group">
+                <div className="sm:w-[74px] sm:h-[74px] w-[64px] h-[64px] my-[25px] mx-auto group-hover:scale-110 group-hover:shadow-2xl duration-300 ease-in-out  relative overflow-hidden rounded-full group">
                   <Image
                     alt={member.name}
                     src={member.image}
@@ -174,9 +174,10 @@ export default function Page() {
                 href="https://wellfound.com/company/timelessco/jobs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 text-lg font-normal tracking-[0.3px] relative"
+                className="group relative text-[#007BFF] hover:text-[#0056b3] text-lg font-normal tracking-[0.3px]"
               >
                 See Careers
+                <div className="absolute left-0 -bottom-1 h-0.5 opacity-0 bg-[#0056b3] transition-all duration-300 ease-in-out rounded-full w-full group-hover:opacity-100 group-hover:-bottom-0.5"></div>
               </a>
             </div>
           </div>

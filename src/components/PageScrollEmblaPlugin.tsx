@@ -28,7 +28,7 @@ export function PageScrollEmblaPlugin(): EmblaPluginType {
 
       if (startEvent instanceof TouchEvent && startEvent.touches.length > 0) {
         const touch = startEvent.touches[0];
-        return new TouchEvent(type, {
+        const syntheticTouchEvent = new TouchEvent(type, {
           touches: [
             new Touch({
               identifier: touch.identifier,
@@ -45,9 +45,13 @@ export function PageScrollEmblaPlugin(): EmblaPluginType {
           cancelable: true,
           composed: true,
         });
+
+        // @ts-expect-error - Mark the event as synthetic
+        syntheticTouchEvent.synthetic = true;
+        return syntheticTouchEvent;
       }
 
-      return new MouseEvent(type, {
+      const syntheticMouseEvent = new MouseEvent(type, {
         clientX: (startEvent as MouseEvent)?.clientX + relativeMovement,
         clientY: (startEvent as MouseEvent)?.clientY ?? 0,
         screenX: (startEvent as MouseEvent)?.screenX + relativeMovement,
@@ -59,6 +63,10 @@ export function PageScrollEmblaPlugin(): EmblaPluginType {
         cancelable: true,
         composed: true,
       });
+
+      // @ts-expect-error - Mark the event as synthetic
+      syntheticMouseEvent.synthetic = true;
+      return syntheticMouseEvent;
     }
 
     function dispatchEvent(event: Event) {
@@ -81,6 +89,9 @@ export function PageScrollEmblaPlugin(): EmblaPluginType {
           cancelable: true,
           composed: true,
         });
+
+        // @ts-expect-error - Mark the event as synthetic
+        startEvent.synthetic = true;
         dispatchEvent(startEvent);
         isSyntheticActive = true;
       }
@@ -102,6 +113,8 @@ export function PageScrollEmblaPlugin(): EmblaPluginType {
     }
 
     function onGlobalPointerMove(e: MouseEvent | TouchEvent) {
+      if (isSyntheticEvent(e)) return;
+
       if (e.isTrusted && isSyntheticActive) {
         e.preventDefault();
         e.stopPropagation();
@@ -109,7 +122,15 @@ export function PageScrollEmblaPlugin(): EmblaPluginType {
       }
     }
 
-    const onWindowPointerUp = () => releaseSynthetic(0);
+    function onWindowPointerUp(e: MouseEvent | TouchEvent) {
+      if (isSyntheticEvent(e)) return;
+      releaseSynthetic(0);
+    }
+
+    function isSyntheticEvent(event: Event): boolean {
+      // @ts-expect-error - Check the synthetic marker
+      return event.synthetic === true;
+    }
 
     window.addEventListener("scroll", onScroll);
     window.addEventListener("mousemove", onGlobalPointerMove, true);

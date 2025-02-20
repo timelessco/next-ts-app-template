@@ -27,7 +27,7 @@ export function NavBar() {
 
   return (
     <div
-      className={`top-0 fixed min-w-[100%] z-10 transition-all duration-300 ease-in-out  text-[18px] leading-[1.5] ${
+      className={`top-0 fixed min-w-[100%] z-20 transition-all duration-300 ease-in-out  text-[18px] leading-[1.5] ${
         scrolled ? "py-[5px] shadow-md" : "py-[15px]"
       } ${isAbout ? "bg-[#0E0E0F] text-white" : "bg-white text-black"}`}
     >
@@ -72,12 +72,13 @@ export function NavBar() {
             </div>
 
             <div
-              className={`flex flex-col lg:flex-row items-center w-full lg:absolute lg:left-0 space-y-3 lg:space-y-0 space-x-0 lg:space-x-6 transition-all duration-500 ease-in-out overflow-hidden ${
+              className={`flex flex-col lg:flex-row items-center w-full lg:absolute lg:left-0 space-y-3 lg:space-y-0 space-x-0 lg:space-x-6 transition-all duration-300 ease-in-out overflow-hidden ${
                 isOpen ? "max-h-[300px]" : "max-h-0"
               } lg:max-h-none lg:opacity-100 lg:flex-row lg:space-y-0 lg:items-center lg:mt-0`}
             >
               <div className="flex flex-col lg:flex-row items-center lg:mx-auto space-y-3 lg:space-y-0 lg:space-x-6">
                 <Link
+                  onClick={() => setIsOpen(false)}
                   href={"/"}
                   className={`${
                     isAbout
@@ -88,6 +89,7 @@ export function NavBar() {
                   Work
                 </Link>
                 <Link
+                  onClick={() => setIsOpen(false)}
                   href={"/about"}
                   className={`${
                     isAbout
@@ -98,6 +100,7 @@ export function NavBar() {
                   About
                 </Link>
                 <Link
+                  onClick={() => setIsOpen(false)}
                   href={"/process"}
                   className={`${
                     isAbout
@@ -109,12 +112,13 @@ export function NavBar() {
                 </Link>
               </div>
               <Link
+                onClick={() => setIsOpen(false)}
                 href={"/contact"}
                 className={`${
                   isAbout
                     ? `text-black ${isOpen ? "text-white" : ""}`
                     : "text-customGray hover:text-customHoverGray"
-                }   lg:hover:text-white lg:bg-[#F2F3F5] lg:hover:bg-black rounded-[7px] px-[8px] py-[2px] lg:absolute lg:right-0`}
+                }   lg:hover:text-white lg:bg-[#F2F3F5] lg:hover:bg-black rounded-[7px] px-2 py-[15px] lg:py-1 lg:absolute lg:right-0`}
               >
                 Contact
               </Link>
