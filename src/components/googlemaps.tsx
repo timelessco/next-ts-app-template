@@ -75,6 +75,8 @@ export default function GoogleMapComponent() {
     });
 
     map.setOptions({
+      zoomControl: true,
+      streetViewControl: true,
       mapTypeControl: true,
       mapTypeControlOptions: {
         style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,

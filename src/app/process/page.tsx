@@ -50,6 +50,7 @@ export default function Page() {
                   height={55}
                   width={252}
                   className="relative"
+                  priority
                 />
                 <span className="absolute -translate-x-[55px] -translate-y-[65px] lg:top-1 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
                   Evolve
@@ -63,6 +64,7 @@ export default function Page() {
                   height={55}
                   width={252}
                   className="relative"
+                  priority
                 />
                 <span className="absolute top-[35px] sm:top-[50px] left-[70px]  sm:right-0 sm:left-[125px] sm:-translate-x-1/2 sm:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
                   Measure
