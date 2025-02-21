@@ -81,7 +81,7 @@ export default function Page() {
             <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px]">
               Why Timeless
             </h2>
-            <h3 className="mt-6 font-lyondisplayweb md:text-[2.5rem] text-[2rem] text-black tracking-[0.4px] leading-[1.08] font-light">
+            <h3 className="mt-6 font-lyondisplayweb md:text-[2.875rem] text-[2rem] text-black tracking-[0.4px] leading-[1.08] font-light">
               Premium design and engineering, always on time and on budget.
             </h3>
             <div className="flex items-center gap-2 hover:gap-4 transition-all mt-6 text-[1.75rem] md:text-[2rem] text-[#007bff] tracking-[0]  mb-0 font-light duration-300 ease-in-out justify-center lg:justify-start">
