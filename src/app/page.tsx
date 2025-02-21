@@ -122,7 +122,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="flex flex-col lg:pl-24 xl:pl-30 max-w-[360px] lg:max-w-[480px]  text-center lg:text-left mt-[30px] md:mt-[52px] lg:mt-[0px]">
+              <div className="flex flex-col lg:pl-24 xl:pl-[120px] max-w-[360px] lg:max-w-[480px]  text-center lg:text-left mt-[30px] md:mt-[52px] lg:mt-[0px]">
                 <h2 className="font-light text-[20px] lg:text-[23px] text-white tracking-[0] mb-[15px] lg:mb-2 leading-[1.2]">
                   Smallcase
                 </h2>
