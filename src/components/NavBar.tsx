@@ -27,7 +27,7 @@ export function NavBar() {
 
   return (
     <div
-      className={`top-0 fixed min-w-[100%] z-20 transition-all duration-300 ease-in-out  text-[18px] leading-[1.5] ${
+      className={`top-0 fixed min-w-[100%] z-20 transition-all duration-300 ease-in-out  text-lg leading-[1.5] ${
         scrolled ? "py-[5px] shadow-md" : "py-[15px]"
       } ${isAbout ? "bg-[#0E0E0F] text-white" : "bg-white text-black"}`}
     >
@@ -40,7 +40,7 @@ export function NavBar() {
               </h1>
 
               <button
-                className="lg:hidden relative w-[24px] h-[2px] flex items-center justify-center focus:outline-none"
+                className="lg:hidden relative w-6 h-0.5 flex items-center justify-center focus:outline-none"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle navigation"
                 aria-expanded={isOpen}

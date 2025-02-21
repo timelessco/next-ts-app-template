@@ -27,14 +27,14 @@ export default function Page() {
           <h2 className="uppercase tracking-[1.97] md:mb-2 text-[13px] sm:text-[15px] text-[rgba(7,18,44,0.55)] font-bold leading-[1.2]">
             Phone
           </h2>
-          <h3 className="text-[22px] lg:text-[27px] text-[#07122C] tracking-[-0.05] leading-10 font-bold md:max-w-[50%] lg:max-w-[340px] mx-auto lg:mx-0 mb-[36px]">
+          <h3 className="text-[22px] lg:text-[27px] text-[#07122C] tracking-[-0.05] leading-10 font-bold md:max-w-[50%] lg:max-w-[340px] mx-auto lg:mx-0 mb-9">
             +91 9688888222
           </h3>
         </div>
       </div>
       <Footer
         desc="Send us an email"
-        href="/"
+        href="mailto:hello@timeless.co"
         title="Let’s build something if you are convinced."
       />
     </>

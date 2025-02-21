@@ -94,7 +94,7 @@ export default function Page() {
   return (
     <>
       <section className="bg-[#0E0E0F] relative text-center lg:text-left">
-        <div className="w-full h-auto pt-[120px] lg:pb-[180px] pb-[48px] px-[15px]">
+        <div className="w-full h-auto pt-[120px] lg:pb-[180px] pb-12 px-[15px]">
           <Image
             alt="TIMELESS OFFICE"
             src={"/timeless-1.jpg"}
@@ -103,7 +103,7 @@ export default function Page() {
             className="w-full h-auto"
           ></Image>
           <div className="canister">
-            <div className="flex lg:flex-row flex-wrap lg:flex-nowrap lg:justify-between text-[#FFFFFF] w-full mx-auto lg:mt-[-4rem] justify-center">
+            <div className="flex lg:flex-row flex-wrap lg:flex-nowrap lg:justify-between text-[#FFFFFF] w-full mx-auto lg:-mt-16 justify-center">
               <h2 className="text-[2.5rem] lg:text-[3.625rem] font-light tracking-[-0.6px] leading-[1.05] max-w-[480px] w-[480px] px-[15px] pb-8">
                 Solving business problems with user-centric design
               </h2>
@@ -126,7 +126,7 @@ export default function Page() {
       </section>
       <WhatWeDoSection />
       <ImageCarousel />
-      <section className="canister pt-10 pb-[32px] md:pb-[108px] lg:pb-[92px] text-center">
+      <section className="canister pt-10 pb-8 md:pb-[108px] lg:pb-[92px] text-center">
         <h2 className="uppercase tracking-[1.97] mb-[29.25px] lg:mb-[33.75px] text-[15px] text-[rgba(7,18,44,0.55)] font-bold leading-[1.2]">
           meet the team
         </h2>
@@ -140,7 +140,7 @@ export default function Page() {
                 key={member.id}
                 className="flex flex-col items-center px-[10px] pb-16 w-1/2 md:w-1/3 lg:w-1/4 group"
               >
-                <div className="sm:w-[74px] sm:h-[74px] w-[64px] h-[64px] my-[25px] mx-auto group-hover:scale-110 group-hover:shadow-2xl duration-300 ease-in-out  relative overflow-hidden rounded-full group">
+                <div className="sm:w-[74px] sm:h-[74px] w-16 h-16 my-[25px] mx-auto group-hover:scale-110 group-hover:shadow-2xl duration-300 ease-in-out  relative overflow-hidden rounded-full group">
                   <Image
                     alt={member.name}
                     src={member.image}
@@ -159,7 +159,7 @@ export default function Page() {
               </div>
             ))}
             <div className="flex flex-col items-center px-[10px] pb-16 w-1/2 md:w-1/3 lg:w-1/4">
-              <div className="sm:w-[74px] sm:h-[74px] w-[64px] h-[64px] my-[25px] mx-auto">
+              <div className="sm:w-[74px] sm:h-[74px] w-16 h-16 my-[25px] mx-auto">
                 <Image
                   alt="You"
                   src="/employees/default.png"

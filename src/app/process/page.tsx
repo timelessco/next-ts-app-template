@@ -25,13 +25,13 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className="flex flex-col bg-gray-100 pb-12 sm:pb-[112px] lg:pb-[226px] pt-12 md:pt-14 lg:pt-[170px] px-[15px] text-center">
+        <div className="flex flex-col bg-gray-100 pb-12 sm:pb-28 lg:pb-[226px] pt-12 md:pt-14 lg:pt-[170px] px-[15px] text-center">
           <div className="canister">
             <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px] mb-[29px] lg:mb-[33px]">
               our process
             </h2>
             <div className="min-[320px]:max-w-[287px] min-[400px]:max-w-[380px] mx-auto sm:max-w-[640px] mb-4 lg:mb-[30px]">
-              <h3 className="max-w-full text-[1.5rem] md:text-[1.875rem] font-light leading-[1.33] tracking-[0.5px] font-lyondisplayweb text-black text-center pb-8 lg:pb-[35px]">
+              <h3 className="max-w-full text-2xl md:text-3xl font-light leading-[1.33] tracking-[0.5px] font-lyondisplayweb text-black text-center pb-8 lg:pb-[35px]">
                 We believe the key to a delightful user experience is an
                 incremental process of measuring business success and aligning
                 them with user goals.
@@ -52,12 +52,12 @@ export default function Page() {
                   className="relative"
                   priority
                 />
-                <span className="absolute -translate-x-[55px] -translate-y-[65px] lg:top-1 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
+                <span className="absolute -translate-x-[55px] -translate-y-[65px] lg:top-1 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-normal text-xl">
                   Evolve
                 </span>
               </div>
 
-              <div className="absolute pointer-events-none top-[590px] md:top-[530px] sm:top-[455px] right-[calc(50%-295px)] -translate-x-[calc(252px/4)] -rotate-90 sm:rotate-0 sm:right-0 sm:bottom-[-40px] sm:left-[150px] sm:-translate-x-[calc(252px/4)] lg:top-60 lg:left-[630px] lg:-translate-x-[calc(252px/4)]">
+              <div className="absolute pointer-events-none top-[590px] md:top-[530px] sm:top-[455px] right-[calc(50%-295px)] -translate-x-[calc(252px/4)] -rotate-90 sm:rotate-0 sm:right-0 sm:-bottom-10 sm:left-[150px] sm:-translate-x-[calc(252px/4)] lg:top-60 lg:left-[630px] lg:-translate-x-[calc(252px/4)]">
                 <Image
                   alt="arrow-bottom"
                   src={"/path-2.png"}
@@ -66,7 +66,7 @@ export default function Page() {
                   className="relative"
                   priority
                 />
-                <span className="absolute top-[35px] sm:top-[50px] left-[70px]  sm:right-0 sm:left-[125px] sm:-translate-x-1/2 sm:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-[400] text-[20px]">
+                <span className="absolute top-[35px] sm:top-[50px] left-[70px]  sm:right-0 sm:left-[125px] sm:-translate-x-1/2 sm:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-normal text-xl">
                   Measure
                 </span>
               </div>
@@ -75,7 +75,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="canister lg:pt-[160px] lg:pb-[104px] pt-16 pb-8">
+      <section className="canister lg:pt-40 lg:pb-26 pt-16 pb-8">
         <div className="flex flex-wrap lg:justify-between justify-center text-center lg:text-left">
           <div className="flex flex-col lg:max-w-[440px] max-w-[495px] mb-12 lg:mb-0">
             <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px]">
