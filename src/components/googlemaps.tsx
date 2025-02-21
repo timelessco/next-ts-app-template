@@ -75,7 +75,6 @@ export default function GoogleMapComponent() {
     });
 
     map.setOptions({
-      zoomControl: true,
       cameraControl: true,
       streetViewControl: true,
       mapTypeControl: true,
