@@ -1,36 +1,19 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Logo from "./Logo";
+import NavBarWrapper from "./NavBarWrapper";
 
 export function NavBar() {
   const currPath = usePathname();
   const isActive = (path: string) =>
     currPath === path ? "text-customHoverGray" : "text-customGray";
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const isAbout = currPath === "/about" ? true : false;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div
-      className={`top-0 fixed min-w-[100%] z-20 transition-all duration-300 ease-in-out  text-lg leading-[1.5] ${
-        scrolled ? "py-[5px] shadow-md" : "py-[15px]"
-      } ${isAbout ? "bg-[#0E0E0F] text-white" : "bg-white text-black"}`}
-    >
+    <NavBarWrapper>
       <div className="canister">
         <nav className="relative">
           <div className="flex flex-col lg:flex-row lg:items-center">
@@ -126,6 +109,6 @@ export function NavBar() {
           </div>
         </nav>
       </div>
-    </div>
+    </NavBarWrapper>
   );
 }

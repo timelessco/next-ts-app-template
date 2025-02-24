@@ -21,6 +21,7 @@ export default function Page() {
             height={4000}
             width={2048}
             className="w-full h-auto"
+            priority
           ></Image>
         </div>
       </section>
@@ -50,7 +51,6 @@ export default function Page() {
                   height={55}
                   width={252}
                   className="relative"
-                  priority
                 />
                 <span className="absolute -translate-x-[55px] -translate-y-[65px] lg:top-1 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-normal text-xl">
                   Evolve
@@ -64,7 +64,6 @@ export default function Page() {
                   height={55}
                   width={252}
                   className="relative"
-                  priority
                 />
                 <span className="absolute top-[35px] sm:top-[50px] left-[70px]  sm:right-0 sm:left-[125px] sm:-translate-x-1/2 sm:-translate-y-1/2 text-[rgba(7,18,44,0.65)] w-[110px] bg-gray-100 font-normal text-xl">
                   Measure
@@ -74,7 +73,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
       <section className="canister lg:pt-40 lg:pb-26 pt-16 pb-8">
         <div className="flex flex-wrap lg:justify-between justify-center text-center lg:text-left">
           <div className="flex flex-col lg:max-w-[440px] max-w-[495px] mb-12 lg:mb-0">

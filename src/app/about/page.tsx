@@ -101,6 +101,7 @@ export default function Page() {
             height={2750}
             width={1564}
             className="w-full h-auto"
+            priority
           ></Image>
           <div className="canister">
             <div className="flex lg:flex-row flex-wrap lg:flex-nowrap lg:justify-between text-[#FFFFFF] w-full mx-auto lg:-mt-16 justify-center">

@@ -111,6 +111,7 @@ export default function Home() {
                   height={1260}
                   width={1032}
                   className="lg:pt-[8px] pb-[48px]"
+                  priority
                 ></Image>
               </div>
             </a>

@@ -1,4 +1,3 @@
-"use client";
 import Arrow from "./arrow";
 import Link from "next/link";
 interface FooterProps {
