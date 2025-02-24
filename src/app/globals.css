@@ -1,9 +1,28 @@
-@import "https://fast.fonts.net/cssapi/d31f6ac3-5be0-4f85-8d4f-e02338312df9.css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Equitan Sans W01";
+  src: url("/fonts/equitan-sans/sans-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Equitan Sans W01";
+  src: url("/fonts/equitan-sans/sans-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Equitan Sans W01";
+  src: url("/fonts/equitan-sans/sans-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
 @font-face {
   font-family: "Lyon Display Web";
   src: url("/fonts/lyon-display/LyonDisplay-Light-Web.woff") format("woff");
