@@ -11,8 +11,8 @@ const images = [
   "/carousel-images/standing-desk.png",
   "/carousel-images/table-tennis.png",
   "/carousel-images/work-area.png",
-  "/carousel-images/work-area.png", //placeholder image 1
-  "/carousel-images/work-area.png", //placeholder image 2
+  "/carousel-images/standing-desk.png", //placeholder image 1
+  "/carousel-images/table-tennis.png", //placeholder image 2
 ];
 
 export default function ImageCarousel() {
