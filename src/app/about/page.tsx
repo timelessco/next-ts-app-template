@@ -94,7 +94,7 @@ export default function Page() {
   return (
     <>
       <section className="bg-[#0E0E0F] relative text-center lg:text-left">
-        <div className="w-full h-auto pt-[120px] lg:pb-[180px] pb-12 px-[15px]">
+        <div className="w-full h-auto pt-[120px] lg:pb-[180px] pb-12">
           <Image
             alt="TIMELESS OFFICE"
             src={"/timeless-1.jpg"}
@@ -105,10 +105,10 @@ export default function Page() {
           ></Image>
           <div className="canister">
             <div className="flex lg:flex-row flex-wrap lg:flex-nowrap lg:justify-between text-[#FFFFFF] w-full mx-auto lg:-mt-16 justify-center">
-              <h2 className="text-[2.5rem] lg:text-[3.625rem] font-light tracking-[-0.6px] leading-[1.05] max-w-[480px] w-[480px] px-[15px] pb-8">
+              <h2 className="text-[2.5rem] lg:text-[3.625rem] font-light tracking-[-0.6px] leading-[1.05] max-w-[480px] w-[480px]  pb-8">
                 Solving business problems with user-centric design
               </h2>
-              <div className="max-w-[580px] w-full px-[15px] text-[22px] lg:text-[1.75rem] tracking-[0.27px] leading-[1.25] font-light text-[rgba(255,255,255,0.70)]">
+              <div className="max-w-[580px] w-full text-[22px] lg:text-[1.75rem] tracking-[0.27px] leading-[1.25] font-light text-[rgba(255,255,255,0.70)]">
                 <h3 className="lg:pb-12 pb-4">
                   At Timeless, we believe that complex business problems have
                   simple, well-designed solutions. We focus on creating
@@ -151,10 +151,10 @@ export default function Page() {
                   />
                 </div>
 
-                <h2 className="text-xl font-normal tracking-[0] leading-[1.2]">
+                <h2 className="text-base sm:text-xl  font-normal tracking-[0] leading-[1.2]">
                   {member.name}
                 </h2>
-                <h3 className="text-[rgba(7,18,44,0.65)] font-normal text-lg tracking-[0.3px] relative">
+                <h3 className="text-[rgba(7,18,44,0.65)] font-normal text-[15px] sm:text-lg tracking-[0.3px] relative">
                   {member.designation}
                 </h3>
               </div>
@@ -168,14 +168,14 @@ export default function Page() {
                   width={148}
                 />
               </div>
-              <h2 className="text-xl font-normal tracking-[0] leading-[1.2]">
+              <h2 className="text-base sm:text-xl font-normal tracking-[0] leading-[1.2]">
                 You
               </h2>
               <a
                 href="https://wellfound.com/company/timelessco/jobs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative text-[#007BFF] hover:text-[#0056b3] text-lg font-normal tracking-[0.3px]"
+                className="group relative text-[#007BFF] hover:text-[#0056b3] text-[15px] sm:text-lgfont-normal tracking-[0.3px]"
               >
                 See Careers
                 <div className="absolute left-0 -bottom-1 h-0.5 opacity-0 bg-[#0056b3] transition-all duration-300 ease-in-out rounded-full w-full group-hover:opacity-100 group-hover:-bottom-0.5"></div>

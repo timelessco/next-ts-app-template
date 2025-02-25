@@ -23,7 +23,7 @@ export default function Whatwedo({
       <h4 className="md:mt-[25px] md:mb-5 my-[15px] text-start font-[600] text-xl md:text-[1.625rem] tracking-0 leading-1.2">
         {title}
       </h4>
-      <ul className="font-[400] text-xl leading-[1.85] text-[rgba(7,18,44,0.65)] text-center md:text-start">
+      <ul className="font-normal text-xl leading-[1.85] text-[rgba(7,18,44,0.65)] text-center md:text-start">
         {listItems.map((item, index) => (
           <li key={index}>{item}</li>
         ))}

@@ -26,7 +26,7 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className="flex flex-col bg-gray-100 pb-12 sm:pb-28 lg:pb-[226px] pt-12 md:pt-14 lg:pt-[170px] px-[15px] text-center">
+        <div className="flex flex-col bg-gray-100 pb-12 sm:pb-28 lg:pb-[226px] pt-12 md:pt-14 lg:pt-[170px text-center">
           <div className="canister">
             <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px] mb-[29px] lg:mb-[33px]">
               our process
@@ -75,7 +75,7 @@ export default function Page() {
       </section>
       <section className="canister lg:pt-40 lg:pb-26 pt-16 pb-8">
         <div className="flex flex-wrap lg:justify-between justify-center text-center lg:text-left">
-          <div className="flex flex-col lg:max-w-[440px] max-w-[495px] mb-12 lg:mb-0">
+          <div className="flex flex-col lg:max-w-[440px] max-w-[495px] mb-10 lg:mb-0">
             <h2 className="font-bold text-[rgba(7,18,44,0.55)] uppercase text-light tracking-[1.97px] text-[13px] md:text-[15px]">
               Why Timeless
             </h2>

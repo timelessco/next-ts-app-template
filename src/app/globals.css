@@ -15,7 +15,12 @@
   font-weight: 400;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "Equitan Sans W01";
+  src: url("/fonts/equitan-sans/sans-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
 @font-face {
   font-family: "Equitan Sans W01";
   src: url("/fonts/equitan-sans/sans-bold.woff2") format("woff2");

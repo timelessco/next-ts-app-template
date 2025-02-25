@@ -108,7 +108,7 @@ export default function ProcessBox({
           src={image}
           width={60}
           height={64}
-          className="mb-[30px] pointer-events-none w-auto h-auto"
+          className="md:mb-[30px] mb-[15px] pointer-events-none w-auto h-auto"
         />
       </div>
       <div

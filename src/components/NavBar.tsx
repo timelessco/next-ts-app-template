@@ -18,8 +18,10 @@ export function NavBar() {
         <nav className="relative">
           <div className="flex flex-col lg:flex-row lg:items-center">
             <div className="flex items-center justify-between">
-              <h1 className="flex items-center py-[5px]">
-                <Logo />
+              <h1 className="flex items-center py-[5px] z-10">
+                <Link href={"/"}>
+                  <Logo />
+                </Link>
               </h1>
 
               <button

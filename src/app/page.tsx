@@ -49,7 +49,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="flex flex-col lg:pl-24 xl:pl-[120px] max-w-[360px] lg:max-w-[480px]  text-center lg:text-left mt-[30px] md:mt-[52px] lg:mt-[0px]">
+              <div className="flex flex-col lg:pl-24 xl:pl-[120px] max-w-[360px] lg:max-w-[400px] xl:max-w-[480px] text-center lg:text-left mt-[30px] md:mt-[52px] lg:mt-[0px]">
                 <h2 className="font-light text-xl lg:text-[23px] text-white tracking-[0] mb-[15px] lg:mb-2 leading-[1.2]">
                   Smallcase
                 </h2>
@@ -57,13 +57,13 @@ export default function Home() {
                   Stock investing for everyone
                 </h3>
               </div>
-              <div className="lg:w-[595px] xl:w-[640px] md:w-[738px] xl:ml-[45px] relative items-center">
+              <div className="lg:w-[640px] md:w-[738px] xl:ml-[45px] relative items-center">
                 <Image
                   src={"/smallcase.png"}
                   alt={"smallcase"}
                   height={1278}
                   width={1130}
-                  className="lg:pt-[15px]"
+                  className="lg:pt-[15px] lg:h-[541px] lg:w-[595px] xl:h-auto xl:w-auto"
                 ></Image>
               </div>
             </a>
