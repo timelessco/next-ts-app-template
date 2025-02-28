@@ -5,6 +5,7 @@ import WhyTimeless from "@/components/whytimeless";
 import Whatwedo from "@/components/whatwedo";
 import Footer from "@/components/footer";
 import BigTextBox from "@/components/bigtextbox";
+import Link from "next/link";
 export default function Page() {
   return (
     <>
@@ -82,12 +83,16 @@ export default function Page() {
             <h3 className="mt-6 font-lyondisplayweb md:text-[2.875rem] text-[2rem] text-black tracking-[0.4px] leading-[1.08] font-light">
               Premium design and engineering, always on time and on budget.
             </h3>
-            <div className="flex items-center gap-2 hover:gap-4 transition-all mt-6 text-[1.75rem] md:text-[2rem] text-[#007bff] tracking-[0]  mb-0 font-light duration-300 ease-in-out justify-center lg:justify-start">
+            <Link
+              className="flex items-center gap-2 hover:gap-4 transition-all mt-6 text-[1.75rem] md:text-[2rem] text-[#007bff] tracking-[0]  mb-0 font-light duration-300 ease-in-out justify-center lg:justify-start"
+              href="/contact"
+              rel="noopener noreferrer"
+            >
               <p className="text-[1.75rem] md:text-[2rem] leading-[1.5]">
                 Get in touch with us
               </p>
               <Arrow />
-            </div>
+            </Link>
           </div>
           <div className="flex flex-col lg:mt-10 lg:max-w-[440px] max-w-[495px] relative">
             <WhyTimeless
