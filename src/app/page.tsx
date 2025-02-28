@@ -45,7 +45,7 @@ export default function Home() {
           <section>
             <a
               className="rounded justify-center bg-[linear-gradient(45deg,#19C391_0%,#49C07D_100%)] flex flex-row  hover:drop-shadow-xl transition duration-500 mt-14 lg:mt-[72px] hover:-translate-y-[3px] flex-wrap lg:flex-nowrap items-center lg:items-left lg:justify-between cursor-pointer"
-              href="https://atlanticpayroll.tmls.dev/"
+              href="https://smallcase.tmls.dev/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -73,7 +73,7 @@ export default function Home() {
           <section>
             <a
               className="rounded bg-[url(/bluematter.jpg)] flex flex-row  hover:drop-shadow-lg mt-14 lg:mt-[72px] py-[216px] transition duration-500 hover:-translate-y-[3px] bg-right-top lg:bg-center justify-center lg:justify-start cursor-pointer"
-              href="https://atlanticpayroll.tmls.dev/"
+              href="https://bluematter.tmls.dev/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -92,7 +92,7 @@ export default function Home() {
           <section>
             <a
               className="justify-center rounded bg-[linear-gradient(45deg,#5B6AFF_0%,#919AFF_100%)] flex flex-row  hover:drop-shadow-lg  lg:justify-between transition duration-500 mt-14 lg:mt-[72px] hover:-translate-y-[3px] flex-wrap lg:flex-nowrap mb-[72px] cursor-pointer"
-              href="https://atlanticpayroll.tmls.dev/"
+              href="https://photon.tmls.dev/"
               target="_blank"
               rel="noopener noreferrer"
             >
