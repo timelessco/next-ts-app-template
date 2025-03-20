@@ -1,4 +1,74 @@
+# Changelog
 
+## 6.0.0 (2025-03-20)
+
+
+### 🧨 BREAKING CHANGE
+
+
+#### `template`- ✨ update for 2025 with latest package versions (#374) 
+
+* chore(deps): 🧹 remove zod-validation-error from pnpm-lock.yaml
+
+* chore(deps): 🧹 clean up pnpm-lock.yaml by removing outdated package entries
+
+
+Introduced in: [`bd69531`](https://github.com/timelessco/next-ts-app-template/commit/bd69531ff428a2f6a864c889ea400670a90633b7)
+
+
+
+
+
+### 👀 Notable Changes
+
+
+
+#### `metadataUtils`- enable PWA splash screen on iOS 
+
+- Include "apple-mobile-web-app-capable": "yes"  with comments referencing relevant issues.
+
+
+Introduced in: [`c4559b5`](https://github.com/timelessco/next-ts-app-template/commit/c4559b5d92aa8c95723144e724eded15e575cd97)
+
+
+
+
+#### `manifest`- update background and theme colors to white for better visibility 
+
+- Changed background_color from "#000" to "#FFF"
+- Changed theme_color from "#000" to "#FFF"
+
+
+Introduced in: [`21b7097`](https://github.com/timelessco/next-ts-app-template/commit/21b7097c61069ab16dcad800b07866d9ed9dfbf9)
+
+
+
+
+
+### 🗃️ Commits
+
+
+#### ⭐ New Features
+
+- **`template:`** ✨ update for 2025 with latest package versions ([#374](https://github.com/timelessco/next-ts-app-template/issues/374)) - [bd69531](https://github.com/timelessco/next-ts-app-template/commit/bd69531ff428a2f6a864c889ea400670a90633b7) by @navin-moorthy
+
+
+
+#### 🐞 Bug Fixes
+
+- **`manifest:`** update background and theme colors to white for better visibility - [21b7097](https://github.com/timelessco/next-ts-app-template/commit/21b7097c61069ab16dcad800b07866d9ed9dfbf9) by @navin-moorthy, closes [#000](https://github.com/timelessco/next-ts-app-template/issues/000) [#000](https://github.com/timelessco/next-ts-app-template/issues/000)
+
+- **`metadataUtils:`** enable PWA splash screen on iOS - [c4559b5](https://github.com/timelessco/next-ts-app-template/commit/c4559b5d92aa8c95723144e724eded15e575cd97) by @navin-moorthy
+
+- **`release-it:`** update file references and configuration - [c059a30](https://github.com/timelessco/next-ts-app-template/commit/c059a3009f09ea8d2dabd3ac737af3511e2c09c2) by @navin-moorthy
+
+
+
+#### 🔨 Maintenance Updates
+
+- **`deps:`** update all dependencies ([#376](https://github.com/timelessco/next-ts-app-template/issues/376)) - [21f8339](https://github.com/timelessco/next-ts-app-template/commit/21f833961cb56e708374cbade1bb214f0abf4cf8) by @renovate[bot]
+
+- **`package:`** 📦 Upgrade next, [@commitlint](https://github.com/commitlint), eslint, stylelint, and other dependencies - [7700279](https://github.com/timelessco/next-ts-app-template/commit/770027981d03bc24dc4dd609ed45d15b6d307fa8) by @navin-moorthy
 
 ## [5.1.0](https://github.com/timelessco/next-ts-app/compare/v5.0.0...v5.1.0) (2023-04-12)
 
