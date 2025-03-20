@@ -185,12 +185,8 @@ export const transform = async (commitOriginal, context) => {
 	// a '!' but no 'BREAKING CHANGE' in body:
 	addBreakingChanges(commit, context);
 
-	console.log(
-		"🚀 ~ file: conventional-changelog-writer-options.js:189 ~ context:",
-		context,
-	);
 	if (context.breakingChanges.length === 0) {
-		context.breakingChanges = false;
+		context.hasBreakingChanges = false;
 	}
 
 	context.hasNotableChanges = true;
