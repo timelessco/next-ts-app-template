@@ -6,7 +6,7 @@ const { description, name } = siteConfig;
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {
-		background_color: "#000",
+		background_color: "#FFF",
 		description,
 		dir: "auto",
 		display: "standalone",
@@ -43,6 +43,6 @@ export default function manifest(): MetadataRoute.Manifest {
 		scope: "/",
 		short_name: name,
 		start_url: "/?source=pwa",
-		theme_color: "#000",
+		theme_color: "#FFF",
 	};
 }
