@@ -1,18 +1,22 @@
 import { type KnipConfig } from "knip";
 
 const config: KnipConfig = {
-	project: ["src/**/*.{ts,tsx}!"],
-	entry: [
-		"src/pages/**/*.{ts,tsx}!",
-		"next.config.js",
-		"tailwind.config.cjs",
-		"env/**/*",
-		"release-it/**/*",
+	entry: ["src/**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}!"],
+	exclude: ["types"],
+	ignore: [],
+	ignoreBinaries: [
+		"lint-staged",
+		"markdownlint",
+		"eslint",
+		"commitlint",
+		"prettier",
 	],
-	// sharp - used by next/image
-	// autoprefixer - used by postcss for tailwind workflow
-	// tilg - used for debugging react components
-	ignoreDependencies: ["sharp", "autoprefixer", "tilg"],
+	ignoreDependencies: [],
+	include: ["nsExports"],
+	project: [
+		"src/**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}!",
+		"**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
+	],
 };
 
 export default config;

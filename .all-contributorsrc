@@ -21,8 +21,9 @@
 	"contributorsPerLine": 7,
 	"files": ["README.md"],
 	"imageSize": 100,
-	"projectName": "next-ts-app",
+	"projectName": "next-ts-app-template",
 	"projectOwner": "timelessco",
 	"repoHost": "https://github.com",
-	"repoType": "github"
+	"repoType": "github",
+	"commitType": "docs"
 }

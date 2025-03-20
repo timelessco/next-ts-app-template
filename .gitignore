@@ -1,92 +1,79 @@
-# dotenv environment variable files
-.env*
-!.env.example
+############################
+# OS X
+############################
 
-# Logs
-*.log*
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+
+############################
+# Environment Variables
+############################
+
+.env
+
+############################
+# Package Manager
+############################
+
+# PNPM
+node_modules
+
+############################
+# Builders
+############################
+
+# Turbo Repo
+.turbo
+
+############################
+# Next.js
+############################
+
+.next
+
+# Next PWA
+public/sw*
+public/swe-worker*
+public/workbox-*
+public/fallback-*
+
+# Next Sitemap
+public/robots.txt
+public/sitemap.xml
+public/sitemap-0.xml
+
+############################
+# Extras
+############################
+
+# Sentry
+.sentryclirc
+.env.sentry-build-plugin
+
+# TypeScript cache
+*.tsbuildinfo
+
+############################
+# Locals
+############################
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
 
-# Optional tool caches
-.eslintcache
-.stylelintcache
+# Prettier cache
 .prettiercache
+
+# Eslint cache
+.eslintcache
+
+# Stylelint cache
+.stylelintcache
+
+# Cspell cache
 .cspellcache
 
-# Dependency directories
-node_modules
-jspm_packages
-
-# Optional npm cache directory
-.npm
-
-# Yarn 2
-.pnp/
-.pnp.*
-.yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-.yarn-integrity # Yarn Integrity file
-
-# Typescript
-*.tsbuildinfo
-
-# Testing
-/coverage
-
-# Next JS
-/.next/
-/out/
-
-# Vercel folder
-.vercel
-
-# Local Netlify
-.netlify
-.idea
-
-# Sentry
-.sentryclirc
-
-# Storybook Build
-storybook-static
-
-# Turbo Repo
-.turbo
-
-# Release-it
-release-it/remote-commits.json
-
-# Next PWA
-**/public/precache.*.*.js
-**/public/sw.js
-**/public/workbox-*.js
-**/public/worker-*.js
-**/public/fallback-*.js
-**/public/precache.*.*.js.map
-**/public/sw.js.map
-**/public/workbox-*.js.map
-**/public/worker-*.js.map
-**/public/fallback-*.js
-
-# Next Sitemap
-**/public/robots.txt
-**/public/sitemap.xml
-**/public/sitemap-0.xml
-
-## library folder
-build
+# Extras(if any)
