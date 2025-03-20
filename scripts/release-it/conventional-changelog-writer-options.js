@@ -155,12 +155,6 @@ const addOtherNotableChanges = (commit, context) => {
 
 export const transform = async (commitOriginal, context) => {
 	const commit = { ...commitOriginal };
-	if (
-		commit.authorEmail !== "navin007.a@gmail.com" &&
-		commit.committerDate !== "2025-03-20"
-	) {
-		return null;
-	}
 
 	commit.body = commit?.body || commit?.footer;
 	// Remove commit body if it's author is a bot
