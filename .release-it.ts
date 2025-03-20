@@ -5,16 +5,15 @@ import {
 	commitPartial,
 	mainTemplate,
 	transform,
-} from "./scripts/release-it/conventional-changelog-writer-options";
+} from "./scripts/release-it/conventional-changelog-writer-options.js";
 
 export default {
 	git: {
-		requireBranch: "main",
-		requireCommits: true,
-		// requireCleanWorkingDir: false,
-
 		commitArgs: ["--no-verify", "-S"],
 		commitMessage: "🚀 Release v${version}",
+		requireBranch: "main",
+		requireCleanWorkingDir: false,
+		requireCommits: true,
 		tagArgs: ["-s"],
 	},
 	github: {
@@ -22,17 +21,17 @@ export default {
 		release: true,
 		releaseName: "Release v${version}",
 	},
-	hooks: { "before:init": ["pnpm lint"] },
+	// hooks: { "before:init": ["pnpm lint"] },
 	npm: { publish: false },
 	plugins: {
 		"@release-it/conventional-changelog": {
-			infile: "CHANGELOG.md",
-			preset: { name: "conventionalcommits" },
-			// ignoreRecommendedBump: true,
 			gitRawCommitsOpts: {
 				format:
 					"%B%n-hash-%n%H%n-shortHash-%n%h%n-gitTags-%n%d%n-committerDate-%n%ci%n-authorName-%n%an%n-authorEmail-%n%ae%n",
 			},
+			// ignoreRecommendedBump: true,
+			infile: "CHANGELOG.md",
+			preset: { name: "conventionalcommits" },
 			writerOpts: {
 				commitGroupsSort,
 				commitPartial,

@@ -1,18 +1,15 @@
 {{> header}}
 
-{{#if noteGroups}}
-{{#each noteGroups}}
+{{#if hasBreakingChanges}}
 
-### {{title}}
+### {{breakingChangesTitle}}
 
-{{#each notes}}
+{{#each breakingChanges}}
 
 {{#if scope}}#### `{{scope}}`{{/if}}{{#if subject}}- {{subject}} {{/if}}
 
 {{#if body}}
 {{body}}
-{{else}}
-- {{header}}
 {{~/if}}
 
 {{#raw}}{{/raw}}
@@ -23,8 +20,7 @@ Introduced in: [`{{shortHash}}`]({{hashUrl}})
 
 {{/each}}
 
-{{~/each}}
-{{~/if}}
+{{/if}}
 
 {{~#if hasNotableChanges}}
 
