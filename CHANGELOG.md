@@ -1,5 +1,16 @@
 # Changelog
 
+## <small>6.0.4 (2025-03-20)</small>
+
+### 🗃️ Commits
+
+
+#### 🐞 Bug Fixes
+
+- **`conventional-changelog:`** add debug log for context in transform function - [665722b](https://github.com/timelessco/next-ts-app-template/commit/665722b6f9b9039df9c9318320df2c4ddac19f27) by @navin-moorthy
+
+- **`conventional-changelog:`** rename breakingChanges to hasBreakingChanges in transform function - [d2a3030](https://github.com/timelessco/next-ts-app-template/commit/d2a30308bdeca6af6be82e86524a69121f592793) by @navin-moorthy
+
 ## <small>6.0.3 (2025-03-20)</small>
 
 ### 🧨 BREAKING CHANGE
