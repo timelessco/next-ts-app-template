@@ -1,5 +1,19 @@
 # Changelog
 
+## <small>6.0.1 (2025-03-20)</small>
+
+
+### 🧨 BREAKING CHANGE
+
+
+
+### 🗃️ Commits
+
+
+#### 🐞 Bug Fixes
+
+- **`conventional-changelog:`** remove email and date filter from transform function - [a1f01c5](https://github.com/timelessco/next-ts-app-template/commit/a1f01c53bc0295342e35433ac9494694590e9ebf) by @navin-moorthy
+
 ## 6.0.0 (2025-03-20)
 
 
