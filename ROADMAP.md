@@ -1,3 +1,0 @@
-- Create release-it plugin for conventional changelog
-- Create a TS Node Template with these configs
-- Add Eslint configs with the TS Node Template(may be with flat config)

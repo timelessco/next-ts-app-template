@@ -16,20 +16,40 @@
 		"misc",
 		"project-words"
 	],
-	"dictionaryDefinitions": [
-		{
-			"name": "project-words",
-			"path": "./project-words.txt",
-			"addWords": true
-		}
-	],
+	"useGitignore": true,
 	"ignorePaths": [
 		".git",
 		".husky",
 		".vscode",
 		"public",
 		"CHANGELOG.md",
-		"pnpm-lock.yaml",
-		"project-words.txt"
+		"pnpm-lock.yaml"
+	],
+	"words": [
+		"Elems",
+		"embla",
+		"fbca",
+		"gifv",
+		"haml",
+		"hookz",
+		"ianvs",
+		"infile",
+		"ipynb",
+		"mdtxt",
+		"mdwn",
+		"micnncim",
+		"mkdn",
+		"mtfoley",
+		"navin",
+		"Navin",
+		"opsz",
+		"RRWEB",
+		"sentryclirc",
+		"styl",
+		"svgz",
+		"syncer",
+		"timelessco",
+		"unenc",
+		"wbmp"
 	]
 }

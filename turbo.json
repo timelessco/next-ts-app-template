@@ -1,15 +1,28 @@
 {
 	"$schema": "https://turbo.build/schema.json",
-	"pipeline": {
-		"build:next": {
-			"dependsOn": ["lint:eslint", "lint:types"],
-			"outputs": [".next/**", "!.next/cache/**"]
+	"tasks": {
+		"dev": {
+			"cache": false,
+			"persistent": true
 		},
-		"test": {},
+		"start": {
+			"dependsOn": ["build"],
+			"cache": false,
+			"persistent": true
+		},
+		"build": {},
+		"build:ci": {},
+		"clean": {},
+		"lint:types": {
+			"inputs": ["**/*.{ts,tsx,d.ts,cts,d.cts,mts,d.mts}"],
+			"outputs": ["*.tsbuildinfo"]
+		},
 		"lint:eslint": {
 			"outputs": [".eslintcache"]
 		},
-		"lint:types": {},
+		"lint:prettier": {
+			"outputs": [".prettiercache"]
+		},
 		"lint:css": {
 			"inputs": ["**/*.css"],
 			"outputs": [".stylelintcache"]
@@ -17,29 +30,26 @@
 		"lint:md": {
 			"inputs": ["**/*.md", ".github/**/*.md"]
 		},
-		"lint:knip": {
-			"inputs": ["src/pages/**/*.{js,jsx,ts,tsx}"]
+		"lint:spelling": {
+			"outputs": [".cspellcache"]
 		},
-		"lint:package-json": {
-			"inputs": ["package.json"]
+		"fix:md": {
+			"inputs": ["**/*.md", ".github/**/*.md"]
 		},
-		"lint:prettier": {
-			"outputs": [".prettiercache"]
-		},
-		"lint:spelling": {},
-		"format:eslint": {
-			"outputs": [".eslintcache"]
-		},
-		"format:css": {
+		"fix:css": {
 			"inputs": ["**/*.css"],
 			"outputs": [".stylelintcache"]
 		},
-		"format:md": {
-			"inputs": ["**/*.md", ".github/**/*.md"]
+		"fix:spelling": {
+			"outputs": [".cspellcache"]
 		},
-		"format:prettier": {
-			"dependsOn": ["format:eslint", "format:css", "format:md"],
+		"fix:prettier": {
+			"dependsOn": ["fix:md", "fix:css", "fix:spelling"],
 			"outputs": [".prettiercache"]
+		},
+		"fix:eslint": {
+			"dependsOn": ["fix:prettier"],
+			"outputs": [".eslintcache"]
 		}
 	}
 }
