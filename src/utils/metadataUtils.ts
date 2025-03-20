@@ -36,9 +36,10 @@ export const sharedMetadata = {
 	generator: "Next.js",
 	keywords: ["react", "typescript", "nextjs", "tailwindcss"],
 	manifest: `/manifest.webmanifest`,
-	other: {
-		"mobile-web-app-capable": "yes",
-	},
+	// https://github.com/vercel/next.js/issues/74524
+	// https://stackoverflow.com/a/79380945/10858781
+	// This is a workaround to enable PWA splash screen on iOS
+	other: { "apple-mobile-web-app-capable": "yes" },
 	publisher: "Vercel",
 	referrer: "origin-when-cross-origin",
 	robots: {
