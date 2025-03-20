@@ -185,6 +185,10 @@ export const transform = async (commitOriginal, context) => {
 	// a '!' but no 'BREAKING CHANGE' in body:
 	addBreakingChanges(commit, context);
 
+	if (context.breakingChanges.length === 0) {
+		context.breakingChanges = false;
+	}
+
 	context.hasNotableChanges = true;
 	context.notableChangesTitle = "👀 Notable Changes";
 	context.notableChanges = context.notableChanges || [];
