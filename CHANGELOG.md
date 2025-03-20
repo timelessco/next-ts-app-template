@@ -1,5 +1,19 @@
 # Changelog
 
+## <small>6.0.2 (2025-03-20)</small>
+
+
+### 🧨 BREAKING CHANGE
+
+
+
+### 🗃️ Commits
+
+
+#### 🐞 Bug Fixes
+
+- **`conventional-changelog:`** set breakingChanges to false if none exist - [ae876dd](https://github.com/timelessco/next-ts-app-template/commit/ae876dd24a86e3e36807ca555496d1f7fa342385) by @navin-moorthy
+
 ## <small>6.0.1 (2025-03-20)</small>
 
 
