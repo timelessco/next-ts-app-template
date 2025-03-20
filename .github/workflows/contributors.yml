@@ -2,7 +2,7 @@ jobs:
   contributors:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           fetch-depth: 0
 
@@ -10,7 +10,7 @@ jobs:
 
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        uses: JoshuaKGoldberg/all-contributors-auto-action@v0.4.3
+        uses: JoshuaKGoldberg/all-contributors-auto-action@944abe4387e751b5bbb38616cb25cf4a4ca998f2 # v0.5.0
 
 name: Contributors
 
