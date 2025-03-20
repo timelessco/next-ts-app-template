@@ -1,5 +1,18 @@
 # Changelog
 
+## <small>6.0.3 (2025-03-20)</small>
+
+### 🧨 BREAKING CHANGE
+
+
+
+### 🗃️ Commits
+
+
+#### 🐞 Bug Fixes
+
+- **`template:`** remove whitespace in conditional for breaking changes - [3c3ae5f](https://github.com/timelessco/next-ts-app-template/commit/3c3ae5f7ed3142049bebe94400d6102b1667c968) by @navin-moorthy
+
 ## <small>6.0.2 (2025-03-20)</small>
 
 
