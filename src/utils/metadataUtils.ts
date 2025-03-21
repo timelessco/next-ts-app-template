@@ -42,10 +42,16 @@ export const sharedMetadata = {
 	other: { "apple-mobile-web-app-capable": "yes" },
 	publisher: "Vercel",
 	referrer: "origin-when-cross-origin",
-	robots: {
-		follow: true,
-		index: true,
-	},
+	robots:
+		process.env.VERCEL_ENV === "production"
+			? {
+					follow: true,
+					index: true,
+				}
+			: {
+					follow: false,
+					index: false,
+				},
 } satisfies Partial<Metadata>;
 
 interface GeneratePageMetadataProps {
