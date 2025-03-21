@@ -1,5 +1,24 @@
 # Changelog
 
+## <small>6.0.5 (2025-03-21)</small>
+
+### 🗃️ Commits
+
+
+#### 🐞 Bug Fixes
+
+- **`robots:`** 🐛 update robots rules based on environment ([#378](https://github.com/timelessco/next-ts-app-template/issues/378)) - [7deeea8](https://github.com/timelessco/next-ts-app-template/commit/7deeea8a3747ac456e9b7b4cc7d6a56513efd71a) by @navin-moorthy
+
+- **`spelling:`** 🐛 update package.json for new words and lint-staged config - [f40b103](https://github.com/timelessco/next-ts-app-template/commit/f40b103593a2b25bcb8400fc750976bbfd7021c5) by @navin-moorthy
+
+- **`workflows:`** 🐛 sort 'opened' event type to pull_request_target in semantic-pr.yml - [5f9dc8a](https://github.com/timelessco/next-ts-app-template/commit/5f9dc8ace96d0d6339a9130b472ba28052e7920c) by @navin-moorthy
+
+
+
+#### 💚 CI Changes
+
+- **`workflows:`** 🤖 update CI workflows and hooks - [9ab151d](https://github.com/timelessco/next-ts-app-template/commit/9ab151dc6a12c8f2c12f16c862856023f4d406cc) by @navin-moorthy
+
 ## <small>6.0.4 (2025-03-20)</small>
 
 ### 🗃️ Commits
