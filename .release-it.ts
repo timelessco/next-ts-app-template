@@ -21,7 +21,7 @@ export default {
 		release: true,
 		releaseName: "Release v${version}",
 	},
-	// hooks: { "before:init": ["pnpm lint"] },
+	hooks: { "before:init": ["pnpm lint"] },
 	npm: { publish: false },
 	plugins: {
 		"@release-it/conventional-changelog": {
