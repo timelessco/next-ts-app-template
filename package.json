@@ -63,7 +63,10 @@
 		]
 	},
 	"lint-staged": {
-		"*": "prettier --ignore-unknown --write"
+		"*": [
+			"prettier --write --cache --cache-location=.prettiercache --list-different --ignore-unknown",
+			"node --experimental-strip-types scripts/update-cspell-words.ts"
+		]
 	},
 	"dependencies": {
 		"@ariakit/react": "0.4.15",
