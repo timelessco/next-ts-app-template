@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+	* {
+		text-wrap: pretty;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-wrap: balance;
+	}
+}
+
+:root {
+	--background: #fff;
+	--foreground: #171717;
+}
+
+@theme {
+	/* Fonts */
+	--font-sans: var(--font-inter);
+	/* stylelint-disable-next-line custom-property-pattern */
+	--font-sans--font-variation-settings: "opsz" 32;
+
+	/* Colors */
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+}
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+}
+
+@utility inter-display {
+	font-optical-sizing: auto;
+}
+
+@utility optimize-legibility {
+	text-rendering: optimizelegibility;
+}

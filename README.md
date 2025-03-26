@@ -1,37 +1,77 @@
-<!-- Deploy -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<!-- First Draft last commit - d2247443f12c97b69be18ceb4cd626d50bd920a88 -->
 
-## Getting Started
+<h1 align="center">Next TS App</h1>
 
-First, run the development server:
+<p align="center">Timeless Co Portfolio</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="center">
+	<a href="#contributors" target="_blank">
+<!-- prettier-ignore-start -->
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<img alt="All Contributors: 2" src="https://img.shields.io/badge/all_contributors-2-21bb42.svg" />
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+<!-- prettier-ignore-end -->
+	</a>
+	<a href="https://github.com/timelessco/timelessco-nextjs/blob/main/.github/CODE_OF_CONDUCT.md" target="_blank">
+		<img alt="Contributor Covenant" src="https://img.shields.io/badge/code_of_conduct-enforced-21bb42" />
+	</a>
+	<a href="https://github.com/timelessco/timelessco-nextjs/blob/main/LICENSE.md" target="_blank">
+		<img alt="License: MIT" src="https://img.shields.io/github/license/timelessco/timelessco-nextjs?color=21bb42">
+	</a>
+	<img alt="Style: Prettier" src="https://img.shields.io/badge/style-prettier-21bb42.svg" />
+	<img alt="TypeScript: Strict" src="https://img.shields.io/badge/typescript-strict-21bb42.svg" />
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Introduction
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Built using the [Next.js framework](https://nextjs.org/) and written in
+TypeScript & other amazing technologies mentioned below to build a modern web
+application.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [pnpm](https://pnpm.io/)
+- [react](https://reactjs.org/)
+- [typeScript](https://www.typescriptlang.org/)
+- [next.js](https://nextjs.org/)
+- [tailwindcss](https://tailwindcss.com/)
+- [zod](https://github.com/colinhacks/zod)
+- [eslint](https://eslint.org/)
+- [prettier](https://prettier.io/)
+- [stylelint](https://stylelint.io/)
+- [markdownlint](https://github.com/DavidAnson/markdownlint)
+- [knip](https://github.com/webpro/knip)
+- [cspell](https://cspell.org)
+- [husky](https://typicode.github.io/husky/#/)
+- [lint-staged](https://github.com/okonet/lint-staged#readme)
+- [commitlint](https://commitlint.js.org/#/)
+- [release-it](https://github.com/release-it/release-it#readme)
+- [all-contributors](https://github.com/all-contributors/all-contributors)
 
-## Learn More
+## Development
 
-To learn more about Next.js, take a look at the following resources:
+See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then [`.github/DEVELOPMENT.md`](./.github/DEVELOPMENT.md).
+Thanks! 💖
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributors
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<!-- spellchecker: disable -->
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://navinmoorthy.me/"><img src="https://avatars.githubusercontent.com/u/39694575?v=4?s=100" width="100px;" alt="Navin Moorthy"/><br /><sub><b>Navin Moorthy</b></sub></a><br /><a href="https://github.com/timelessco/timelessco-nextjs/commits?author=navin-moorthy" title="Code">💻</a> <a href="#a11y-navin-moorthy" title="Accessibility">️️️️♿️</a> <a href="https://github.com/timelessco/timelessco-nextjs/commits?author=navin-moorthy" title="Documentation">📖</a> <a href="#design-navin-moorthy" title="Design">🎨</a> <a href="#ideas-navin-moorthy" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-navin-moorthy" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.joshuakgoldberg.com"><img src="https://avatars.githubusercontent.com/u/3335181?v=4?s=100" width="100px;" alt="Josh Goldberg"/><br /><sub><b>Josh Goldberg</b></sub></a><br /><a href="#tool-JoshuaKGoldberg" title="Tools">🔧</a></td>
+    </tr>
+  </tbody>
+</table>
 
-## Deploy on Vercel
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+<!-- spellchecker: enable -->
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<!-- You can remove this notice if you don't want it 🙂 no worries! -->
+
+> 💙 This package is based on [@JoshuaKGoldberg](https://github.com/JoshuaKGoldberg)'s [template-typescript-node-package](https://github.com/JoshuaKGoldberg/template-typescript-node-package).

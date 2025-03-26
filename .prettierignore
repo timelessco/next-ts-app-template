@@ -1,0 +1,6 @@
+/.gitattributes
+/.husky
+/pnpm-lock.yaml
+/public
+/CHANGELOG.md
+/scripts/release-it/**/*.hbs
