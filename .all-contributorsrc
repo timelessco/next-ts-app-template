@@ -16,6 +16,13 @@
 			"avatar_url": "https://avatars.githubusercontent.com/u/3335181?v=4",
 			"profile": "http://www.joshuakgoldberg.com",
 			"contributions": ["tool"]
+		},
+		{
+			"login": "widejoy",
+			"name": "rogerantony",
+			"avatar_url": "https://avatars.githubusercontent.com/u/101205954?v=4",
+			"profile": "https://github.com/widejoy",
+			"contributions": ["code", "maintenance", "design"]
 		}
 	],
 	"contributorsPerLine": 7,
