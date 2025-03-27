@@ -1,5 +1,26 @@
 # Changelog
 
+## <small>6.0.6 (2025-03-27)</small>
+
+### 🗃️ Commits
+
+
+#### 🐞 Bug Fixes
+
+- **`deps:`** update all dependencies ([#379](https://github.com/timelessco/next-ts-app-template/issues/379)) - [456c42c](https://github.com/timelessco/next-ts-app-template/commit/456c42c1392102bf71065db5caf34a344ec8391a) by @renovate[bot]
+
+- **`Icon:`** 🐛 make 'name' prop optional and add 'children' support for better accessibility - [0dee00a](https://github.com/timelessco/next-ts-app-template/commit/0dee00ac11decba624d092a60ffa40616900f924) by @navin-moorthy
+
+
+
+#### 🔨 Maintenance Updates
+
+- **`docs:`** 🧹 remove detailed technology section from DEVELOPMENT.md for clarity - [1ea7567](https://github.com/timelessco/next-ts-app-template/commit/1ea75676dc6309fc0ca2d6fa02e3ca3d47e9f2f5) by @navin-moorthy
+
+- **`docs:`** 🧹 update table of contents formatting in multiple markdown files - [6efc464](https://github.com/timelessco/next-ts-app-template/commit/6efc46477a8a1b274be28fb5ab05b0daad6d675e) by @navin-moorthy
+
+- **`env:`** update example environment variables to be commented out for clarity - [8b85d54](https://github.com/timelessco/next-ts-app-template/commit/8b85d544be30e96b82854144f4476eae893138d6) by @navin-moorthy
+
 ## <small>6.0.5 (2025-03-21)</small>
 
 ### 🗃️ Commits
