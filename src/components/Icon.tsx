@@ -10,14 +10,14 @@ export interface IconProps extends ComponentProps<"svg"> {
 	 * If it has a label, the icon will be given a role of "img" for accessibility
 	 * If it does not have a label, the icon will be hidden from screen readers
 	 */
-	readonly ariaLabel?: string;
-	readonly name: IconName;
+	ariaLabel?: string;
+	name?: IconName;
 }
 
 // For accessibility - https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/
 // Default: aria hidden props are used as the majority of icons are decorative
 export function Icon(props: IconProps) {
-	const { ariaLabel, className, name, ...rest } = props;
+	const { ariaLabel, children, className, name, ...rest } = props;
 	const ariaLabelProps: AriaHiddenProps | AriaLabelProps = isNonNullable(
 		ariaLabel,
 	)
@@ -40,7 +40,7 @@ export function Icon(props: IconProps) {
 			{...rest}
 		>
 			{isNonNullable(ariaLabel) ? <title>{ariaLabel}</title> : null}
-			<use href={`/svg/sprite.svg#${name}`} />
+			{name ? <use href={`/svg/sprite.svg#${name}`} /> : children}
 		</svg>
 	);
 }
