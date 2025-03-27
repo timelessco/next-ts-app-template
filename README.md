@@ -1,6 +1,6 @@
 <!-- First Draft last commit - d2247443f12c97b69be18ceb4cd626d50bd920a88 -->
 
-<h1 align="center">Next TS App</h1>
+<h1 align="center">Timeless Co</h1>
 
 <p align="center">Timeless Co Portfolio</p>
 

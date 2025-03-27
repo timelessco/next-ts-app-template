@@ -1,4 +1,4 @@
-const SITE = "Next TS App";
+const SITE = "Timeless Co";
 
 const productionUrl =
 	process.env.NEXT_PUBLIC_SITE_URL ??
