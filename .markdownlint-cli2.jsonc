@@ -4,7 +4,10 @@
 		"no-multiple-blanks": false,
 		"no-inline-html": false,
 		"line-length": false,
-		"no-hard-tabs": false
+		"no-hard-tabs": false,
+		"ul-indent": {
+			"indent": 1
+		}
 	},
 
 	// Define glob expressions to use (only valid at root)

@@ -2,27 +2,28 @@
 
 ## Table of Contents
 
+<!-- prettier-ignore -->
 - [Development](#development)
-  - [Table of Contents](#table-of-contents)
-  - [Prerequisites](#prerequisites)
-  - [Getting Started](#getting-started)
-  - [Configuration](#configuration)
-    - [Client Env Variables](#client-env-variables)
-    - [Server Env Variables](#server-env-variables)
-  - [Installing the dependencies](#installing-the-dependencies)
-  - [Running the project locally](#running-the-project-locally)
-  - [Building the project](#building-the-project)
-  - [Deploying the project](#deploying-the-project)
-  - [Detailed information on technologies used](#detailed-information-on-technologies-used)
-  - [More DX scripts](#more-dx-scripts)
-    - [Prettier](#prettier)
-    - [Eslint](#eslint)
-    - [Check Types](#check-types)
-    - [Check unused dependencies, exports \& types](#check-unused-dependencies-exports--types)
-    - [Stylelint](#stylelint)
-    - [Markdown](#markdown)
-    - [Cspell](#cspell)
-    - [PNPM Dedupe](#pnpm-dedupe)
+	- [Table of Contents](#table-of-contents)
+	- [Prerequisites](#prerequisites)
+	- [Getting Started](#getting-started)
+	- [Configuration](#configuration)
+		- [Client Env Variables](#client-env-variables)
+		- [Server Env Variables](#server-env-variables)
+	- [Installing the dependencies](#installing-the-dependencies)
+	- [Running the project locally](#running-the-project-locally)
+	- [Building the project](#building-the-project)
+	- [Deploying the project](#deploying-the-project)
+	- [Detailed information on technologies used](#detailed-information-on-technologies-used)
+	- [More DX scripts](#more-dx-scripts)
+		- [Prettier](#prettier)
+		- [Eslint](#eslint)
+		- [Check Types](#check-types)
+		- [Check unused dependencies, exports \& types](#check-unused-dependencies-exports--types)
+		- [Stylelint](#stylelint)
+		- [Markdown](#markdown)
+		- [Cspell](#cspell)
+		- [PNPM Dedupe](#pnpm-dedupe)
 
 ## Prerequisites
 
@@ -213,4 +214,4 @@ It should be applied automatically when you save files in VS Code or make a Git 
 
 > Check for unnecessarily duplicated packages
 
-- `pnpm lint:packages`
+- `pnpm check:packages`
