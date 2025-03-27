@@ -14,7 +14,6 @@
 	- [Running the project locally](#running-the-project-locally)
 	- [Building the project](#building-the-project)
 	- [Deploying the project](#deploying-the-project)
-	- [Detailed information on technologies used](#detailed-information-on-technologies-used)
 	- [More DX scripts](#more-dx-scripts)
 		- [Prettier](#prettier)
 		- [Eslint](#eslint)
@@ -104,19 +103,7 @@ pnpm start
 
 ## Deploying the project
 
-You can then deploy the **`.next`** directory to your production environment using a static file server, such as **[NGINX](https://www.nginx.com/)**.
-
-[Deploy using NGINX](../docs/deploy-nginx.md)
-
 Guide on how to deploy Next.js to various [hosting providers](https://nextjs.org/docs/deployment).
-
-## Detailed information on technologies used
-
-[Configurations & Setup Required](../docs/configs.md)
-
-[Client Side stack](../docs/client-side.md)
-
-[Server Side stack](../docs/server-side.md)
 
 ## More DX scripts
 
