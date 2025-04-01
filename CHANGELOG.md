@@ -1,5 +1,20 @@
 # Changelog
 
+## <small>6.0.7 (2025-04-01)</small>
+
+### 🗃️ Commits
+
+
+#### 🐞 Bug Fixes
+
+- **`deps:`** update all dependencies ([#380](https://github.com/timelessco/next-ts-app-template/issues/380)) - [32481b7](https://github.com/timelessco/next-ts-app-template/commit/32481b7c3d219747a1d40d7d901f9439b43640f1) by @renovate[bot]
+
+
+
+#### 🔨 Maintenance Updates
+
+- **`deps:`** replace all dependencies ([#381](https://github.com/timelessco/next-ts-app-template/issues/381)) - [dec9ee5](https://github.com/timelessco/next-ts-app-template/commit/dec9ee5c1eeeb76e4aa8311dfbf4113b2df77871) by @renovate[bot]
+
 ## <small>6.0.6 (2025-03-27)</small>
 
 ### 🗃️ Commits
