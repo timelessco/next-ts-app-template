@@ -10,8 +10,8 @@ export function StyledButton(props: StyledButtonProps) {
 	return (
 		<Button
 			className={cn(
-				className,
 				"cursor-pointer appearance-none align-middle whitespace-nowrap outline-hidden transition-all select-none disabled:cursor-not-allowed data-focus-visible:ring-2 data-focus-visible:ring-[#171717]",
+				className,
 			)}
 			{...rest}
 		/>

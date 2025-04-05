@@ -24,7 +24,7 @@ export function StyledNextLink(props: StyledNextLinkProps) {
 				className,
 				"cursor-pointer outline-hidden",
 				!hasImageChildren &&
-					"data-focus-visible:ring-2 data-focus-visible:ring-[#171717]",
+					"data-focus-visible:ring-2 data-focus-visible:ring-[#171717] data-focus-visible:ring-offset-2",
 			)}
 			render={<AriaCurrentLink {...rest} />}
 		>
@@ -33,6 +33,7 @@ export function StyledNextLink(props: StyledNextLinkProps) {
 		</Command>
 	);
 }
+
 type AriaCurrentLinkProps = ComponentProps<typeof Link>;
 
 function AriaCurrentLink(props: AriaCurrentLinkProps) {
