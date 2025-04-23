@@ -1,18 +1,15 @@
-import { clsx } from "clsx";
+import type { ComponentProps } from "react";
 
-import { Presentation, type PresentationProps } from "./Presentation";
+import { cn } from "../utils";
 
-type ContainerProps = PresentationProps;
+type ContainerProps = ComponentProps<"div">;
 
 export function Container(props: ContainerProps) {
 	const { className, ...rest } = props;
 
 	return (
-		<Presentation
-			className={clsx(
-				"relative mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-(--breakpoint-xl)",
-				className,
-			)}
+		<div
+			className={cn("container mx-auto px-4 sm:px-6 lg:px-8", className)}
 			{...rest}
 		/>
 	);

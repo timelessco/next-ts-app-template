@@ -1,10 +1,10 @@
 import { type ReactNode } from "react";
 import { type Metadata, type Viewport } from "next";
 
+import { Header } from "@/ui/root-layout/Header";
 import { Providers } from "@/ui/root-layout/Providers";
 import { TailwindIndicator } from "@/ui/root-layout/TailwindIndicator";
 import { rootMetaData, rootViewport } from "@/utils/metadataUtils";
-import { inter } from "@/styles/fonts";
 
 import "@/styles/global.css";
 
@@ -17,7 +17,7 @@ export default function RootLayout(props: RootLayoutProps) {
 
 	return (
 		<html
-			className={`h-full antialiased inter-display optimize-legibility ${inter.variable}`}
+			className={`h-full antialiased inter-display optimize-legibility`}
 			dir="ltr"
 			lang="en"
 		>
@@ -25,8 +25,9 @@ export default function RootLayout(props: RootLayoutProps) {
 			{/* <head>
 				<script src="https://unpkg.com/react-scan/dist/auto.global.js" async />
 			</head> */}
-			<body className="relative min-h-full">
+			<body className="relative min-h-full bg-white text-black">
 				<Providers>
+					<Header />
 					{children}
 					<TailwindIndicator />
 				</Providers>
