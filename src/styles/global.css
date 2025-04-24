@@ -15,6 +15,13 @@
 	h6 {
 		text-wrap: balance;
 	}
+
+	/* Make animation elements visible by default when JS is disabled */
+	.no-js .motion--initial-hidden {
+		transform: translateY(0) !important;
+		visibility: visible !important;
+		opacity: 1 !important;
+	}
 }
 
 @theme {

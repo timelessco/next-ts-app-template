@@ -12,7 +12,7 @@ interface MobileDisclosureProviderProps {
 
 export function MobileDisclosureProvider(props: MobileDisclosureProviderProps) {
 	const { children } = props;
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState(true);
 	const isMediaFromSm = useIsMediaFromSm();
 
 	useEffect(() => {

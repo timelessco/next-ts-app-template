@@ -17,15 +17,24 @@ export default function RootLayout(props: RootLayoutProps) {
 
 	return (
 		<html
-			className={`h-full antialiased inter-display optimize-legibility`}
+			className={`no-js h-full antialiased inter-display optimize-legibility`}
 			dir="ltr"
 			lang="en"
+			suppressHydrationWarning
 		>
 			{/* Enable this when we have a page that needs to be scanned */}
 			{/* <head>
 				<script src="https://unpkg.com/react-scan/dist/auto.global.js" async />
 			</head> */}
 			<body className="relative min-h-full bg-white text-black">
+				{/* Script to remove no-js class when JavaScript is enabled */}
+				{/* When JavaScript is enabled, FadeInWhenVisible component will be animated from hidden */}
+				<script
+					// eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml
+					dangerouslySetInnerHTML={{
+						__html: `(function() { document.documentElement.classList.remove('no-js'); })();`,
+					}}
+				/>
 				<Providers>
 					<Header />
 					{children}
