@@ -1,10 +1,39 @@
 "use client";
 
-import { useCallback, useEffect, useState, type ReactNode } from "react";
+import {
+	useCallback,
+	useEffect,
+	useRef,
+	useState,
+	type ReactNode,
+} from "react";
 import { DisclosureProvider, useDisclosureContext } from "@ariakit/react";
+import { useIntersectionObserver } from "@react-hookz/web";
 
 import { Slot } from "@/components/Slot";
 import { useIsMediaFromSm } from "@/hooks/useMediaQuery";
+
+interface HeaderSlotProps {
+	children: ReactNode;
+}
+
+export function HeaderSlot(props: HeaderSlotProps) {
+	const { children } = props;
+	const elementRef = useRef<HTMLDivElement | null>(null);
+
+	const intersection = useIntersectionObserver(elementRef, {
+		rootMargin: "50px",
+		threshold: [0],
+	});
+	const isScrolled = intersection ? !intersection.isIntersecting : false;
+
+	return (
+		<>
+			<div className="absolute inset-1 h-1 w-1 opacity-0" ref={elementRef} />
+			<Slot data-scrolled={isScrolled}>{children}</Slot>
+		</>
+	);
+}
 
 interface MobileDisclosureProviderProps {
 	children: ReactNode;
