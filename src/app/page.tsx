@@ -1,34 +1,66 @@
 import * as motion from "motion/react-client";
 
 import { Container } from "@/components/Container";
-import { cn, FADE_IN_WHEN_VISIBLE_MOTION_PROPS } from "@/utils/index";
+import { NextImage } from "@/components/image/NextImage";
+import { StyledNextLink } from "@/components/link/StyledLink";
+import { getFadeInWhenVisibleMotionProps } from "@/utils/index";
+
+import atlanticPayrollImage from "../images/atlantic-payroll.png";
 
 const HERO_SECTION_ID = "homepage__section--hero-heading";
-const {
-	className: fadeInWhenVisibleClassName,
-	...fadeInWhenVisibleMotionProps
-} = FADE_IN_WHEN_VISIBLE_MOTION_PROPS;
+const ATLANTIC_PAYROLL_SECTION_ID = "homepage__section--hero-atlantic-payroll";
 
 export default function Home() {
 	return (
-		<main>
+		<motion.main>
 			<section
 				aria-labelledby={HERO_SECTION_ID}
 				className="pt-12 md:pt-20 lg:pt-40"
 			>
 				<Container>
 					<motion.h1
-						className={cn(
-							"max-w-[480px] pt-24 pb-16 text-center text-4xl leading-[1.05] font-light tracking-[-0.6px] text-black sm:text-left sm:text-5xl lg:py-8 lg:text-[3.625rem]",
-							fadeInWhenVisibleClassName,
-						)}
+						className="motion--initial-hidden mx-auto max-w-120 pt-24 pb-16 text-center text-4xl leading-[1.05] font-light tracking-[-0.6px] text-black sm:mx-[initial] sm:text-left sm:text-5xl lg:py-8 lg:text-[3.625rem]"
 						id={HERO_SECTION_ID}
-						{...fadeInWhenVisibleMotionProps}
+						{...getFadeInWhenVisibleMotionProps()}
 					>
 						We build brands, products and apps.
 					</motion.h1>
 				</Container>
 			</section>
-		</main>
+
+			<motion.section
+				aria-labelledby={ATLANTIC_PAYROLL_SECTION_ID}
+				className="motion--initial-hidden my-7"
+				{...getFadeInWhenVisibleMotionProps(0.25)}
+			>
+				<Container>
+					<StyledNextLink
+						className="flex flex-wrap items-center rounded bg-[linear-gradient(45deg,#34B1E0_0%,#A7E0F5_100%)] text-white transition-all duration-250 hover:-translate-y-[3px] hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)] lg:mt-10 lg:mb-8 lg:flex-nowrap"
+						href="https://atlanticpayroll.tmls.dev/"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						<div className="mx-auto mt-8 flex max-w-80 flex-col text-center md:max-w-90 lg:mx-[initial] lg:mt-0 lg:max-w-120 lg:pl-24 lg:text-left xl:pl-30">
+							<h2
+								className="mb-4 text-xl leading-[1.2] font-light tracking-[0] sm:mt-5 lg:mt-0 lg:mb-2 lg:text-[23px]"
+								id={ATLANTIC_PAYROLL_SECTION_ID}
+							>
+								Atlantic payroll
+							</h2>
+							<h3 className="font-lyon text-[2rem] leading-[1.1] font-bold md:text-4xl lg:mb-2 lg:text-[3.125rem] lg:leading-[1]">
+								Rethinking the online payroll experience
+							</h3>
+						</div>
+						<div className="mx-auto max-w-[486px] lg:pt-14">
+							<NextImage
+								alt="Atlantic Payroll"
+								priority
+								src={atlanticPayrollImage}
+							/>
+						</div>
+					</StyledNextLink>
+				</Container>
+			</motion.section>
+		</motion.main>
 	);
 }

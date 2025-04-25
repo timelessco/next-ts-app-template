@@ -9,7 +9,7 @@ import { Logo } from "./Logo";
 
 export function Header() {
 	return (
-		<header className="fixed top-0 z-20 min-w-full py-[15px]">
+		<header className="fixed top-0 z-20 min-w-full bg-white py-[15px]">
 			<Container>
 				<div className="flex flex-wrap items-center justify-between sm:flex-nowrap">
 					<StyledNextLink className="rounded-md py-0.5" href="/">
@@ -59,7 +59,7 @@ export function Header() {
 						{/*Using the same element for mobile and desktop for responsibly and simplicity*/}
 						<DisclosureContent className="grid w-full grid-rows-[0fr] transition-all ease-in-out data-[enter=true]:grid-rows-[1fr]">
 							{/* p-0 overflow-hidden does the magic with grid template rows for disclosure animation */}
-							<nav className="overflow-hidden bg-white p-0 sm:overflow-visible sm:p-[initial]">
+							<nav className="overflow-hidden p-0 sm:overflow-visible sm:p-[initial]">
 								<ul className="relative flex flex-col py-[5px] text-lg leading-[1.5] text-[rgba(0,0,0,0.5)] sm:flex-row sm:justify-center sm:space-x-4 sm:py-0">
 									{LINK_DATA.map(({ label, path }) => (
 										<li
