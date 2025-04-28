@@ -7,7 +7,7 @@ export interface NextImageProps extends ImageProps {
 }
 
 export function NextImage(props: NextImageProps) {
-	const { alt, fill, hash, height, src, width, ...rest } = props;
+	const { alt, hash, src, ...rest } = props;
 
 	if (isNullable(src)) {
 		return null;

@@ -19,6 +19,10 @@ const nextConfig: NextConfig = {
 	// reactStrictMode: false, // default: true
 
 	// Turn on fetch and it's data cache logging when debugging rsc fetches
+	images: {
+		formats: ["image/avif", "image/webp"],
+	},
+
 	logging: {
 		fetches: {
 			fullUrl: true,
