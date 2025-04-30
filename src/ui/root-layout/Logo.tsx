@@ -3,7 +3,7 @@ import { cn } from "@/utils/index";
 
 type LogoProps = IconProps;
 
-export const Logo = (props: LogoProps) => {
+export function Logo(props: LogoProps) {
 	const { className, ...rest } = props;
 
 	return (
@@ -19,4 +19,4 @@ export const Logo = (props: LogoProps) => {
 			/>
 		</Icon>
 	);
-};
+}

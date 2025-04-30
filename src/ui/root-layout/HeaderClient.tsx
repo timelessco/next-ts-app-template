@@ -5,32 +5,32 @@ import {
 	useEffect,
 	useRef,
 	useState,
+	type ComponentProps,
 	type ReactNode,
 } from "react";
 import { DisclosureProvider, useDisclosureContext } from "@ariakit/react";
 import { useIntersectionObserver } from "@react-hookz/web";
 
-import { Slot } from "@/components/Slot";
+import {
+	StyledNextLink,
+	type StyledNextLinkProps,
+} from "@/components/link/StyledLink";
 import { useIsMediaFromSm } from "@/hooks/useMediaQuery";
 
-interface HeaderSlotProps {
-	children: ReactNode;
-}
+type HeaderWrapperProps = ComponentProps<"header">;
 
-export function HeaderSlot(props: HeaderSlotProps) {
-	const { children } = props;
+export function HeaderWrapper(props: HeaderWrapperProps) {
 	const elementRef = useRef<HTMLDivElement | null>(null);
 
 	const intersection = useIntersectionObserver(elementRef, {
 		rootMargin: "50px",
-		threshold: [0],
 	});
 	const isScrolled = intersection ? !intersection.isIntersecting : false;
 
 	return (
 		<>
 			<div className="absolute inset-1 h-1 w-1 opacity-0" ref={elementRef} />
-			<Slot data-scrolled={isScrolled}>{children}</Slot>
+			<header data-scrolled={isScrolled} {...props} />
 		</>
 	);
 }
@@ -56,18 +56,13 @@ export function MobileDisclosureProvider(props: MobileDisclosureProviderProps) {
 	);
 }
 
-interface NavLinkSlotProps {
-	children: ReactNode;
-}
+type NavLinkProps = StyledNextLinkProps;
 
-export function NavLinkSlot(props: NavLinkSlotProps) {
-	const { children } = props;
+export function NavLink(props: NavLinkProps) {
 	const isMediaFromSm = useIsMediaFromSm();
 	const disclosure = useDisclosureContext();
 	if (!disclosure) {
-		throw new Error(
-			"NavLinkSlot must be used within a MobileDisclosureProvider",
-		);
+		throw new Error("NavLink must be used within a MobileDisclosureProvider");
 	}
 
 	const handleClick = useCallback(() => {
@@ -76,5 +71,5 @@ export function NavLinkSlot(props: NavLinkSlotProps) {
 		disclosure.setOpen(false);
 	}, [isMediaFromSm, disclosure]);
 
-	return <Slot onClick={handleClick}>{children}</Slot>;
+	return <StyledNextLink onClick={handleClick} {...props} />;
 }
