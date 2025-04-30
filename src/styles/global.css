@@ -39,3 +39,7 @@
 @utility optimize-legibility {
 	text-rendering: optimizelegibility;
 }
+
+@utility ease-out-quad {
+	transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}

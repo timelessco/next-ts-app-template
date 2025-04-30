@@ -1,5 +1,6 @@
 import * as motion from "motion/react-client";
 
+import { TestimonialCarousel } from "@/ui/homepage/TestimonialCarousel";
 import { Container } from "@/components/Container";
 import { NextImage } from "@/components/image/NextImage";
 import { StyledNextLink } from "@/components/link/StyledLink";
@@ -166,6 +167,8 @@ export default function Home() {
 					</StyledNextLink>
 				</Container>
 			</motion.section>
+
+			<TestimonialCarousel />
 		</main>
 	);
 }

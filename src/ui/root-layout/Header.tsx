@@ -63,7 +63,7 @@ export function Header() {
 							<DisclosureContent className="grid w-full grid-rows-[0fr] transition-all ease-in-out data-[enter=true]:grid-rows-[1fr]">
 								{/* p-0 overflow-hidden does the magic with grid template rows for disclosure animation */}
 								<nav className="overflow-hidden p-0 sm:overflow-visible sm:p-[initial]">
-									<ul className="relative flex flex-col py-[5px] text-lg leading-[1.5] text-[rgba(0,0,0,0.5)] sm:flex-row sm:justify-center sm:space-x-4 sm:py-0">
+									<ul className="relative flex flex-col py-[5px] text-lg leading-[1.5] text-black/50 sm:flex-row sm:justify-center sm:space-x-4 sm:py-0">
 										{LINK_DATA.map(({ label, path }) => (
 											<li
 												className="w-full py-[5px] text-center sm:w-auto sm:py-0"
@@ -71,7 +71,7 @@ export function Header() {
 											>
 												<NavLinkSlot>
 													<StyledNextLink
-														className="block rounded-md py-2 hover:text-[rgba(0,0,0,0.9)] aria-[current=page]:text-black data-focus-visible:text-[rgba(0,0,0,0.9)] sm:px-2"
+														className="block rounded-md py-2 hover:text-black/90 aria-[current=page]:text-black data-focus-visible:text-black/90 sm:px-2"
 														href={path}
 													>
 														{label}
@@ -82,7 +82,7 @@ export function Header() {
 										<li className="w-full py-[5px] text-center sm:w-auto sm:py-0">
 											<NavLinkSlot>
 												<StyledNextLink
-													className="block rounded-lg py-2 hover:text-[rgba(0,0,0,0.9)] aria-[current=page]:text-black data-focus-visible:text-[rgba(0,0,0,0.9)] sm:absolute sm:top-1/2 sm:right-0 sm:w-auto sm:-translate-y-1/2 sm:bg-[#F2F3F5] sm:px-2 sm:leading-[1] sm:hover:bg-black sm:hover:text-white sm:aria-[current=page]:bg-black sm:aria-[current=page]:text-white sm:data-focus-visible:bg-black sm:data-focus-visible:text-white"
+													className="block rounded-lg py-2 hover:text-black/90 aria-[current=page]:text-black data-focus-visible:text-black/90 sm:absolute sm:top-1/2 sm:right-0 sm:w-auto sm:-translate-y-1/2 sm:bg-[#F2F3F5] sm:px-2 sm:leading-[1] sm:hover:bg-black sm:hover:text-white sm:aria-[current=page]:bg-black sm:aria-[current=page]:text-white sm:data-focus-visible:bg-black sm:data-focus-visible:text-white"
 													href="/contact"
 												>
 													Contact
