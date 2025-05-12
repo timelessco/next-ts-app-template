@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56">
+	<linearGradient id="strategy-a" x1="50%" x2="50%" y1="1.17%" y2="99.02%">
+		<stop offset="0" stop-color="#ffdcd5" />
+		<stop offset="1" stop-color="#ffc4b9" />
+	</linearGradient>
+	<linearGradient id="strategy-b" x1="50%" x2="50%" y1="95.21%" y2="3.13%">
+		<stop offset="0" stop-color="#ffac9d" />
+		<stop offset="1" stop-color="#ffc1b6" />
+	</linearGradient>
+	<linearGradient id="strategy-c" x1="50%" x2="50%" y1="100%" y2="0%">
+		<stop offset="0" stop-color="#5b6aff" />
+		<stop offset="1" stop-color="#919aff" />
+	</linearGradient>
+	<g
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		stroke-width="3"
+		fill="transparent"
+	>
+		<path stroke="url(#strategy-a)" d="m0 0 15 15" transform="translate(2 2)" />
+		<path stroke="url(#strategy-b)" d="M0 15 15 0" transform="translate(2 2)" />
+		<path
+			stroke="url(#strategy-a)"
+			d="m37 37 15 15"
+			transform="translate(2 2)"
+		/>
+		<path
+			stroke="url(#strategy-b)"
+			d="m37 52 15-15"
+			transform="translate(2 2)"
+		/>
+		<g stroke="url(#strategy-c)" transform="translate(2 2)" fill="transparent">
+			<path d="M18 33 48 2" />
+			<circle cx="10.5" cy="41.5" r="10.5" />
+			<path d="M35 0h15v15" />
+		</g>
+	</g>
+</svg>

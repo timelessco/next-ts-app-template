@@ -34,14 +34,14 @@ export function Header() {
 							>
 								<title>Nav links mobile menu icon</title>
 								<rect
-									className="transition group-aria-[expanded='true']:origin-[0%_30%] group-aria-[expanded='true']:rotate-45"
+									className="transition group-aria-expanded:origin-[0%_30%] group-aria-expanded:rotate-45"
 									fill="currentColor"
 									height="2"
 									rx="1"
 									width="16"
 								/>
 								<rect
-									className="transition group-aria-[expanded='true']:opacity-0"
+									className="transition group-aria-expanded:opacity-0"
 									fill="currentColor"
 									height="2"
 									rx="1"
@@ -49,7 +49,7 @@ export function Header() {
 									y="6"
 								/>
 								<rect
-									className="transition group-aria-[expanded='true']:origin-[10%_75%] group-aria-[expanded='true']:rotate-[-45deg]"
+									className="transition group-aria-expanded:origin-[10%_75%] group-aria-expanded:-rotate-45"
 									fill="currentColor"
 									height="2"
 									rx="1"
@@ -62,7 +62,7 @@ export function Header() {
 						<DisclosureContent className="grid w-full grid-rows-[0fr] transition-all ease-in-out data-[enter=true]:grid-rows-[1fr]">
 							{/* p-0 overflow-hidden does the magic with grid template rows for disclosure animation */}
 							<nav className="overflow-hidden p-0 sm:overflow-visible sm:p-[initial]">
-								<ul className="relative flex flex-col py-[5px] text-lg leading-[1.5] text-black/50 sm:flex-row sm:justify-center sm:space-x-4 sm:py-0">
+								<ul className="relative flex flex-col py-[5px] text-lg leading-normal text-black/50 sm:flex-row sm:justify-center sm:space-x-4 sm:py-0">
 									{LINK_DATA.map(({ label, path }) => (
 										<li
 											className="w-full py-[5px] text-center sm:w-auto sm:py-0"
@@ -78,7 +78,7 @@ export function Header() {
 									))}
 									<li className="w-full py-[5px] text-center sm:w-auto sm:py-0">
 										<NavLink
-											className="block rounded-lg py-2 hover:text-black/90 aria-[current=page]:text-black data-focus-visible:text-black/90 sm:absolute sm:top-1/2 sm:right-0 sm:w-auto sm:-translate-y-1/2 sm:bg-[#F2F3F5] sm:px-2 sm:leading-[1] sm:hover:bg-black sm:hover:text-white sm:aria-[current=page]:bg-black sm:aria-[current=page]:text-white sm:data-focus-visible:bg-black sm:data-focus-visible:text-white"
+											className="block rounded-lg py-2 hover:text-black/90 aria-[current=page]:text-black data-focus-visible:text-black/90 sm:absolute sm:top-1/2 sm:right-0 sm:w-auto sm:-translate-y-1/2 sm:bg-[#F2F3F5] sm:px-2 sm:leading-none sm:hover:bg-black sm:hover:text-white sm:aria-[current=page]:bg-black sm:aria-[current=page]:text-white sm:data-focus-visible:bg-black sm:data-focus-visible:text-white"
 											href="/contact"
 										>
 											Contact

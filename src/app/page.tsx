@@ -1,16 +1,16 @@
 import * as motion from "motion/react-client";
 
-import { TestimonialCarousel } from "@/ui/homepage/TestimonialCarousel";
+import { TestimonialCarousel } from "@/ui/home-page/TestimonialCarousel";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { NextImage } from "@/components/image/NextImage";
 import { StyledNextLink } from "@/components/link/StyledLink";
 import { getFadeInWhenVisibleMotionProps } from "@/utils/index";
 
-import atlanticPayrollImage from "../images/atlantic-payroll.png";
-import bluematterImage from "../images/bluematter.jpg";
-import photonImage from "../images/photon.png";
-import smallcaseImage from "../images/smallcase.png";
+import atlanticPayrollImage from "../images/home-page/atlantic-payroll.png";
+import bluematterImage from "../images/home-page/bluematter.jpg";
+import photonImage from "../images/home-page/photon.png";
+import smallcaseImage from "../images/home-page/smallcase.png";
 
 const HERO_SECTION_ID = "homepage__section--hero-heading";
 const ATLANTIC_PAYROLL_SECTION_ID = "homepage__section--hero-atlantic-payroll";
@@ -116,7 +116,7 @@ export default function Home() {
 						>
 							<NextImage
 								alt="Bluematter image"
-								className="object-cover object-right-top lg:object-center"
+								className="object-cover object-top-right lg:object-center"
 								fill
 								src={bluematterImage}
 							/>

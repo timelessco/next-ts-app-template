@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 33">
+	<linearGradient
+		id="affordable-a"
+		x1="94.73%"
+		x2="12.79%"
+		y1="83.82%"
+		y2="-10.08%"
+	>
+		<stop offset="0" stop-color="#2d82e4" />
+		<stop offset="1" stop-color="#69afff" />
+	</linearGradient>
+	<g
+		stroke="url(#affordable-a)"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		stroke-width="2"
+		fill="transparent"
+		transform="translate(1 1)"
+	>
+		<path
+			d="M0 3.1v21.7A6.2 6.2 0 0 0 6.18 31h24.73A3.1 3.1 0 0 0 34 27.9V9.3a3.1 3.1 0 0 0-3.1-3.1H3.1a3.1 3.1 0 0 1 0-6.2h27.8"
+		/>
+		<circle cx="25" cy="19" r="3" />
+	</g>
+</svg>

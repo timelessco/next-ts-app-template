@@ -51,5 +51,6 @@
 		"typescript": "javascript",
 		"typescriptreact": "javascript",
 		"javascriptreact": "javascript"
-	}
+	},
+	"conventionalCommits.scopes": ["process-page"]
 }
