@@ -1,4 +1,5 @@
 import { ProcessCard } from "@/ui/process-page/ProcessCard";
+import { ProcessPageIconGradients } from "@/ui/process-page/ProcessPageIconGradients";
 import { WhyTimelessContent } from "@/ui/process-page/WhyTimeless";
 import { ArrowIcon } from "@/components/ArrowIcon";
 import { Container } from "@/components/Container";
@@ -33,6 +34,8 @@ export default function Page() {
 						</h1>
 					</Container>
 				</section>
+
+				<ProcessPageIconGradients />
 
 				<section
 					aria-label="process cover image section"
