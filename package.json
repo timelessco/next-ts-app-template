@@ -75,6 +75,7 @@
 	},
 	"dependencies": {
 		"@ariakit/react": "0.4.17",
+		"@react-google-maps/api": "2.20.6",
 		"@react-hookz/web": "25.1.1",
 		"@sentry/nextjs": "9.15.0",
 		"@serwist/next": "9.0.14",
@@ -171,6 +172,7 @@
 	"pnpm": {
 		"onlyBuiltDependencies": [
 			"@sentry/cli",
+			"@tailwindcss/oxide",
 			"esbuild",
 			"sharp"
 		],
