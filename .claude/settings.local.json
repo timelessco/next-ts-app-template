@@ -4,7 +4,6 @@
 			"Bash(grep:*)",
 			"Bash(pnpm lint:eslint:*)",
 			"Bash(pnpm lint:types:*)",
-			"Bash(pnpm build:*)",
 			"mcp__sequential-thinking__sequentialthinking",
 			"WebFetch(domain:github.com)",
 			"mcp__desktop-commander__search_code",
