@@ -77,3 +77,4 @@ public/sitemap-0.xml
 .cspellcache
 
 # Extras(if any)
+.claude/*

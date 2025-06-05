@@ -24,6 +24,7 @@ export const serverEnvironment = {
  * To expose them to the client, prefix them with `NEXT_PUBLIC_`.
  */
 export const clientSchema = z.object({
+	NEXT_PUBLIC_GOOGLE_MAP_ID: z.string(),
 	NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: z.string(),
 	NEXT_PUBLIC_SENTRY_DSN: z.string().url().optional(),
 	// Needed for sitemap generation
@@ -36,6 +37,7 @@ export const clientSchema = z.object({
  * and only used environment variables are included in the build.
  */
 export const clientEnvironment = {
+	NEXT_PUBLIC_GOOGLE_MAP_ID: process.env.NEXT_PUBLIC_GOOGLE_MAP_ID,
 	NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
 	NEXT_PUBLIC_SENTRY_DSN: process.env.NEXT_PUBLIC_SENTRY_DSN,
 	// Needed for sitemap generation

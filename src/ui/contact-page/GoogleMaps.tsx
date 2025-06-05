@@ -1,18 +1,37 @@
 "use client";
 
-import { useCallback, useMemo } from "react";
-import {
-	GoogleMap,
-	useLoadScript,
-	type Libraries,
-} from "@react-google-maps/api";
+import { useMemo } from "react";
 import { useMediaQuery } from "@react-hookz/web";
+import {
+	AdvancedMarker,
+	APIProvider,
+	Map,
+	useApiLoadingStatus,
+} from "@vis.gl/react-google-maps";
+import { preconnect, prefetchDNS } from "react-dom";
 
-import { Spinner } from "@/components/Spinner";
 import { COMPANY_GEO, COMPANY_INFO } from "@/utils/siteConfig";
 
-export function GoogleMapComponent() {
+function MapLoadingSkeleton() {
+	return (
+		<div
+			className="size-full animate-pulse bg-gradient-to-br from-gray-100 to-gray-200"
+			style={{ aspectRatio: "16/9" }}
+		>
+			<div className="flex h-full items-center justify-center">
+				<div className="space-y-3 text-center">
+					<div className="mx-auto h-4 w-32 animate-pulse rounded bg-gray-300" />
+					<div className="mx-auto h-2 w-24 animate-pulse rounded bg-gray-300" />
+				</div>
+			</div>
+		</div>
+	);
+}
+
+function GoogleMapWithLoadingState() {
+	const status = useApiLoadingStatus();
 	const isLargeScreen = useMediaQuery("(min-width: 1024px)");
+
 	const center = useMemo(() => {
 		const lat = Number.parseFloat(COMPANY_GEO.latitude);
 		const lng = Number.parseFloat(COMPANY_GEO.longitude);
@@ -22,131 +41,69 @@ export function GoogleMapComponent() {
 			: { lat, lng };
 	}, [isLargeScreen]);
 
-	const libraries = useMemo<Libraries>(() => ["marker"], []);
-	const { isLoaded, loadError } = useLoadScript({
-		googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
-		libraries,
-	});
+	const markerPosition = useMemo(
+		() => ({
+			lat: Number.parseFloat(COMPANY_GEO.latitude),
+			lng: Number.parseFloat(COMPANY_GEO.longitude),
+		}),
+		[],
+	);
 
-	const onLoad = useCallback((map: google.maps.Map) => {
-		// eslint-disable-next-line @typescript-eslint/no-deprecated
-		new google.maps.Marker({
-			icon: {
-				scaledSize: new google.maps.Size(40, 40),
-				url: "/svg/marker.svg",
-			},
-			map,
-			position: {
-				lat: Number.parseFloat(COMPANY_GEO.latitude),
-				lng: Number.parseFloat(COMPANY_GEO.longitude),
-			},
-			title: `${COMPANY_INFO.name}!`,
-		});
-
-		// TODO: Use advanced marker instead of marker with custom map ID
-		// TODO: A Map's styles property cannot be set when a mapId is present.
-		// const markerIcon = document.createElement("img");
-		// markerIcon.src = "/svg/marker.svg";
-		// markerIcon.width = 40;
-		// markerIcon.height = 40;
-
-		// new google.maps.marker.AdvancedMarkerElement({
-		// 	content: markerIcon,
-		// 	map,
-		// 	position: {
-		//		lat: Number.parseFloat(COMPANY_GEO.latitude),
-		//		lng: Number.parseFloat(COMPANY_GEO.longitude)
-		//	},
-		// 	title: `${COMPANY_INFO.name}!`,
-		// });
-	}, []);
-
-	if (loadError) {
-		console.error(loadError);
-
-		return null;
+	if (status !== "LOADED") {
+		return <MapLoadingSkeleton />;
 	}
 
-	if (!isLoaded) return <Spinner className="size-8 border-4" />;
-
 	return (
-		<GoogleMap
-			center={center}
-			mapContainerClassName="size-full"
-			onLoad={onLoad}
-			options={{
-				// TODO: add this once we have a proper map id
-				// mapId: "TIMELESS_MAP_ID",
-				cameraControl: true,
-				disableDefaultUI: true,
-				mapTypeControl: true,
-				mapTypeControlOptions: {
-					mapTypeIds: [
-						google.maps.MapTypeId.ROADMAP,
-						google.maps.MapTypeId.SATELLITE,
-						google.maps.MapTypeId.TERRAIN,
-						google.maps.MapTypeId.HYBRID,
-					],
-					position: google.maps.ControlPosition.TOP_LEFT,
-					style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-				},
-				streetViewControl: true,
-				styles: mapStyles,
+		<Map
+			className="size-full"
+			defaultCenter={center}
+			// Required for Advanced Markers - created this mapId in Google Cloud Console
+			// Note: styles cannot be used when mapId is present (cloud-based styling should be used instead)
+			// styles={mapStyles}
+			defaultZoom={17}
+			mapId={process.env.NEXT_PUBLIC_GOOGLE_MAP_ID}
+			mapTypeControl
+			mapTypeControlOptions={{
+				mapTypeIds: [
+					google.maps.MapTypeId.ROADMAP,
+					google.maps.MapTypeId.SATELLITE,
+					google.maps.MapTypeId.TERRAIN,
+					google.maps.MapTypeId.HYBRID,
+				],
+				position: google.maps.ControlPosition.TOP_LEFT,
+				style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
 			}}
-			zoom={16.75}
-		/>
+			streetViewControl
+		>
+			<AdvancedMarker position={markerPosition} title={`${COMPANY_INFO.name}!`}>
+				{/* eslint-disable-next-line @next/next/no-img-element */}
+				<img
+					alt={`${COMPANY_INFO.name} location marker`}
+					decoding="sync"
+					fetchPriority="high"
+					height={40}
+					loading="eager"
+					src="/svg/marker.svg"
+					width={40}
+				/>
+			</AdvancedMarker>
+		</Map>
 	);
 }
 
-const mapStyles = [
-	{
-		elementType: "labels.text.fill",
-		featureType: "administrative",
-		stylers: [{ color: "#444444" }],
-	},
-	{
-		elementType: "all",
-		featureType: "landscape",
-		stylers: [{ color: "#f2f2f2" }],
-	},
-	{
-		elementType: "all",
-		featureType: "poi",
-		stylers: [{ visibility: "off" }],
-	},
-	{
-		elementType: "all",
-		featureType: "road",
-		stylers: [{ saturation: -100 }, { lightness: 45 }],
-	},
-	{
-		elementType: "all",
-		featureType: "road.highway",
-		stylers: [{ visibility: "simplified" }],
-	},
-	{
-		elementType: "geometry.fill",
-		featureType: "road.highway.controlled_access",
-		stylers: [{ color: "#7fd8de" }],
-	},
-	{
-		elementType: "geometry.stroke",
-		featureType: "road.highway.controlled_access",
-		stylers: [{ color: "#70989c" }],
-	},
-	{
-		elementType: "labels.icon",
-		featureType: "road.arterial",
-		stylers: [{ visibility: "off" }],
-	},
-	{
-		elementType: "all",
-		featureType: "transit",
-		stylers: [{ visibility: "off" }],
-	},
-	{
-		elementType: "all",
-		featureType: "water",
-		stylers: [{ color: "#53d8f0" }, { visibility: "on" }],
-	},
-];
+export function GoogleMapComponent() {
+	const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+
+	// Page-level resource optimization for above-the-fold Google Maps
+	// This starts even before the GoogleMapComponent renders
+	prefetchDNS("https://maps.googleapis.com");
+	prefetchDNS("https://maps.gstatic.com");
+	preconnect("https://maps.googleapis.com", { crossOrigin: "anonymous" });
+	preconnect("https://maps.gstatic.com", { crossOrigin: "anonymous" });
+
+	return (
+		<APIProvider apiKey={apiKey} libraries={["marker"]}>
+			<GoogleMapWithLoadingState />
+		</APIProvider>
+	);
+}
