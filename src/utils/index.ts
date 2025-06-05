@@ -1,4 +1,5 @@
 import { clsx, type ClassValue } from "clsx";
+import type { HTMLMotionProps } from "motion/react";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
@@ -9,7 +10,7 @@ export function getFadeInWhenVisibleMotionProps(delay = 0) {
 	return {
 		initial: "hidden",
 		transition: {
-			default: { delay, duration: 0.5, ease: "ease" },
+			default: { delay, duration: 0.5, ease: "easeIn" },
 			transform: {
 				bounce: 0.25,
 				delay,
@@ -23,5 +24,5 @@ export function getFadeInWhenVisibleMotionProps(delay = 0) {
 		},
 		viewport: { once: true },
 		whileInView: "visible",
-	};
+	} satisfies HTMLMotionProps<"div">;
 }

@@ -2,6 +2,90 @@ import { Icon } from "@/components/Icon";
 
 // This component is used to create the gradients for the process card icons.
 // This is a workaround to avoid the gradient not being applied to the icons on Safari.
+
+// Shared gradients used by both ProcessPage and AboutPage
+function SharedGradients() {
+	return (
+		<>
+			{/* strategy */}
+			<linearGradient
+				gradientUnits="userSpaceOnUse"
+				id="strategy-a"
+				x1="50%"
+				x2="50%"
+				y1="1.17%"
+				y2="99.02%"
+			>
+				<stop offset="0" stopColor="#ffdcd5" />
+				<stop offset="1" stopColor="#ffc4b9" />
+			</linearGradient>
+			<linearGradient
+				gradientUnits="userSpaceOnUse"
+				id="strategy-b"
+				x1="50%"
+				x2="50%"
+				y1="95.21%"
+				y2="3.13%"
+			>
+				<stop offset="0" stopColor="#ffac9d" />
+				<stop offset="1" stopColor="#ffc1b6" />
+			</linearGradient>
+			<linearGradient id="strategy-c" x1="50%" x2="50%" y1="100%" y2="0%">
+				<stop offset="0" stopColor="#5b6aff" />
+				<stop offset="1" stopColor="#919aff" />
+			</linearGradient>
+			{/* what-we-do-design */}
+			<linearGradient
+				id="what-we-do-design-a"
+				x1="0%"
+				x2="88.546%"
+				y1="100%"
+				y2="0%"
+			>
+				<stop offset="0%" stopColor="#FFAC9D" />
+				<stop offset="100%" stopColor="#FFC6BD" />
+			</linearGradient>
+			<linearGradient
+				id="what-we-do-design-b"
+				x1="50%"
+				x2="50%"
+				y1="100%"
+				y2="0%"
+			>
+				<stop offset="0%" stopColor="#5B6AFF" />
+				<stop offset="100%" stopColor="#919AFF" />
+			</linearGradient>
+			<linearGradient
+				id="what-we-do-design-c"
+				x1="100%"
+				x2="0%"
+				y1="100%"
+				y2="0%"
+			>
+				<stop offset="0%" stopColor="#96D7F3" />
+				<stop offset="100%" stopColor="#C2E8F8" />
+			</linearGradient>
+			{/* execute */}
+			<linearGradient id="execute-a" x1="100%" x2="0%" y1="86.49%" y2="35.82%">
+				<stop offset="0" stopColor="#9fdaf3" />
+				<stop offset="1" stopColor="#c2e8f8" />
+			</linearGradient>
+			<linearGradient id="execute-b" x1="50%" x2="50%" y1="89.79%" y2=".83%">
+				<stop offset="0" stopColor="#b0a2fa" />
+				<stop offset="1" stopColor="#cbc0fc" />
+			</linearGradient>
+			<linearGradient id="execute-c" x1="100%" x2="0%" y1="78.85%" y2="26.36%">
+				<stop offset="0" stopColor="#82d1ef" />
+				<stop offset="1" stopColor="#7fd0ef" />
+			</linearGradient>
+			<linearGradient id="execute-d" x1="50%" x2="50%" y1="99.02%" y2="0%">
+				<stop offset="0" stopColor="#7056f5" />
+				<stop offset="1" stopColor="#afa1fa" />
+			</linearGradient>
+		</>
+	);
+}
+
 export function ProcessPageIconGradients() {
 	return (
 		<Icon
@@ -10,6 +94,7 @@ export function ProcessPageIconGradients() {
 			width="0"
 			xmlns="http://www.w3.org/2000/svg"
 		>
+			<SharedGradients />
 			{/* research */}
 			<linearGradient
 				gradientUnits="userSpaceOnUse"
@@ -55,33 +140,6 @@ export function ProcessPageIconGradients() {
 				<stop offset="0" stopColor="#5B6AFF" />
 				<stop offset="1" stopColor="#919AFF" />
 			</linearGradient>
-			{/* strategy */}
-			<linearGradient
-				gradientUnits="userSpaceOnUse"
-				id="strategy-a"
-				x1="50%"
-				x2="50%"
-				y1="1.17%"
-				y2="99.02%"
-			>
-				<stop offset="0" stopColor="#ffdcd5" />
-				<stop offset="1" stopColor="#ffc4b9" />
-			</linearGradient>
-			<linearGradient
-				gradientUnits="userSpaceOnUse"
-				id="strategy-b"
-				x1="50%"
-				x2="50%"
-				y1="95.21%"
-				y2="3.13%"
-			>
-				<stop offset="0" stopColor="#ffac9d" />
-				<stop offset="1" stopColor="#ffc1b6" />
-			</linearGradient>
-			<linearGradient id="strategy-c" x1="50%" x2="50%" y1="100%" y2="0%">
-				<stop offset="0" stopColor="#5b6aff" />
-				<stop offset="1" stopColor="#919aff" />
-			</linearGradient>
 			{/* process-design */}
 			<linearGradient id="design-a" x1="100%" x2="0%" y1="86.49%" y2="35.82%">
 				<stop offset="0" stopColor="#9fdaf3" />
@@ -94,54 +152,6 @@ export function ProcessPageIconGradients() {
 			<linearGradient id="design-c" x1="50%" x2="50%" y1="1.17%" y2="99.02%">
 				<stop offset="0" stopColor="#ffc7d1" />
 				<stop offset="1" stopColor="#ffa3b4" />
-			</linearGradient>
-			{/* execute */}
-			<linearGradient id="execute-a" x1="100%" x2="0%" y1="86.49%" y2="35.82%">
-				<stop offset="0" stopColor="#9fdaf3" />
-				<stop offset="1" stopColor="#c2e8f8" />
-			</linearGradient>
-			<linearGradient id="execute-b" x1="50%" x2="50%" y1="89.79%" y2=".83%">
-				<stop offset="0" stopColor="#b0a2fa" />
-				<stop offset="1" stopColor="#cbc0fc" />
-			</linearGradient>
-			<linearGradient id="execute-c" x1="100%" x2="0%" y1="78.85%" y2="26.36%">
-				<stop offset="0" stopColor="#82d1ef" />
-				<stop offset="1" stopColor="#7fd0ef" />
-			</linearGradient>
-			<linearGradient id="execute-d" x1="50%" x2="50%" y1="99.02%" y2="0%">
-				<stop offset="0" stopColor="#7056f5" />
-				<stop offset="1" stopColor="#afa1fa" />
-			</linearGradient>
-			{/* what-we-do-design */}
-			<linearGradient
-				id="what-we-do-design-a"
-				x1="0%"
-				x2="88.546%"
-				y1="100%"
-				y2="0%"
-			>
-				<stop offset="0%" stopColor="#FFAC9D" />
-				<stop offset="100%" stopColor="#FFC6BD" />
-			</linearGradient>
-			<linearGradient
-				id="what-we-do-design-b"
-				x1="50%"
-				x2="50%"
-				y1="100%"
-				y2="0%"
-			>
-				<stop offset="0%" stopColor="#5B6AFF" />
-				<stop offset="100%" stopColor="#919AFF" />
-			</linearGradient>
-			<linearGradient
-				id="what-we-do-design-c"
-				x1="100%"
-				x2="0%"
-				y1="100%"
-				y2="0%"
-			>
-				<stop offset="0%" stopColor="#96D7F3" />
-				<stop offset="100%" stopColor="#C2E8F8" />
 			</linearGradient>
 			{/* premium */}
 			<linearGradient
@@ -214,6 +224,19 @@ export function ProcessPageIconGradients() {
 				<stop offset="0" stopColor="#2d82e4" />
 				<stop offset="1" stopColor="#69afff" />
 			</linearGradient>
+		</Icon>
+	);
+}
+
+export function AboutPageIconGradients() {
+	return (
+		<Icon
+			className="sr-only"
+			height="0"
+			width="0"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<SharedGradients />
 		</Icon>
 	);
 }

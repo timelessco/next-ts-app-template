@@ -5,7 +5,7 @@ import { Icon } from "./Icon";
 
 const WHAT_WE_DO_SECTION_ID = "common__section--what-we-do";
 
-export default function WhatWeDoSection() {
+export function WhatWeDoSection() {
 	return (
 		<section
 			aria-labelledby={WHAT_WE_DO_SECTION_ID}
@@ -48,6 +48,24 @@ interface WhatWeDoItemProps {
 	title: string;
 }
 
+function WhatwedoSectionItem(props: WhatWeDoItemProps) {
+	const { iconName, listItems, title } = props;
+
+	return (
+		<div className="w-full text-center md:max-w-[225px] md:text-left">
+			<Icon className="text-[34px] text-white" name={iconName} />
+			<h4 className="my-[15px] text-xl leading-[1.2] font-semibold md:mt-[25px] md:mb-5 md:text-start md:text-[1.625rem]">
+				{title}
+			</h4>
+			<ul className="text-xl leading-[1.85] text-[#07122C]/65 md:text-start">
+				{listItems.map((item) => (
+					<li key={item}>{item}</li>
+				))}
+			</ul>
+		</div>
+	);
+}
+
 const whatWeDoItems = [
 	{
 		iconName: "strategy",
@@ -80,21 +98,3 @@ const whatWeDoItems = [
 		title: "Technology",
 	},
 ] satisfies WhatWeDoItemProps[];
-
-export function WhatwedoSectionItem(props: WhatWeDoItemProps) {
-	const { iconName, listItems, title } = props;
-
-	return (
-		<div className="w-full text-center md:max-w-[225px] md:text-left">
-			<Icon className="text-[34px] text-white" name={iconName} />
-			<h4 className="my-[15px] text-xl leading-[1.2] font-semibold md:mt-[25px] md:mb-5 md:text-start md:text-[1.625rem]">
-				{title}
-			</h4>
-			<ul className="text-xl leading-[1.85] text-[#07122C]/65 md:text-start">
-				{listItems.map((item) => (
-					<li key={item}>{item}</li>
-				))}
-			</ul>
-		</div>
-	);
-}

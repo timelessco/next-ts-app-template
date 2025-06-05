@@ -1,6 +1,14 @@
-import GoogleMapComponent from "@/ui/contact-page/GoogleMaps";
+import { GoogleMapComponent } from "@/ui/contact-page/GoogleMaps";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
+import { generatePageMetadata } from "@/utils/metadataUtils";
+import { siteConfig } from "@/utils/siteConfig";
+
+export const metadata = generatePageMetadata({
+	description: "We’d love to hear from you.",
+	title: "Contact Us",
+	url: `${siteConfig.url}/contact`,
+});
 
 const HERO_SECTION_ID = "contact__section--hero-heading";
 const MAPS_SECTION_ID = "contact__section--maps";

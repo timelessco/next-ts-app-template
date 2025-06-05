@@ -111,7 +111,6 @@ function useTestimonialEmblaCarouselAutoplay(
 ) {
 	const intersection = useIntersectionObserver(sectionRef);
 	const { isIntersecting } = intersection ?? {};
-	console.log(isIntersecting);
 
 	useEffect(() => {
 		const autoplay = emblaApi?.plugins().autoplay;

@@ -18,11 +18,11 @@ export function StyledNextLink(props: StyledNextLinkProps) {
 	return (
 		<Command
 			className={cn(
-				hasImageChildren && "group",
-				className,
+				hasImageChildren && "group transition-all",
 				"cursor-pointer outline-hidden",
+				className,
 				!hasImageChildren &&
-					"transition-all data-focus-visible:ring-2 data-focus-visible:ring-[#171717] data-focus-visible:ring-offset-2",
+					"data-focus-visible:ring-2 data-focus-visible:ring-[#171717] data-focus-visible:ring-offset-2",
 			)}
 			render={<AriaCurrentLink {...rest} />}
 		>

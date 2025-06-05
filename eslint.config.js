@@ -12,7 +12,6 @@ import importPlugin from "eslint-plugin-import-x";
 import jsdoc from "eslint-plugin-jsdoc";
 import jsonc from "eslint-plugin-jsonc";
 import jsxA11y from "eslint-plugin-jsx-a11y";
-import markdown from "eslint-plugin-markdown";
 import node from "eslint-plugin-n";
 import packageJson from "eslint-plugin-package-json";
 import perfectionist from "eslint-plugin-perfectionist";
@@ -154,10 +153,6 @@ export default tseslint.config(
 		},
 	},
 	{
-		extends: [tseslint.configs.disableTypeChecked],
-		files: ["**/*.md/*.{cjs,js,jsx,ts,tsx}"],
-	},
-	{
 		name: "next",
 		plugins: {
 			"@next/next": next,
@@ -179,7 +174,6 @@ export default tseslint.config(
 			],
 		},
 	},
-	markdown.configs.recommended,
 	packageJson.configs.recommended,
 	{
 		extends: [

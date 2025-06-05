@@ -6,7 +6,7 @@ import { type Metadata, type Viewport } from "next";
 import { splashScreens } from "@/ui/root-layout/splashScreens";
 import { siteConfig } from "@/utils/siteConfig";
 
-const { author, description, links, name, socials, title, url } = siteConfig;
+const { author, description, links, name, socials, url } = siteConfig;
 
 export const rootViewport = {
 	colorScheme: "dark light",
@@ -81,9 +81,10 @@ export function generatePageMetadata(
 		imageHeight = 1260,
 		imageUrl = "/opengraph-image.jpg",
 		imageWidth = 2400,
-		title: pageTitle = title,
+		title,
 		url: pageUrl = url,
 	} = props;
+	const pageTitle = title ? `${title} | ${name}` : name;
 
 	return {
 		...sharedMetadata,
@@ -96,7 +97,7 @@ export function generatePageMetadata(
 			description: pageDescription ?? description,
 			images: [
 				{
-					alt: pageTitle,
+					alt: title ?? name,
 					height: imageHeight,
 					url: imageUrl,
 					width: imageWidth,
@@ -104,12 +105,12 @@ export function generatePageMetadata(
 			],
 			locale: "en-US",
 			siteName: name,
-			title: `${pageTitle} | ${name}`,
+			title: pageTitle,
 			type: "website",
 			url: pageUrl,
 		},
 		title: {
-			default: pageTitle,
+			default: title ?? name,
 			template: `%s | ${name}`,
 		},
 		twitter: {
@@ -118,13 +119,13 @@ export function generatePageMetadata(
 			description: pageDescription ?? description,
 			images: [
 				{
-					alt: pageTitle,
+					alt: title ?? name,
 					height: imageHeight,
 					url: imageUrl,
 					width: imageWidth,
 				},
 			],
-			title: `${pageTitle} | ${name}`,
+			title: pageTitle,
 		},
 	};
 }

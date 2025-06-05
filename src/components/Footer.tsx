@@ -27,11 +27,11 @@ export function Footer(props: FooterProps) {
 						>
 							{title}
 						</h2>
-						<div className="mb-0 flex items-center justify-center gap-2 text-[#2D82E4] transition-colors group-hover:text-white">
+						<div className="mb-0 flex items-center justify-center gap-3 text-[#2D82E4] transition-colors group-hover:text-white">
 							<p className="text-[1.75rem] leading-normal font-light md:text-[2rem]">
 								{desc}
 							</p>
-							<ArrowIcon className="text-[1.25rem] transition-transform group-hover:translate-x-3 md:text-[1.375rem]" />
+							<ArrowIcon className="text-lg transition-transform group-hover:translate-x-3 md:text-[1.375rem]" />
 						</div>
 					</div>
 				</Container>

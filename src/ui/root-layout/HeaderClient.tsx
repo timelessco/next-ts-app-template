@@ -8,6 +8,7 @@ import {
 	type ComponentProps,
 	type ReactNode,
 } from "react";
+import { usePathname } from "next/navigation";
 import { DisclosureProvider, useDisclosureContext } from "@ariakit/react";
 import { useIntersectionObserver } from "@react-hookz/web";
 
@@ -21,7 +22,8 @@ type HeaderWrapperProps = ComponentProps<"header">;
 
 export function HeaderWrapper(props: HeaderWrapperProps) {
 	const elementRef = useRef<HTMLDivElement | null>(null);
-
+	const pathname = usePathname();
+	const isAbout = pathname === "/about";
 	const intersection = useIntersectionObserver(elementRef, {
 		rootMargin: "50px",
 	});
@@ -30,7 +32,7 @@ export function HeaderWrapper(props: HeaderWrapperProps) {
 	return (
 		<>
 			<div className="absolute inset-1 h-1 w-1 opacity-0" ref={elementRef} />
-			<header data-scrolled={isScrolled} {...props} />
+			<header data-about={isAbout} data-scrolled={isScrolled} {...props} />
 		</>
 	);
 }
@@ -61,9 +63,11 @@ type NavLinkProps = StyledNextLinkProps;
 export function NavLink(props: NavLinkProps) {
 	const isMediaFromSm = useIsMediaFromSm();
 	const disclosure = useDisclosureContext();
+	const pathname = usePathname();
 	if (!disclosure) {
 		throw new Error("NavLink must be used within a MobileDisclosureProvider");
 	}
+	const isAbout = pathname === "/about";
 
 	const handleClick = useCallback(() => {
 		if (isMediaFromSm) return;
@@ -71,5 +75,7 @@ export function NavLink(props: NavLinkProps) {
 		disclosure.setOpen(false);
 	}, [isMediaFromSm, disclosure]);
 
-	return <StyledNextLink onClick={handleClick} {...props} />;
+	return (
+		<StyledNextLink data-about={isAbout} onClick={handleClick} {...props} />
+	);
 }

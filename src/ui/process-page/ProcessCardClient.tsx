@@ -46,8 +46,8 @@ export function ProcessCardClient(props: ProcessCardSectionProps) {
 
 	return (
 		<motion.div
-			onMouseLeave={handleMouseLeave}
-			onMouseMove={handleMouseMove}
+			onPointerMove={handleMouseMove}
+			onPointerUp={handleMouseLeave}
 			ref={ref}
 			style={{
 				transform,

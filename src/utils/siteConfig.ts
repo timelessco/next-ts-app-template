@@ -1,4 +1,4 @@
-const SITE = "Timeless Co";
+const SITE = "Timeless";
 
 const productionUrl =
 	process.env.NEXT_PUBLIC_SITE_URL ??
@@ -30,6 +30,5 @@ export const siteConfig = {
 	socials: {
 		twitter: TIMELESS_TWITTER_ID,
 	},
-	title: SITE,
 	url: BASE_URL,
 };

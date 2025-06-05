@@ -1,17 +1,25 @@
 import { ProcessCard } from "@/ui/process-page/ProcessCard";
-import { ProcessPageIconGradients } from "@/ui/process-page/ProcessPageIconGradients";
 import { WhyTimelessContent } from "@/ui/process-page/WhyTimeless";
 import { ArrowIcon } from "@/components/ArrowIcon";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
+import { ProcessPageIconGradients } from "@/components/IconGradients";
 import { NextImage } from "@/components/image/NextImage";
 import { StyledNextLink } from "@/components/link/StyledLink";
-import WhatWeDoSection from "@/components/WhatWeDoSection";
+import { WhatWeDoSection } from "@/components/WhatWeDoSection";
 import type { IconName } from "@/icons/icon-name";
+import { generatePageMetadata } from "@/utils/metadataUtils";
+import { siteConfig } from "@/utils/siteConfig";
 
 import EvolveArrowImage from "../../images/process-page/evolve-arrow.png";
 import MeasureArrowImage from "../../images/process-page/measure-arrow.png";
 import ProcessCoverImage from "../../images/process-page/process-cover.png";
+
+export const metadata = generatePageMetadata({
+	description: "Data driven design decisions",
+	title: "Process",
+	url: `${siteConfig.url}/process`,
+});
 
 const HERO_SECTION_ID = "process__section--hero-heading";
 const WHY_TIMELESS_SECTION_ID = "process__section--why-timeless";
@@ -56,7 +64,7 @@ export default function Page() {
 					<Container>
 						<div className="mx-auto max-w-[645px] pb-4 text-center lg:pb-12">
 							<h2
-								className="mb-[2.25em] text-[13px] leading-[1.2] font-bold tracking-[1.97px] text-[#07122C]/55 uppercase md:text-[0.9375rem]"
+								className="mb-[2.25em] text-[0.8125rem] leading-[1.2] font-bold tracking-[1.97px] text-[#07122C]/55 uppercase md:text-[0.9375rem]"
 								id={OUR_PROCESS_SECTION_ID}
 							>
 								our process

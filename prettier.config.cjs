@@ -1,3 +1,10 @@
+const plugins = [
+	"prettier-plugin-packagejson",
+	"prettier-plugin-curly",
+	"prettier-plugin-sh",
+	"@ianvs/prettier-plugin-sort-imports",
+	"prettier-plugin-tailwindcss",
+];
 /**
  * @see https://prettier.io/docs/en/configuration.html
  */
@@ -44,14 +51,15 @@ module.exports = {
 				trailingComma: "none",
 			},
 		},
+		// Fixes [prettier-plugin-sort-imports]: import sorting aborted due to babel parsing error in markdown files
+		{
+			files: ["*.md"],
+			importOrder: undefined,
+			importOrderParserPlugins: undefined,
+			options: { plugins },
+		},
 	],
-	plugins: [
-		"prettier-plugin-packagejson",
-		"prettier-plugin-curly",
-		"prettier-plugin-sh",
-		"@ianvs/prettier-plugin-sort-imports",
-		"prettier-plugin-tailwindcss",
-	],
+	plugins,
 	tailwindFunctions: ["cn"],
 	tailwindStylesheet: "./src/styles/global.css",
 	useTabs: true,
