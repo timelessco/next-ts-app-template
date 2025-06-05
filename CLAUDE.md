@@ -105,14 +105,23 @@ src/
    - Use metadataUtils for consistent SEO
    - Site config in `/src/utils/siteConfig.ts`
 
-7. **Styling**:
+7. **Centralized Configuration**:
+
+   - All company information, contact details, and business data should use `/src/utils/siteConfig.ts`
+   - Import specific constants (e.g., `COMPANY_INFO`, `COMPANY_ADDRESS`, `COMPANY_GEO`) instead of hardcoding
+   - Testimonials use `TESTIMONIALS` export from siteConfig
+   - Portfolio items use `PORTFOLIO_ITEMS` export from siteConfig
+   - Geographic coordinates use `COMPANY_GEO` export (latitude/longitude)
+   - This ensures single source of truth and consistency across pages and components
+
+8. **Styling**:
 
    - Tailwind CSS v4 with custom theme
    - `cn()` utility for className merging (clsx + tailwind-merge)
    - Custom fonts: Equitan Sans and Lyon Display Web
    - No CSS-in-JS, prefer Tailwind utilities
 
-8. **Animation**:
+9. **Animation**:
    - Motion (Framer Motion v12) for animations
    - `getFadeInWhenVisibleMotionProps()` utility for consistent animations
    - Progressive enhancement approach

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Container } from "@/components/Container";
+import { TESTIMONIALS } from "@/utils/siteConfig";
 
 import gregAvatarImage from "../../images/home-page/greg-avatar.png";
 import justinAvatarImage from "../../images/home-page/justin-avatar.png";
@@ -12,6 +13,22 @@ import {
 	TestimonialEmblaCarouselSection,
 	TestimonialEmblaCarouselWrapper,
 } from "./TestimonialCarouselClient";
+
+const TESTIMONIAL_IMAGES = {
+	"1": ryanAvatarImage,
+	"2": vasanthAvatarImage,
+	"3": justinAvatarImage,
+	"4": mikaelAvatarImage,
+	"5": gregAvatarImage,
+} as const;
+
+const testimonials = TESTIMONIALS.map((testimonial) => ({
+	id: testimonial.id,
+	image: TESTIMONIAL_IMAGES[testimonial.id],
+	name: testimonial.authorName,
+	position: `${testimonial.authorJobTitle}, ${testimonial.companyName}`,
+	text: testimonial.reviewText,
+}));
 
 const TESTIMONIAL_SECTION_ID = "homepage__section--testimonial-carousel";
 
@@ -30,7 +47,7 @@ export function TestimonialCarousel() {
 				</h2>
 				{/* Dots Indicator */}
 				<ol className="absolute -bottom-10 left-2/4 flex -translate-x-2/4 space-x-2.5 md:-bottom-12.5 lg:-bottom-25">
-					{TESTIMONIALS.map((testimonial, index) => {
+					{testimonials.map((testimonial, index) => {
 						const { id } = testimonial;
 
 						return (
@@ -39,7 +56,7 @@ export function TestimonialCarousel() {
 								key={`testimonial-carousel-dot-button-${id}`}
 							>
 								<TestimonialEmblaCarouselDotButton
-									aria-label={`Dot button ${id} of ${TESTIMONIALS.length}`}
+									aria-label={`Dot button ${id} of ${testimonials.length}`}
 									className="size-1.5 rounded-full bg-[#333] opacity-25 ease-in-out hover:scale-150 data-[selected=true]:opacity-100 md:size-2 lg:size-2.5"
 									index={index}
 								/>
@@ -50,7 +67,7 @@ export function TestimonialCarousel() {
 
 				<TestimonialEmblaCarouselWrapper className="touch-pan-y touch-pinch-zoom ease-out-quad select-none [-webkit-tap-highlight-color:transparent] backface-hidden [&.is-draggable]:cursor-grab [&.is-dragging]:cursor-grabbing">
 					<ol className="flex">
-						{TESTIMONIALS.map((testimonial) => {
+						{testimonials.map((testimonial) => {
 							const { id, image, name, position, text } = testimonial;
 
 							return (
@@ -83,41 +100,3 @@ export function TestimonialCarousel() {
 		</TestimonialEmblaCarouselSection>
 	);
 }
-
-const TESTIMONIALS = [
-	{
-		id: 1,
-		image: ryanAvatarImage,
-		name: "Ryan McInerney",
-		position: "CEO, Bluematter",
-		text: "We've engaged Timeless many times over several years and I have never had anything but the highest quality work done by the most professional people, on time and with excellent communication.",
-	},
-	{
-		id: 2,
-		image: vasanthAvatarImage,
-		name: "Vasanth Kamath",
-		position: "Founder & CEO, Smallcase",
-		text: "We've engaged Timeless for our product design at smallcase, and have super delighted with the work done. Very smart, professional & flexible. Would love to collaborate again.",
-	},
-	{
-		id: 3,
-		image: justinAvatarImage,
-		name: "Justin Young",
-		position: "Marketing Director, Slavic401k",
-		text: "Timeless delivers the highest quality user experiences on time and on budget. Sandeep's team is second to none!",
-	},
-	{
-		id: 4,
-		image: mikaelAvatarImage,
-		name: "Mikael Uusitalo",
-		position: "CEO, Thrillism",
-		text: "We have worked with Timeless multiple times over the years and they have always delivered exceptionally well with a keen eye for detail",
-	},
-	{
-		id: 5,
-		image: gregAvatarImage,
-		name: "Greg Osuri",
-		position: "CEO, Overclock Labs",
-		text: "We hired Timeless for helping with our product needs. The result was beyond good and exceeded my exceptions.",
-	},
-];

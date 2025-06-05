@@ -9,16 +9,26 @@ import { StyledNextLink } from "@/components/link/StyledLink";
 import { WhatWeDoSection } from "@/components/WhatWeDoSection";
 import type { IconName } from "@/icons/icon-name";
 import { generatePageMetadata } from "@/utils/metadataUtils";
-import { siteConfig } from "@/utils/siteConfig";
+import {
+	createSchemaScript,
+	getOrganizationSchema,
+	getServiceSchema,
+	getWebPageSchema,
+} from "@/utils/schemaUtils";
+import { BASE_URL } from "@/utils/siteConfig";
 
 import EvolveArrowImage from "../../images/process-page/evolve-arrow.png";
 import MeasureArrowImage from "../../images/process-page/measure-arrow.png";
 import ProcessCoverImage from "../../images/process-page/process-cover.png";
 
+const PROCESS_PAGE_DESCRIPTION = "Data driven design decisions";
+const PROCESS_PAGE_TITLE = "Process";
+const PROCESS_PAGE_URL = `${BASE_URL}/process`;
+
 export const metadata = generatePageMetadata({
-	description: "Data driven design decisions",
-	title: "Process",
-	url: `${siteConfig.url}/process`,
+	description: PROCESS_PAGE_DESCRIPTION,
+	title: PROCESS_PAGE_TITLE,
+	url: PROCESS_PAGE_URL,
 });
 
 const HERO_SECTION_ID = "process__section--hero-heading";
@@ -149,6 +159,20 @@ export default function Page() {
 
 				<WhatWeDoSection />
 			</main>
+
+			{/* Schema markup for SEO */}
+			<script {...createSchemaScript(getOrganizationSchema())} />
+			<script {...createSchemaScript(getServiceSchema())} />
+			<script
+				{...createSchemaScript(
+					getWebPageSchema({
+						description: PROCESS_PAGE_DESCRIPTION,
+						title: PROCESS_PAGE_TITLE,
+						url: PROCESS_PAGE_URL,
+					}),
+				)}
+			/>
+
 			<Footer
 				desc="Get in touch with us"
 				href="/contact"

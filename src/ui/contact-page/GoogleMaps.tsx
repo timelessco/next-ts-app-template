@@ -9,16 +9,18 @@ import {
 import { useMediaQuery } from "@react-hookz/web";
 
 import { Spinner } from "@/components/Spinner";
+import { COMPANY_GEO, COMPANY_INFO } from "@/utils/siteConfig";
 
 export function GoogleMapComponent() {
 	const isLargeScreen = useMediaQuery("(min-width: 1024px)");
-	const center = useMemo(
-		() =>
-			isLargeScreen
-				? { lat: 12.991, lng: 80.222 }
-				: { lat: 12.991, lng: 80.219 },
-		[isLargeScreen],
-	);
+	const center = useMemo(() => {
+		const lat = Number.parseFloat(COMPANY_GEO.latitude);
+		const lng = Number.parseFloat(COMPANY_GEO.longitude);
+
+		return isLargeScreen
+			? { lat, lng: lng + 0.003 } // Slight offset for large screens
+			: { lat, lng };
+	}, [isLargeScreen]);
 
 	const libraries = useMemo<Libraries>(() => ["marker"], []);
 	const { isLoaded, loadError } = useLoadScript({
@@ -34,8 +36,11 @@ export function GoogleMapComponent() {
 				url: "/svg/marker.svg",
 			},
 			map,
-			position: { lat: 12.991_479, lng: 80.219_008 },
-			title: "Timeless!",
+			position: {
+				lat: Number.parseFloat(COMPANY_GEO.latitude),
+				lng: Number.parseFloat(COMPANY_GEO.longitude),
+			},
+			title: `${COMPANY_INFO.name}!`,
 		});
 
 		// TODO: Use advanced marker instead of marker with custom map ID
@@ -48,8 +53,11 @@ export function GoogleMapComponent() {
 		// new google.maps.marker.AdvancedMarkerElement({
 		// 	content: markerIcon,
 		// 	map,
-		// 	position: { lat: 12.991_479, lng: 80.219_008 },
-		// 	title: "Timeless!",
+		// 	position: {
+		//		lat: Number.parseFloat(COMPANY_GEO.latitude),
+		//		lng: Number.parseFloat(COMPANY_GEO.longitude)
+		//	},
+		// 	title: `${COMPANY_INFO.name}!`,
 		// });
 	}, []);
 

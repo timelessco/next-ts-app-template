@@ -8,7 +8,10 @@
 			"WebFetch(domain:github.com)",
 			"mcp__desktop-commander__search_code",
 			"Bash(rg:*)",
-			"mcp__git__git_diff"
+			"mcp__git__git_diff",
+			"WebFetch(domain:www.npmjs.com)",
+			"Bash(pnpm add:*)",
+			"mcp__ide__getDiagnostics"
 		],
 		"deny": []
 	}

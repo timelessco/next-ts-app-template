@@ -5,7 +5,13 @@ import { AboutPageIconGradients } from "@/components/IconGradients";
 import { NextImage } from "@/components/image/NextImage";
 import { WhatWeDoSection } from "@/components/WhatWeDoSection";
 import { generatePageMetadata } from "@/utils/metadataUtils";
-import { siteConfig } from "@/utils/siteConfig";
+import {
+	createSchemaScript,
+	getAboutPageSchema,
+	getOrganizationSchema,
+	getWebPageSchema,
+} from "@/utils/schemaUtils";
+import { BASE_URL } from "@/utils/siteConfig";
 
 import aboutHeroCoverImage from "../../images/about-page/about-hero-cover.jpg";
 import AnandImage from "../../images/about-page/anand.png";
@@ -24,10 +30,15 @@ import VigneshImage from "../../images/about-page/vignesh.png";
 import YuvarajImage from "../../images/about-page/yuvaraj.png";
 import ZaidImage from "../../images/about-page/zaid.png";
 
+const ABOUT_PAGE_DESCRIPTION =
+	"Solving business problems with user-centric design.";
+const ABOUT_PAGE_TITLE = "About Us";
+const ABOUT_PAGE_URL = `${BASE_URL}/about`;
+
 export const metadata = generatePageMetadata({
-	description: "Solving business problems with user-centric design.",
-	title: "About Us",
-	url: `${siteConfig.url}/about`,
+	description: ABOUT_PAGE_DESCRIPTION,
+	title: ABOUT_PAGE_TITLE,
+	url: ABOUT_PAGE_URL,
 });
 
 const HERO_SECTION_ID = "about__section--hero-cover";
@@ -130,6 +141,20 @@ export default function Page() {
 					</Container>
 				</section>
 			</main>
+
+			{/* Schema markup for SEO */}
+			<script {...createSchemaScript(getOrganizationSchema())} />
+			<script {...createSchemaScript(getAboutPageSchema())} />
+			<script
+				{...createSchemaScript(
+					getWebPageSchema({
+						description: ABOUT_PAGE_DESCRIPTION,
+						title: ABOUT_PAGE_TITLE,
+						url: ABOUT_PAGE_URL,
+					}),
+				)}
+			/>
+
 			<Footer
 				desc="Look into our process"
 				href="/process"

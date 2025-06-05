@@ -1,15 +1,15 @@
 import { type MetadataRoute } from "next";
 
-import { siteConfig } from "@/utils/siteConfig";
+import { BASE_URL } from "@/utils/siteConfig";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	// "" - HomePage
-	const routes = [""];
+	const routes = ["", "about", "contact", "process"];
 	const routesInSitemapFormat = routes.map((route) => {
 		return {
 			changeFrequency: "yearly",
 			lastModified: new Date().toISOString().split("T")[0],
-			url: `${siteConfig.url}/${route}`,
+			url: `${BASE_URL}/${route}`,
 		} satisfies MetadataRoute.Sitemap[0];
 	});
 
