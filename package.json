@@ -139,7 +139,7 @@
 		"glob": "11.0.2",
 		"husky": "9.1.7",
 		"is-ci": "4.1.0",
-		"knip": "5.60.0",
+		"knip": "5.60.1",
 		"lint-staged": "16.1.0",
 		"markdownlint": "0.38.0",
 		"markdownlint-cli2": "0.18.1",
