@@ -1,0 +1,5 @@
+- Add GTM - Google Tag Manager
+- Add Analytics
+- Add Google Search Console
+- Add BlurHash to images
+- Properly handle image sizes

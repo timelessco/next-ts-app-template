@@ -97,6 +97,7 @@ export default function Home() {
 								<div className="mx-auto max-w-[486px] lg:pt-14">
 									<NextImage
 										alt={atlanticPayroll.name}
+										fetchPriority="high"
 										priority
 										src={PORTFOLIO_IMAGES[atlanticPayroll.id]}
 									/>

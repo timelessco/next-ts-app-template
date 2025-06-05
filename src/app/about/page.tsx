@@ -52,7 +52,12 @@ export default function Page() {
 					aria-labelledby={HERO_SECTION_ID}
 					className="relative bg-[#0E0E0F] pt-30 pb-12 text-center lg:pb-45 lg:text-left"
 				>
-					<NextImage alt="TIMELESS OFFICE" priority src={aboutHeroCoverImage} />
+					<NextImage
+						alt="TIMELESS OFFICE"
+						fetchPriority="high"
+						priority
+						src={aboutHeroCoverImage}
+					/>
 					<Container className="flex flex-wrap justify-center text-white lg:-mt-16 lg:flex-row lg:flex-nowrap lg:justify-between">
 						<h1
 							className="mb-2 max-w-120 px-[15px] pb-4 text-[2.5rem] leading-[1.05] font-light tracking-[-0.6px] lg:pb-0 lg:text-[3.625rem]"

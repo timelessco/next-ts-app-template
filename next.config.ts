@@ -40,6 +40,10 @@ const nextConfig: NextConfig = {
 		},
 	}),
 
+	experimental: {
+		optimizePackageImports: ["@ariakit/react"],
+	},
+
 	// Enable the below option only when you are debugging sourceamp
 	productionBrowserSourceMaps: process.env.SOURCEMAP === "true",
 	serverExternalPackages: ["@sentry/nextjs"],

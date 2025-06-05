@@ -62,6 +62,7 @@ export default function Page() {
 					<NextImage
 						alt="process cover image"
 						className="mx-auto"
+						fetchPriority="high"
 						priority
 						src={ProcessCoverImage}
 					/>
