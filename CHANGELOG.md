@@ -1,5 +1,234 @@
 # Changelog
 
+## 0.2.0 (2025-06-05)
+
+### 👀 Notable Changes
+
+
+
+#### `config`- add package import optimization and update image fetch priority 
+
+- Introduce optimization for package imports for @ariakit/react
+- Update NextImage to include fetchPriority="high" for improved loading performance
+- move schema-dts dependency in package.json
+
+
+Introduced in: [`ec35c50`](https://github.com/timelessco/timelessco-nextjs/commit/ec35c506b71846409d2d1cccba4abcb6eb2de690)
+
+
+
+
+#### `seo`- ✨ enhance SEO with structured data & centralized config 
+
+- Integrate structured data scripts for SEO improvement across pages
+- Centralize site configuration for consistency and maintainability
+- Add schema-dts dependency for structured data support
+- Refactor to use constants for site info, improving DRY principle
+
+
+Introduced in: [`19ff798`](https://github.com/timelessco/timelessco-nextjs/commit/19ff7984f49b81202aef82b45fe25ab7e92269d9)
+
+
+
+
+#### `about-page`- done with the about page (#51) 
+
+Co-authored-by: Navin Moorthy <navin007.a@gmail.com>
+
+
+Introduced in: [`e3b1e92`](https://github.com/timelessco/timelessco-nextjs/commit/e3b1e92318f544ffc73cd29c3ef5ca405a21a638)
+
+
+
+
+#### `brand-fetch`- ✨ fetch specific brand in fetchActiveBrands 
+
+- Implement logic to retrieve a specific brand based on criteria
+- Optimize data retrieval process for improved performance
+- Update related tests to ensure accuracy of brand fetching
+
+
+Introduced in: [`6bfbbfe`](https://github.com/timelessco/timelessco-nextjs/commit/6bfbbfeaa0055ee29018ed58dc209b13beb425be)
+
+
+
+
+#### `process-page`- ✨ add ProcessPageIconGradients component 
+
+- Introduce ProcessPageIconGradients to enhance icon gradients
+- Improve visual consistency across different browsers, especially Safari
+- Integrate the new component into the process page layout
+
+
+Introduced in: [`9cb9e62`](https://github.com/timelessco/timelessco-nextjs/commit/9cb9e625707e5b1103b8e073fbdeeb614bd68f18)
+
+
+
+
+#### `contact-page`- created the contact page (#52) 
+
+Co-authored-by: Navin Moorthy <navin007.a@gmail.com>
+
+
+Introduced in: [`edb1831`](https://github.com/timelessco/timelessco-nextjs/commit/edb1831db5f29c36d704da1f170006d067e3892e)
+
+
+
+
+#### `process-page`- done with process page (#48) 
+
+Co-authored-by: Navin Moorthy <navin007.a@gmail.com>
+
+
+Introduced in: [`05266d0`](https://github.com/timelessco/timelessco-nextjs/commit/05266d028da7f4a2d51f179302c2fad9568d9483)
+
+
+
+
+#### `footer`- add Footer component with link and description (#40) 
+
+Co-authored-by: widejoy <rogerantony40@gmail.com>
+
+
+Introduced in: [`ff5e35c`](https://github.com/timelessco/timelessco-nextjs/commit/ff5e35c3d86cc0ccec385c086bec438027f119f0)
+
+
+
+
+#### `word-page-cards`- done with all the  cards in the work page (#38) 
+
+Co-authored-by: Navin Moorthy <navin007.a@gmail.com>
+
+
+Introduced in: [`97cfaf3`](https://github.com/timelessco/timelessco-nextjs/commit/97cfaf3fd09f1df3ea2e949e1ee8f017d56073ac)
+
+
+
+
+#### `hero-section`- create the hero section and animation it on initial (#34) 
+
+Co-authored-by: widejoy <rogerantony40@gmail.com>
+
+
+Introduced in: [`c06ee22`](https://github.com/timelessco/timelessco-nextjs/commit/c06ee225db26d9fb2be7d065590b11018d5adaa7)
+
+
+
+
+#### `Header`- create Header in Root Layout (#32) 
+
+Co-authored-by: widejoy <rogerantony40@gmail.com>
+
+
+Introduced in: [`8e99339`](https://github.com/timelessco/timelessco-nextjs/commit/8e993391544dd21e870096cf75273531621cecf0)
+
+
+
+
+
+### 📌 Other Notable Changes
+
+
+#### `map`- ♻️ migrate to @vis.gl/react-google-maps 
+
+- Replace @react-google-maps/api with @vis.gl/react-google-maps
+- Introduce a loading skeleton for better user experience during map loading
+- Add environment variable support for custom Google Map IDs
+- Update .gitignore to exclude local Claude settings
+- Extend cspell.json with new terms
+
+
+Introduced in: [`761e375`](https://github.com/timelessco/timelessco-nextjs/commit/761e37558fea1431755d746cf72f2ae05e4daf37)
+
+
+
+
+#### `Icon`- ♻️ improve accessibility and icon handling 
+
+- Update IconProps to make ariaLabel and name optional
+- Enhance rendering logic to handle missing icon names
+- Adjust StyledLink to include additional focus-visible styles
+
+
+Introduced in: [`9bb1430`](https://github.com/timelessco/timelessco-nextjs/commit/9bb14306e01ba529ef4861e2cca4f0f04314a980)
+
+
+
+
+
+### 🗃️ Commits
+
+
+#### ⭐ New Features
+
+- **`about-page:`** done with the about page ([#51](https://github.com/timelessco/timelessco-nextjs/issues/51)) - [e3b1e92](https://github.com/timelessco/timelessco-nextjs/commit/e3b1e92318f544ffc73cd29c3ef5ca405a21a638) by @widejoy
+
+- **`brand-fetch:`** ✨ fetch specific brand in fetchActiveBrands - [6bfbbfe](https://github.com/timelessco/timelessco-nextjs/commit/6bfbbfeaa0055ee29018ed58dc209b13beb425be) by @navin-moorthy
+
+- **`config:`** add package import optimization and update image fetch priority - [ec35c50](https://github.com/timelessco/timelessco-nextjs/commit/ec35c506b71846409d2d1cccba4abcb6eb2de690) by @navin-moorthy
+
+- **`contact-page:`** created the contact page ([#52](https://github.com/timelessco/timelessco-nextjs/issues/52)) - [edb1831](https://github.com/timelessco/timelessco-nextjs/commit/edb1831db5f29c36d704da1f170006d067e3892e) by @widejoy
+
+- **`contributors:`** add rogerantony to contributors list and update badge count - [cc218fa](https://github.com/timelessco/timelessco-nextjs/commit/cc218fab88601a53074b29bf4475f29b5ffaebb0) by @navin-moorthy
+
+- **`footer:`** add Footer component with link and description ([#40](https://github.com/timelessco/timelessco-nextjs/issues/40)) - [ff5e35c](https://github.com/timelessco/timelessco-nextjs/commit/ff5e35c3d86cc0ccec385c086bec438027f119f0) by @navin-moorthy
+
+- **`header:`** animated header onscroll ([#37](https://github.com/timelessco/timelessco-nextjs/issues/37)) - [ef82e2f](https://github.com/timelessco/timelessco-nextjs/commit/ef82e2f7102bafa7fc90311b06a9ce8b6cfd3395) by @widejoy
+
+- **`Header:`** create Header in Root Layout ([#32](https://github.com/timelessco/timelessco-nextjs/issues/32)) - [8e99339](https://github.com/timelessco/timelessco-nextjs/commit/8e993391544dd21e870096cf75273531621cecf0) by @navin-moorthy
+
+- **`hero-section:`** :zap: done with the hero section image ([#35](https://github.com/timelessco/timelessco-nextjs/issues/35)) - [e90affc](https://github.com/timelessco/timelessco-nextjs/commit/e90affc5bb24ff23cfb74767e961009f20f02d6b) by @widejoy
+
+- **`hero-section:`** create the hero section and animation it on initial ([#34](https://github.com/timelessco/timelessco-nextjs/issues/34)) - [c06ee22](https://github.com/timelessco/timelessco-nextjs/commit/c06ee225db26d9fb2be7d065590b11018d5adaa7) by @navin-moorthy
+
+- **`process-page:`** ✨ add ProcessPageIconGradients component - [9cb9e62](https://github.com/timelessco/timelessco-nextjs/commit/9cb9e625707e5b1103b8e073fbdeeb614bd68f18) by @navin-moorthy
+
+- **`process-page:`** done with process page ([#48](https://github.com/timelessco/timelessco-nextjs/issues/48)) - [05266d0](https://github.com/timelessco/timelessco-nextjs/commit/05266d028da7f4a2d51f179302c2fad9568d9483) by @widejoy
+
+- **`seo:`** ✨ enhance SEO with structured data & centralized config - [19ff798](https://github.com/timelessco/timelessco-nextjs/commit/19ff7984f49b81202aef82b45fe25ab7e92269d9) by @navin-moorthy
+
+- **`testimonial-carousel:`** done with the testimonial carousel ([#39](https://github.com/timelessco/timelessco-nextjs/issues/39)) - [706a34f](https://github.com/timelessco/timelessco-nextjs/commit/706a34f888ee0105bde39650d23fb749f149dbfd) by @widejoy
+
+- **`word-page-cards:`** done with all the  cards in the work page ([#38](https://github.com/timelessco/timelessco-nextjs/issues/38)) - [97cfaf3](https://github.com/timelessco/timelessco-nextjs/commit/97cfaf3fd09f1df3ea2e949e1ee8f017d56073ac) by @widejoy
+
+
+
+#### 🐞 Bug Fixes
+
+- **`page:`** add rounded corners to NextImage component for improved aesthetics - [027bc8f](https://github.com/timelessco/timelessco-nextjs/commit/027bc8f18d40bc9f3b4576ac665a2e821fc257b0) by @navin-moorthy
+
+- **`process-page:`** update ProcessCoverImage format from PNG to JPG - [56fd69a](https://github.com/timelessco/timelessco-nextjs/commit/56fd69a14e6691f885e629a0166b81923f2d76aa) by @navin-moorthy
+
+
+
+#### ♻️  Code Refactoring
+
+- **`Icon:`** ♻️ improve accessibility and icon handling - [9bb1430](https://github.com/timelessco/timelessco-nextjs/commit/9bb14306e01ba529ef4861e2cca4f0f04314a980) by @navin-moorthy
+
+- **`map:`** ♻️ migrate to [@vis](https://github.com/vis).gl/react-google-maps - [761e375](https://github.com/timelessco/timelessco-nextjs/commit/761e37558fea1431755d746cf72f2ae05e4daf37) by @navin-moorthy
+
+
+
+#### 🔨 Maintenance Updates
+
+- **`deps:`** 🧹 remove 'motion' dependency - [84e5164](https://github.com/timelessco/timelessco-nextjs/commit/84e516444ff782c6abea4dcc1d6da3c5ea1a9030) by @navin-moorthy
+
+- **`deps:`** 🧹 update dependencies to latest versions - [252c6cc](https://github.com/timelessco/timelessco-nextjs/commit/252c6cc7a1b5d94c2be9c3e0235b91743889e55a) by @navin-moorthy
+
+- **`deps:`** 🧹 update dependencies to latest versions - [24e966b](https://github.com/timelessco/timelessco-nextjs/commit/24e966ba1ab7773f3ada189e5e7f0ec5729ce61c) by @navin-moorthy
+
+- **`deps:`** 🧹 update dependencies to latest versions ([#54](https://github.com/timelessco/timelessco-nextjs/issues/54)) - [9e163fe](https://github.com/timelessco/timelessco-nextjs/commit/9e163fea574e3e221a953ff3cbc7fd3c62049f32) by @navin-moorthy
+
+- **`deps:`** 🧹 update Node.js engine requirement - [d1a4ab9](https://github.com/timelessco/timelessco-nextjs/commit/d1a4ab975bd00ee02fcfffd18b332841c4d4517d) by @navin-moorthy
+
+- **`deps:`** update all dependencies ([#53](https://github.com/timelessco/timelessco-nextjs/issues/53)) - [e7af63d](https://github.com/timelessco/timelessco-nextjs/commit/e7af63db5dbb51ad9c9c4eb1d223397cd622b3aa) by @renovate[bot]
+
+- **`deps:`** update dependencies including sentry, motion, eslint plugins and pnpm - [2cf0b97](https://github.com/timelessco/timelessco-nextjs/commit/2cf0b97f3ba0db9a27261ae2a3b59a8550e45a17) by @navin-moorthy
+
+- **`images:`** update about-hero-cover image to new JPG format - [12b743f](https://github.com/timelessco/timelessco-nextjs/commit/12b743f5f0f576f148f0662a30f7345490e975ba) by @navin-moorthy
+
+- **`seo:`** 🧹 update project name from "Next TS App" to "Timeless Co" - [afbe51f](https://github.com/timelessco/timelessco-nextjs/commit/afbe51fe30d7ca18ccf153a50a977275faa6ecf2) by @navin-moorthy
+
 ## 0.1.0 (2025-03-26)
 
 ### 👀 Notable Changes
