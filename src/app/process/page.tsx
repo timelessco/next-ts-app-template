@@ -19,7 +19,7 @@ import { BASE_URL } from "@/utils/siteConfig";
 
 import EvolveArrowImage from "../../images/process-page/evolve-arrow.png";
 import MeasureArrowImage from "../../images/process-page/measure-arrow.png";
-import ProcessCoverImage from "../../images/process-page/process-cover.png";
+import ProcessCoverImage from "../../images/process-page/process-cover.jpg";
 
 const PROCESS_PAGE_DESCRIPTION = "Data driven design decisions";
 const PROCESS_PAGE_TITLE = "Process";
