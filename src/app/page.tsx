@@ -154,7 +154,7 @@ export default function Home() {
 						>
 							<NextImage
 								alt={bluematter.name}
-								className="object-cover object-top-right lg:object-center"
+								className="rounded object-cover object-top-right lg:object-center"
 								fill
 								src={PORTFOLIO_IMAGES[bluematter.id]}
 							/>
