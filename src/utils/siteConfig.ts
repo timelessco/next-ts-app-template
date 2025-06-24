@@ -4,8 +4,8 @@ export const SITE_EMAIL = "hello@timeless.co";
 export const SITE_PHONE_NUMBER = "+91 9688888222";
 export const SITE_AUTHOR = "Timeless Team";
 export const SITE_SOCIAL_MEDIA_LINKS = {
-	github: "https://github.com/next-ts-app",
-	twitter: "https://twitter.com/next-ts-app",
+	github: "https://github.com/timelessco",
+	twitter: "https://twitter.com/timelessco",
 } as const;
 export const SITE_SOCIAL_MEDIA_IDS = {
 	twitter: "@timelessco",
