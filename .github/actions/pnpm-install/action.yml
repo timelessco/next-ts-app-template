@@ -1,0 +1,42 @@
+# #######################################################################################
+# "pnpm install" composite action                                                       #
+# --------------------------------------------------------------------------------------#
+#                                                                                       #
+# Usage in workflows steps:                                                             #
+#                                                                                       #
+#      - name: 📥 PNPM install                                                          #
+#        uses: ./.github/actions/pnpm-install                                           #
+#                                                                                       #
+# Reference:                                                                            #
+#   - latest: https://github.com/pnpm/action-setup#use-cache-to-reduce-installation-time#
+# #######################################################################################
+
+description: Run pnpm install with cache enabled
+
+name: PNPM install
+
+runs:
+  steps:
+    - name: Configure Git
+      uses: ./.github/actions/git-config
+
+    - name: Install pnpm
+      uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4
+      with:
+        run_install: false
+
+    - name: Install Node.js
+      uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+      with:
+        cache: pnpm
+        node-version-file: .nvmrc
+
+    - env:
+        # Other environment variables
+        HUSKY: "0" # By default do not run HUSKY install
+      name: Install dependencies
+      run: pnpm install --frozen-lockfile --prefer-offline
+      shell: bash
+      working-directory: ${{ inputs.cwd }}
+
+  using: composite

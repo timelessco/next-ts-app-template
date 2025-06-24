@@ -1,0 +1,79 @@
+############################
+# OS X
+############################
+
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+
+############################
+# Environment Variables
+############################
+
+.env
+
+############################
+# Package Manager
+############################
+
+# PNPM
+node_modules
+
+############################
+# Builders
+############################
+
+# Turbo Repo
+.turbo
+
+############################
+# Next.js
+############################
+
+.next
+
+# Next PWA
+public/sw*
+public/swe-worker*
+public/workbox-*
+public/fallback-*
+
+# Next Sitemap
+public/robots.txt
+public/sitemap.xml
+public/sitemap-0.xml
+
+############################
+# Extras
+############################
+
+# Sentry
+.sentryclirc
+.env.sentry-build-plugin
+
+# TypeScript cache
+*.tsbuildinfo
+
+############################
+# Locals
+############################
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Prettier cache
+.prettiercache
+
+# Eslint cache
+.eslintcache
+
+# Stylelint cache
+.stylelintcache
+
+# Cspell cache
+.cspellcache
+
+# Extras(if any)
