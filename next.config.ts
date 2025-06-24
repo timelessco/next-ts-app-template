@@ -18,6 +18,10 @@ const nextConfig: NextConfig = {
 	// https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode
 	// reactStrictMode: false, // default: true
 
+	images: {
+		formats: ["image/avif", "image/webp"],
+	},
+
 	// Turn on fetch and it's data cache logging when debugging rsc fetches
 	logging: {
 		fetches: {
@@ -38,7 +42,7 @@ const nextConfig: NextConfig = {
 
 	// Enable the below option only when you are debugging sourceamp
 	productionBrowserSourceMaps: process.env.SOURCEMAP === "true",
-	serverExternalPackages: ["@sentry/nextjs", "@sentry/core"],
+	serverExternalPackages: ["@sentry/nextjs"],
 };
 
 const isDevOrLocal =

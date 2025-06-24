@@ -1,15 +1,19 @@
 import { type MetadataRoute } from "next";
 
-import { siteConfig } from "@/utils/siteConfig";
+import { BASE_URL } from "@/utils/siteConfig";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	// "" - HomePage
-	const routes = [""];
-	const routesInSitemapFormat = routes.map((route) => {
+	// Define routes with their specific priorities and change frequencies
+	const routeConfig = [
+		{ changeFrequency: "weekly" as const, priority: 1, route: "" }, // Homepage
+	];
+
+	const routesInSitemapFormat = routeConfig.map((config) => {
 		return {
-			changeFrequency: "yearly",
+			changeFrequency: config.changeFrequency,
 			lastModified: new Date().toISOString().split("T")[0],
-			url: `${siteConfig.url}/${route}`,
+			priority: config.priority,
+			url: `${BASE_URL}/${config.route}`,
 		} satisfies MetadataRoute.Sitemap[0];
 	});
 

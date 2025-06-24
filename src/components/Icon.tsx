@@ -17,7 +17,7 @@ export interface IconProps extends ComponentProps<"svg"> {
 // For accessibility - https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/
 // Default: aria hidden props are used as the majority of icons are decorative
 export function Icon(props: IconProps) {
-	const { ariaLabel, children, className, name, ...rest } = props;
+	const { "aria-label": ariaLabel, children, className, name, ...rest } = props;
 	const ariaLabelProps: AriaHiddenProps | AriaLabelProps = isNonNullable(
 		ariaLabel,
 	)

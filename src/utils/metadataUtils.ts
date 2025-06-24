@@ -4,9 +4,14 @@
 import { type Metadata, type Viewport } from "next";
 
 import { splashScreens } from "@/ui/root-layout/splashScreens";
-import { siteConfig } from "@/utils/siteConfig";
-
-const { author, description, links, name, socials, title, url } = siteConfig;
+import {
+	BASE_URL,
+	SERVICES_OFFERED,
+	SITE_AUTHOR,
+	SITE_DESCRIPTION,
+	SITE_NAME,
+	SITE_SOCIAL_MEDIA_IDS,
+} from "@/utils/siteConfig";
 
 export const rootViewport = {
 	colorScheme: "dark light",
@@ -22,19 +27,19 @@ export const sharedMetadata = {
 		// https://progressier.com/pwa-icons-and-ios-splash-screen-generator
 		startupImage: splashScreens,
 		statusBarStyle: "default",
-		title: name,
+		title: SITE_NAME,
 	},
-	applicationName: name,
-	authors: [{ name: author, url: links.timeless }],
-	category: "entertainment",
-	creator: author,
+	applicationName: SITE_NAME,
+	authors: [{ name: SITE_AUTHOR, url: BASE_URL }],
+	category: "technology",
+	creator: SITE_AUTHOR,
 	formatDetection: {
 		address: false,
 		email: false,
 		telephone: false,
 	},
 	generator: "Next.js",
-	keywords: ["react", "typescript", "nextjs", "tailwindcss"],
+	keywords: SERVICES_OFFERED.map((service) => service.toLowerCase()),
 	manifest: `/manifest.webmanifest`,
 	// https://github.com/vercel/next.js/issues/74524
 	// https://stackoverflow.com/a/79380945/10858781
@@ -67,54 +72,55 @@ export function generatePageMetadata(
 	props: Partial<GeneratePageMetadataProps>,
 ): Metadata {
 	const {
-		description: pageDescription = description,
+		description,
 		imageHeight = 1260,
 		imageUrl = "/opengraph-image.jpg",
 		imageWidth = 2400,
-		title: pageTitle = title,
-		url: pageUrl = url,
+		title,
+		url: pageUrl = BASE_URL,
 	} = props;
+	const pageTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
 
 	return {
 		...sharedMetadata,
 		alternates: {
 			canonical: pageUrl,
 		},
-		description: pageDescription,
-		metadataBase: new URL(url),
+		description,
+		metadataBase: new URL(BASE_URL),
 		openGraph: {
-			description: pageDescription ?? description,
+			description: description ?? SITE_DESCRIPTION,
 			images: [
 				{
-					alt: pageTitle,
+					alt: title ?? SITE_NAME,
 					height: imageHeight,
 					url: imageUrl,
 					width: imageWidth,
 				},
 			],
 			locale: "en-US",
-			siteName: name,
-			title: `${pageTitle} | ${name}`,
+			siteName: SITE_NAME,
+			title: pageTitle,
 			type: "website",
 			url: pageUrl,
 		},
 		title: {
-			default: pageTitle,
-			template: `%s | ${name}`,
+			default: title ?? SITE_NAME,
+			template: `%s | ${SITE_NAME}`,
 		},
 		twitter: {
 			card: "summary_large_image",
-			creator: socials.twitter,
-			description: pageDescription ?? description,
+			creator: SITE_SOCIAL_MEDIA_IDS.twitter,
+			description: description ?? SITE_DESCRIPTION,
 			images: [
 				{
-					alt: pageTitle,
+					alt: title ?? SITE_NAME,
 					height: imageHeight,
 					url: imageUrl,
 					width: imageWidth,
 				},
 			],
-			title: `${pageTitle} | ${name}`,
+			title: pageTitle,
 		},
 	};
 }

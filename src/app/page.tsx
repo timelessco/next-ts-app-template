@@ -1,10 +1,9 @@
 import { Icon } from "@/components/Icon";
 import { StyledNextLink } from "@/components/link/StyledLink";
-import { Presentation } from "@/components/Presentation";
 
 export default function Home() {
 	return (
-		<Presentation className="grid min-h-dvh grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 sm:p-20">
+		<div className="grid min-h-dvh grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 sm:p-20">
 			<header className="row-start-1">
 				<nav>
 					<StyledNextLink
@@ -43,6 +42,6 @@ export default function Home() {
 					Go to timeless.co →
 				</StyledNextLink>
 			</footer>
-		</Presentation>
+		</div>
 	);
 }
