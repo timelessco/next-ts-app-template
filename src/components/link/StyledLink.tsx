@@ -8,8 +8,6 @@ import { Command } from "@ariakit/react";
 import { isNullable } from "@/utils/assertionUtils";
 import { cn } from "@/utils/index";
 
-import { Presentation } from "../Presentation";
-
 export interface StyledNextLinkProps
 	extends AriaCurrentLinkProps,
 		ImageFocusRingProps {}
@@ -20,11 +18,11 @@ export function StyledNextLink(props: StyledNextLinkProps) {
 	return (
 		<Command
 			className={cn(
-				hasImageChildren && "group",
-				className,
+				hasImageChildren && "group transition-all",
 				"cursor-pointer outline-hidden",
+				className,
 				!hasImageChildren &&
-					"data-focus-visible:ring-2 data-focus-visible:ring-[#171717]",
+					"data-focus-visible:ring-2 data-focus-visible:ring-[#171717] data-focus-visible:ring-offset-2",
 			)}
 			render={<AriaCurrentLink {...rest} />}
 		>
@@ -33,6 +31,7 @@ export function StyledNextLink(props: StyledNextLinkProps) {
 		</Command>
 	);
 }
+
 type AriaCurrentLinkProps = ComponentProps<typeof Link>;
 
 function AriaCurrentLink(props: AriaCurrentLinkProps) {
@@ -62,6 +61,6 @@ function ImageFocusRing(props: ImageFocusRingProps) {
 	}
 
 	return (
-		<Presentation className="absolute inset-0 size-full ring-inset group-data-focus-visible:ring-2 group-data-focus-visible:ring-[#171717]" />
+		<div className="absolute inset-0 size-full transition-all ring-inset group-data-focus-visible:ring-2 group-data-focus-visible:ring-[#171717]" />
 	);
 }

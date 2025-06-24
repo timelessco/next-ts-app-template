@@ -19,6 +19,10 @@ const nextConfig: NextConfig = {
 	// reactStrictMode: false, // default: true
 
 	// Turn on fetch and it's data cache logging when debugging rsc fetches
+	images: {
+		formats: ["image/avif", "image/webp"],
+	},
+
 	logging: {
 		fetches: {
 			fullUrl: true,
@@ -36,9 +40,13 @@ const nextConfig: NextConfig = {
 		},
 	}),
 
+	experimental: {
+		optimizePackageImports: ["@ariakit/react"],
+	},
+
 	// Enable the below option only when you are debugging sourceamp
 	productionBrowserSourceMaps: process.env.SOURCEMAP === "true",
-	serverExternalPackages: ["@sentry/nextjs", "@sentry/core"],
+	serverExternalPackages: ["@sentry/nextjs"],
 };
 
 const isDevOrLocal =

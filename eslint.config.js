@@ -3,8 +3,11 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 
+import { fileURLToPath } from "node:url";
+
 import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
 import react from "@eslint-react/eslint-plugin";
+import { includeIgnoreFile } from "@eslint/compat";
 import js from "@eslint/js";
 import next from "@next/eslint-plugin-next";
 import tsParser from "@typescript-eslint/parser";
@@ -12,7 +15,6 @@ import importPlugin from "eslint-plugin-import-x";
 import jsdoc from "eslint-plugin-jsdoc";
 import jsonc from "eslint-plugin-jsonc";
 import jsxA11y from "eslint-plugin-jsx-a11y";
-import markdown from "eslint-plugin-markdown";
 import node from "eslint-plugin-n";
 import packageJson from "eslint-plugin-package-json";
 import perfectionist from "eslint-plugin-perfectionist";
@@ -23,15 +25,13 @@ import unicorn from "eslint-plugin-unicorn";
 import yml from "eslint-plugin-yml";
 import tseslint from "typescript-eslint";
 
+const gitignorePath = fileURLToPath(new URL(".gitignore", import.meta.url));
+
 export default tseslint.config(
+	includeIgnoreFile(gitignorePath, "Imported .gitignore patterns"),
 	{
 		ignores: [
-			// Package Manager
-			"node_modules",
 			"pnpm-lock.yaml",
-			// Extras(if any)
-			".turbo/**/*",
-			".next/**/*",
 			"public/**/*",
 			"CHANGELOG.md",
 			"scripts/release-it/**/*",
@@ -51,7 +51,6 @@ export default tseslint.config(
 		},
 	},
 	regexp.configs["flat/recommended"],
-	js.configs.recommended,
 	{
 		extends: [node.configs["flat/recommended-script"]],
 		ignores: ["src/**/*"],
@@ -59,6 +58,7 @@ export default tseslint.config(
 			"n/no-missing-import": "off",
 		},
 	},
+	js.configs.recommended,
 	{
 		extends: [
 			importPlugin.flatConfigs.recommended,
@@ -154,10 +154,6 @@ export default tseslint.config(
 		},
 	},
 	{
-		extends: [tseslint.configs.disableTypeChecked],
-		files: ["**/*.md/*.{cjs,js,jsx,ts,tsx}"],
-	},
-	{
 		name: "next",
 		plugins: {
 			"@next/next": next,
@@ -179,7 +175,6 @@ export default tseslint.config(
 			],
 		},
 	},
-	markdown.configs.recommended,
 	packageJson.configs.recommended,
 	{
 		extends: [
@@ -192,10 +187,10 @@ export default tseslint.config(
 		},
 	},
 	{
-		extends: [yml.configs["flat/recommended"], yml.configs["flat/prettier"]],
+		extends: [yml.configs["flat/standard"], yml.configs["flat/prettier"]],
 		files: ["**/*.{yml,yaml}"],
 		rules: {
-			"yml/file-extension": ["error", { extension: "yml" }],
+			"yml/file-extension": ["off"],
 			"yml/sort-keys": [
 				"error",
 				{ order: { type: "asc" }, pathPattern: "^.*$" },

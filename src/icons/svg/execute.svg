@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 50">
+	<linearGradient id="execute-a" x1="100%" x2="0%" y1="86.49%" y2="35.82%">
+		<stop offset="0" stop-color="#9fdaf3" />
+		<stop offset="1" stop-color="#c2e8f8" />
+	</linearGradient>
+	<linearGradient id="execute-b" x1="50%" x2="50%" y1="89.79%" y2=".83%">
+		<stop offset="0" stop-color="#b0a2fa" />
+		<stop offset="1" stop-color="#cbc0fc" />
+	</linearGradient>
+	<linearGradient id="execute-c" x1="100%" x2="0%" y1="78.85%" y2="26.36%">
+		<stop offset="0" stop-color="#82d1ef" />
+		<stop offset="1" stop-color="#7fd0ef" />
+	</linearGradient>
+	<linearGradient id="execute-d" x1="50%" x2="50%" y1="99.02%" y2="0%">
+		<stop offset="0" stop-color="#7056f5" />
+		<stop offset="1" stop-color="#afa1fa" />
+	</linearGradient>
+	<g
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		stroke-width="3"
+		fill="transparent"
+	>
+		<path
+			stroke="url(#execute-a)"
+			d="m0 0 24 15.55V30L0 14.45z"
+			transform="matrix(1 0 0 -1 2 32)"
+		/>
+		<path
+			stroke="url(#execute-b)"
+			d="m36 0 24 15.55V30L36 14.45z"
+			transform="rotate(180 49 16)"
+		/>
+		<g fill="#fff">
+			<path
+				stroke="url(#execute-c)"
+				d="m0 16 24 15.55V46L0 30.45z"
+				transform="translate(2 2)"
+			/>
+			<path
+				stroke="url(#execute-d)"
+				d="m36 16 24 15.55V46L36 30.45z"
+				transform="matrix(-1 0 0 1 98 2)"
+			/>
+		</g>
+	</g>
+</svg>

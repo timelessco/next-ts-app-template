@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 60">
+	<linearGradient id="research-a" x1="0%" x2="90.95%" y1="90.91%" y2="0%">
+		<stop offset=".02" stop-color="#7ecdef" />
+		<stop offset=".96" stop-color="#c2e8f8" />
+	</linearGradient>
+	<linearGradient id="research-b" x1="8.25%" x2="83.27%" y1="100%" y2="0%">
+		<stop offset="0" stop-color="#ffc89d" />
+		<stop offset="1" stop-color="#ffc6bd" />
+	</linearGradient>
+	<linearGradient id="research-c" x1="50%" x2="50%" y1="100%" y2="0%">
+		<stop offset="0" stop-color="#9ea5ff" />
+		<stop offset="1" stop-color="#bcc2ff" />
+	</linearGradient>
+	<linearGradient id="research-d" x1="50%" x2="50%" y1="100%" y2="0%">
+		<stop offset="0" stop-color="#5b6aff" />
+		<stop offset="1" stop-color="#919aff" />
+	</linearGradient>
+	<g fill-rule="nonzero">
+		<g stroke-width="3" fill="transparent">
+			<path
+				stroke="url(#research-a)"
+				d="M46.32-1.17c.72 0 1.35.16 1.9.5.88.54 1.42 1.47 1.69 2.7 1.26 5.63-2.98 17.6-11.35 30.3-8.96 13.59-19.28 22.84-24.88 22.84-.72 0-1.35-.16-1.9-.5-.88-.54-1.42-1.47-1.69-2.7-1.26-5.63 2.98-17.6 11.35-30.3C30.4 8.08 40.72-1.17 46.32-1.17z"
+				transform="translate(3 3)"
+			/>
+			<path
+				stroke="url(#research-b)"
+				d="M29 17.93c16.72 0 30.13 4.6 30.13 10.07S45.73 38.07 29 38.07-1.13 33.47-1.13 28 12.27 17.93 29 17.93z"
+				transform="translate(3 3)"
+			/>
+			<path
+				stroke="url(#research-c)"
+				d="M13.68-1.17c5.6 0 15.92 9.25 24.88 22.84 8.37 12.7 12.6 24.67 11.35 30.3-.27 1.23-.81 2.16-1.69 2.7-.55.34-1.18.5-1.9.5-5.6 0-15.92-9.25-24.88-22.84-8.37-12.7-12.6-24.67-11.35-30.3.27-1.23.81-2.16 1.69-2.7.55-.34 1.18-.5 1.9-.5z"
+				transform="translate(3 3)"
+			/>
+		</g>
+		<path
+			fill="url(#research-d)"
+			d="M29.83 24.83a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
+			transform="translate(3 3)"
+		/>
+	</g>
+</svg>

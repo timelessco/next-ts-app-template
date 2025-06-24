@@ -1,0 +1,63 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	viewBox="0 0 35 34"
+>
+	<linearGradient
+		id="on_time-a"
+		x1="-345.1"
+		x2="-345.1"
+		y1="337.71"
+		y2="338.36"
+		gradientTransform="matrix(-5 0 0 -5 -1705 1701)"
+		gradientUnits="userSpaceOnUse"
+	>
+		<stop offset="0" stop-color="#2d82e4" />
+		<stop offset="1" stop-color="#69afff" />
+	</linearGradient>
+	<linearGradient
+		xlink:href="#on_time-a"
+		id="on_time-b"
+		x1="0"
+		x2="0"
+		y1="394.41"
+		y2="395.06"
+		gradientTransform="matrix(1 0 0 -20 6 7914)"
+	/>
+	<linearGradient
+		xlink:href="#on_time-a"
+		id="on_time-c"
+		x1="0"
+		x2="0"
+		y1="394.41"
+		y2="395.06"
+		gradientTransform="matrix(1 0 0 -20 30 7914)"
+	/>
+	<linearGradient
+		xlink:href="#on_time-a"
+		id="on_time-d"
+		x1="-277.6"
+		x2="-276.94"
+		y1="36"
+		y2="36"
+		gradientTransform="matrix(33 0 0 -1 9217 69)"
+	/>
+	<linearGradient
+		xlink:href="#on_time-a"
+		id="on_time-e"
+		x1="-275.5"
+		x2="-275.5"
+		y1="397.56"
+		y2="398.21"
+		gradientTransform="matrix(24 0 0 -24 6630 9559)"
+	/>
+	<g fill="none" stroke-linejoin="round" stroke-width="2">
+		<g stroke-linecap="round">
+			<path stroke="url(#on_time-a)" d="M23 14h-5V9" />
+			<path stroke="url(#on_time-b)" d="M6 12v20" />
+			<path stroke="url(#on_time-c)" d="M30 12v20" />
+			<path stroke="url(#on_time-d)" d="M1 33h33" />
+		</g>
+		<circle cx="18" cy="13" r="12" stroke="url(#on_time-e)" />
+	</g>
+</svg>

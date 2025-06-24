@@ -1,13 +1,11 @@
 import { type MetadataRoute } from "next";
 
-import { siteConfig } from "../utils/siteConfig";
-
-const { description, name } = siteConfig;
+import { SITE_DESCRIPTION, SITE_NAME } from "@/utils/siteConfig";
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {
 		background_color: "#FFF",
-		description,
+		description: SITE_DESCRIPTION,
 		dir: "auto",
 		display: "standalone",
 		display_override: ["window-controls-overlay"],
@@ -38,10 +36,10 @@ export default function manifest(): MetadataRoute.Manifest {
 		],
 		id: "/?source=pwa",
 		lang: "en-US",
-		name,
+		name: SITE_NAME,
 		orientation: "portrait-primary",
 		scope: "/",
-		short_name: name,
+		short_name: SITE_NAME,
 		start_url: "/?source=pwa",
 		theme_color: "#FFF",
 	};

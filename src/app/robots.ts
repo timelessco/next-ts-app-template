@@ -1,21 +1,21 @@
 import { type MetadataRoute } from "next";
 
-import { siteConfig } from "@/utils/siteConfig";
+import { BASE_URL } from "@/utils/siteConfig";
 
 export default function robots(): MetadataRoute.Robots {
 	return {
-		host: siteConfig.url,
+		host: BASE_URL,
 		rules:
 			process.env.NODE_ENV === "production"
 				? {
 						allow: "/",
-						disallow: "/api/",
+						disallow: ["/api/", "/~offline"],
 						userAgent: "*",
 					}
 				: {
 						disallow: "/",
 						userAgent: "*",
 					},
-		sitemap: `${siteConfig.url}/sitemap.xml`,
+		sitemap: `${BASE_URL}/sitemap.xml`,
 	};
 }

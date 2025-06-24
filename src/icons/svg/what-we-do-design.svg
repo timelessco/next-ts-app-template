@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37">
+  <defs>
+    <linearGradient id="what-we-do-design-a" x1="0%" x2="88.546%" y1="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFAC9D"/>
+      <stop offset="100%" stop-color="#FFC6BD"/>
+    </linearGradient>
+    <linearGradient id="what-we-do-design-b" x1="50%" x2="50%" y1="100%" y2="0%">
+      <stop offset="0%" stop-color="#5B6AFF"/>
+      <stop offset="100%" stop-color="#919AFF"/>
+    </linearGradient>
+    <linearGradient id="what-we-do-design-c" x1="100%" x2="0%" y1="100%" y2="0%">
+      <stop offset="0%" stop-color="#96D7F3"/>
+      <stop offset="100%" stop-color="#C2E8F8"/>
+    </linearGradient>
+  </defs>
+    <g fill="transparent" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(.265 .403)">
+      <rect width="24" height="24" x=".774" y="10.664" stroke="url(#what-we-do-design-a)" rx="2"/>
+    <g fill="#fff">
+      <circle cx="17.416" cy="11.488" r="10.5" stroke="url(#what-we-do-design-b)"/>
+      <path stroke="url(#what-we-do-design-c)" d="M34.774 9.538v17.65a1 1 0 0 1-1 1H15.706a1 1 0 0 1-.698-1.716L33.075 8.823a1 1 0 0 1 1.699.715Z"/>
+    </g>
+  </g>
+</svg>

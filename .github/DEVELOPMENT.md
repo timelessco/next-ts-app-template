@@ -2,27 +2,25 @@
 
 ## Table of Contents
 
-<!-- prettier-ignore -->
 - [Development](#development)
-	- [Table of Contents](#table-of-contents)
-	- [Prerequisites](#prerequisites)
-	- [Getting Started](#getting-started)
-	- [Configuration](#configuration)
-		- [Client Env Variables](#client-env-variables)
-		- [Server Env Variables](#server-env-variables)
-	- [Installing the dependencies](#installing-the-dependencies)
-	- [Running the project locally](#running-the-project-locally)
-	- [Building the project](#building-the-project)
-	- [Deploying the project](#deploying-the-project)
-	- [More DX scripts](#more-dx-scripts)
-		- [Prettier](#prettier)
-		- [Eslint](#eslint)
-		- [Check Types](#check-types)
-		- [Check unused dependencies, exports \& types](#check-unused-dependencies-exports--types)
-		- [Stylelint](#stylelint)
-		- [Markdown](#markdown)
-		- [Cspell](#cspell)
-		- [PNPM Dedupe](#pnpm-dedupe)
+  - [Table of Contents](#table-of-contents)
+  - [Prerequisites](#prerequisites)
+  - [Getting Started](#getting-started)
+  - [Configuration](#configuration)
+    - [Client Env Variables](#client-env-variables)
+    - [Server Env Variables](#server-env-variables)
+  - [Installing the dependencies](#installing-the-dependencies)
+  - [Running the project locally](#running-the-project-locally)
+  - [Building the project](#building-the-project)
+  - [More DX scripts](#more-dx-scripts)
+    - [Prettier](#prettier)
+    - [Eslint](#eslint)
+    - [Check Types](#check-types)
+    - [Check unused dependencies, exports \& types](#check-unused-dependencies-exports--types)
+    - [Stylelint](#stylelint)
+    - [Markdown](#markdown)
+    - [Cspell](#cspell)
+    - [PNPM Dedupe](#pnpm-dedupe)
 
 ## Prerequisites
 
@@ -60,11 +58,11 @@ The project uses environmental variables for configuration. Create a **`.env`** 
 After you have set the environmental variables in the **`.env`** file, you can run the project locally by
 
 ```shell
-git clone https://github.com/timelessco/next-ts-app-template
+git clone https://github.com/timelessco/timelessco-nextjs
 ```
 
 ```shell
-cd next-ts-app-template
+cd timelessco-nextjs
 ```
 
 ```shell
@@ -100,10 +98,6 @@ Run the above built application locally using
 ```bash
 pnpm start
 ```
-
-## Deploying the project
-
-Guide on how to deploy Next.js to various [hosting providers](https://nextjs.org/docs/deployment).
 
 ## More DX scripts
 

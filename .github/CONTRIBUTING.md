@@ -1,27 +1,26 @@
 # Contributing
 
-Thanks for your interest in contributing to `next-ts-app-template`! 💖
+Thanks for your interest in contributing to `timelessco-nextjs`! 💖
 
 > After this page, see [DEVELOPMENT.md](./DEVELOPMENT.md) for local development instructions.
 
 ## Table of Contents
 
-<!-- prettier-ignore -->
 - [Contributing](#contributing)
-	- [Table of Contents](#table-of-contents)
-	- [Code of Conduct](#code-of-conduct)
-	- [Reporting Issues](#reporting-issues)
-	- [Sending Contributions](#sending-contributions)
-		- [Finding an Issue](#finding-an-issue)
-			- [Issue Claiming](#issue-claiming)
-		- [Sending a Pull Request](#sending-a-pull-request)
-			- [Draft PRs](#draft-prs)
-			- [Granular PRs](#granular-prs)
-			- [Pull Request Reviews](#pull-request-reviews)
-			- [Asking Questions](#asking-questions)
-			- [Requested Changes](#requested-changes)
-			- [Post-Merge Recognition](#post-merge-recognition)
-	- [Emojis \& Appreciation](#emojis--appreciation)
+  - [Table of Contents](#table-of-contents)
+  - [Code of Conduct](#code-of-conduct)
+  - [Reporting Issues](#reporting-issues)
+  - [Sending Contributions](#sending-contributions)
+    - [Finding an Issue](#finding-an-issue)
+      - [Issue Claiming](#issue-claiming)
+    - [Sending a Pull Request](#sending-a-pull-request)
+      - [Draft PRs](#draft-prs)
+      - [Granular PRs](#granular-prs)
+      - [Pull Request Reviews](#pull-request-reviews)
+      - [Asking Questions](#asking-questions)
+      - [Requested Changes](#requested-changes)
+      - [Post-Merge Recognition](#post-merge-recognition)
+  - [Emojis \& Appreciation](#emojis--appreciation)
 
 ## Code of Conduct
 
@@ -29,7 +28,7 @@ This project contains a [Contributor Covenant code of conduct](./CODE_OF_CONDUCT
 
 ## Reporting Issues
 
-Please do [report an issue on the issue tracker](https://github.com/timelessco/next-ts-app-template/issues/new/choose) if there's any bugfix, documentation improvement, or general enhancement you'd like to see in the repository! Please fully fill out all required fields in the most appropriate issue form.
+Please do [report an issue on the issue tracker](https://github.com/timelessco/timelessco-nextjs/issues/new/choose) if there's any bugfix, documentation improvement, or general enhancement you'd like to see in the repository! Please fully fill out all required fields in the most appropriate issue form.
 
 ## Sending Contributions
 
@@ -41,8 +40,8 @@ There are two steps involved:
 
 ### Finding an Issue
 
-With the exception of very small typos, all changes to this repository generally need to correspond to an [unassigned open issue marked as `status: accepting prs` on the issue tracker](https://github.com/timelessco/next-ts-app-template/issues?q=is%3Aissue+is%3Aopen+label%3A%22status%3A+accepting+prs%22+no%3Aassignee+).
-If this is your first time contributing, consider searching for [unassigned issues that also have the `good first issue` label](https://github.com/timelessco/next-ts-app-template/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+label%3A%22status%3A+accepting+prs%22+no%3Aassignee+).
+With the exception of very small typos, all changes to this repository generally need to correspond to an [unassigned open issue marked as `status: accepting prs` on the issue tracker](https://github.com/timelessco/timelessco-nextjs/issues?q=is%3Aissue+is%3Aopen+label%3A%22status%3A+accepting+prs%22+no%3Aassignee+).
+If this is your first time contributing, consider searching for [unassigned issues that also have the `good first issue` label](https://github.com/timelessco/timelessco-nextjs/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+label%3A%22status%3A+accepting+prs%22+no%3Aassignee+).
 If the issue you'd like to fix isn't found on the issue, see [Reporting Issues](#reporting-issues) for filing your own (please do!).
 
 #### Issue Claiming
@@ -61,7 +60,7 @@ Be sure to fill out the pull request template's requested information -- otherwi
 PRs are also expected to have a title that adheres to [conventional commits](https://www.conventionalcommits.org/en/v1.0.0).
 Only PR titles need to be in that format, not individual commits.
 Don't worry if you get this wrong: you can always change the PR title after sending it.
-Check [previously merged PRs](https://github.com/timelessco/next-ts-app-template/pulls?q=is%3Apr+is%3Amerged+-label%3Adependencies+) for reference.
+Check [previously merged PRs](https://github.com/timelessco/timelessco-nextjs/pulls?q=is%3Apr+is%3Amerged+-label%3Adependencies+) for reference.
 
 #### Draft PRs
 
