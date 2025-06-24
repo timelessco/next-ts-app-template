@@ -6,22 +6,21 @@ Thanks for your interest in contributing to `next-ts-app-template`! 💖
 
 ## Table of Contents
 
-<!-- prettier-ignore -->
 - [Contributing](#contributing)
-	- [Table of Contents](#table-of-contents)
-	- [Code of Conduct](#code-of-conduct)
-	- [Reporting Issues](#reporting-issues)
-	- [Sending Contributions](#sending-contributions)
-		- [Finding an Issue](#finding-an-issue)
-			- [Issue Claiming](#issue-claiming)
-		- [Sending a Pull Request](#sending-a-pull-request)
-			- [Draft PRs](#draft-prs)
-			- [Granular PRs](#granular-prs)
-			- [Pull Request Reviews](#pull-request-reviews)
-			- [Asking Questions](#asking-questions)
-			- [Requested Changes](#requested-changes)
-			- [Post-Merge Recognition](#post-merge-recognition)
-	- [Emojis \& Appreciation](#emojis--appreciation)
+  - [Table of Contents](#table-of-contents)
+  - [Code of Conduct](#code-of-conduct)
+  - [Reporting Issues](#reporting-issues)
+  - [Sending Contributions](#sending-contributions)
+    - [Finding an Issue](#finding-an-issue)
+      - [Issue Claiming](#issue-claiming)
+    - [Sending a Pull Request](#sending-a-pull-request)
+      - [Draft PRs](#draft-prs)
+      - [Granular PRs](#granular-prs)
+      - [Pull Request Reviews](#pull-request-reviews)
+      - [Asking Questions](#asking-questions)
+      - [Requested Changes](#requested-changes)
+      - [Post-Merge Recognition](#post-merge-recognition)
+  - [Emojis \& Appreciation](#emojis--appreciation)
 
 ## Code of Conduct
 
