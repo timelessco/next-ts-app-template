@@ -1,5 +1,67 @@
 # Changelog
 
+## <small>6.0.8 (2025-07-02)</small>
+
+### 📌 Other Notable Changes
+
+
+#### `components`- ♻️ simplify NextImage component interface 
+
+- Remove blur hash functionality and related props
+  - Update dependencies: ESLint, TypeScript, Prettier, Tailwind
+  - Move Sentry from dependencies to devDependencies
+  - Add WCAG to spell check dictionary for accessibility
+
+
+Introduced in: [`cd75e80`](https://github.com/timelessco/next-ts-app-template/commit/cd75e802aa85421d977bc8c072a36655e95c3214)
+
+
+
+
+#### `components`- ♻️ remove unused Presentation and Slot components 
+
+- Eliminate Presentation and Slot components to streamline codebase
+- Update Container and Home components to use div instead of Presentation
+- Adjust environment variable example in .env.example for clarity
+- Refactor siteConfig to export constants for site name and description
+- Update sitemap and robots to use BASE_URL for consistency
+
+
+Introduced in: [`d70fe64`](https://github.com/timelessco/next-ts-app-template/commit/d70fe64bfa05cbee04bdf032593bd7ece26927ea)
+
+
+
+
+
+### 🗃️ Commits
+
+
+#### 🐞 Bug Fixes
+
+- **`deps:`** update all dependencies ([#382](https://github.com/timelessco/next-ts-app-template/issues/382)) - [ae1fffb](https://github.com/timelessco/next-ts-app-template/commit/ae1fffbf8e57a142b96cd47a0015f07092a8bb35) by @renovate[bot]
+
+- **`deps:`** update all dependencies ([#383](https://github.com/timelessco/next-ts-app-template/issues/383)) - [801a55e](https://github.com/timelessco/next-ts-app-template/commit/801a55e23ed325ea55d043d1e68e265f253e98a9) by @renovate[bot]
+
+
+
+#### ♻️  Code Refactoring
+
+- **`components:`** ♻️ remove unused Presentation and Slot components - [d70fe64](https://github.com/timelessco/next-ts-app-template/commit/d70fe64bfa05cbee04bdf032593bd7ece26927ea) by @navin-moorthy
+
+- **`components:`** ♻️ simplify NextImage component interface - [cd75e80](https://github.com/timelessco/next-ts-app-template/commit/cd75e802aa85421d977bc8c072a36655e95c3214) by @navin-moorthy
+
+
+
+#### 🔨 Maintenance Updates
+
+- **`deps:`** 🧹 remove unused eslint-plugin-markdown dependency - [7aad074](https://github.com/timelessco/next-ts-app-template/commit/7aad0747a755c18b0ecf628699f6dc49a4a0498e) by @navin-moorthy
+
+
+
+#### 🎨 Code Style Changes
+
+- **`docs:`** 💄 format markdown files for consistency - [732ef51](https://github.com/timelessco/next-ts-app-template/commit/732ef510946d99f5a3da43d6653bd368e8724f03) by @navin-moorthy
+
 ## <small>6.0.7 (2025-04-01)</small>
 
 ### 🗃️ Commits
