@@ -79,7 +79,7 @@
 		"react-dom": "19.1.0",
 		"serwist": "9.0.15",
 		"tailwind-merge": "3.3.1",
-		"zod": "3.25.67"
+		"zod": "3.25.71"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "19.8.1",
@@ -144,7 +144,7 @@
 		"sentences-per-line": "0.3.0",
 		"sharp": "0.34.2",
 		"source-map-explorer": "2.5.3",
-		"stylelint": "16.21.0",
+		"stylelint": "16.21.1",
 		"stylelint-config-clean-order": "7.0.0",
 		"stylelint-config-standard": "38.0.0",
 		"svgo": "4.0.0",
