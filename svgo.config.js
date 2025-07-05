@@ -16,7 +16,7 @@ export default {
 		// Remove metadata
 		"removeMetadata",
 		// Remove xmlns
-		"removeXMLNS",
+		// "removeXMLNS",
 		// Remove editor data
 		"removeEditorsNSData",
 		// Clean up attribute whitespace
