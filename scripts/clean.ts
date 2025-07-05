@@ -96,9 +96,18 @@ const $$ = $({ stdio: "inherit" });
 switch (value) {
 	case "all": {
 		const results = await Promise.all([
-			vet(() => $$`rimraf ./.next`),
-			vet(() => $$`rimraf --glob **/node_modules`),
-			vet(() => $$`rimraf ./.turbo`),
+			vet(async () => {
+				const result = await $$`rimraf ./.next`;
+				return result;
+			}),
+			vet(async () => {
+				const result = await $$`rimraf --glob **/node_modules`;
+				return result;
+			}),
+			vet(async () => {
+				const result = await $$`rimraf ./.turbo`;
+				return result;
+			}),
 		]);
 
 		const errors = results.filter((r) => r.isErr());

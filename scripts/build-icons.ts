@@ -103,7 +103,10 @@ async function generateIconFiles() {
 		inputDirectoryProp: inputDirectory,
 		outputPath: spriteFilepath,
 	});
-	const svgoResult = await vet(() => $`svgo --precision 2 ${spriteFilepath}`);
+	const svgoResult = await vet(async () => {
+		const result = await $`svgo --precision 2 ${spriteFilepath}`;
+		return result;
+	});
 	if (svgoResult.isErr()) {
 		logVerbose(`Warning: Failed to optimize SVG sprite`);
 		console.warn(svgoResult.error);
