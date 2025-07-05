@@ -1,5 +1,38 @@
 # Changelog
 
+## 6.1.0 (2025-07-05)
+
+### 🗃️ Commits
+
+
+#### ⭐ New Features
+
+- ✨ add template sync system for derived repositories - [91ae9ec](https://github.com/timelessco/next-ts-app-template/commit/91ae9ec93572c3c0fb3fe16733b16bec0f9f8abf) by @navin-moorthy
+
+
+
+#### 🐞 Bug Fixes
+
+- **`deps:`** replace all dependencies ([#384](https://github.com/timelessco/next-ts-app-template/issues/384)) - [1edbd61](https://github.com/timelessco/next-ts-app-template/commit/1edbd6164a30c2c06fc7b1a53fb8c649b94e3b26) by @renovate[bot]
+
+- **`svgo:`** 🐛 comment out "removeXMLNS" optimization in SVGO config - [34a6bcb](https://github.com/timelessco/next-ts-app-template/commit/34a6bcb30fc901e30ed16bb4b2274c254f459c5c) by @navin-moorthy
+
+
+
+#### ♻️  Code Refactoring
+
+- **`scripts:`** ♻️ enhance error handling in clean script - [3bfac4e](https://github.com/timelessco/next-ts-app-template/commit/3bfac4e9d6402133957002d9b60307d294b068e5) by @navin-moorthy
+
+- **`scripts:`** ♻️ improve SVG optimization and clean scripts - [2779e52](https://github.com/timelessco/next-ts-app-template/commit/2779e52d4e952d9eda4605dabdb72a388717f60f) by @navin-moorthy
+
+
+
+#### 🔨 Maintenance Updates
+
+- **`cspell:`** 🧹 add "Elems" to spell check dictionary - [e02c2af](https://github.com/timelessco/next-ts-app-template/commit/e02c2afabeabe9df81023f888073c71071a4f9cb) by @navin-moorthy
+
+- **`scripts:`** 🧹 integrate fs-extra for file operations - [cfcb668](https://github.com/timelessco/next-ts-app-template/commit/cfcb668b301011d9e19871d4ffbe0cd9a489baa6) by @navin-moorthy
+
 ## <small>6.0.8 (2025-07-02)</small>
 
 ### 📌 Other Notable Changes
