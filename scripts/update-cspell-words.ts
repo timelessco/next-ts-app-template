@@ -1,8 +1,11 @@
-import fs from "node:fs/promises";
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable import-x/no-named-as-default-member */
+
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { $ } from "execa";
+import fsExtra from "fs-extra";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -12,14 +15,14 @@ interface CSpellConfig {
 }
 
 async function readCspellConfig(path: string): Promise<CSpellConfig> {
-	return JSON.parse(await fs.readFile(path, "utf8")) as CSpellConfig;
+	return JSON.parse(await fsExtra.readFile(path, "utf8")) as CSpellConfig;
 }
 
 async function writeCspellConfig(
 	path: string,
 	config: CSpellConfig,
 ): Promise<void> {
-	await fs.writeFile(path, `${JSON.stringify(config, undefined, "\t")}\n`);
+	await fsExtra.writeFile(path, `${JSON.stringify(config, undefined, "\t")}\n`);
 }
 
 async function updateWordsInConfig(

@@ -1,6 +1,7 @@
-import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
+import fsExtra from "fs-extra";
 
 import { getGithubCommits } from "./get-commits-since-last-release.js";
 
@@ -281,12 +282,12 @@ export const transform = async (commitOriginal, context) => {
 	return commit;
 };
 
-export const mainTemplate = readFileSync(
+export const mainTemplate = fsExtra.readFileSync(
 	path.resolve(__dirname, "./templates/template.hbs"),
 	"utf8",
 );
 
-const commitTemplate = readFileSync(
+const commitTemplate = fsExtra.readFileSync(
 	path.resolve(__dirname, "./templates/commit.hbs"),
 	"utf8",
 );
