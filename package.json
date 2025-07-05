@@ -55,7 +55,8 @@
 		"lint:types": "tsc --noEmit",
 		"prepare": "is-ci || husky",
 		"release": "release-it --ci",
-		"start": "next start"
+		"start": "next start",
+		"sync:template": "node --experimental-strip-types scripts/sync-template-changes.ts"
 	},
 	"commitlint": {
 		"extends": [
