@@ -2,7 +2,9 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## EXTREMELY IMPORTANT: Code Quality Checks
+## ! EXTREMELY IMPORTANT
+
+### Code Quality Checks
 
 **ALWAYS run the following commands before completing any task:**
 
@@ -13,6 +15,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Do this for any file you create or modify
 
 This is a CRITICAL step that must NEVER be skipped when working on any code-related task
+
+### File Size Limits
+
+- **Maximum 250 lines per file** - If a file exceeds this limit:
+  - Extract large sections into separate component files
+  - Move related functionality into dedicated modules
+  - Split complex components into smaller, focused components
+- This ensures maintainability and better code organization
+
+### Command Reminders
+
+- **Always remember to use `trash` command for removing file instead of `rm`, `trash` is available in the terminal**
 
 ## Development Commands
 

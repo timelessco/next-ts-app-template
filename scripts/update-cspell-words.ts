@@ -7,6 +7,8 @@ import { fileURLToPath } from "node:url";
 import { $ } from "execa";
 import fsExtra from "fs-extra";
 
+import { vet } from "./utils/try.ts";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 interface CSpellConfig {
@@ -15,14 +17,33 @@ interface CSpellConfig {
 }
 
 async function readCspellConfig(path: string): Promise<CSpellConfig> {
-	return JSON.parse(await fsExtra.readFile(path, "utf8")) as CSpellConfig;
+	const readResult = await vet(() => fsExtra.readFile(path, "utf8"));
+	if (readResult.isErr()) {
+		console.error(`Failed to read cspell config ${path}`);
+		throw readResult.error;
+	}
+
+	const parseResult = vet(() => JSON.parse(readResult.value) as CSpellConfig);
+	if (parseResult.isErr()) {
+		console.error(`Failed to parse cspell config ${path}`);
+		throw parseResult.error;
+	}
+
+	return parseResult.value;
 }
 
 async function writeCspellConfig(
 	path: string,
 	config: CSpellConfig,
 ): Promise<void> {
-	await fsExtra.writeFile(path, `${JSON.stringify(config, undefined, "\t")}\n`);
+	const writeResult = await vet(() =>
+		fsExtra.writeFile(path, `${JSON.stringify(config, undefined, "\t")}\n`),
+	);
+
+	if (writeResult.isErr()) {
+		console.error(`Failed to write cspell config ${path}`);
+		throw writeResult.error;
+	}
 }
 
 async function updateWordsInConfig(
@@ -41,11 +62,21 @@ async function updateCspellWords(): Promise<void> {
 	await updateWordsInConfig(cspellPath, []);
 
 	// Run cspell command and get output
-	const { stdout } = await $({
-		reject: false,
-	})`cspell --words-only --unique --gitignore --cache --dot **/*`;
+	const cspellResult = await vet(async () => {
+		const result = await $({
+			reject: false,
+		})`cspell --words-only --unique --gitignore --cache --dot **/*`;
 
-	const newWords = stdout
+		return result.stdout;
+	});
+
+	if (cspellResult.isErr()) {
+		console.error("Failed to run cspell command");
+
+		throw cspellResult.error;
+	}
+
+	const newWords = cspellResult.value
 		.trim()
 		.split("\n")
 		.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));

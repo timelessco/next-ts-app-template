@@ -3,6 +3,7 @@
 	"compilerOptions": {
 		"allowJs": true,
 		"allowUnreachableCode": false,
+		"allowImportingTsExtensions": true,
 		"downlevelIteration": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,

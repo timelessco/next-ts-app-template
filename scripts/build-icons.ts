@@ -10,6 +10,8 @@ import fsExtra from "fs-extra";
 import { glob } from "glob";
 import { parse } from "node-html-parser";
 
+import { vet } from "./utils/try.ts";
+
 const cwd = process.cwd();
 const inputDirectory = path.join(cwd, "src", "icons", "svg");
 const inputDirectoryRelative = path.relative(cwd, inputDirectory);
@@ -18,22 +20,41 @@ const publicDirectory = path.join(cwd, "public");
 const publicSvgDirectory = path.join(publicDirectory, "svg");
 
 // Check if input directory exists
-if (!fsExtra.existsSync(inputDirectory)) {
+const dirExists = await vet(() => fsExtra.pathExists(inputDirectory));
+if (!dirExists.unwrapOr(false)) {
 	throw new Error(`Input directory ${inputDirectoryRelative} not found`);
 }
 
 // Create output and public directories if they don't exist
-await fsExtra.ensureDir(outputDirectory);
-await fsExtra.ensureDir(publicDirectory);
-await fsExtra.ensureDir(publicSvgDirectory);
+const ensureDirsResult = await vet(async () => {
+	await fsExtra.ensureDir(outputDirectory);
+	await fsExtra.ensureDir(publicDirectory);
+	await fsExtra.ensureDir(publicSvgDirectory);
+});
 
-const files = glob
-	.sync("**/*.svg", {
-		cwd: inputDirectory,
-	})
-	.sort((a, b) => {
-		return a.localeCompare(b);
-	});
+if (ensureDirsResult.isErr()) {
+	console.error(
+		`Failed to create directories ${outputDirectory}, ${publicDirectory}, ${publicSvgDirectory}`,
+	);
+	throw ensureDirsResult.error;
+}
+
+const filesResult = vet(() =>
+	glob
+		.sync("**/*.svg", {
+			cwd: inputDirectory,
+		})
+		.sort((a, b) => {
+			return a.localeCompare(b);
+		}),
+);
+
+if (filesResult.isErr()) {
+	console.error(`Failed to find SVG files in ${inputDirectoryRelative}`);
+	throw filesResult.error;
+}
+
+const files = filesResult.value;
 
 const shouldVerboseLog = process.argv.includes("--log=verbose");
 // eslint-disable-next-line @typescript-eslint/no-empty-function
@@ -48,16 +69,16 @@ if (files.length === 0) {
 async function generateIconFiles() {
 	const spriteFilepath = path.join(publicDirectory, "svg/sprite.svg");
 	const typeOutputFilepath = path.join(outputDirectory, "icon-name.d.ts");
-	const currentSprite = await fsExtra
-		.readFile(spriteFilepath, "utf8")
-		.catch(() => {
-			return "";
-		});
-	const currentTypes = await fsExtra
-		.readFile(typeOutputFilepath, "utf8")
-		.catch(() => {
-			return "";
-		});
+	// We use the unwrapOr to avoid throwing an error because they will be created if they don't exist
+	const spriteResult = await vet(() =>
+		fsExtra.readFile(spriteFilepath, "utf8"),
+	);
+	const currentSprite = spriteResult.unwrapOr("");
+	// We use the unwrapOr to avoid throwing an error because they will be created if they don't exist
+	const typesResult = await vet(() =>
+		fsExtra.readFile(typeOutputFilepath, "utf8"),
+	);
+	const currentTypes = typesResult.unwrapOr("");
 
 	const iconNames = files.map((file) => {
 		return iconName(file);
@@ -77,12 +98,16 @@ async function generateIconFiles() {
 
 	logVerbose(`Generating sprite for ${inputDirectoryRelative}`);
 
-	const spriteChanged = await generateSvgSprite({
+	await generateSvgSprite({
 		filesProp: files,
 		inputDirectoryProp: inputDirectory,
 		outputPath: spriteFilepath,
 	});
-	await $`svgo --precision 2 ${spriteFilepath}`;
+	const svgoResult = await vet(() => $`svgo --precision 2 ${spriteFilepath}`);
+	if (svgoResult.isErr()) {
+		logVerbose(`Warning: Failed to optimize SVG sprite`);
+		console.warn(svgoResult.error);
+	}
 
 	for (const file of files) {
 		logVerbose("✅", file);
@@ -99,14 +124,11 @@ async function generateIconFiles() {
 export type IconName =
 \t| ${stringifiedIconNames.join("\n\t| ")};
 `;
-	const typesChanged = await writeIfChanged(
-		typeOutputFilepath,
-		typeOutputContent,
-	);
+	await writeIfChanged(typeOutputFilepath, typeOutputContent);
 
 	logVerbose(`Manifest saved to ${path.relative(cwd, typeOutputFilepath)}`);
 
-	const readmeChanged = await writeIfChanged(
+	await writeIfChanged(
 		path.join(outputDirectory, "README.md"),
 		`# Icons
 
@@ -119,9 +141,7 @@ The icon sprite is generated within the public directory at \`/svg/sprite.svg\`.
 `,
 	);
 
-	if (spriteChanged || typesChanged || readmeChanged) {
-		console.log(`Generated ${files.length} icons`);
-	}
+	console.log(`Generated ${files.length} icons`);
 }
 
 function iconName(file: string) {
@@ -146,28 +166,39 @@ async function generateSvgSprite({
 	outputPath: string;
 }) {
 	// Each SVG becomes a symbol and we wrap them all in a single SVG
-	const symbols = await Promise.all(
-		filesProp.map(async (file) => {
-			const input = await fsExtra.readFile(
-				path.join(inputDirectoryProp, file),
-				"utf8",
-			);
-			const root = parse(input);
+	const symbolPromises = filesProp.map(async (file) => {
+		const filepath = path.join(inputDirectoryProp, file);
+		const inputResult = await vet(() => fsExtra.readFile(filepath, "utf8"));
 
-			const svg = root.querySelector("svg");
-			if (!svg) throw new Error("No SVG element found");
+		if (inputResult.isErr()) {
+			console.error(`Failed to read SVG file: ${filepath}`);
+			throw inputResult.error;
+		}
 
-			svg.tagName = "symbol";
-			svg.setAttribute("id", iconName(file));
-			svg.removeAttribute("xmlns");
-			svg.removeAttribute("xmlns:xlink");
-			svg.removeAttribute("version");
-			svg.removeAttribute("width");
-			svg.removeAttribute("height");
+		const parseResult = vet(() => parse(inputResult.value));
+		if (parseResult.isErr()) {
+			console.error(`Failed to parse SVG file: ${filepath}`);
+			throw parseResult.error;
+		}
 
-			return svg.toString().trim();
-		}),
-	);
+		const root = parseResult.value;
+		const svg = root.querySelector("svg");
+		if (!svg) {
+			throw new Error(`No SVG element found in ${filepath}`);
+		}
+
+		svg.tagName = "symbol";
+		svg.setAttribute("id", iconName(file));
+		svg.removeAttribute("xmlns");
+		svg.removeAttribute("xmlns:xlink");
+		svg.removeAttribute("version");
+		svg.removeAttribute("width");
+		svg.removeAttribute("height");
+
+		return svg.toString().trim();
+	});
+
+	const symbols = await Promise.all(symbolPromises);
 
 	const output = [
 		`<?xml version="1.0" encoding="UTF-8"?>`,
@@ -180,17 +211,21 @@ async function generateSvgSprite({
 		"", // trailing newline
 	].join("\n");
 
-	return await writeIfChanged(outputPath, output);
+	await writeIfChanged(outputPath, output);
 }
 
 async function writeIfChanged(filepath: string, newContent: string) {
-	const currentContent = await fsExtra.readFile(filepath, "utf8").catch(() => {
-		return "";
-	});
+	const readResult = await vet(() => fsExtra.readFile(filepath, "utf8"));
+	// We use the unwrapOr to avoid throwing an error because they will be created if they don't exist
+	const currentContent = readResult.unwrapOr("");
 
-	if (currentContent === newContent) return false;
+	if (currentContent === newContent) return;
 
-	await fsExtra.writeFile(filepath, newContent, "utf8");
-
-	return true;
+	const writeResult = await vet(() =>
+		fsExtra.writeFile(filepath, newContent, "utf8"),
+	);
+	if (writeResult.isErr()) {
+		console.error(`Failed to write to ${filepath}`);
+		throw writeResult.error;
+	}
 }
