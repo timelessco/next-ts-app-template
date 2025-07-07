@@ -80,6 +80,9 @@ export default tseslint.config(
 	{
 		rules: {
 			"unicorn/filename-case": "off",
+			"unicorn/no-array-callback-reference": "off",
+			"unicorn/no-array-for-each": "off",
+			"unicorn/no-array-method-this-argument": "off",
 			"unicorn/no-null": "off",
 			"unicorn/prevent-abbreviations": "off",
 		},
