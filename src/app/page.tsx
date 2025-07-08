@@ -1,5 +1,5 @@
 import { Icon } from "@/components/Icon";
-import { StyledNextLink } from "@/components/link/StyledLink";
+import { StyledNextLink } from "@/components/StyledNextLink";
 
 export default function Home() {
 	return (

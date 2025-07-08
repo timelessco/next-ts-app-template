@@ -72,7 +72,6 @@
 	"dependencies": {
 		"@ariakit/react": "0.4.17",
 		"@serwist/next": "9.0.15",
-		"blurhash": "2.0.5",
 		"clsx": "2.1.1",
 		"ky": "1.8.1",
 		"next": "15.3.4",
