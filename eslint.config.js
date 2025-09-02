@@ -1,5 +1,5 @@
 /* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 
@@ -35,6 +35,7 @@ export default tseslint.config(
 			"public/**/*",
 			"CHANGELOG.md",
 			"scripts/release-it/**/*",
+			"next-env.d.ts",
 		],
 	},
 	{ linterOptions: { reportUnusedDisableDirectives: "error" } },

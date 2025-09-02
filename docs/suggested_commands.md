@@ -1,12 +1,82 @@
-# Suggested Commands
+# Development Commands
 
-## Core Development Commands
-
-### Start Development
+## Package Management
 
 ```bash
-pnpm dev           # Start development server with Turbopack
-pnpm dev:sourcemap # Development with source maps enabled
+# Install dependencies
+pnpm install
+
+# Check for duplicate packages
+pnpm dedupe
+
+# Clean build artifacts and dependencies
+pnpm clean
+```
+
+## Development
+
+```bash
+# Start development server with Turbopack
+pnpm dev
+
+# Start development server with source maps enabled
+pnpm dev:sourcemap
+
+# Build for production but for local testing
+# Faster with Turbopack
+pnpm build:local
+
+# Build for production
+pnpm build
+
+# Start production server
+pnpm start
+
+# Analyze bundle size
+ANALYZE=true pnpm build
+```
+
+## Code Quality
+
+```bash
+# Run all quality checks
+pnpm lint
+
+# Fix all auto-fixable issues
+pnpm fix
+
+# Individual linting commands
+pnpm lint:eslint   # ESLint checking
+pnpm lint:prettier # Prettier formatting check
+pnpm lint:css      # Stylelint CSS/PostCSS check
+pnpm lint:md       # Markdown linting
+pnpm lint:spelling # Spell checking with cspell
+pnpm lint:types    # TypeScript type checking
+pnpm lint:knip     # Find unused code and dependencies
+
+# Fix individual tools
+pnpm fix:eslint   # Auto-fix ESLint issues
+pnpm fix:spelling # Auto-fix spelling issues
+pnpm fix:prettier # Format with Prettier
+pnpm fix:css      # Auto-fix CSS issues
+pnpm fix:md       # Auto-fix Markdown issues
+```
+
+## Release & Deployment
+
+```bash
+# Create a new release
+pnpm release
+```
+
+## Troubleshooting
+
+```bash
+# Clear Next.js cache
+pnpm clean --next
+
+# Clear all caches and reinstall
+pnpm clean && pnpm install
 ```
 
 ### Build & Production
@@ -26,53 +96,7 @@ pnpm build:analyze   # Build with bundle analysis + webpack-bundle-analyzer
 pnpm build:sourcemap # Build with source maps and analysis
 ```
 
-## Code Quality Commands
-
-### Comprehensive Linting (Turbo-powered)
-
-```bash
-pnpm lint # Run ALL linters in parallel:
-# - TypeScript type checking
-# - ESLint code quality
-# - Prettier formatting
-# - Knip unused code detection
-# - Markdown linting
-# - Spell checking
-# - CSS linting
-```
-
-### Individual Linting
-
-```bash
-pnpm lint:types    # TypeScript type checking
-pnpm lint:eslint   # ESLint code quality checks
-pnpm lint:prettier # Prettier formatting validation
-pnpm lint:knip     # Unused dependencies/exports/types
-pnpm lint:css      # Stylelint CSS linting
-pnpm lint:md       # Markdown formatting
-pnpm lint:spelling # Spell checking with CSpell
-```
-
-### Auto-fixing
-
-```bash
-pnpm fix          # Auto-fix ESLint issues (via Turbo)
-pnpm fix:eslint   # ESLint auto-fix
-pnpm fix:prettier # Auto-format with Prettier
-pnpm fix:css      # Auto-fix CSS with Stylelint
-pnpm fix:md       # Auto-fix Markdown formatting
-pnpm fix:spelling # Update spell check dictionary
-```
-
-## Maintenance Commands
-
-### Project Cleanup
-
-```bash
-pnpm clean # Clean build artifacts and caches
-```
-
-### Package Management
+### Package Management & Dependencies
 
 ```bash
 pnpm check:packages # Check for duplicate packages
@@ -92,68 +116,6 @@ pnpm build:icons # Generate icon components from SVGs
 pnpm release               # Automated release with conventional changelog
 pnpm contributors:add      # Add contributors
 pnpm contributors:generate # Generate contributors list
-```
-
-## Task Completion Workflow
-
-When finishing any development task, run these commands in order:
-
-1. **Format Code**: `pnpm fix:prettier`
-2. **Fix Linting**: `pnpm fix:eslint`
-3. **Validate Everything**: `pnpm lint`
-4. **Build Check**: `pnpm build` (optional but recommended)
-
-## Development Workflow Tips
-
-### Quick Quality Check
-
-```bash
-# Fast feedback loop for development
-pnpm fix && pnpm lint:types
-```
-
-### Pre-commit Safety
-
-```bash
-# What runs automatically via husky + lint-staged
-pnpm fix:prettier && pnpm fix:spelling
-```
-
-### Performance Analysis
-
-```bash
-# Analyze bundle size and composition
-ANALYZE=true pnpm build:analyze
-```
-
-### Debug with Source Maps
-
-```bash
-# Generate source maps for debugging
-SOURCEMAP=true pnpm dev
-```
-
-## Environment Variables
-
-### Required for Production
-
-- `NEXT_PUBLIC_SITE_URL` - Site URL for sitemap generation
-
-### Optional
-
-- `NEXT_PUBLIC_SENTRY_DSN` - Sentry error tracking
-- `SKIP_ENV_VALIDATION=true` - Skip environment validation (CI builds)
-- `ANALYZE=true` - Enable bundle analyzer
-- `SOURCEMAP=true` - Generate source maps
-- `LOCAL=true` - Local build mode
-
-## Git Workflow Commands
-
-```bash
-# Conventional commits are enforced
-git commit -m "feat: add new component"
-git commit -m "fix: resolve type error"
-git commit -m "refactor: improve performance"
 ```
 
 All commands are optimized for performance using Turbo's caching and parallel execution capabilities.

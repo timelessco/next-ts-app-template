@@ -1,5 +1,14 @@
 # Task Completion Checklist
 
+## 1. Code Quality ✓
+
+- [ ] All TypeScript strict mode checks pass (`pnpm lint:types`)
+- [ ] ESLint shows no errors or warnings (`pnpm fix:eslint`)
+- [ ] Code is properly formatted (`pnpm fix:prettier`)
+- [ ] CSS follows style guidelines (`pnpm fix:css`)
+- [ ] No spelling mistakes in code/comments (`pnpm fix:spelling`)
+- [ ] No unused code or dependencies (`pnpm fix:knip`)
+
 ## Essential Commands to Run After Completing Any Development Task
 
 ### 1. Code Formatting & Auto-fixing
@@ -17,10 +26,12 @@ pnpm fix
 
 ### 2. Comprehensive Code Quality Check
 
-```bash
-# Run all linters in parallel (this is the main quality gate)
-pnpm lint
-```
+- [ ] All TypeScript strict mode checks pass (`pnpm lint:types`)
+- [ ] ESLint shows no errors or warnings (`pnpm fix:eslint`)
+- [ ] Code is properly formatted (`pnpm fix:prettier`)
+- [ ] CSS follows style guidelines (`pnpm fix:css`)
+- [ ] No spelling mistakes in code/comments (`pnpm fix:spelling`)
+- [ ] No unused code or dependencies (`pnpm fix:knip`)
 
 This single command validates:
 
@@ -171,10 +182,10 @@ pnpm fix && pnpm lint:types && pnpm lint:eslint
 
 ```bash
 # The essentials (run after every task)
-pnpm fix && pnpm lint && pnpm build
+pnpm fix && pnpm build
 
 # Fast feedback loop during development
-pnpm fix:prettier && pnpm lint:types
+pnpm fix:prettier && pnpm lint:eslint && pnpm lint:types
 
 # Full quality assurance
 pnpm lint && pnpm build:analyze

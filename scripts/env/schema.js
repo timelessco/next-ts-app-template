@@ -24,9 +24,9 @@ export const serverEnvironment = {
  * To expose them to the client, prefix them with `NEXT_PUBLIC_`.
  */
 export const clientSchema = z.object({
-	NEXT_PUBLIC_SENTRY_DSN: z.string().url().optional(),
+	NEXT_PUBLIC_SENTRY_DSN: z.url().optional(),
 	// Needed for sitemap generation
-	NEXT_PUBLIC_SITE_URL: z.string().url().optional(),
+	NEXT_PUBLIC_SITE_URL: z.url().optional(),
 });
 
 /**

@@ -22,6 +22,8 @@ const nextConfig: NextConfig = {
 		formats: ["image/avif", "image/webp"],
 	},
 
+	typedRoutes: true,
+
 	// Turn on fetch and it's data cache logging when debugging rsc fetches
 	logging: {
 		fetches: {

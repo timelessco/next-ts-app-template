@@ -1,5 +1,7 @@
 // Thanks to https://github.com/t3-oss/create-t3-app/
 
+import { z } from "zod";
+
 import { clientEnvironmentParsedData } from "./client.js";
 import { serverEnvironment, serverSchema } from "./schema.js";
 import { formatErrors } from "./utils.js";
@@ -9,7 +11,7 @@ const parsedServerEnvironment = serverSchema.safeParse(serverEnvironment);
 if (!parsedServerEnvironment.success) {
 	console.error(
 		"❌ Invalid environment variables:\n",
-		...formatErrors(parsedServerEnvironment.error.format()),
+		...formatErrors(z.treeifyError(parsedServerEnvironment.error)),
 	);
 	throw new Error("Invalid environment variables");
 }

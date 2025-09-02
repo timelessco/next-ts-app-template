@@ -1,13 +1,13 @@
 import kyDefault from "ky";
 import { type z } from "zod";
 
-export interface FetchDataWithZodValidationProps<T extends z.Schema> {
+export interface FetchDataWithZodValidationProps<T extends z.ZodType> {
 	options?: Parameters<typeof kyDefault>[1];
 	schema: T;
 	url: string;
 }
 
-export async function fetchDataWithZodValidation<T extends z.Schema>(
+export async function fetchDataWithZodValidation<T extends z.ZodType>(
 	props: FetchDataWithZodValidationProps<T>,
 ): Promise<Awaited<z.infer<T>>> {
 	const { options, schema, url } = props;

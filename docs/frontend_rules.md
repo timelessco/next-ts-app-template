@@ -1,5 +1,7 @@
 # Frontend Rules
 
+This document contains comprehensive accessibility and code quality rules for frontend development in this Next.js/React project.
+
 ## Accessibility Rules
 
 ### ARIA and Semantic HTML
@@ -126,6 +128,7 @@
 - Always use ES Modules. Never use CommonJS.
 - Always set `"type": "module"` in `package.json`.
 - Always use function declarations. Never use function expressions.
+
 - Never use consecutive spaces in regular expression literals.
 - Never use the `arguments` object.
 - Never use the comma operator.
@@ -206,7 +209,7 @@
 - Never use bitwise operators.
 - Never use expressions where the operation doesn't change the value.
 - Always ensure Promise-like statements are handled appropriately.
-- Never use **dirname and**filename in the global scope.
+- Never use \*\*dirname and \*\*filename in the global scope.
 - Never create import cycles.
 - Never use configured elements.
 - Never hardcode sensitive data like API keys and tokens.
@@ -334,3 +337,14 @@
 - Always use the "use strict" directive in script files.
 - Never use negation in `if` statements that have `else` clauses.
 - Never use nested ternary expressions.
+
+## Implementation Notes
+
+These rules are designed to work with:
+
+- Next.js with App Router
+- React
+- TypeScript with strict mode
+- ESLint with comprehensive plugins
+
+Many of these rules are already enforced by the project's ESLint configuration. This document serves as a comprehensive reference for all frontend best practices that should be followed in this codebase.

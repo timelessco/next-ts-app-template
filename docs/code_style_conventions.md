@@ -1,265 +1,157 @@
 # Code Style Conventions
 
-## TypeScript Standards
+## Code Quality Checks
 
-### Strictness Level: MAXIMUM
+**ALWAYS run the following commands before completing any task:**
 
-- **Strict Mode**: Fully enabled with all flags
-- **No `any` Types**: Use `unknown` if type is truly unknown
-- **No Type Assertions**: Use type guards instead of `as` casting
-- **Readonly Props**: Use `readonly` for component props
-- **Null Safety**: Proper null checking with type guards
+1. Automatically use the IDE's built-in diagnostics tool to check for linting and type errors:
+   - Fix any linting or type errors before considering the task complete
+   - Do this for any file you create or modify
 
-### Type Patterns
+This is a CRITICAL step that must NEVER be skipped when working on any code-related task
 
-```typescript
-// Component Props Pattern
-export interface ComponentProps {
-	readonly children?: ReactNode;
-	readonly className?: string;
-}
+## File Size Limits
 
-// Utility Type Examples
-export type NonEmptyArray<T> = [T, ...T[]];
-
-// Type Guards
-export function isNonNullable<T>(value: T): value is NonNullable<T> {
-	return value != null;
-}
-```
+- **Maximum 250 lines per file** - If a file exceeds this limit:
+  - Extract large sections into separate component files
+  - Move related functionality into dedicated modules
+  - Split complex components into smaller, focused components
+- This ensures maintainability and better code organization
 
 ## Naming Conventions
 
-### Files & Directories
+- **Components**: PascalCase (e.g., `HeaderNavigation.tsx`)
+- **Functions/Hooks**: camelCase (e.g., `useMediaQuery`, `getFadeInProps`)
+- **Constants**: UPPER_SNAKE_CASE for true constants (e.g., `SITE_NAME`)
+- **Files**: kebab-case for non-component files
+- **CSS Classes**: Use Tailwind utilities, custom classes in kebab-case
 
-- **Components**: `PascalCase.tsx` (e.g., `StyledButton.tsx`)
-- **Utilities**: `camelCase.ts` (e.g., `assertionUtils.ts`)
-- **Types**: `PascalCase` with descriptive names
-- **Constants**: `UPPER_SNAKE_CASE` for site config
+## React/Next.js Patterns
 
-### Code Naming
+- **Exports**: Named exports only (no default exports) (no array function for the exports)
+
+  ```typescript
+  export function ComponentName () { ... }
+  ```
+
+- **Component Structure**:
+  - Server components by default
+  - Client components explicitly marked with `"use client"`
+  - Separate files for server/client versions (e.g., `Component.tsx` and `ComponentClient.tsx`)
+- **Props**: Always define TypeScript interfaces
+
+  ```typescript
+  interface ComponentProps {
+  	title: string;
+  	isActive?: boolean;
+  }
+  ```
+
+## Styling Guidelines
+
+- **Tailwind CSS v4**: Primary styling method
+- **className Utility**: Use `cn()` helper for conditional classes
+
+  ```typescript
+  cn("base-class", isActive && "active-class");
+  ```
+
+- **No CSS-in-JS**: Avoid runtime styling solutions
+- **Custom CSS**: Only in global.css when absolutely necessary
+
+## File Organization
+
+- **Components**: Generic reusable components in `/src/components/`
+- **UI Components**: Page-specific components in `/src/ui/[page-name]/`
+- **Utilities**: Helper functions in `/src/utils/`
+- **Hooks**: Custom React hooks in `/src/hooks/`
+- **Images**: Static images in `/src/images/[page-name]/`
+
+## Function Parameter Pattern
+
+**For functions with 2 or more parameters, use the options object pattern:**
+
+### Required Elements
+
+1. **Options Type**: Name it `FunctionNameOptions`
+2. **Function Signature**: Use regular functions with single `options` parameter
+3. **Destructuring**: First line must destructure options alphabetically
+4. **Return Type**: Export complex return types as `FunctionNameReturnType`
+
+### Simple Example
 
 ```typescript
-// Functions: camelCase with descriptive verbs
-const getUserProfile = () => {};
-const validateEmailAddress = () => {};
-
-// Types: PascalCase with clear purpose
-interface UserProfile extends BaseProfile {}
-type ApiResponse<T> = Success<T> | Error;
-
-// Constants: UPPER_SNAKE_CASE
-const SITE_NAME = "Next TS App";
-const API_BASE_URL = "https://api.example.com";
-```
-
-## Component Patterns
-
-### Standard Component Structure
-
-```typescript
-import { type ReactNode } from "react";
-import { cn } from "@/utils/index";
-
-export interface ComponentProps {
-  readonly children?: ReactNode;
-  readonly className?: string;
+// Define options interface
+export interface ProcessDataOptions {
+	connection: DatabaseConnection;
+	logger: Logger;
+	timeout?: number;
 }
 
-export function Component(props: ComponentProps) {
-  const { children, className, ...rest } = props;
-
-  return (
-    <div className={cn("base-styles", className)} {...rest}>
-      {children}
-    </div>
-  );
-}
-```
-
-### Composition Patterns
-
-```typescript
-// Extend existing components rather than recreate
-export function StyledButton(props: StyledButtonProps) {
-  const { className, ...rest } = props;
-  return (
-    <Button
-      className={cn(baseButtonStyles, className)}
-      {...rest}
-    />
-  );
+// Regular function with options parameter
+export async function processData(
+	options: ProcessDataOptions,
+): Promise<ProcessResult> {
+	const { connection, logger, timeout = 5000 } = options; // Alphabetical destructuring
+	// ... implementation
 }
 
-// Use render props for complex composition
-<Command render={<AriaCurrentLink {...linkProps} />}>
-  {children}
-</Command>
+// Export return type if needed elsewhere
+export type ProcessDataReturnType = Awaited<ReturnType<typeof processData>>;
 ```
 
-## Import/Export Conventions
+### Benefits
 
-### Path Aliases (Required)
+- Clear parameter grouping
+- Easy to add/remove parameters without changing call sites
+- Consistent pattern across codebase
 
-```typescript
-// Always use path aliases for internal imports
-import { Component } from "@/components/Component";
-import { utility } from "@/utils/utility";
-import { CONFIG } from "@/utils/siteConfig";
+**For detailed TypeScript type rules, see [`docs/type_deduction_guidelines.md`](./type_deduction_guidelines.md)**
 
-// Not: import { Component } from "../../components/Component";
-```
+## Best Practices
 
-### Import Order (Auto-sorted by Prettier)
+- **Images**: Use NextImage component with blurhash placeholders
+- **Links**: Use StyledLink component for consistent styling
+- **Icons**: Add to `/src/icons/svg/` and build sprite
+- **Config**: Centralize all business data in `siteConfig.ts`
+- **Environment Variables**: Validate with Zod schemas
+- **Metadata**: Use metadataUtils for consistent SEO
 
-1. Built-in Node.js modules
-2. React/Next.js framework modules
-3. Third-party packages
-4. Internal modules (by priority):
-   - `@/lib/*`
-   - `@/ui/*`
-   - `@/components/*`
-   - `@/hooks/*`
-   - `@/stores/*`
-   - `@/icons/*`
-   - `@/utils/*`
-   - `@/styles/*`
-   - `@/app/*`
-5. Relative imports
-6. CSS files
+## Code Quality Tools
 
-### Export Patterns
+- **ESLint**: Extensive rule set for React, TypeScript, accessibility
+- **Prettier**: Auto-formatting with specific import order
+- **Stylelint**: CSS linting for consistency
+- **TypeScript**: Strict mode with all checks enabled
+- **Knip**: Detect unused code and dependencies
+- **cspell**: Spell checking across codebase
 
-```typescript
-// Named exports preferred
-export { Component, type ComponentProps };
+## Accessibility Guidelines
 
-// Barrel exports in index files
-export * from "./Component";
-export * from "./utils";
+- **ARIA**: Use semantic HTML over ARIA roles when possible
+- **Keyboard**: All interactive elements must be keyboard accessible
+- **Alt Text**: Meaningful alt text for images (avoid "image", "picture", "photo")
+- **Focus**: Don't use positive tabIndex values
+- **Labels**: All form inputs must have associated labels
+- **Language**: Include `lang` attribute on html element
 
-// Default exports only for pages and layouts
-export default function Page() {}
-```
+## Frontend Best Practices
 
-## CSS and Styling
+- **Next.js Images**: Use `next/image` instead of `<img>` tags
+- **Head Management**: Use Next.js head management, not `<head>` tags
+- **Security**: Always use `rel="noopener"` with `target="_blank"`
+- **Keys**: Don't use array indices as React keys
+- **Hooks**: Call hooks at top level, specify all dependencies
+- **Error Boundaries**: Handle errors gracefully with error boundaries
 
-### TailwindCSS Patterns
+See [`docs/frontend_rules.md`](./frontend_rules.md) for full frontend details.
 
-```typescript
-// Use cn() utility for class composition
-import { cn } from "@/utils/index";
+## Git Conventions
 
-const styles = cn(
-	"base-styles",
-	"responsive-modifier:style",
-	condition && "conditional-style",
-	className,
-);
-```
-
-### Custom CSS (when needed)
-
-```css
-/* BEM methodology for custom CSS */
-.component__element--modifier {
-	/* Properties in clean order (via Stylelint) */
-}
-
-/* CSS variables for theming */
-@theme {
-	--color-primary: hsl(210 100% 50%);
-	--font-sans: var(--font-inter);
-}
-```
-
-## Accessibility Standards
-
-### Built-in ARIA Support
-
-```typescript
-// Proper ARIA handling in components
-const ariaProps = ariaLabel
-  ? { role: "img", "aria-label": ariaLabel }
-  : { "aria-hidden": "true", focusable: "false" };
-
-return <svg {...ariaProps} />;
-```
-
-### Semantic HTML
-
-- Use semantic HTML elements
-- Provide proper heading hierarchy
-- Include alternative text for images
-- Ensure keyboard navigation
-
-## Error Handling
-
-### Type-Safe Error Handling
-
-```typescript
-// Use Result types instead of throwing
-type Result<T, E = Error> =
-  | { success: true; data: T }
-  | { success: false; error: E };
-
-// Graceful degradation in components
-if (!data) {
-  return <div>Loading...</div>;
-}
-```
-
-## Code Organization
-
-### Utility Functions
-
-- **Pure Functions**: No side effects when possible
-- **Single Responsibility**: Each function has one clear purpose
-- **Type Guards**: Proper TypeScript type narrowing
-- **Immutable**: Work with immutable data structures
-
-### Component Organization
-
-- **Small Components**: Focus on single responsibility
-- **Composition**: Build complex UI through composition
-- **Props Interface**: Clear, readonly prop definitions
-- **Default Exports**: Only for pages, use named exports elsewhere
-
-## Performance Considerations
-
-### Bundle Optimization
-
-- **Dynamic Imports**: Use for large components
-- **Image Optimization**: Use Next.js Image component
-- **Bundle Analysis**: Regular bundle size monitoring
-
-### React Patterns
-
-- **Functional Components**: Use hooks over class components
-- **Memo Usage**: Only when performance measurement shows benefit
-- **Avoid Premature Optimization**: Profile before optimizing
-
-## Quality Assurance
-
-### ESLint Rules Enforced
-
-- Strict TypeScript checking
-- React hooks validation
-- Import organization
-- Accessibility compliance
-- No unused variables
-- Consistent naming
-
-### Automated Formatting
-
-- **Prettier**: Handles all code formatting
-- **Import Sorting**: Automatic import organization
-- **TailwindCSS**: Class sorting for consistency
-
-### Git Practices
-
-- **Conventional Commits**: Enforced commit message format
-- **Pre-commit Hooks**: Automatic formatting and spell checking
-- **Linear History**: Prefer rebase over merge commits
-
-This coding style ensures consistency, maintainability, and high code quality across the entire project.
+- **Commits**: Conventional commits format (enforced by commitlint)
+  - `feat:` for features
+  - `fix:` for bug fixes
+  - `chore:` for maintenance
+  - `docs:` for documentation
+- **Pre-commit**: Automatic linting via husky and lint-staged
+- **PR Titles**: Must follow conventional commits format
