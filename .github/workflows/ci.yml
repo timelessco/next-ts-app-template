@@ -3,7 +3,7 @@ jobs:
     name: Find Duplicated Packages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
       - uses: ./.github/actions/pnpm-install
       - run: pnpm turbo check:packages
     timeout-minutes: 15
@@ -15,7 +15,7 @@ jobs:
     name: 🔬 Lint CSS
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
       - uses: ./.github/actions/pnpm-install
       - run: pnpm turbo lint:css
     timeout-minutes: 15
@@ -27,7 +27,7 @@ jobs:
     name: 🔬 Lint ESLint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
       - uses: ./.github/actions/pnpm-install
       - run: pnpm turbo lint:eslint
     timeout-minutes: 15
@@ -39,7 +39,7 @@ jobs:
     name: 🔬 Lint Knip
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
       - uses: ./.github/actions/pnpm-install
       - run: pnpm turbo lint:knip
     timeout-minutes: 15
@@ -51,7 +51,7 @@ jobs:
     name: 🔬 Lint MD
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
       - uses: ./.github/actions/pnpm-install
       - run: pnpm turbo lint:md
     timeout-minutes: 15
@@ -63,7 +63,7 @@ jobs:
     name: 🔬 Lint Prettier
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
       - uses: ./.github/actions/pnpm-install
       - run: pnpm turbo lint:prettier
     timeout-minutes: 15
@@ -75,7 +75,7 @@ jobs:
     name: 🔬 Lint Spelling
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
       - uses: ./.github/actions/pnpm-install
       - run: pnpm turbo lint:spelling
     timeout-minutes: 15
@@ -87,7 +87,7 @@ jobs:
     name: 🔬 Lint Types
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
       - uses: ./.github/actions/pnpm-install
       - run: pnpm turbo lint:types
     timeout-minutes: 15
